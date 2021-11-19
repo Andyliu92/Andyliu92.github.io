@@ -1,4 +1,4 @@
-name: github pages # 名字自取
+name: server deployment # 名字自取
 
 on:
   push:
