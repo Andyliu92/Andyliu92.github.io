@@ -146,13 +146,15 @@
 <li>21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。</li>
 <li>21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。</li>
 <li>21.11.19 由于使用主题时采用了<code>git submodule</code>的方式，而github同步时不同步submodule导致各种错误，重新使用<code>git clone</code>方式引入了主题，重新搭建了博客与github repo，并配置github actions。</li>
+<li>21.11.19 解决github actions css无法加载问题，使用<code>git submodule</code>直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。</li>
 <li>21.11.19 写下这篇hello world文档。</li>
 </ul>
-<p>动手去做一个项目确实是学习的高效方法。通过搭建这个博客的过程，我至少熟悉了一下内容：</p>
+<p>动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：</p>
 <ol>
 <li>云服务器</li>
 <li>Linux命令行</li>
 <li>git命令行操作</li>
+<li>git submodule</li>
 <li>github全流程</li>
 <li>github pages</li>
 <li>github actions</li>
