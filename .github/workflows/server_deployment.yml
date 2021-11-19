@@ -13,7 +13,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.1
         with:
           switches: -avzh
-          path: "./"
+          path: "./*"
           remote_path: "/home/ubuntu/www/Blogs/Personal"
           remote_host: "101.42.141.88"
           remote_port: "22"
