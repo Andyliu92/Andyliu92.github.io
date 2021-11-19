@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>comfluter.life/about/</loc>
+    <loc>http://comfluter.life/about/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/categories/</loc>
+    <loc>http://comfluter.life/categories/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/p/hello-world/</loc>
+    <loc>http://comfluter.life/p/hello-world/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/page/</loc>
+    <loc>http://comfluter.life/page/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/post/</loc>
+    <loc>http://comfluter.life/post/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/tags/</loc>
+    <loc>http://comfluter.life/tags/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>http://comfluter.life/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/</loc>
+    <loc>http://comfluter.life/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/tags/%E9%9A%8F%E6%83%B3/</loc>
+    <loc>http://comfluter.life/tags/%E9%9A%8F%E6%83%B3/</loc>
     <lastmod>2021-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/archives/</loc>
+    <loc>http://comfluter.life/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>comfluter.life/search/</loc>
+    <loc>http://comfluter.life/search/</loc>
   </url>
 </urlset>

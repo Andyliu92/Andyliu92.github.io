@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随想 on 知止堂</title>
-    <link>comfluter.life/tags/%E9%9A%8F%E6%83%B3/</link>
+    <link>http://comfluter.life/tags/%E9%9A%8F%E6%83%B3/</link>
     <description>Recent content in 随想 on 知止堂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="comfluter.life/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://comfluter.life/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello, World!</title>
-      <link>comfluter.life/p/hello-world/</link>
+      <link>http://comfluter.life/p/hello-world/</link>
       <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>comfluter.life/p/hello-world/</guid>
+      <guid>http://comfluter.life/p/hello-world/</guid>
       <description>序言 在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。
 在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？
 第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。
