@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on 知止堂</title>
+    <link>http://comfluter.life/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on 知止堂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://comfluter.life/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ToD-BERT 相关内容</title>
+      <link>http://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
+      <description>计算ToD-BERT推理时间延迟 如何正确地计算 深度学习中如何正确地measure inference time</description>
+    </item>
+    
+  </channel>
+</rss>
