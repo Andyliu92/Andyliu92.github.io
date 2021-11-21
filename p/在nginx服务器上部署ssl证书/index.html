@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
+下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
+ SSL证书面板 
+zip包文件结构：
+ zip_struct 
+由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
+ 
+将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
+root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.'><title>在Nginx服务器上部署SSL证书</title>
+
+<link rel='canonical' href='http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='在Nginx服务器上部署SSL证书'>
+<meta property='og:description' content='申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
+下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
+ SSL证书面板 
+zip包文件结构：
+ zip_struct 
+由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
+ 
+将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
+root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.'>
+<meta property='og:url' content='http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/'>
+<meta property='og:site_name' content='知止堂'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='网络' /><meta property='article:tag' content='SSL证书' /><meta property='article:tag' content='https' /><meta property='article:tag' content='Nginx服务器' /><meta property='article:published_time' content='2021-11-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-21T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="在Nginx服务器上部署SSL证书">
+<meta name="twitter:description" content="申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
+下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
+ SSL证书面板 
+zip包文件结构：
+ zip_struct 
+由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
+ 
+将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
+root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
+                技术
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/">在Nginx服务器上部署SSL证书</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 21, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="申请证书">申请证书</h2>
+<p>在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。</p>
+<h2 id="下载证书并上传至云服务器">下载证书并上传至云服务器</h2>
+<p>在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载</p>
+<p><figure 
+	>
+	<a href="/1.png" >
+		<img src="/1.png"
+			
+			
+			
+			loading="lazy"
+			alt="SSL证书面板">
+	</a>
+	
+	<figcaption>SSL证书面板</figcaption>
+	
+</figure></p>
+<p>zip包文件结构：</p>
+<p><figure 
+	>
+	<a href="/2.png" >
+		<img src="/2.png"
+			
+			
+			
+			loading="lazy"
+			alt="zip_struct">
+	</a>
+	
+	<figcaption>zip_struct</figcaption>
+	
+</figure></p>
+<p>由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：</p>
+<p><figure 
+	>
+	<a href="/3.png" >
+		<img src="/3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为<code>/etc/nginx</code>：</p>
+<pre tabindex="0"><code>root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx
+root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx
+root@VM-24-3-ubuntu:/# cd /etc/nginx
+root@VM-24-3-ubuntu:/etc/nginx# ll -s
+total 80
+4 drwxr-xr-x   8 root   root   4096 Nov 21 10:05 ./
+4 drwxr-xr-x 115 root   root   4096 Nov 15 15:50 ../
+4 -rw-rw-r--   1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt
+4 -rw-rw-r--   1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.life.key
+4 drwxr-xr-x   2 root   root   4096 Nov 15 16:48 conf.d/
+4 -rw-r--r--   1 root   root   1077 Feb  4  2019 fastcgi.conf
+4 -rw-r--r--   1 root   root   1007 Feb  4  2019 fastcgi_params
+4 -rw-r--r--   1 root   root   2837 Feb  4  2019 koi-utf
+4 -rw-r--r--   1 root   root   2223 Feb  4  2019 koi-win
+4 -rw-r--r--   1 root   root   3957 Feb  4  2019 mime.types
+4 drwxr-xr-x   2 root   root   4096 May 26 01:10 modules-available/
+4 drwxr-xr-x   2 root   root   4096 Nov 15 15:50 modules-enabled/
+4 -rw-r--r--   1 root   root   1512 Nov 15 16:53 nginx.conf
+4 -rw-r--r--   1 root   root    180 Feb  4  2019 proxy_params
+4 -rw-r--r--   1 root   root    636 Feb  4  2019 scgi_params
+4 drwxr-xr-x   2 root   root   4096 Nov 15 16:40 sites-available/
+4 drwxr-xr-x   2 root   root   4096 Nov 15 16:48 sites-enabled/
+4 drwxr-xr-x   2 root   root   4096 Nov 15 15:50 snippets/
+4 -rw-r--r--   1 root   root    664 Feb  4  2019 uwsgi_params
+4 -rw-r--r--   1 root   root   3071 Feb  4  2019 win-utf
+</code></pre><h2 id="编辑nginx服务器配置">编辑Nginx服务器配置</h2>
+<p>更改<code>/etc/nginx/sites-enabled</code>下服务器配置文件：</p>
+<pre tabindex="0"><code>server {
+    listen 443 ssl;
+    #填写绑定证书的域名
+    server_name comfluter.life; 
+    #证书文件名称
+    ssl_certificate  1_comfluter.life_bundle.crt; 
+    #私钥文件名称
+    ssl_certificate_key 2_comfluter.life.key; 
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    location / {
+            #网站主页路径。此路径仅供参考，具体请您按照实际目录操作。 
+            #例如，您的网站运行目录在/etc/www下，则填写/etc/www。
+        root /home/ubuntu/www/Blogs/Personal;
+        index index.html index.htm;
+    }
+}
+server {
+    listen 80;
+    #填写绑定证书的域名
+    server_name comfluter.life; 
+    #把http的域名请求转成https
+    return 301 https://$host$request_uri; 
+}
+</code></pre><p>配置中前半部分为https网页服务，后半部分为将http请求重定向至https请求</p>
+<p>验证配置文件：</p>
+<pre tabindex="0"><code>root@VM-24-3-ubuntu:/etc/nginx# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+</code></pre><p>重启Nginx服务器：<code>nginx -s reload</code></p>
+<h2 id="https访问">https访问！</h2>
+<p>此时输入<code>comfluter.life</code>访问时即可看到已经是https连接</p>
+<p><figure 
+	>
+	<a href="/4.png" >
+		<img src="/4.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%BD%91%E7%BB%9C/">网络</a>
+        
+            <a href="/tags/ssl%E8%AF%81%E4%B9%A6/">SSL证书</a>
+        
+            <a href="/tags/https/">https</a>
+        
+            <a href="/tags/nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">Nginx服务器</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 知止堂
+    </section>
+    
+    <section class="powerby">
+        
+            京ICP备2021035515号 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#申请证书">申请证书</a></li>
+    <li><a href="#下载证书并上传至云服务器">下载证书并上传至云服务器</a></li>
+    <li><a href="#编辑nginx服务器配置">编辑Nginx服务器配置</a></li>
+    <li><a href="#https访问">https访问！</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
