@@ -106,7 +106,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -167,6 +167,97 @@
 <li>在真正需要的example前运行几个example，使得GPU不再处于省电模式。</li>
 <li>使用<code>tr.cuda.event</code>，在GPU上测量时间</li>
 <li>使用函数<code>torch.cuda.synchronize()</code>，使得CPU和GPU工作在同步执行模式。</li>
+</ol>
+<h3 id="在服务器上进行inference并计算inference时间">在服务器上进行inference并计算inference时间</h3>
+<ol>
+<li>
+<p>在<code>run_tod_lm_pretraining.sh</code>文件中修改<code>batch size = 1</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">gpu</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">model_type</span><span class="o">=</span><span class="nv">$2</span>
+<span class="nv">bert_dir</span><span class="o">=</span><span class="nv">$3</span>
+<span class="nv">output_dir</span><span class="o">=</span><span class="nv">$4</span>
+<span class="nv">add1</span><span class="o">=</span><span class="nv">$5</span>
+<span class="nv">add2</span><span class="o">=</span><span class="nv">$6</span>
+<span class="nv">add3</span><span class="o">=</span><span class="nv">$7</span>
+<span class="nv">add4</span><span class="o">=</span><span class="nv">$8</span>
+<span class="nv">add5</span><span class="o">=</span><span class="nv">$9</span>
+
+<span class="c1"># ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn</span>
+<span class="c1"># ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-JNT --only_last_turn --add_rs_loss</span>
+
+<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">3</span> python my_tod_pretraining.py <span class="se">\
+</span><span class="se"></span>    --task<span class="o">=</span>usdl <span class="se">\
+</span><span class="se"></span>    --model_type<span class="o">=</span><span class="si">${</span><span class="nv">model_type</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --model_name_or_path<span class="o">=</span><span class="si">${</span><span class="nv">bert_dir</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --output_dir<span class="o">=</span><span class="si">${</span><span class="nv">output_dir</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --do_train <span class="se">\
+</span><span class="se"></span>    --do_eval <span class="se">\
+</span><span class="se"></span>    --mlm <span class="se">\
+</span><span class="se"></span>    --do_lower_case <span class="se">\
+</span><span class="se"></span>    --evaluate_during_training <span class="se">\
+</span><span class="se"></span>    --save_steps<span class="o">=</span><span class="m">2500</span> --logging_steps<span class="o">=</span><span class="m">1000</span> <span class="se">\
+</span><span class="se"></span>    --per_gpu_train_batch_size<span class="o">=</span><span class="m">1</span> --per_gpu_eval_batch_size<span class="o">=</span><span class="m">1</span> <span class="se">\
+</span><span class="se"></span>    <span class="si">${</span><span class="nv">add1</span><span class="si">}</span> <span class="si">${</span><span class="nv">add2</span><span class="si">}</span> <span class="si">${</span><span class="nv">add3</span><span class="si">}</span> <span class="si">${</span><span class="nv">add4</span><span class="si">}</span> <span class="si">${</span><span class="nv">add5</span><span class="si">}</span>
+</code></pre></div></li>
+<li>
+<p>使用上文办法，在<code>my_tod_pretraining.py</code>中引入计时相关语句：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1">## with only MLM loss</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="n">starter</span><span class="p">,</span> <span class="n">ender</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">enable_timing</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">enable_timing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+     <span class="n">inputs</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s2">&#34;context&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">mlm</span><span class="p">:</span>
+        <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">mask_tokens</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="n">starter</span><span class="o">.</span><span class="n">record</span><span class="p">()</span>
+
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span>
+                        <span class="n">masked_lm_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+                        <span class="n">attention_mask</span><span class="o">=</span><span class="n">inputs</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">ender</span><span class="o">.</span><span class="n">record</span><span class="p">()</span>
+        <span class="c1"># WAIT FOR GPU SYNC</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+        <span class="n">curr_time</span> <span class="o">=</span> <span class="n">starter</span><span class="o">.</span><span class="n">elapsed_time</span><span class="p">(</span><span class="n">ender</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">curr_time</span><span class="p">)</span>
+</code></pre></div></li>
+<li>
+<p>由于训练时间较长，使用<code>tmux</code>命令：<code>tmux new -s inference_time_measure</code>，进入tmux回话后还需要重新激活虚拟环境。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="se">\(</span>base<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ <span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span> ./run_tod_lm_pretraining.sh <span class="m">0</span> bert bert-base-uncased save/prtrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&#34;/media/HD1/dche/ToD-BERT/my_tod_pretraining.py&#34;</span>, line 16, in &lt;module&gt;
+    import numpy as np
+ModuleNotFoundError: No module named <span class="s1">&#39;numpy&#39;</span>
+<span class="o">(</span>base<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda info --env
+<span class="c1"># conda environments:</span>
+<span class="c1">#</span>
+base                  *  /media/HD1/dche/miniconda3
+sum_env                  /media/HD1/dche/miniconda3/envs/sum_env
+tod_bert                 /media/HD1/dche/miniconda3/envs/tod_bert
+                         /media/HD1/miniconda3
+
+<span class="o">(</span>base<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda activate tod_bert
+<span class="o">(</span>tod_bert<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ <span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span> ./run_tod_lm_pretraining.sh <span class="m">0</span> bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
+</code></pre></div></li>
+<li>
+<p>进行训练，观察输出结果 <code>CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets</code></p>
+</li>
+<li>
+<p>训练过程中可以使用<code>crtl+b d</code>从会话中分离</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>tod_bert<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux new -s inference_time_measure
+<span class="o">[</span>detached <span class="o">(</span>from session inference_time_measure<span class="o">)]</span>
+<span class="o">(</span>tod_bert<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ 
+</code></pre></div></li>
+<li>
+<p>可以查看当前的tmux会话并连接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>tod_bert<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux ls
+inference_time_measure: <span class="m">1</span> windows <span class="o">(</span>created Sun Nov <span class="m">21</span> 23:26:48 2021<span class="o">)</span> <span class="o">[</span>134x33<span class="o">]</span>
+zym1: <span class="m">1</span> windows <span class="o">(</span>created Sun Nov <span class="m">21</span> 18:34:03 2021<span class="o">)</span> <span class="o">[</span>148x45<span class="o">]</span>
+zym2: <span class="m">1</span> windows <span class="o">(</span>created Sun Nov <span class="m">21</span> 18:34:44 2021<span class="o">)</span> <span class="o">[</span>113x12<span class="o">]</span>
+<span class="o">(</span>tod_bert<span class="o">)</span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux attach -t inference_time_measure
+</code></pre></div></li>
 </ol>
 
 </section>
@@ -342,6 +433,7 @@
     <li><a href="#计算tod-bert推理时间延迟">计算ToD-BERT推理时间延迟</a>
       <ol>
         <li><a href="#如何正确地计算">如何正确地计算</a></li>
+        <li><a href="#在服务器上进行inference并计算inference时间">在服务器上进行inference并计算inference时间</a></li>
       </ol>
     </li>
   </ol>

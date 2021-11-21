@@ -280,6 +280,8 @@ nginx: configuration file /etc/nginx/nginx.conf <span class="nb">test</span> is 
 	</a>
 	
 </figure></p>
+<h2 id="debugging">Debugging</h2>
+<p>更改成为https连接后博客的搜索功能出现问题，浏览器提示提交的表单不安全并阻止了搜索表单的提交。问题在于没有更改hugo博客配置文件中的<code>baseURL</code>字段，将其改为<code>baseurl: https://comfluter.life</code>即可解决。</p>
 
 </section>
 
@@ -457,6 +459,7 @@ nginx: configuration file /etc/nginx/nginx.conf <span class="nb">test</span> is 
     <li><a href="#下载证书并上传至云服务器">下载证书并上传至云服务器</a></li>
     <li><a href="#编辑nginx服务器配置">编辑Nginx服务器配置</a></li>
     <li><a href="#https访问">https访问！</a></li>
+    <li><a href="#debugging">Debugging</a></li>
   </ol>
 </nav>
                 </div>
