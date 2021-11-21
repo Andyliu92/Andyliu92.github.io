@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>知止堂</title>
-        <link>http://comfluter.life/</link>
+        <link>https://comfluter.life/</link>
         <description>Recent content on 知止堂</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://comfluter.life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ToD-BERT 相关内容</title>
-        <link>http://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
+        <link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
         <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
         
-        <guid>http://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
+        <guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
         <description>&lt;h2 id=&#34;在服务器上运行tod-bert训练&#34;&gt;在服务器上运行ToD-BERT训练&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;进入服务器，激活环境&lt;code&gt;source activate todbert_env&lt;/code&gt;&lt;/li&gt;
@@ -68,10 +68,10 @@
         </item>
         <item>
         <title>在Nginx服务器上部署SSL证书</title>
-        <link>http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link>
+        <link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link>
         <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
         
-        <guid>http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid>
+        <guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid>
         <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
 &lt;p&gt;在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。&lt;/p&gt;
 &lt;h2 id=&#34;下载证书并上传至云服务器&#34;&gt;下载证书并上传至云服务器&lt;/h2&gt;
@@ -83,11 +83,11 @@
 			flex-grow: 176; 
 			flex-basis: 423px&#34;
 	&gt;
-	&lt;a href=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34; data-size=&#34;2736x1550&#34;&gt;
-		&lt;img src=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34;
+	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34; data-size=&#34;2736x1550&#34;&gt;
+		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34;
 			width=&#34;2736&#34;
 			height=&#34;1550&#34;
-			srcset=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;SSL证书面板&#34;&gt;
 	&lt;/a&gt;
@@ -103,11 +103,11 @@
 			flex-grow: 128; 
 			flex-basis: 308px&#34;
 	&gt;
-	&lt;a href=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34; data-size=&#34;342x266&#34;&gt;
-		&lt;img src=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34;
+	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34; data-size=&#34;342x266&#34;&gt;
+		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34;
 			width=&#34;342&#34;
 			height=&#34;266&#34;
-			srcset=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;zip_struct&#34;&gt;
 	&lt;/a&gt;
@@ -123,11 +123,11 @@
 			flex-grow: 397; 
 			flex-basis: 954px&#34;
 	&gt;
-	&lt;a href=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34; data-size=&#34;366x92&#34;&gt;
-		&lt;img src=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34;
+	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34; data-size=&#34;366x92&#34;&gt;
+		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34;
 			width=&#34;366&#34;
 			height=&#34;92&#34;
-			srcset=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -202,11 +202,11 @@ nginx: configuration file /etc/nginx/nginx.conf &lt;span class=&#34;nb&#34;&gt;t
 			flex-grow: 657; 
 			flex-basis: 1577px&#34;
 	&gt;
-	&lt;a href=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34; data-size=&#34;368x56&#34;&gt;
-		&lt;img src=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34;
+	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34; data-size=&#34;368x56&#34;&gt;
+		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34;
 			width=&#34;368&#34;
 			height=&#34;56&#34;
-			srcset=&#34;http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, http://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -216,11 +216,11 @@ nginx: configuration file /etc/nginx/nginx.conf &lt;span class=&#34;nb&#34;&gt;t
         </item>
         <item>
         <title>Hello, World!</title>
-        <link>http://comfluter.life/p/hello-world/</link>
+        <link>https://comfluter.life/p/hello-world/</link>
         <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
         
-        <guid>http://comfluter.life/p/hello-world/</guid>
-        <description>&lt;img src="http://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" /&gt;&lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
+        <guid>https://comfluter.life/p/hello-world/</guid>
+        <description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" /&gt;&lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
 &lt;p&gt;在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p&gt;
 &lt;p&gt;在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p&gt;
 &lt;p&gt;第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p&gt;

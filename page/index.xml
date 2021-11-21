@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 知止堂</title>
-    <link>http://comfluter.life/page/</link>
+    <link>https://comfluter.life/page/</link>
     <description>Recent content in Pages on 知止堂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://comfluter.life/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://comfluter.life/about/</link>
+      <link>https://comfluter.life/about/</link>
       <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://comfluter.life/about/</guid>
+      <guid>https://comfluter.life/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Archives</title>
-      <link>http://comfluter.life/archives/</link>
+      <link>https://comfluter.life/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://comfluter.life/archives/</guid>
+      <guid>https://comfluter.life/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://comfluter.life/search/</link>
+      <link>https://comfluter.life/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://comfluter.life/search/</guid>
+      <guid>https://comfluter.life/search/</guid>
       <description></description>
     </item>
     
