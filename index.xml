@@ -12,10 +12,58 @@
         <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
         
         <guid>http://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
-        <description>&lt;h2 id=&#34;计算tod-bert推理时间延迟&#34;&gt;计算ToD-BERT推理时间延迟&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;在服务器上运行tod-bert训练&#34;&gt;在服务器上运行ToD-BERT训练&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;进入服务器，激活环境&lt;code&gt;source activate todbert_env&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进入/media/HD1/dche/ToD-BERT文件夹&lt;code&gt;cd /media/HD1/dche/ToD-BERT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看GPU资源占用情况&lt;code&gt;nvidia-smi&lt;/code&gt;，然后选择目前占用情况较低的一张GPU进行训练即可&lt;/li&gt;
+&lt;li&gt;运行训练shell脚本文件&lt;code&gt;CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code&gt;。根据第三步选择的几号卡，就把对应的0改成几，此处默认单卡训练。如果一切正常的话，再读入数据集数据后，就会开始训练了，有进度条出现就Ok了。常见的没跑起来的情况是CUDA out of memory。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tod-bert本地调用&#34;&gt;ToD-BERT本地调用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将ToD-BERT模型下载至本地&lt;/li&gt;
+&lt;li&gt;包含ToD-BERT所需的python包，并定义模型路径
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;torch&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/home/andyliu/Desktop/Work/ToD-BERT/Models/ToD-BERT-mlm&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# &amp;lt;path_to_the_downloaded_tod-bert&amp;gt; 注意此处的路径要使用从根目录开始的绝对路径，而非从用户~目录开始的相对路径。&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;model_class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer_class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config_class&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertTokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertConfig&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer_class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model_class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;使用ToD-BERT文档中的示例
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Encode text &lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[CLS] [SYS] Hello, what can I help with you today? [USR] Find me a cheap restaurant nearby the north town.&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;input_tokens&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokenize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Tensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convert_tokens_to_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unsqueeze&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# batch size dimension&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is_available&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;no_grad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;input_context&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;input_ids&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;attention_mask&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()}&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;hiddens&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;计算tod-bert推理时间延迟&#34;&gt;计算ToD-BERT推理时间延迟&lt;/h2&gt;
 &lt;h3 id=&#34;如何正确地计算&#34;&gt;如何正确地计算&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/9b9d6782f90b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;深度学习中如何正确地measure inference time&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在进行多batch训练或推理的时候，batch1被送进GPU后，CPU由于异步执行，不再等待batch1在GPU内执行完毕，而是直接对batch2进行预处理，此时若使用python的time库，停止计算时间的代码将在GPU执行完毕前被执行，导致时长计算错误。&lt;/li&gt;
+&lt;li&gt;GPU在不工作时将关掉许多硬件模块，在调用GPU时需要重新初始化（GPU预热），占用大量时间，导致时间测算错误。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在真正需要的example前运行几个example，使得GPU不再处于省电模式。&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;tr.cuda.event&lt;/code&gt;，在GPU上测量时间&lt;/li&gt;
+&lt;li&gt;使用函数&lt;code&gt;torch.cuda.synchronize()&lt;/code&gt;，使得CPU和GPU工作在同步执行模式。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>
@@ -86,32 +134,32 @@
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为&lt;code&gt;/etc/nginx&lt;/code&gt;：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx
 root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx
-root@VM-24-3-ubuntu:/# cd /etc/nginx
+root@VM-24-3-ubuntu:/# &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/nginx
 root@VM-24-3-ubuntu:/etc/nginx# ll -s
-total 80
-4 drwxr-xr-x   8 root   root   4096 Nov 21 10:05 ./
-4 drwxr-xr-x 115 root   root   4096 Nov 15 15:50 ../
-4 -rw-rw-r--   1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt
-4 -rw-rw-r--   1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.life.key
-4 drwxr-xr-x   2 root   root   4096 Nov 15 16:48 conf.d/
-4 -rw-r--r--   1 root   root   1077 Feb  4  2019 fastcgi.conf
-4 -rw-r--r--   1 root   root   1007 Feb  4  2019 fastcgi_params
-4 -rw-r--r--   1 root   root   2837 Feb  4  2019 koi-utf
-4 -rw-r--r--   1 root   root   2223 Feb  4  2019 koi-win
-4 -rw-r--r--   1 root   root   3957 Feb  4  2019 mime.types
-4 drwxr-xr-x   2 root   root   4096 May 26 01:10 modules-available/
-4 drwxr-xr-x   2 root   root   4096 Nov 15 15:50 modules-enabled/
-4 -rw-r--r--   1 root   root   1512 Nov 15 16:53 nginx.conf
-4 -rw-r--r--   1 root   root    180 Feb  4  2019 proxy_params
-4 -rw-r--r--   1 root   root    636 Feb  4  2019 scgi_params
-4 drwxr-xr-x   2 root   root   4096 Nov 15 16:40 sites-available/
-4 drwxr-xr-x   2 root   root   4096 Nov 15 16:48 sites-enabled/
-4 drwxr-xr-x   2 root   root   4096 Nov 15 15:50 snippets/
-4 -rw-r--r--   1 root   root    664 Feb  4  2019 uwsgi_params
-4 -rw-r--r--   1 root   root   3071 Feb  4  2019 win-utf
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;编辑nginx服务器配置&#34;&gt;编辑Nginx服务器配置&lt;/h2&gt;
+total &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 10:05 ./
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x &lt;span class=&#34;m&#34;&gt;115&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 ../
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-rw-r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; ubuntu ubuntu &lt;span class=&#34;m&#34;&gt;3921&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 08:37 1_comfluter.life_bundle.crt
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-rw-r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; ubuntu ubuntu &lt;span class=&#34;m&#34;&gt;1700&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 08:37 2_comfluter.life.key
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:48 conf.d/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1077&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; fastcgi.conf
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1007&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; fastcgi_params
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;2837&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; koi-utf
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;2223&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; koi-win
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;3957&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; mime.types
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; May &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; 01:10 modules-available/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 modules-enabled/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1512&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:53 nginx.conf
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;180&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; proxy_params
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;636&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; scgi_params
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:40 sites-available/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:48 sites-enabled/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 snippets/
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;664&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; uwsgi_params
+&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;3071&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; win-utf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;编辑nginx服务器配置&#34;&gt;编辑Nginx服务器配置&lt;/h2&gt;
 &lt;p&gt;更改&lt;code&gt;/etc/nginx/sites-enabled&lt;/code&gt;下服务器配置文件：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
     listen 443 ssl;
@@ -141,10 +189,10 @@ server {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置中前半部分为https网页服务，后半部分为将http请求重定向至https请求&lt;/p&gt;
 &lt;p&gt;验证配置文件：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;root@VM-24-3-ubuntu:/etc/nginx# nginx -t
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@VM-24-3-ubuntu:/etc/nginx# nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;重启Nginx服务器：&lt;code&gt;nginx -s reload&lt;/code&gt;&lt;/p&gt;
+nginx: configuration file /etc/nginx/nginx.conf &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; is successful
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启Nginx服务器：&lt;code&gt;nginx -s reload&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;https访问&#34;&gt;https访问！&lt;/h2&gt;
 &lt;p&gt;此时输入&lt;code&gt;comfluter.life&lt;/code&gt;访问时即可看到已经是https连接&lt;/p&gt;
 &lt;p&gt;&lt;figure 
@@ -207,7 +255,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;h2 id=&#34;link&#34;&gt;link&lt;/h2&gt;
 &lt;p&gt;built with hugo and using theme &amp;ldquo;Stack&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack Chinese documentation&lt;/a&gt;&lt;/p&gt;
+    &gt;Stack Chinese documentation&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://tablericons.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;icons&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         
