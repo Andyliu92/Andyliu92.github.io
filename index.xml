@@ -1,361 +1,497 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>知止堂</title>
-        <link>https://comfluter.life/</link>
-        <description>Recent content on 知止堂</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>ToD-BERT 相关内容</title>
-        <link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
-        <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid>
-        <description>&lt;h2 id=&#34;在服务器上运行tod-bert训练&#34;&gt;在服务器上运行ToD-BERT训练&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;进入服务器，激活环境&lt;code&gt;source activate todbert_env&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;进入/media/HD1/dche/ToD-BERT文件夹&lt;code&gt;cd /media/HD1/dche/ToD-BERT&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;查看GPU资源占用情况&lt;code&gt;nvidia-smi&lt;/code&gt;，然后选择目前占用情况较低的一张GPU进行训练即可&lt;/li&gt;
-&lt;li&gt;运行训练shell脚本文件&lt;code&gt;CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code&gt;。根据第三步选择的几号卡，就把对应的0改成几，此处默认单卡训练。如果一切正常的话，再读入数据集数据后，就会开始训练了，有进度条出现就Ok了。常见的没跑起来的情况是CUDA out of memory。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;tod-bert本地调用&#34;&gt;ToD-BERT本地调用&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;将ToD-BERT模型下载至本地&lt;/li&gt;
-&lt;li&gt;包含ToD-BERT所需的python包，并定义模型路径
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;torch&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path_to_the_downloaded_tod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bert&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 注意此处的路径要使用从根目录开始的绝对路径，而非从用户~目录开始的相对路径。&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;model_class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer_class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config_class&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertTokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BertConfig&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer_class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model_class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BERT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;使用ToD-BERT文档中的示例
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Encode text &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[CLS] [SYS] Hello, what can I help with you today? [USR] Find me a cheap restaurant nearby the north town.&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;input_tokens&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokenize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Tensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convert_tokens_to_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
-    &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unsqueeze&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# batch size dimension&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is_available&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt; 
-    &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;no_grad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;input_context&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;input_ids&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;story&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;attention_mask&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;story&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()}&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;hiddens&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tod_bert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;计算tod-bert推理时间延迟&#34;&gt;计算ToD-BERT推理时间延迟&lt;/h2&gt;
-&lt;h3 id=&#34;如何正确地计算&#34;&gt;如何正确地计算&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/9b9d6782f90b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;深度学习中如何正确地measure inference time&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在进行多batch训练或推理的时候，batch1被送进GPU后，CPU由于异步执行，不再等待batch1在GPU内执行完毕，而是直接对batch2进行预处理，此时若使用python的time库，停止计算时间的代码将在GPU执行完毕前被执行，导致时长计算错误。&lt;/li&gt;
-&lt;li&gt;GPU在不工作时将关掉许多硬件模块，在调用GPU时需要重新初始化（GPU预热），占用大量时间，导致时间测算错误。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;解决方法：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在真正需要的example前运行几个example，使得GPU不再处于省电模式。&lt;/li&gt;
-&lt;li&gt;使用&lt;code&gt;tr.cuda.event&lt;/code&gt;，在GPU上测量时间&lt;/li&gt;
-&lt;li&gt;使用函数&lt;code&gt;torch.cuda.synchronize()&lt;/code&gt;，使得CPU和GPU工作在同步执行模式。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;在服务器上进行inference并计算inference时间&#34;&gt;在服务器上进行inference并计算inference时间&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在&lt;code&gt;run_tod_lm_pretraining.sh&lt;/code&gt;文件中修改&lt;code&gt;batch size = 1&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;gpu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;model_type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;bert_dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$3&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;output_dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$4&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;add1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$5&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;add2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$6&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;add3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$7&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;add4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$8&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;add5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$9&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-JNT --only_last_turn --add_rs_loss&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;CUDA_VISIBLE_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; python my_tod_pretraining.py &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --task&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;usdl &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --model_type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;model_type&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --model_name_or_path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;bert_dir&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --output_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;output_dir&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --do_train &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --do_eval &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --mlm &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --do_lower_case &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --evaluate_during_training &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --save_steps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2500&lt;/span&gt; --logging_steps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1000&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --per_gpu_train_batch_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --per_gpu_eval_batch_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add2&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add3&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add4&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add5&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用上文办法，在&lt;code&gt;my_tod_pretraining.py&lt;/code&gt;中引入计时相关语句：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## with only MLM loss&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
-    &lt;span class=&#34;n&#34;&gt;starter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ender&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable_timing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable_timing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-     &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mlm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;labels&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mask_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;labels&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;labels&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-        &lt;span class=&#34;n&#34;&gt;starter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-
-        &lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;n&#34;&gt;masked_lm_labels&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;labels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;n&#34;&gt;attention_mask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-        &lt;span class=&#34;n&#34;&gt;ender&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;# WAIT FOR GPU SYNC&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;synchronize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;curr_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;starter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;elapsed_time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;curr_time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;由于训练时间较长，使用&lt;code&gt;tmux&lt;/code&gt;命令：&lt;code&gt;tmux new -s inference_time_measure&lt;/code&gt;，进入tmux回话后还需要重新激活虚拟环境。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;se&#34;&gt;\(&lt;/span&gt;base&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ &lt;span class=&#34;nv&#34;&gt;CUDA_VISIBLE_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ./run_tod_lm_pretraining.sh &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bert bert-base-uncased save/prtrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
-Traceback &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;most recent call last&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
-  File &lt;span class=&#34;s2&#34;&gt;&amp;#34;/media/HD1/dche/ToD-BERT/my_tod_pretraining.py&amp;#34;&lt;/span&gt;, line 16, in &amp;lt;module&amp;gt;
-    import numpy as np
-ModuleNotFoundError: No module named &lt;span class=&#34;s1&#34;&gt;&amp;#39;numpy&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;base&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda info --env
-&lt;span class=&#34;c1&#34;&gt;# conda environments:&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
-base                  *  /media/HD1/dche/miniconda3
-sum_env                  /media/HD1/dche/miniconda3/envs/sum_env
-tod_bert                 /media/HD1/dche/miniconda3/envs/tod_bert
-                         /media/HD1/miniconda3
-
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;base&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda activate tod_bert
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ &lt;span class=&#34;nv&#34;&gt;CUDA_VISIBLE_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ./run_tod_lm_pretraining.sh &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进行训练，观察输出结果 &lt;code&gt;CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;训练过程中可以使用&lt;code&gt;crtl+b d&lt;/code&gt;从会话中分离&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux new -s inference_time_measure
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;detached &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;from session inference_time_measure&lt;span class=&#34;o&#34;&gt;)]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以查看当前的tmux会话并连接&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux ls
-inference_time_measure: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; windows &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;created Sun Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 23:26:48 2021&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;134x33&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-zym1: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; windows &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;created Sun Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 18:34:03 2021&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;148x45&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-zym2: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; windows &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;created Sun Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 18:34:44 2021&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;113x12&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux attach -t inference_time_measure
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;为了便于记录inference time，可以将bash命令中的输出全部写入txt文件，&lt;code&gt;script -a 1.txt&lt;/code&gt;，则之后shell中所有文字都将被记录在&lt;code&gt;1.txt&lt;/code&gt;中。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>在Nginx服务器上部署SSL证书</title>
-        <link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link>
-        <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid>
-        <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
-&lt;p&gt;在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。&lt;/p&gt;
-&lt;h2 id=&#34;下载证书并上传至云服务器&#34;&gt;下载证书并上传至云服务器&lt;/h2&gt;
-&lt;p&gt;在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 176; 
-			flex-basis: 423px&#34;
-	&gt;
-	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34; data-size=&#34;2736x1550&#34;&gt;
-		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg&#34;
-			width=&#34;2736&#34;
-			height=&#34;1550&#34;
-			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;SSL证书面板&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;SSL证书面板&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;zip包文件结构：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 128; 
-			flex-basis: 308px&#34;
-	&gt;
-	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34; data-size=&#34;342x266&#34;&gt;
-		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg&#34;
-			width=&#34;342&#34;
-			height=&#34;266&#34;
-			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;zip_struct&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;zip_struct&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 397; 
-			flex-basis: 954px&#34;
-	&gt;
-	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34; data-size=&#34;366x92&#34;&gt;
-		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg&#34;
-			width=&#34;366&#34;
-			height=&#34;92&#34;
-			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为&lt;code&gt;/etc/nginx&lt;/code&gt;：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="p">]],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">31&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">33&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意Numpy中元素编号从0开始，左侧包含右侧不包含&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>取单个元素&lt;code>x = a[1, 2]&lt;/code>，对应第0维的第1个元素&lt;code>4&lt;/code>&lt;/li>
+&lt;li>切片&lt;code>x = a[0:2, 1:3]&lt;/code>，对应第0维的第0~1个元素，第1维的第1~2个元素&lt;code>[[12 13], [22 23]]&lt;/code>&lt;/li>
+&lt;li>切片&lt;code>x = a[:2, 2:]&lt;/code>，对应对应第0维的最开始到第2（2-1）个元素，第1维的第2个及以后的所有元素&lt;code>[[13], [23]]&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="判断一个数组是否存在于另一个大数组内">判断一个数组是否存在于另一个大数组内&lt;/h2>
+&lt;p>直接使用&lt;code>==&lt;/code>会逐数字判断元素是否存在：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]])&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以改为&lt;code>(a == np.array([1, 2, 3])).all(1).any()&lt;/code>。y == z会将y的每一行与z的每个元素进行比较。 使用all(axis=1)可以获取所有元素匹配的行，并使用any()找出是否匹配。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]])&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]))&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]))&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">any&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出结果：&lt;/p>
+&lt;pre tabindex="0">&lt;code>[[ True True True]
+[False False False]]
+[ True False]
+True
+&lt;/code>&lt;/pre></description></item><item><title>Python 学习随记</title><link>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="python-module">Python Module&lt;/h2>
+&lt;h3 id="python-module-导入方法">Python Module 导入方法&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>import &amp;lt;module name&amp;gt;&lt;/code>调用这个方法导入的module中的函数时，需要&lt;code>&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;&lt;/code>格式进行使用&lt;/li>
+&lt;li>&lt;code>from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;&lt;/code>从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&lt;code>&amp;lt;sth&amp;gt;&lt;/code>就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。&lt;/li>
+&lt;li>&lt;code>from &amp;lt;module name&amp;gt; import *&lt;/code>将模块中所有对象引入，直接使用原模块中的名称即可使用&lt;/li>
+&lt;/ol>
+&lt;h3 id="搜索路径">搜索路径&lt;/h3>
+&lt;p>导入一个模块时，Python 解析器对模块位置的搜索顺序是：&lt;/p>
+&lt;ol>
+&lt;li>当前目录&lt;/li>
+&lt;li>如果不在当前目录，Python 则搜索在 shell 变量 &lt;code>PYTHONPATH&lt;/code> 下的每个目录。&lt;/li>
+&lt;li>如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为&lt;code>/usr/local/lib/python/&lt;/code>。
+模块搜索路径存储在 &lt;code>system&lt;/code> 模块的 &lt;code>sys.path&lt;/code> 变量中。变量里包含当前目录，&lt;code>PYTHONPATH&lt;/code>和由安装过程决定的默认目录。&lt;/li>
+&lt;/ol>
+&lt;h3 id="命名空间和作用域">命名空间和作用域&lt;/h3>
+&lt;ul>
+&lt;li>变量：名字与匹配对象的对应&lt;/li>
+&lt;li>命名空间：记录了所有名字-对象对应关系的字典&lt;/li>
+&lt;/ul>
+&lt;p>python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。
+使用&lt;code>global&lt;/code>语句可以告诉python变量属于全局变量。ex.&lt;code>global x&lt;/code>&lt;/p>
+&lt;h3 id="导入本地自定义包">导入本地自定义包&lt;/h3>
+&lt;p>文件结构&lt;/p>
+&lt;pre tabindex="0">&lt;code>main.py
+package
+|--__init__.py
+|--module1.py
+|--module2.py
+&lt;/code>&lt;/pre>&lt;p>包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。&lt;/p>
+&lt;p>简单来说，包就是文件夹，但该文件夹下必须存在&lt;code>__init__.py&lt;/code> 文件, 该文件的内容可以为空。&lt;code>__init__.py&lt;/code> 用于标识当前文件夹是一个包。&lt;/p>
+&lt;p>假设&lt;code>module1.py&lt;/code>中有函数&lt;code>func1()&lt;/code>，则在main函数中可以使用以下集中方式进行包导入：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>import mymodule.module1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>mymodule.module1.func1()&lt;/code>，前缀较长，比较繁琐。&lt;/li>
+&lt;li>&lt;code>import mymodule.module1 as m1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>m1.func1()&lt;/code>&lt;/li>
+&lt;li>&lt;code>from mymodule import module1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>module1.func1()&lt;/code>&lt;/li>
+&lt;/ol></description></item><item><title>大创对话系统21.11.22组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
+&lt;ol>
+&lt;li>设备选择：
+&lt;ol>
+&lt;li>主要参数：内存 GPU&lt;/li>
+&lt;li>设备：jetson更好
+&lt;ol>
+&lt;li>树莓派算力有限，人工智能框架支持不官方&lt;/li>
+&lt;li>jetson有关方支持&lt;/li>
+&lt;li>tensor+树莓派能媲美jetson+tensor&lt;/li>
+&lt;li>IO口&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Tod-BERT fine tune
+&lt;ol>
+&lt;li>精调后的inference time &amp;amp; 内存占用？&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>ToD-inference time 单位？&lt;/li>
+&lt;/ol>
+&lt;h2 id="任务">任务&lt;/h2>
+&lt;ol>
+&lt;li>树莓派装pytorch&lt;/li>
+&lt;li>ToD-BERT 在树莓派上训练、推理&lt;/li>
+&lt;li>ToD-BERT fine tune&lt;/li>
+&lt;li>ToD-BERT inference time
+&lt;ol>
+&lt;li>想测在一个卡上batch size = 1时候的推理时间&lt;/li>
+&lt;li>&lt;code>cuda.event&lt;/code>时间数值的单位？&lt;/li>
+&lt;li>&lt;code>time&lt;/code>包中测出来的时间？ 10ms级别&lt;/li>
+&lt;li>使用&lt;code>time&lt;/code>包测量的方法
+&lt;ol>
+&lt;li>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 194;
+flex-basis: 467px"
+>
+&lt;a href="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png" data-size="678x348">
+&lt;img src="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png"
+width="678"
+height="348"
+srcset="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_480x0_resize_box_3.png 480w, https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>服务器CPU运行测量 training
+&lt;ol>
+&lt;li>限制CPU核心数量4&lt;/li>
+&lt;li>batch size = 1，2，4&lt;/li>
+&lt;li>重新配置conda环境，安装CPU版本pytorch
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/94744929" target="_blank" rel="noopener"
+>配置conda环境教程&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>用&lt;code>time&lt;/code>模块测量&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>立项答辩
+&lt;ol>
+&lt;li>&lt;strong>突出动机&lt;/strong>&lt;/li>
+&lt;li>抓住评委兴趣&lt;/li>
+&lt;li>语速、文字减少，减少技术细节&lt;/li>
+&lt;li>突出重音、重点&lt;/li>
+&lt;li>每人提2条意见&lt;/li>
+&lt;li>应用场景&lt;/li>
+&lt;li>边缘端部署
+&lt;ol>
+&lt;li>内存需求&lt;/li>
+&lt;li>算力需求&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol></description></item><item><title>ToD-BERT 相关内容</title><link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid><description>&lt;h2 id="在服务器上运行tod-bert训练">在服务器上运行ToD-BERT训练&lt;/h2>
+&lt;ol>
+&lt;li>进入服务器，激活环境&lt;code>source activate todbert_env&lt;/code>&lt;/li>
+&lt;li>进入/media/HD1/dche/ToD-BERT文件夹&lt;code>cd /media/HD1/dche/ToD-BERT&lt;/code>&lt;/li>
+&lt;li>查看GPU资源占用情况&lt;code>nvidia-smi&lt;/code>，然后选择目前占用情况较低的一张GPU进行训练即可&lt;/li>
+&lt;li>运行训练shell脚本文件&lt;code>CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code>。根据第三步选择的几号卡，就把对应的0改成几，此处默认单卡训练。如果一切正常的话，再读入数据集数据后，就会开始训练了，有进度条出现就Ok了。常见的没跑起来的情况是CUDA out of memory。&lt;/li>
+&lt;/ol>
+&lt;h2 id="tod-bert本地调用">ToD-BERT本地调用&lt;/h2>
+&lt;ol>
+&lt;li>将ToD-BERT模型下载至本地&lt;/li>
+&lt;li>包含ToD-BERT所需的python包，并定义模型路径
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">torch&lt;/span>
+&lt;span class="kn">from&lt;/span> &lt;span class="nn">transformers&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="o">*&lt;/span>
+&lt;span class="n">BERT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">path_to_the_downloaded_tod&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">bert&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="c1"># 注意此处的路径要使用从根目录开始的绝对路径，而非从用户~目录开始的相对路径。&lt;/span>
+&lt;span class="n">model_class&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">tokenizer_class&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">config_class&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">BertModel&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">BertTokenizer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">BertConfig&lt;/span>
+&lt;span class="n">tokenizer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tokenizer_class&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">from_pretrained&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BERT&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">tod_bert&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">model_class&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">from_pretrained&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BERT&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>使用ToD-BERT文档中的示例
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="c1"># Encode text &lt;/span>
+&lt;span class="n">input_text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;[CLS] [SYS] Hello, what can I help with you today? [USR] Find me a cheap restaurant nearby the north town.&amp;#34;&lt;/span>
+&lt;span class="n">input_tokens&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tokenizer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">tokenize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">story&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Tensor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tokenizer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">convert_tokens_to_ids&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_tokens&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">long&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">story&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">story&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">story&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">unsqueeze&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># batch size dimension&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">is_available&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="n">tod_bert&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tod_bert&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">story&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">story&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">with&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">no_grad&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;span class="n">input_context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;input_ids&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">story&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;attention_mask&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">story&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">long&lt;/span>&lt;span class="p">()}&lt;/span>
+&lt;span class="n">hiddens&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tod_bert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="n">input_context&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="计算tod-bert推理时间延迟">计算ToD-BERT推理时间延迟&lt;/h2>
+&lt;h3 id="如何正确地计算">如何正确地计算&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/9b9d6782f90b" target="_blank" rel="noopener"
+>深度学习中如何正确地measure inference time&lt;/a>&lt;/p>
+&lt;p>问题：&lt;/p>
+&lt;ol>
+&lt;li>在进行多batch训练或推理的时候，batch1被送进GPU后，CPU由于异步执行，不再等待batch1在GPU内执行完毕，而是直接对batch2进行预处理，此时若使用python的time库，停止计算时间的代码将在GPU执行完毕前被执行，导致时长计算错误。&lt;/li>
+&lt;li>GPU在不工作时将关掉许多硬件模块，在调用GPU时需要重新初始化（GPU预热），占用大量时间，导致时间测算错误。&lt;/li>
+&lt;/ol>
+&lt;p>解决方法：&lt;/p>
+&lt;ol>
+&lt;li>在真正需要的example前运行几个example，使得GPU不再处于省电模式。&lt;/li>
+&lt;li>使用&lt;code>tr.cuda.event&lt;/code>，在GPU上测量时间&lt;/li>
+&lt;li>使用函数&lt;code>torch.cuda.synchronize()&lt;/code>，使得CPU和GPU工作在同步执行模式。&lt;/li>
+&lt;/ol>
+&lt;h3 id="在服务器上进行inference并计算inference时间">在服务器上进行inference并计算inference时间&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>在&lt;code>run_tod_lm_pretraining.sh&lt;/code>文件中修改&lt;code>batch size = 1&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nv">gpu&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;span class="nv">model_type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$2&lt;/span>
+&lt;span class="nv">bert_dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$3&lt;/span>
+&lt;span class="nv">output_dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$4&lt;/span>
+&lt;span class="nv">add1&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$5&lt;/span>
+&lt;span class="nv">add2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$6&lt;/span>
+&lt;span class="nv">add3&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$7&lt;/span>
+&lt;span class="nv">add4&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$8&lt;/span>
+&lt;span class="nv">add5&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$9&lt;/span>
+&lt;span class="c1"># ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn&lt;/span>
+&lt;span class="c1"># ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-JNT --only_last_turn --add_rs_loss&lt;/span>
+&lt;span class="nv">CUDA_VISIBLE_DEVICES&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> python my_tod_pretraining.py &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --task&lt;span class="o">=&lt;/span>usdl &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --model_type&lt;span class="o">=&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">model_type&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --model_name_or_path&lt;span class="o">=&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">bert_dir&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --output_dir&lt;span class="o">=&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">output_dir&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --do_train &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --do_eval &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --mlm &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --do_lower_case &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --evaluate_during_training &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --save_steps&lt;span class="o">=&lt;/span>&lt;span class="m">2500&lt;/span> --logging_steps&lt;span class="o">=&lt;/span>&lt;span class="m">1000&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> --per_gpu_train_batch_size&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> --per_gpu_eval_batch_size&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">add1&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">add2&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">add3&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">add4&lt;/span>&lt;span class="si">}&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">add5&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>使用上文办法，在&lt;code>my_tod_pretraining.py&lt;/code>中引入计时相关语句：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="c1">## with only MLM loss&lt;/span>
+&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">starter&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ender&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Event&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">enable_timing&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">True&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Event&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">enable_timing&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">inputs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">batch&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;context&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">clone&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mlm&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">labels&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mask_tokens&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">tokenizer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">inputs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">labels&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">labels&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">device&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">starter&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">record&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">outputs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">model&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">masked_lm_labels&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">labels&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">attention_mask&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">ender&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">record&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="c1"># WAIT FOR GPU SYNC&lt;/span>
+&lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cuda&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">synchronize&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">curr_time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">starter&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">elapsed_time&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ender&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">curr_time&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>由于训练时间较长，使用&lt;code>tmux&lt;/code>命令：&lt;code>tmux new -s inference_time_measure&lt;/code>，进入tmux回话后还需要重新激活虚拟环境。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="se">\(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ &lt;span class="nv">CUDA_VISIBLE_DEVICES&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> ./run_tod_lm_pretraining.sh &lt;span class="m">0&lt;/span> bert bert-base-uncased save/prtrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
+Traceback &lt;span class="o">(&lt;/span>most recent call last&lt;span class="o">)&lt;/span>:
+File &lt;span class="s2">&amp;#34;/media/HD1/dche/ToD-BERT/my_tod_pretraining.py&amp;#34;&lt;/span>, line 16, in &amp;lt;module&amp;gt;
+import numpy as np
+ModuleNotFoundError: No module named &lt;span class="s1">&amp;#39;numpy&amp;#39;&lt;/span>
+&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda info --env
+&lt;span class="c1"># conda environments:&lt;/span>
+&lt;span class="c1">#&lt;/span>
+base * /media/HD1/dche/miniconda3
+sum_env /media/HD1/dche/miniconda3/envs/sum_env
+tod_bert /media/HD1/dche/miniconda3/envs/tod_bert
+/media/HD1/miniconda3
+&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ conda activate tod_bert
+&lt;span class="o">(&lt;/span>tod_bert&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ &lt;span class="nv">CUDA_VISIBLE_DEVICES&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> ./run_tod_lm_pretraining.sh &lt;span class="m">0&lt;/span> bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>进行训练，观察输出结果 &lt;code>CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>训练过程中可以使用&lt;code>crtl+b d&lt;/code>从会话中分离&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>tod_bert&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux new -s inference_time_measure
+&lt;span class="o">[&lt;/span>detached &lt;span class="o">(&lt;/span>from session inference_time_measure&lt;span class="o">)]&lt;/span>
+&lt;span class="o">(&lt;/span>tod_bert&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>可以查看当前的tmux会话并连接&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>tod_bert&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux ls
+inference_time_measure: &lt;span class="m">1&lt;/span> windows &lt;span class="o">(&lt;/span>created Sun Nov &lt;span class="m">21&lt;/span> 23:26:48 2021&lt;span class="o">)&lt;/span> &lt;span class="o">[&lt;/span>134x33&lt;span class="o">]&lt;/span>
+zym1: &lt;span class="m">1&lt;/span> windows &lt;span class="o">(&lt;/span>created Sun Nov &lt;span class="m">21&lt;/span> 18:34:03 2021&lt;span class="o">)&lt;/span> &lt;span class="o">[&lt;/span>148x45&lt;span class="o">]&lt;/span>
+zym2: &lt;span class="m">1&lt;/span> windows &lt;span class="o">(&lt;/span>created Sun Nov &lt;span class="m">21&lt;/span> 18:34:44 2021&lt;span class="o">)&lt;/span> &lt;span class="o">[&lt;/span>113x12&lt;span class="o">]&lt;/span>
+&lt;span class="o">(&lt;/span>tod_bert&lt;span class="o">)&lt;/span> dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux attach -t inference_time_measure
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>为了便于记录inference time，可以将bash命令中的输出全部写入txt文件，&lt;code>script -a 1.txt&lt;/code>，则之后shell中所有文字都将被记录在&lt;code>1.txt&lt;/code>中。&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>在Nginx服务器上部署SSL证书</title><link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid><description>&lt;h2 id="申请证书">申请证书&lt;/h2>
+&lt;p>在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。&lt;/p>
+&lt;h2 id="下载证书并上传至云服务器">下载证书并上传至云服务器&lt;/h2>
+&lt;p>在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 176;
+flex-basis: 423px"
+>
+&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg" data-size="2736x1550">
+&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg"
+width="2736"
+height="1550"
+srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="SSL证书面板">
+&lt;/a>
+&lt;figcaption>SSL证书面板&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>zip包文件结构：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 128;
+flex-basis: 308px"
+>
+&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg" data-size="342x266">
+&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg"
+width="342"
+height="266"
+srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="zip_struct">
+&lt;/a>
+&lt;figcaption>zip_struct&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 397;
+flex-basis: 954px"
+>
+&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg" data-size="366x92">
+&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg"
+width="366"
+height="92"
+srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为&lt;code>/etc/nginx&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx
 root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx
-root@VM-24-3-ubuntu:/# &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/nginx
+root@VM-24-3-ubuntu:/# &lt;span class="nb">cd&lt;/span> /etc/nginx
 root@VM-24-3-ubuntu:/etc/nginx# ll -s
-total &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 10:05 ./
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x &lt;span class=&#34;m&#34;&gt;115&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 ../
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-rw-r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; ubuntu ubuntu &lt;span class=&#34;m&#34;&gt;3921&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 08:37 1_comfluter.life_bundle.crt
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-rw-r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; ubuntu ubuntu &lt;span class=&#34;m&#34;&gt;1700&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 08:37 2_comfluter.life.key
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:48 conf.d/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1077&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; fastcgi.conf
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1007&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; fastcgi_params
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;2837&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; koi-utf
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;2223&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; koi-win
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;3957&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; mime.types
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; May &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; 01:10 modules-available/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 modules-enabled/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;1512&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:53 nginx.conf
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;180&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; proxy_params
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;636&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; scgi_params
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:40 sites-available/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 16:48 sites-enabled/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; drwxr-xr-x   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Nov &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; 15:50 snippets/
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root    &lt;span class=&#34;m&#34;&gt;664&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; uwsgi_params
-&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -rw-r--r--   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root   root   &lt;span class=&#34;m&#34;&gt;3071&lt;/span&gt; Feb  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2019&lt;/span&gt; win-utf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;编辑nginx服务器配置&#34;&gt;编辑Nginx服务器配置&lt;/h2&gt;
-&lt;p&gt;更改&lt;code&gt;/etc/nginx/sites-enabled&lt;/code&gt;下服务器配置文件：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
-    listen 443 ssl;
-    #填写绑定证书的域名
-    server_name comfluter.life; 
-    #证书文件名称
-    ssl_certificate  1_comfluter.life_bundle.crt; 
-    #私钥文件名称
-    ssl_certificate_key 2_comfluter.life.key; 
-    ssl_session_timeout 5m;
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    location / {
-            #网站主页路径。此路径仅供参考，具体请您按照实际目录操作。 
-            #例如，您的网站运行目录在/etc/www下，则填写/etc/www。
-        root /home/ubuntu/www/Blogs/Personal;
-        index index.html index.htm;
-    }
+total &lt;span class="m">80&lt;/span>
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">8&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">21&lt;/span> 10:05 ./
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">115&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 15:50 ../
+&lt;span class="m">4&lt;/span> -rw-rw-r-- &lt;span class="m">1&lt;/span> ubuntu ubuntu &lt;span class="m">3921&lt;/span> Nov &lt;span class="m">21&lt;/span> 08:37 1_comfluter.life_bundle.crt
+&lt;span class="m">4&lt;/span> -rw-rw-r-- &lt;span class="m">1&lt;/span> ubuntu ubuntu &lt;span class="m">1700&lt;/span> Nov &lt;span class="m">21&lt;/span> 08:37 2_comfluter.life.key
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 16:48 conf.d/
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">1077&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> fastcgi.conf
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">1007&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> fastcgi_params
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">2837&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> koi-utf
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">2223&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> koi-win
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">3957&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> mime.types
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> May &lt;span class="m">26&lt;/span> 01:10 modules-available/
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 15:50 modules-enabled/
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">1512&lt;/span> Nov &lt;span class="m">15&lt;/span> 16:53 nginx.conf
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">180&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> proxy_params
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">636&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> scgi_params
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 16:40 sites-available/
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 16:48 sites-enabled/
+&lt;span class="m">4&lt;/span> drwxr-xr-x &lt;span class="m">2&lt;/span> root root &lt;span class="m">4096&lt;/span> Nov &lt;span class="m">15&lt;/span> 15:50 snippets/
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">664&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> uwsgi_params
+&lt;span class="m">4&lt;/span> -rw-r--r-- &lt;span class="m">1&lt;/span> root root &lt;span class="m">3071&lt;/span> Feb &lt;span class="m">4&lt;/span> &lt;span class="m">2019&lt;/span> win-utf
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="编辑nginx服务器配置">编辑Nginx服务器配置&lt;/h2>
+&lt;p>更改&lt;code>/etc/nginx/sites-enabled&lt;/code>下服务器配置文件：&lt;/p>
+&lt;pre tabindex="0">&lt;code>server {
+listen 443 ssl;
+#填写绑定证书的域名
+server_name comfluter.life;
+#证书文件名称
+ssl_certificate 1_comfluter.life_bundle.crt;
+#私钥文件名称
+ssl_certificate_key 2_comfluter.life.key;
+ssl_session_timeout 5m;
+ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+ssl_prefer_server_ciphers on;
+location / {
+#网站主页路径。此路径仅供参考，具体请您按照实际目录操作。
+#例如，您的网站运行目录在/etc/www下，则填写/etc/www。
+root /home/ubuntu/www/Blogs/Personal;
+index index.html index.htm;
+}
 }
 server {
-    listen 80;
-    #填写绑定证书的域名
-    server_name comfluter.life; 
-    #把http的域名请求转成https
-    return 301 https://$host$request_uri; 
+listen 80;
+#填写绑定证书的域名
+server_name comfluter.life;
+#把http的域名请求转成https
+return 301 https://$host$request_uri;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置中前半部分为https网页服务，后半部分为将http请求重定向至https请求&lt;/p&gt;
-&lt;p&gt;验证配置文件：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@VM-24-3-ubuntu:/etc/nginx# nginx -t
+&lt;/code>&lt;/pre>&lt;p>配置中前半部分为https网页服务，后半部分为将http请求重定向至https请求&lt;/p>
+&lt;p>验证配置文件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">root@VM-24-3-ubuntu:/etc/nginx# nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; is successful
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启Nginx服务器：&lt;code&gt;nginx -s reload&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;https访问&#34;&gt;https访问！&lt;/h2&gt;
-&lt;p&gt;此时输入&lt;code&gt;comfluter.life&lt;/code&gt;访问时即可看到已经是https连接&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 657; 
-			flex-basis: 1577px&#34;
-	&gt;
-	&lt;a href=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34; data-size=&#34;368x56&#34;&gt;
-		&lt;img src=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg&#34;
-			width=&#34;368&#34;
-			height=&#34;56&#34;
-			srcset=&#34;https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;debugging&#34;&gt;Debugging&lt;/h2&gt;
-&lt;p&gt;更改成为https连接后博客的搜索功能出现问题，浏览器提示提交的表单不安全并阻止了搜索表单的提交。问题在于没有更改hugo博客配置文件中的&lt;code&gt;baseURL&lt;/code&gt;字段，将其改为&lt;code&gt;baseurl: https://comfluter.life&lt;/code&gt;即可解决。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Hello, World!</title>
-        <link>https://comfluter.life/p/hello-world/</link>
-        <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://comfluter.life/p/hello-world/</guid>
-        <description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" /&gt;&lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
-&lt;p&gt;在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p&gt;
-&lt;p&gt;在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p&gt;
-&lt;p&gt;第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p&gt;
-&lt;p&gt;此外，也是最近在学习计算机网络的相关课程。从之前分不清HTTP、URL、TCP等等名词之间的关系的状态一步步地了解了网络的各个方面，而因为课程设计原因深感实践不足。云服务器的配置、连接、博客的搭建与部署、域名的申请与域名解析配置等等正好为动手实践课程内容提供了一个极佳的机会。在搭建服务器、部署博客的过程中也确实不断地将课本中抽象的知识落到实处。&lt;/p&gt;
-&lt;p&gt;最后，可能也是最近受龄的影响，觉得自己不能再一天天想着GPA就惶惶不可终日。成天担心对成绩的影响而束手束脚，投入了过多不必要的时间在课业的细枝末节上，生怕漏掉一小点就会有多么大的影响。现在我觉得比较好的态度是：应该投入的时间，我保证投入。除此之外，偶然性是必然有的，考试中等等可能出现的意外情况、偏门的微末之处，实在无必要，也无意义为了它们投入大量的时间。投入了，也不能保证最后的结果。与其如此，正如闫锋老师说的，不如让自己真正做点实在的事出来，在实践中学习，在实践中收获，在主动地做事情的过程当中发挥自己心灵的能动性，让自己过得由己、恣肆、多彩一些。&lt;/p&gt;
-&lt;p&gt;因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。&lt;/p&gt;
-&lt;h2 id=&#34;建站小记&#34;&gt;建站小记&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;21.11.05 购买腾讯云服务器、购买域名&lt;code&gt;comfluter.life&lt;/code&gt;，熟悉linux服务器操作与hugo工具基本使用&lt;/li&gt;
-&lt;li&gt;21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。&lt;/li&gt;
-&lt;li&gt;21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。&lt;/li&gt;
-&lt;li&gt;21.11.19 由于使用主题时采用了&lt;code&gt;git submodule&lt;/code&gt;的方式，而github同步时不同步submodule导致各种错误，重新使用&lt;code&gt;git clone&lt;/code&gt;方式引入了主题，重新搭建了博客与github repo，并配置github actions。&lt;/li&gt;
-&lt;li&gt;21.11.19 解决github actions css无法加载问题，使用&lt;code&gt;git submodule&lt;/code&gt;直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。&lt;/li&gt;
-&lt;li&gt;21.11.19 写下这篇hello world文档。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;云服务器&lt;/li&gt;
-&lt;li&gt;Linux命令行&lt;/li&gt;
-&lt;li&gt;git命令行操作&lt;/li&gt;
-&lt;li&gt;git submodule&lt;/li&gt;
-&lt;li&gt;github全流程&lt;/li&gt;
-&lt;li&gt;github pages&lt;/li&gt;
-&lt;li&gt;github actions&lt;/li&gt;
-&lt;li&gt;hugo使用&lt;/li&gt;
-&lt;li&gt;域名配置与域名解析&lt;/li&gt;
-&lt;li&gt;防火墙配置&lt;/li&gt;
-&lt;li&gt;Nginx服务器搭建&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p&gt;
-&lt;p&gt;希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p&gt;
-&lt;h2 id=&#34;link&#34;&gt;link&lt;/h2&gt;
-&lt;p&gt;built with hugo and using theme &amp;ldquo;Stack&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack Chinese documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tablericons.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;icons&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+nginx: configuration file /etc/nginx/nginx.conf &lt;span class="nb">test&lt;/span> is successful
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>重启Nginx服务器：&lt;code>nginx -s reload&lt;/code>&lt;/p>
+&lt;h2 id="https访问">https访问！&lt;/h2>
+&lt;p>此时输入&lt;code>comfluter.life&lt;/code>访问时即可看到已经是https连接&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 657;
+flex-basis: 1577px"
+>
+&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg" data-size="368x56">
+&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg"
+width="368"
+height="56"
+srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="debugging">Debugging&lt;/h2>
+&lt;p>更改成为https连接后博客的搜索功能出现问题，浏览器提示提交的表单不安全并阻止了搜索表单的提交。问题在于没有更改hugo博客配置文件中的&lt;code>baseURL&lt;/code>字段，将其改为&lt;code>baseurl: https://comfluter.life&lt;/code>即可解决。&lt;/p></description></item><item><title>重听《成像世界的奇境》</title><link>https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</guid><description>&lt;h2 id="211122-锁链">21.11.22 锁链&lt;/h2>
+&lt;ul>
+&lt;li>香农-奈奎斯特采样定律&lt;/li>
+&lt;li>测量：测不准原理
+&lt;ul>
+&lt;li>高速成像：
+&lt;ul>
+&lt;li>STEAM：10e-10 second 时间分辨率&lt;/li>
+&lt;li>STAMP：10e-12 second&lt;/li>
+&lt;li>最先进：10e-15 second 接近电子转移过程的时长！&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="information-in-imaging">information in imaging&lt;/h3>
+&lt;ul>
+&lt;li>香农：硕士论文：信息学开山
+&lt;ul>
+&lt;li>做一些无聊的事？还是有自己独特的思考？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>yes and no question
+How many questions (y/n) must you ask to ensure the color of the ball you have?&lt;/p>
+&lt;ol>
+&lt;li>8 red balls?&lt;/li>
+&lt;li>4 red &amp;amp; 2 blue &amp;amp; 1 black &amp;amp; 1 white?&lt;/li>
+&lt;li>2 red &amp;amp; 2 blue &amp;amp; 2 black &amp;amp; 2 white?&lt;/li>
+&lt;/ol>
+&lt;h4 id="香农信息熵">香农信息熵&lt;/h4>
+&lt;p>傅里叶变换的信息损失？&lt;/p>
+&lt;ul>
+&lt;li>取傅里叶变换的过程中，可以有位深&lt;/li>
+&lt;li>二维傅里叶变换，可以通过幅度反演相位&lt;/li>
+&lt;li>取傅里叶变换再取反变换？相似度有多高？
+&lt;ul>
+&lt;li>SSMS&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>傅里叶变换过后低频信息密集，高频信息稀疏。&lt;/li>
+&lt;/ul>
+&lt;p>JPEG压缩：压缩低频信息，让步给高频信息&lt;/p>
+&lt;p>Signal Sparsity
+图像中不是每一个频率都要进行采样！可以抽出傅里叶变换中影响比较大的信息量。&lt;/p>
+&lt;ul>
+&lt;li>Compressive sensing
+&lt;ul>
+&lt;li>通过采样稀疏的键值信号，尽可能好地还原信号&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Hello, World!</title><link>https://comfluter.life/p/hello-world/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/hello-world/</guid><description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
+&lt;p>在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p>
+&lt;p>在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p>
+&lt;p>第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p>
+&lt;p>此外，也是最近在学习计算机网络的相关课程。从之前分不清HTTP、URL、TCP等等名词之间的关系的状态一步步地了解了网络的各个方面，而因为课程设计原因深感实践不足。云服务器的配置、连接、博客的搭建与部署、域名的申请与域名解析配置等等正好为动手实践课程内容提供了一个极佳的机会。在搭建服务器、部署博客的过程中也确实不断地将课本中抽象的知识落到实处。&lt;/p>
+&lt;p>最后，可能也是最近受龄的影响，觉得自己不能再一天天想着GPA就惶惶不可终日。成天担心对成绩的影响而束手束脚，投入了过多不必要的时间在课业的细枝末节上，生怕漏掉一小点就会有多么大的影响。现在我觉得比较好的态度是：应该投入的时间，我保证投入。除此之外，偶然性是必然有的，考试中等等可能出现的意外情况、偏门的微末之处，实在无必要，也无意义为了它们投入大量的时间。投入了，也不能保证最后的结果。与其如此，正如闫锋老师说的，不如让自己真正做点实在的事出来，在实践中学习，在实践中收获，在主动地做事情的过程当中发挥自己心灵的能动性，让自己过得由己、恣肆、多彩一些。&lt;/p>
+&lt;p>因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。&lt;/p>
+&lt;h2 id="建站小记">建站小记&lt;/h2>
+&lt;ul>
+&lt;li>21.11.05 购买腾讯云服务器、购买域名&lt;code>comfluter.life&lt;/code>，熟悉linux服务器操作与hugo工具基本使用&lt;/li>
+&lt;li>21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。&lt;/li>
+&lt;li>21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。&lt;/li>
+&lt;li>21.11.19 由于使用主题时采用了&lt;code>git submodule&lt;/code>的方式，而github同步时不同步submodule导致各种错误，重新使用&lt;code>git clone&lt;/code>方式引入了主题，重新搭建了博客与github repo，并配置github actions。&lt;/li>
+&lt;li>21.11.19 解决github actions css无法加载问题，使用&lt;code>git submodule&lt;/code>直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。&lt;/li>
+&lt;li>21.11.19 写下这篇hello world文档。&lt;/li>
+&lt;/ul>
+&lt;p>动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：&lt;/p>
+&lt;ol>
+&lt;li>云服务器&lt;/li>
+&lt;li>Linux命令行&lt;/li>
+&lt;li>git命令行操作&lt;/li>
+&lt;li>git submodule&lt;/li>
+&lt;li>github全流程&lt;/li>
+&lt;li>github pages&lt;/li>
+&lt;li>github actions&lt;/li>
+&lt;li>hugo使用&lt;/li>
+&lt;li>域名配置与域名解析&lt;/li>
+&lt;li>防火墙配置&lt;/li>
+&lt;li>Nginx服务器搭建&lt;/li>
+&lt;/ol>
+&lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p>
+&lt;h2 id="link">link&lt;/h2>
+&lt;p>built with hugo and using theme &amp;ldquo;Stack&amp;rdquo;&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
+>Stack Chinese documentation&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
+>icons&lt;/a>&lt;/p></description></item></channel></rss>

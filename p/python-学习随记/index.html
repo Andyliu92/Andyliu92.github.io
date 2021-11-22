@@ -1,0 +1,205 @@
+<!doctype html><html lang=en>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
+ 当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
+导入本地自定义包 文件结构
+main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
+假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
+ import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1."><title>Python 学习随记</title>
+<link rel=canonical href=https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Python 学习随记">
+<meta property="og:description" content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
+ 当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
+导入本地自定义包 文件结构
+main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
+假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
+ import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1.">
+<meta property="og:url" content="https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/">
+<meta property="og:site_name" content="知止堂">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Python"><meta property="article:tag" content="随记"><meta property="article:published_time" content="2021-11-22T00:00:00+00:00"><meta property="article:modified_time" content="2021-11-22T00:00:00+00:00">
+<meta name=twitter:title content="Python 学习随记">
+<meta name=twitter:description content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
+ 当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
+导入本地自定义包 文件结构
+main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
+假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
+ import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1.">
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E5%AD%A6%E4%B9%A0/>
+学习
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>Python 学习随记</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 22, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+1 minute read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=python-module>Python Module</h2>
+<h3 id=python-module-导入方法>Python Module 导入方法</h3>
+<ol>
+<li><code>import &lt;module name></code>调用这个方法导入的module中的函数时，需要<code>&lt;module name>.&lt;function name></code>格式进行使用</li>
+<li><code>from &lt;module name> import &lt;sth></code>从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用<code>&lt;sth></code>就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。</li>
+<li><code>from &lt;module name> import *</code>将模块中所有对象引入，直接使用原模块中的名称即可使用</li>
+</ol>
+<h3 id=搜索路径>搜索路径</h3>
+<p>导入一个模块时，Python 解析器对模块位置的搜索顺序是：</p>
+<ol>
+<li>当前目录</li>
+<li>如果不在当前目录，Python 则搜索在 shell 变量 <code>PYTHONPATH</code> 下的每个目录。</li>
+<li>如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为<code>/usr/local/lib/python/</code>。
+模块搜索路径存储在 <code>system</code> 模块的 <code>sys.path</code> 变量中。变量里包含当前目录，<code>PYTHONPATH</code>和由安装过程决定的默认目录。</li>
+</ol>
+<h3 id=命名空间和作用域>命名空间和作用域</h3>
+<ul>
+<li>变量：名字与匹配对象的对应</li>
+<li>命名空间：记录了所有名字-对象对应关系的字典</li>
+</ul>
+<p>python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。
+使用<code>global</code>语句可以告诉python变量属于全局变量。ex.<code>global x</code></p>
+<h3 id=导入本地自定义包>导入本地自定义包</h3>
+<p>文件结构</p>
+<pre tabindex=0><code>main.py
+package
+|--__init__.py
+|--module1.py
+|--module2.py
+</code></pre><p>包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。</p>
+<p>简单来说，包就是文件夹，但该文件夹下必须存在<code>__init__.py</code> 文件, 该文件的内容可以为空。<code>__init__.py</code> 用于标识当前文件夹是一个包。</p>
+<p>假设<code>module1.py</code>中有函数<code>func1()</code>，则在main函数中可以使用以下集中方式进行包导入：</p>
+<ol>
+<li><code>import mymodule.module1</code>此时对应<code>func1()</code>的调用为<code>mymodule.module1.func1()</code>，前缀较长，比较繁琐。</li>
+<li><code>import mymodule.module1 as m1</code>此时对应<code>func1()</code>的调用为<code>m1.func1()</code></li>
+<li><code>from mymodule import module1</code>此时对应<code>func1()</code>的调用为<code>module1.func1()</code></li>
+</ol>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/python/>Python</a>
+<a href=/tags/%E9%9A%8F%E8%AE%B0/>随记</a>
+</section>
+</footer>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<div class=article-details>
+<h2 class=article-title>Numpy 学习随记</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/>
+<div class=article-details>
+<h2 class=article-title>重听《成像世界的奇境》</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 知止堂
+</section>
+<section class=powerby>
+京ICP备2021035515号 <br>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#python-module>Python Module</a>
+<ol>
+<li><a href=#python-module-导入方法>Python Module 导入方法</a></li>
+<li><a href=#搜索路径>搜索路径</a></li>
+<li><a href=#命名空间和作用域>命名空间和作用域</a></li>
+<li><a href=#导入本地自定义包>导入本地自定义包</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

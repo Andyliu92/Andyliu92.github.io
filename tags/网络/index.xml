@@ -1,28 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>网络 on 知止堂</title>
-    <link>https://comfluter.life/tags/%E7%BD%91%E7%BB%9C/</link>
-    <description>Recent content in 网络 on 知止堂</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>在Nginx服务器上部署SSL证书</title>
-      <link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link>
-      <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid>
-      <description>申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on 知止堂</title><link>https://comfluter.life/tags/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>在Nginx服务器上部署SSL证书</title><link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid><description>申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
 下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
- SSL证书面板 
+SSL证书面板
 zip包文件结构：
- zip_struct 
+zip_struct
 由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
- 
 将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
-root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.</description>
-    </item>
-    
-  </channel>
-</rss>
+root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.</description></item></channel></rss>
