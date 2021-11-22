@@ -6,7 +6,7 @@
         <description>Recent content on 知止堂</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ToD-BERT 相关内容</title>
         <link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link>
         <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
@@ -154,6 +154,9 @@ zym1: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; windows &lt;span class=&#34;o
 zym2: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; windows &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;created Sun Nov &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 18:34:44 2021&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;113x12&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;tod_bert&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; dialogue@amax-13:/media/HD1/dche/ToD-BERT$ tmux attach -t inference_time_measure
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为了便于记录inference time，可以将bash命令中的输出全部写入txt文件，&lt;code&gt;script -a 1.txt&lt;/code&gt;，则之后shell中所有文字都将被记录在&lt;code&gt;1.txt&lt;/code&gt;中。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         </item>
