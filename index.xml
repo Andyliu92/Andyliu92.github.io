@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
+&lt;p>using vscode extension &lt;code>Verilog-HDL/SystemVerilog/Bluespec SystemVerilog&lt;/code>.&lt;/p>
+&lt;p>using &lt;code>iverilog&lt;/code>&lt;/p>
+&lt;p>go to extension settings and set &lt;code>verilog &amp;gt; linting : linter = iverilog&lt;/code>&lt;/p>
+&lt;p>then the linting function should work for verilog files.&lt;/p>
+&lt;p>Notice:&lt;/p>
+&lt;ul>
+&lt;li>the dir to verilog file should not contain chinese characters and spaces.&lt;/li>
+&lt;li>if you imported module from other file without ``include&lt;code>command, iverilog willl report an error. As it is always the case when using vivado, add&lt;/code>-i&lt;code>to extention setting&lt;/code>Verilog › Linting › Iverilog: Arguments` to ignore this error.&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338497672" target="_blank" rel="noopener"
+>用VSCode编辑verilog代码、iverilog编译、自动例化、自动补全、自动格式化等常用插件&lt;/a>&lt;/p></description></item><item><title>Vivado 学习随记</title><link>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="multi-module-project">Multi-module Project&lt;/h2>
+&lt;p>Just write two verilog files and instantiate a module specified in the other file, the vivado will figure out the dependencies automatically.&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="anaconda新建环境">Anaconda新建环境&lt;/h2>
+&lt;ol>
+&lt;li>检查python版本&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:~$ python --version
+Python 3.9.5
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>Anaconda 创建新环境&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:~$ conda create -n tod_bert_cpu &lt;span class="nv">python&lt;/span>&lt;span class="o">=&lt;/span>3.9.5
+Collecting package metadata &lt;span class="o">(&lt;/span>current_repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata &lt;span class="o">(&lt;/span>repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
+Solving environment: &lt;span class="k">done&lt;/span>
+&lt;span class="c1">## Package Plan ##&lt;/span>
+environment location: /media/HD1/dche/miniconda3/envs/tod_bert_cpu
+added / updated specs:
+- &lt;span class="nv">python&lt;/span>&lt;span class="o">=&lt;/span>3.9.5
+The following packages will be downloaded:
+&lt;span class="p">|&lt;/span> package &lt;span class="p">|&lt;/span> build &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> ----------------- &lt;span class="p">|&lt;/span> ----------------------------- &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> certifi-2021.10.8 &lt;span class="p">|&lt;/span> py39h06a4308_0 &lt;span class="m">151&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> pip-21.2.4 &lt;span class="p">|&lt;/span> py39h06a4308_0 1.8 MB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> setuptools-58.0.4 &lt;span class="p">|&lt;/span> py39h06a4308_0 &lt;span class="m">790&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> tzdata-2021e &lt;span class="p">|&lt;/span> hda174b7_0 &lt;span class="m">112&lt;/span> KB &lt;span class="p">|&lt;/span>
+------------------------------------------------------------
+Total: 2.8 MB
+The following NEW packages will be INSTALLED:
+_libgcc_mutex pkgs/main/linux-64::_libgcc_mutex-0.1-main
+_openmp_mutex pkgs/main/linux-64::_openmp_mutex-4.5-1_gnu
+ca-certificates pkgs/main/linux-64::ca-certificates-2021.10.26-h06a4308_2
+certifi pkgs/main/linux-64::certifi-2021.10.8-py39h06a4308_0
+ld_impl_linux-64 pkgs/main/linux-64::ld_impl_linux-64-2.35.1-h7274673_9
+libffi pkgs/main/linux-64::libffi-3.3-he6710b0_2
+libgcc-ng pkgs/main/linux-64::libgcc-ng-9.3.0-h5101ec6_17
+libgomp pkgs/main/linux-64::libgomp-9.3.0-h5101ec6_17
+libstdcxx-ng pkgs/main/linux-64::libstdcxx-ng-9.3.0-hd4cf53a_17
+ncurses pkgs/main/linux-64::ncurses-6.3-h7f8727e_2
+openssl pkgs/main/linux-64::openssl-1.1.1l-h7f8727e_0
+pip pkgs/main/linux-64::pip-21.2.4-py39h06a4308_0
+python pkgs/main/linux-64::python-3.9.5-h12debd9_4
+readline pkgs/main/linux-64::readline-8.1-h27cfd23_0
+setuptools pkgs/main/linux-64::setuptools-58.0.4-py39h06a4308_0
+sqlite pkgs/main/linux-64::sqlite-3.36.0-hc218d9a_0
+tk pkgs/main/linux-64::tk-8.6.11-h1ccaba5_0
+tzdata pkgs/main/noarch::tzdata-2021e-hda174b7_0
+wheel pkgs/main/noarch::wheel-0.37.0-pyhd3eb1b0_1
+xz pkgs/main/linux-64::xz-5.2.5-h7b6447c_0
+zlib pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3
+Proceed &lt;span class="o">([&lt;/span>y&lt;span class="o">]&lt;/span>/n&lt;span class="o">)&lt;/span>? y
+Downloading and Extracting Packages
+setuptools-58.0.4 &lt;span class="p">|&lt;/span> &lt;span class="m">790&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+certifi-2021.10.8 &lt;span class="p">|&lt;/span> &lt;span class="m">151&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+tzdata-2021e &lt;span class="p">|&lt;/span> &lt;span class="m">112&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+pip-21.2.4 &lt;span class="p">|&lt;/span> 1.8 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+Preparing transaction: &lt;span class="k">done&lt;/span>
+Verifying transaction: &lt;span class="k">done&lt;/span>
+Executing transaction: &lt;span class="k">done&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># To activate this environment, use&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># $ conda activate tod_bert_cpu&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># To deactivate an active environment, use&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># $ conda deactivate&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>激活环境&lt;/li>
+&lt;/ol></description></item><item><title>OpenCV with Python</title><link>https://comfluter.life/p/opencv-with-python/</link><pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-with-python/</guid><description>&lt;h2 id="安装opencv">安装OpenCV&lt;/h2>
+&lt;p>Python中使用pip安装时的命令为&lt;code>pip install opencv-python&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="p">(.&lt;/span>&lt;span class="n">venv&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nb">PS &lt;/span>&lt;span class="n">D:&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">Work&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">04&lt;/span> &lt;span class="n">Research&lt;/span> &lt;span class="n">Project&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">21&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">08&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">19&lt;/span> &lt;span class="n">Early&lt;/span> &lt;span class="n">Visual&lt;/span> &lt;span class="n">Processing&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">pyspice&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">pip&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
+&lt;span class="n">Collecting&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
+&lt;span class="n">Downloading&lt;/span> &lt;span class="n">opencv_python&lt;/span>&lt;span class="p">-&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">60-cp39-cp39-win_amd64&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">whl&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">35&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="n">MB&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">|&lt;/span>&lt;span class="err">████████████████████████████████&lt;/span>&lt;span class="p">|&lt;/span> &lt;span class="n">35&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="n">MB&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="n">MB&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">s&lt;/span>
+&lt;span class="n">Requirement&lt;/span> &lt;span class="n">already&lt;/span> &lt;span class="n">satisfied&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="n">numpy&lt;/span>&lt;span class="p">&amp;gt;=&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">19&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">c:&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">programming&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">lib&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="nb">site-packages&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span> &lt;span class="nb">opencv-python&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">21&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">Installing&lt;/span> &lt;span class="n">collected&lt;/span> &lt;span class="n">packages&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
+&lt;span class="n">Successfully&lt;/span> &lt;span class="n">installed&lt;/span> &lt;span class="nb">opencv-python&lt;/span>&lt;span class="p">-&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">60&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>导入时使用语句&lt;code>import cv2 as cv&lt;/code>&lt;/p>
+&lt;h2 id="图像读取显示与保存">图像读取、显示与保存&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">cv2&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">cv&lt;/span>
+&lt;span class="n">imagePath&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;D:&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">Work&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">04 Research Project&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">21.08.19 Early Visual Processing&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">pyspice&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">assets&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">img&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">test.jpg&amp;#34;&lt;/span>
+&lt;span class="n">img&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imread&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">imagePath&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 读取图像&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 命令行打印图像像素信息&lt;/span>
+&lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imshow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Display window&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 调用窗口显示图像&lt;/span>
+&lt;span class="n">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">waitKey&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 在argument规定的时间内等待用户输入，并返回用户输入值，0=forever&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;s&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imwrite&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;D:&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">Work&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">04 Research Project&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">21.08.19 Early Visual Processing&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">pyspice&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">assets&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">img&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">saved.jpg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 保存图像&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>图像路径中不能有中文字符。&lt;/p>
+&lt;h2 id="读取并修改图像信息">读取并修改图像信息&lt;/h2>
+&lt;ul>
+&lt;li>图片像素信息：通过&lt;code>img = cv.imread(imagePath)&lt;/code>读取得到的img类型为&lt;code>np.ndarray&lt;/code>，其中0维为行数，1维为列数，2，3，4维分别为图片每像素B、G、R对应的值。&lt;strong>注意顺序！&lt;/strong>&lt;/li>
+&lt;li>图片大小信息：&lt;code>img.shape&lt;/code>对象，为三值数组，分别为行数、列数、通道数。e.p.&lt;code>(138, 200, 3)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="读取视频调用摄像头保存视频">读取视频、调用摄像头、保存视频&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">cv2&lt;/span>
+&lt;span class="n">cap&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoCapture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">fourcc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoWriter_fourcc&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="s1">&amp;#39;XVID&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">out&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoWriter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;output.avi&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">fourcc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">20.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">640&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">480&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">isOpened&lt;/span>&lt;span class="p">()):&lt;/span>
+&lt;span class="n">ret&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">frame&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imshow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;frame&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">frame&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">waitKey&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="mh">0xFF&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;q&amp;#39;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="k">break&lt;/span>
+&lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">release&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">release&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">destroyAllWindows&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>关键点：&lt;/p>
+&lt;ul>
+&lt;li>调用摄像头：&lt;code>cap = cv2.VideoCapture(0)&lt;/code> 创建一个VideoCapture对象。它的参数可以是设备索引或视频文件的名称（下面会讲到）。设备索引只是指定哪台摄像机的号码。0代表第一台摄像机、1代表第二台摄像机。之后，可以逐帧捕捉视频。最后释放捕获。&lt;/li>
+&lt;li>读取视频：&lt;code>cap = cv2.VideoCapture('&amp;lt;path to video&amp;gt;')&lt;/code>，然后可以使用&lt;code>cap.isOpened()&lt;/code>检查视频的打开情况&lt;/li>
+&lt;li>读取视频：&lt;!-- raw HTML omitted --> = cv.VideoWriter( filename, fourcc, fps, frameSize[, isColor] )
+&lt;ul>
+&lt;li>filename：给要保存的视频起个名字&lt;/li>
+&lt;li>fourcc：指定视频编解码器的4字节代码&lt;/li>
+&lt;li>【（‘P’，‘I’，‘M’，‘1’）是MPEG-1编解码器】？&lt;/li>
+&lt;li>【（‘M’，‘J’，‘P’，&amp;lsquo;G &amp;lsquo;）是一个运动jpeg编解码器】？&lt;/li>
+&lt;li>fps：帧率&lt;/li>
+&lt;li>frameSize：帧大小&lt;/li>
+&lt;li>isColor：如果为true，则视频为彩色，否则为灰度视频，默认为true&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>读取下一帧：&lt;code>ret, frame = cap.read()&lt;/code>&lt;/li>
+&lt;li>将帧写到文件中：&lt;code>ret, frame = cap.read()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="常用视频相关函数">常用视频相关函数&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>cv2.VideoCapture.get(propId)&lt;/code> 访问视频的某些功能，其中propId是一个从0到18的数字，每个数字表示视频的属性（Property Identifier）。&lt;/li>
+&lt;li>&lt;code>retval = cv2.VideoCapture.set(propId,value)&lt;/code> 其中一些值可以使用 &lt;code>cap.set(propId，value)&lt;/code> 进行修改，value是修改后的值。
+&lt;ul>
+&lt;li>例如：通过&lt;code>cap.get(3)&lt;/code>和&lt;code>cap.get(4)&lt;/code>来检查帧的宽度和高度，默认的值是640x480。现修改为320x240，使用&lt;code>ret = cap.set（3, 320）&lt;/code>和&lt;code>ret = cap.set（4, 240）&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>retval,image= cv2.VideoCapture.read([,image])&lt;/code> 抓取，解码并返回下一个视频帧。返回值为&lt;code>true&lt;/code>表明抓取成功。该函数是组合了&lt;code>grab()&lt;/code>和&lt;code>retrieve()&lt;/code> ，这是最方便的方法。如果没有帧，该函数返回&lt;code>false&lt;/code>，并输出空图像。&lt;/li>
+&lt;li>&lt;code>retval, image = cv2.VideoCapture.retrieve([, image[, flag]])&lt;/code> 解码并返回抓取的视频帧
+&lt;code>retval = cv2.VideoCapture.grab()&lt;/code> 从视频文件或相机中抓取下一帧。&lt;code>true&lt;/code>为抓取成功。该函数主要用于多摄像头时。&lt;/li>
+&lt;li>&lt;code>cv2.VideoCapture.release()&lt;/code> 关闭视频文件或相机设备。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_34106574/article/details/90265603?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.no_search_link&amp;amp;spm=1001.2101.3001.4242.1" target="_blank" rel="noopener"
+>【OpenCV】Python视频的读取及保存&lt;/a>&lt;/p></description></item><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
 &lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="p">]],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">31&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">33&lt;/span>&lt;span class="p">])&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意Numpy中元素编号从0开始，左侧包含右侧不包含&lt;/strong>&lt;/p>
@@ -23,7 +177,24 @@
 [False False False]]
 [ True False]
 True
-&lt;/code>&lt;/pre></description></item><item><title>Python 学习随记</title><link>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="python-module">Python Module&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h2 id="各种拷贝">各种拷贝&lt;/h2>
+&lt;ol>
+&lt;li>无拷贝&lt;code>a = b&lt;/code>:a,b完全相同，指向同一对象&lt;/li>
+&lt;li>浅拷贝&lt;code>b = a.view()&lt;/code>：只会copy父对象，不会copy底层的数据，共用原始引用指向的对象数据。如果在view上修改数据，会直接反馈到原始对象。改变b的&lt;code>shape&lt;/code>等父对象的参数时，不会改变a的相应参数&lt;/li>
+&lt;li>深拷贝&lt;code>b = a.copy()&lt;/code>：对象及其子对象都进行copy一份，两对象完全独立。&lt;/li>
+&lt;/ol></description></item><item><title>PlantUML 学习随记</title><link>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="plantuml-with-vscode">PlantUML with VsCode&lt;/h2>
+&lt;ol>
+&lt;li>Install &lt;code>PlantUML&lt;/code> extension for vscode.&lt;/li>
+&lt;li>following extension follow me document:
+&lt;ol>
+&lt;li>install java JRE&lt;/li>
+&lt;li>install Graphviz&lt;/li>
+&lt;li>download the latest &lt;code>plantuml.jar&lt;/code>&lt;/li>
+&lt;li>specify the jar location with the extension setting plantuml.jar&lt;/li>
+&lt;li>specify the GraphViz installation by defining the Windows environment variable &lt;code>GRAPHVIZ_DOT&lt;/code>, e.g., &lt;code>c:\program files\graphviz\bin\dot.exe&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol></description></item><item><title>Python 学习随记</title><link>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="python-module">Python Module&lt;/h2>
 &lt;h3 id="python-module-导入方法">Python Module 导入方法&lt;/h3>
 &lt;ol>
 &lt;li>&lt;code>import &amp;lt;module name&amp;gt;&lt;/code>调用这个方法导入的module中的函数时，需要&lt;code>&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;&lt;/code>格式进行使用&lt;/li>
@@ -59,7 +230,99 @@ package
 &lt;li>&lt;code>import mymodule.module1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>mymodule.module1.func1()&lt;/code>，前缀较长，比较繁琐。&lt;/li>
 &lt;li>&lt;code>import mymodule.module1 as m1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>m1.func1()&lt;/code>&lt;/li>
 &lt;li>&lt;code>from mymodule import module1&lt;/code>此时对应&lt;code>func1()&lt;/code>的调用为&lt;code>module1.func1()&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>大创对话系统21.11.22组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
+&lt;/ol>
+&lt;h2 id="集合数据类型">集合数据类型&lt;/h2>
+&lt;p>Python 编程语言中有四种集合数据类型：&lt;/p>
+&lt;ul>
+&lt;li>列表（List）是一种有序和可更改的集合。允许重复的成员。&lt;/li>
+&lt;li>元组（Tuple）是一种有序且不可更改的集合。允许重复的成员。&lt;/li>
+&lt;li>集合（Set）是一个无序和无索引的集合。没有重复的成员。&lt;/li>
+&lt;li>词典（Dictionary）是一个无序，可变和有索引的集合。没有重复的成员。&lt;/li>
+&lt;/ul>
+&lt;p>选择集合类型时，了解该类型的属性很有用。&lt;/p>
+&lt;p>为特定数据集选择正确的类型可能意味着保留含义，并且可能意味着提高效率或安全性。&lt;/p>
+&lt;ul>
+&lt;li>List
+&lt;ul>
+&lt;li>&lt;code>thislist = [&amp;quot;apple&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;cherry&amp;quot;]&lt;/code>&lt;/li>
+&lt;li>&lt;code>print(thislist[1])&lt;/code>&lt;/li>
+&lt;li>&lt;code>thislist[1] = &amp;quot;mango&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Tuple
+&lt;ul>
+&lt;li>&lt;code>thistuple = (&amp;quot;apple&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;cherry&amp;quot;)&lt;/code>&lt;/li>
+&lt;li>&lt;code>print(thistuple[1])&lt;/code>&lt;/li>
+&lt;li>不可更改，需要转为列表更改后再转回&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Set
+&lt;ul>
+&lt;li>&lt;code>thisset = {&amp;quot;apple&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;cherry&amp;quot;}&lt;/code>&lt;/li>
+&lt;li>访问项目：
+&lt;ul>
+&lt;li>您无法通过引用索引来访问 &lt;code>set&lt;/code> 中的项目，因为 &lt;code>set&lt;/code> 是无序的，项目没有索引。&lt;/li>
+&lt;li>但是您可以使用 &lt;code>for&lt;/code> 循环遍历 &lt;code>set&lt;/code> 项目，或者使用 &lt;code>in&lt;/code> 关键字查询集合中是否存在指定值。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>要将一个项添加到集合，请使用 &lt;code>add()&lt;/code> 方法。&lt;/li>
+&lt;li>要向集合中添加多个项目，请使用 &lt;code>update()&lt;/code> 方法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Dictionary
+&lt;ul>
+&lt;li>创建字典
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="n">thisdict&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="s2">&amp;#34;brand&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Porsche&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;model&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;911&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;year&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1963&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>&lt;code>x = thisdict[&amp;quot;model&amp;quot;]&lt;/code> or &lt;code>x = thisdict.get(&amp;quot;model&amp;quot;)&lt;/code>&lt;/li>
+&lt;li>thisdict[&amp;ldquo;year&amp;rdquo;] = 2019&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="virtual-environment">Virtual Environment&lt;/h2>
+&lt;h3 id="安装虚拟环境">安装虚拟环境&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">PS D:&lt;span class="se">\W&lt;/span>ork&lt;span class="se">\0&lt;/span>&lt;span class="m">4&lt;/span> Research Project&lt;span class="se">\2&lt;/span>1.08.19 Early Visual Processing&lt;span class="se">\p&lt;/span>yspice&amp;gt; pip install virtualenv
+Collecting virtualenv
+&lt;span class="p">|&lt;/span>████████████████████████████████&lt;span class="p">|&lt;/span> 5.6 MB 6.4 MB/s
+Collecting filelock&amp;lt;4,&amp;gt;&lt;span class="o">=&lt;/span>3.2
+Downloading filelock-3.4.0-py3-none-any.whl &lt;span class="o">(&lt;/span>9.8 kB&lt;span class="o">)&lt;/span>
+Collecting backports.entry-points-selectable&amp;gt;&lt;span class="o">=&lt;/span>1.0.4
+Downloading backports.entry_points_selectable-1.1.1-py2.py3-none-any.whl &lt;span class="o">(&lt;/span>6.2 kB&lt;span class="o">)&lt;/span>
+Collecting platformdirs&amp;lt;3,&amp;gt;&lt;span class="o">=&lt;/span>&lt;span class="m">2&lt;/span>
+Downloading platformdirs-2.4.0-py3-none-any.whl &lt;span class="o">(&lt;/span>&lt;span class="m">14&lt;/span> kB&lt;span class="o">)&lt;/span>
+Collecting distlib&amp;lt;1,&amp;gt;&lt;span class="o">=&lt;/span>0.3.1
+&lt;span class="p">|&lt;/span>████████████████████████████████&lt;span class="p">|&lt;/span> &lt;span class="m">496&lt;/span> kB 1.6 MB/s
+Requirement already satisfied: six&amp;lt;2,&amp;gt;&lt;span class="o">=&lt;/span>1.9.0 in c:&lt;span class="se">\p&lt;/span>rogramming&lt;span class="se">\p&lt;/span>ython&lt;span class="se">\l&lt;/span>ib&lt;span class="se">\s&lt;/span>ite-packages &lt;span class="o">(&lt;/span>from virtualenv&lt;span class="o">)&lt;/span> &lt;span class="o">(&lt;/span>1.16.0&lt;span class="o">)&lt;/span>
+Installing collected packages: platformdirs, filelock, distlib, backports.entry-points-selectable, virtualenv
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="创建虚拟环境">创建虚拟环境&lt;/h3>
+&lt;p>&lt;code>virtualenv myvenv&lt;/code>，可选参数：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--no-site-packages&lt;/code>：创建虚拟环境时，不复制主环境中安装的第三方包，也就是创建一个 “干净的” 虚拟环境&lt;/li>
+&lt;li>&lt;code>-p&lt;/code>：用于指定 Python 解析器，就是安装好的 Python 应用程序，默认为当前环境中的 Python&lt;/li>
+&lt;li>&lt;code>--no-pip&lt;/code>：不需要安装 pip，默认为安装&lt;/li>
+&lt;li>&lt;code>--clear&lt;/code>：如果创建虚拟环境的目录已经有了其他虚拟环境，清除重建&lt;/li>
+&lt;/ul>
+&lt;h3 id="激活虚拟环境">激活虚拟环境&lt;/h3>
+&lt;p>虚拟环境创建好后，需要激活才能在当前命令行中使用，可以理解成将当前命令行环境中 PATH 变量的值替换掉&lt;/p>
+&lt;p>通过 virtualenv 和 模块 venv 创建的虚拟环境，激活方式是一样的，即运行激活脚本&lt;/p>
+&lt;ul>
+&lt;li>Windows 系统中，激活脚本路径是 &lt;code>&amp;lt;myvenv&amp;gt;\Scripts\activate.bat&lt;/code>，如果是 powershell 命令行，脚本换成 &lt;code>Activate.ps1&lt;/code> , 注意将 &lt;!-- raw HTML omitted -->换成你自己的虚拟环境目录&lt;/li>
+&lt;li>Linux 系统中，激活脚本路径是 &lt;code>&amp;lt;myvenv&amp;gt;/bin/activate&lt;/code>，默认脚本没有执行权限，要么设置脚本为可执行，要么用 &lt;code>source&lt;/code> 命令执行&lt;/li>
+&lt;/ul>
+&lt;p>激活后，可以查看&lt;code>PATH&lt;/code>变量 &lt;code>echo %PATH%&lt;/code>&lt;/p>
+&lt;h3 id="退出虚拟环境">退出虚拟环境&lt;/h3>
+&lt;p>退出虚拟环境很简单，只需要执行 &lt;code>deactivate&lt;/code> 命令就行，这个命令也在虚拟环境的脚本目录下，因为激活时，将脚本目录设置到 &lt;code>PATH&lt;/code> 中了，所以可以直接使用&lt;/p>
+&lt;p>退出虚拟环境相当于将 &lt;code>PATH&lt;/code> 恢复成原来的&lt;/p>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;ul>
+&lt;li>Python does not have &lt;code>switch&lt;/code> statement. Use dict instead.&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;p>(W3School Python 教程)[https://www.w3school.com.cn/python/index.asp]&lt;/p></description></item><item><title>大创对话系统21.11.22组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
 &lt;ol>
 &lt;li>设备选择：
 &lt;ol>

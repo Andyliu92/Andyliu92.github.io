@@ -82,7 +82,12 @@ extended">
  [False False False]]
 [ True False]
 True
-</code></pre>
+</code></pre><h2 id=各种拷贝>各种拷贝</h2>
+<ol>
+<li>无拷贝<code>a = b</code>:a,b完全相同，指向同一对象</li>
+<li>浅拷贝<code>b = a.view()</code>：只会copy父对象，不会copy底层的数据，共用原始引用指向的对象数据。如果在view上修改数据，会直接反馈到原始对象。改变b的<code>shape</code>等父对象的参数时，不会改变a的相应参数</li>
+<li>深拷贝<code>b = a.copy()</code>：对象及其子对象都进行copy一份，两对象完全独立。</li>
+</ol>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
@@ -98,9 +103,23 @@ True
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
+<a href=/p/opencv-with-python/>
+<div class=article-details>
+<h2 class=article-title>OpenCV with Python</h2>
+</div>
+</a>
+</article>
+<article>
 <a href=/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <div class=article-details>
 <h2 class=article-title>Python 学习随记</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<div class=article-details>
+<h2 class=article-title>PlantUML 学习随记</h2>
 </div>
 </a>
 </article>
@@ -172,6 +191,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <ol>
 <li><a href=#数组切片>数组切片</a></li>
 <li><a href=#判断一个数组是否存在于另一个大数组内>判断一个数组是否存在于另一个大数组内</a></li>
+<li><a href=#各种拷贝>各种拷贝</a></li>
 </ol>
 </nav>
 </div>
