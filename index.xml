@@ -35,7 +35,40 @@
 &lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
 >Stack Chinese documentation&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
->icons&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
+>icons&lt;/a>&lt;/p></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_36829091/article/details/82053322" target="_blank" rel="noopener"
+>使用taskset命令限定Linux下CPU逻辑核的使用对象及个数&lt;/a>
+&lt;a class="link" href="https://www.cnblogs.com/the-tops/p/7840494.html#:~:text=Linux%E4%B8%8B%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9C%8B%E6%AF%8F%E4%B8%AACPU%E7%9A%84%E4%BD%BF%E7%94%A8%E7%8E%87%EF%BC%9A%20%23top%20-d,1%20%EF%BC%88%E6%AD%A4%E6%97%B6%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%BB%A51s%E7%9A%84%E9%A2%91%E7%8E%87%E5%88%B7%E6%96%B0%E7%B3%BB%E7%BB%9F%E8%B4%9F%E8%BD%BD%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%80%BB%E7%9A%84CPU%E7%9A%84%E8%B4%9F%E8%BD%BD%E6%83%85%E5%86%B5%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%8D%A0CPU%E6%9C%80%E9%AB%98%E7%9A%84%E8%BF%9B%E7%A8%8Bid%EF%BC%8C%E8%BF%9B%E7%A8%8B%E5%90%8D%E5%AD%97%E7%AD%89%E4%BF%A1%E6%81%AF%EF%BC%89%20%EF%BC%88%E5%88%87%E6%8D%A2%E6%8C%89%E4%B8%8B%E6%95%B0%E5%AD%971%EF%BC%8C%E5%88%99%E5%8F%AF%E4%BB%A5%E5%9C%A8%E6%98%BE%E7%A4%BA%E5%A4%9A%E4%B8%AACPU%E5%92%8C%E6%80%BBCPU%E4%B8%AD%E5%88%87%E6%8D%A2%EF%BC%89" target="_blank" rel="noopener"
+>linux下如何查看多核负载情况&lt;/a>
+&lt;a class="link" href="https://cloud.tencent.com/developer/article/1457617" target="_blank" rel="noopener"
+>LINUX下查看CPU使用率的命令&lt;/a>&lt;/p></description></item><item><title>博客评论功能搭建</title><link>https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</guid><description>&lt;p>在王凯师兄的推荐下，使用gitalk搭建博客评论功能。&lt;/p>
+&lt;h2 id="github上申请oauth-application">Github上申请OAuth application&lt;/h2>
+&lt;ol>
+&lt;li>登录github&lt;/li>
+&lt;li>在&lt;code>Settings&lt;/code>页面选择&lt;code>Developer settings&lt;/code>选项。&lt;/li>
+&lt;li>在&lt;code>Developer settings&lt;/code>选择&lt;code>OAuth Apps&lt;/code>,然后会在页面右边有一个&lt;code>New OAuth App&lt;/code>按钮，点击这个按钮就进入到新建&lt;code>OAuth application&lt;/code>页面&lt;/li>
+&lt;li>填写新建&lt;code>OAuth application&lt;/code>相关信息：
+&lt;ol>
+&lt;li>&lt;code>Application name&lt;/code>：新建应用的名称&lt;/li>
+&lt;li>&lt;code>Homepage URL&lt;/code>：The full URL to your application homepage. eg.&lt;code>https://comfluter.life/&lt;/code>&lt;/li>
+&lt;li>&lt;code>Application description&lt;/code>：对新建应用的描述&lt;/li>
+&lt;li>&lt;code>Authorization callback URL&lt;/code>：回调链接，与&lt;code>Homepage URL&lt;/code>保持一致即可。&lt;/li>
+&lt;li>注：这些参数可以在以后修改&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>点击注册应用，就可以看到&lt;code>Client ID&lt;/code>，可以新建一个&lt;code>Client Secret&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="hugo-配置">Hugo 配置&lt;/h2>
+&lt;p>使用&lt;code>stack&lt;/code>主题，在配置文件&lt;code>config.yaml&lt;/code>中已经预留了相关字段。&lt;/p>
+&lt;ol>
+&lt;li>复制填写刚生成的&lt;code>Client ID&lt;/code>，&lt;code>Client Secret&lt;/code>。&lt;/li>
+&lt;li>&lt;code>repo&lt;/code>: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论&lt;/li>
+&lt;li>&lt;code>owner&lt;/code>: 类型：字符串，必填，github仓库的所有者的名字&lt;/li>
+&lt;li>&lt;code>admin&lt;/code>: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：&lt;code>['someone']&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000018072952" target="_blank" rel="noopener"
+>Gitalk评论插件使用教程&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
 &lt;p>using vscode extension &lt;code>Verilog-HDL/SystemVerilog/Bluespec SystemVerilog&lt;/code>.&lt;/p>
 &lt;p>using &lt;code>iverilog&lt;/code>&lt;/p>
 &lt;p>go to extension settings and set &lt;code>verilog &amp;gt; linting : linter = iverilog&lt;/code>&lt;/p>
@@ -43,7 +76,7 @@
 &lt;p>Notice:&lt;/p>
 &lt;ul>
 &lt;li>the dir to verilog file should not contain chinese characters and spaces.&lt;/li>
-&lt;li>if you imported module from other file without ``include&lt;code>command, iverilog willl report an error. As it is always the case when using vivado, add&lt;/code>-i&lt;code>to extention setting&lt;/code>Verilog › Linting › Iverilog: Arguments` to ignore this error.&lt;/li>
+&lt;li>if you imported module from other file without &lt;code>include&lt;/code> command, iverilog willl report an error. As it is always the case when using vivado, add &lt;code>-i&lt;/code> to extention setting &lt;code>Verilog › Linting › Iverilog: Arguments&lt;/code> to ignore this error.&lt;/li>
 &lt;/ul>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338497672" target="_blank" rel="noopener"
@@ -217,61 +250,22 @@
 &lt;li>难知：天地初始状态，难以用现有的语言进行描述。思维习惯、语言、行为规范是禁锢、限制、不自由、不自然。描述初始状态时必然会用到玄奥的词句。&lt;/li>
 &lt;li>其实易行：回到初始状态&lt;/li>
 &lt;/ul>
-&lt;p>庄子：自由与自然的紧张。警惕“自我”对他人的毒害。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="anaconda新建环境">Anaconda新建环境&lt;/h2>
-&lt;ol>
-&lt;li>检查python版本&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:~$ python --version
-Python 3.9.5
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>Anaconda 创建新环境&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:~$ conda create -n tod_bert_cpu &lt;span class="nv">python&lt;/span>&lt;span class="o">=&lt;/span>3.9.5
-Collecting package metadata &lt;span class="o">(&lt;/span>current_repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
-Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
-Collecting package metadata &lt;span class="o">(&lt;/span>repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
-Solving environment: &lt;span class="k">done&lt;/span>
-&lt;span class="c1">## Package Plan ##&lt;/span>
-environment location: /media/HD1/dche/miniconda3/envs/tod_bert_cpu
-added / updated specs:
-- &lt;span class="nv">python&lt;/span>&lt;span class="o">=&lt;/span>3.9.5
-The following packages will be downloaded:
-&lt;span class="p">|&lt;/span> package &lt;span class="p">|&lt;/span> build &lt;span class="p">|&lt;/span>
-&lt;span class="p">|&lt;/span> ----------------- &lt;span class="p">|&lt;/span> ----------------------------- &lt;span class="p">|&lt;/span>
-&lt;span class="p">|&lt;/span> certifi-2021.10.8 &lt;span class="p">|&lt;/span> py39h06a4308_0 &lt;span class="m">151&lt;/span> KB &lt;span class="p">|&lt;/span>
-&lt;span class="p">|&lt;/span> pip-21.2.4 &lt;span class="p">|&lt;/span> py39h06a4308_0 1.8 MB &lt;span class="p">|&lt;/span>
-&lt;span class="p">|&lt;/span> setuptools-58.0.4 &lt;span class="p">|&lt;/span> py39h06a4308_0 &lt;span class="m">790&lt;/span> KB &lt;span class="p">|&lt;/span>
-&lt;span class="p">|&lt;/span> tzdata-2021e &lt;span class="p">|&lt;/span> hda174b7_0 &lt;span class="m">112&lt;/span> KB &lt;span class="p">|&lt;/span>
-------------------------------------------------------------
-Total: 2.8 MB
-The following NEW packages will be INSTALLED:
-_libgcc_mutex pkgs/main/linux-64::_libgcc_mutex-0.1-main
-_openmp_mutex pkgs/main/linux-64::_openmp_mutex-4.5-1_gnu
-ca-certificates pkgs/main/linux-64::ca-certificates-2021.10.26-h06a4308_2
-certifi pkgs/main/linux-64::certifi-2021.10.8-py39h06a4308_0
-ld_impl_linux-64 pkgs/main/linux-64::ld_impl_linux-64-2.35.1-h7274673_9
-libffi pkgs/main/linux-64::libffi-3.3-he6710b0_2
-libgcc-ng pkgs/main/linux-64::libgcc-ng-9.3.0-h5101ec6_17
-libgomp pkgs/main/linux-64::libgomp-9.3.0-h5101ec6_17
-libstdcxx-ng pkgs/main/linux-64::libstdcxx-ng-9.3.0-hd4cf53a_17
-ncurses pkgs/main/linux-64::ncurses-6.3-h7f8727e_2
-openssl pkgs/main/linux-64::openssl-1.1.1l-h7f8727e_0
-pip pkgs/main/linux-64::pip-21.2.4-py39h06a4308_0
-python pkgs/main/linux-64::python-3.9.5-h12debd9_4
-readline pkgs/main/linux-64::readline-8.1-h27cfd23_0
-setuptools pkgs/main/linux-64::setuptools-58.0.4-py39h06a4308_0
-sqlite pkgs/main/linux-64::sqlite-3.36.0-hc218d9a_0
-tk pkgs/main/linux-64::tk-8.6.11-h1ccaba5_0
-tzdata pkgs/main/noarch::tzdata-2021e-hda174b7_0
-wheel pkgs/main/noarch::wheel-0.37.0-pyhd3eb1b0_1
-xz pkgs/main/linux-64::xz-5.2.5-h7b6447c_0
-zlib pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3
-Proceed &lt;span class="o">([&lt;/span>y&lt;span class="o">]&lt;/span>/n&lt;span class="o">)&lt;/span>? y
-Downloading and Extracting Packages
-setuptools-58.0.4 &lt;span class="p">|&lt;/span> &lt;span class="m">790&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
-certifi-2021.10.8 &lt;span class="p">|&lt;/span> &lt;span class="m">151&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
-tzdata-2021e &lt;span class="p">|&lt;/span> &lt;span class="m">112&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
-pip-21.2.4 &lt;span class="p">|&lt;/span> 1.8 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+&lt;p>庄子：自由与自然的紧张。警惕“自我”对他人的毒害。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="conda-复制已有环境">Conda 复制已有环境&lt;/h2>
+&lt;p>由于服务器上本身已经有使用CUDA平台的ToD-BERT运行环境，仅需将此环境中所有使用GPU的库换为使用CPU的库即可：pytorch&lt;/p>
+&lt;p>查看已有环境&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda info --env
+&lt;span class="c1"># conda environments:&lt;/span>
+&lt;span class="c1">#&lt;/span>
+base * /media/HD1/dche/miniconda3
+sum_env /media/HD1/dche/miniconda3/envs/sum_env
+tod_bert /media/HD1/dche/miniconda3/envs/tod_bert
+/media/HD1/miniconda3
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>创建新环境，并将原有环境中的所有包复制，并激活新建立的环境。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda create -n tod_bert_cpu --clone tod_bert
+Source: /media/HD1/dche/miniconda3/envs/tod_bert
+Destination: /media/HD1/dche/miniconda3/envs/tod_bert_cpu
+Packages: &lt;span class="m">20&lt;/span>
+Files: &lt;span class="m">12683&lt;/span>
 Preparing transaction: &lt;span class="k">done&lt;/span>
 Verifying transaction: &lt;span class="k">done&lt;/span>
 Executing transaction: &lt;span class="k">done&lt;/span>
@@ -283,9 +277,218 @@ Executing transaction: &lt;span class="k">done&lt;/span>
 &lt;span class="c1"># To deactivate an active environment, use&lt;/span>
 &lt;span class="c1">#&lt;/span>
 &lt;span class="c1"># $ conda deactivate&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>激活环境&lt;/li>
-&lt;/ol></description></item><item><title>OpenCV with Python</title><link>https://comfluter.life/p/opencv-with-python/</link><pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-with-python/</guid><description>&lt;h2 id="安装opencv">安装OpenCV&lt;/h2>
+&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda activate tod_bert_cpu
+&lt;span class="o">(&lt;/span>tod_bert_cpu&lt;span class="o">)&lt;/span> dialogue@amax-13:/$
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conda配置环境中的包卸载gpu版本安装cpu版本">Conda配置环境中的包（卸载GPU版本、安装CPU版本）&lt;/h2>
+&lt;p>Conda 查看环境中所有包的信息&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>tod_bert_cpu&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda list
+&lt;span class="c1"># packages in environment at /media/HD1/dche/miniconda3/envs/tod_bert_cpu:&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># Name Version Build Channel&lt;/span>
+_libgcc_mutex 0.1 main
+_openmp_mutex 4.5 1_gnu
+anykeystore 0.2 pypi_0 pypi
+apex 0.9.8.dev0 pypi_0 pypi
+blessings 1.7 pypi_0 pypi
+ca-certificates 2021.10.26 h06a4308_2
+certifi 2021.10.8 py37h06a4308_0
+charset-normalizer 2.0.7 pypi_0 pypi
+click 8.0.3 pypi_0 pypi
+cryptacular 1.6.2 pypi_0 pypi
+defusedxml 0.7.1 pypi_0 pypi
+filelock 3.4.0 pypi_0 pypi
+future 0.18.2 pypi_0 pypi
+gpustat 0.6.0 pypi_0 pypi
+greenlet 1.1.2 pypi_0 pypi
+hupper 1.10.3 pypi_0 pypi
+idna 3.3 pypi_0 pypi
+importlib-metadata 4.8.2 pypi_0 pypi
+joblib 1.1.0 pypi_0 pypi
+libedit 3.1.20210910 h7f8727e_0
+libffi 3.2.1 hf484d3e_1007
+libgcc-ng 9.3.0 h5101ec6_17
+libgomp 9.3.0 h5101ec6_17
+libstdcxx-ng 9.3.0 hd4cf53a_17
+markupsafe 2.0.1 pypi_0 pypi
+ncurses 6.3 h7f8727e_2
+nltk 3.5 pypi_0 pypi
+numpy 1.18.1 pypi_0 pypi
+nvidia-ml-py3 7.352.0 pypi_0 pypi
+oauthlib 3.1.1 pypi_0 pypi
+openssl 1.0.2u h7b6447c_0
+packaging 21.3 pypi_0 pypi
+pastedeploy 2.1.1 pypi_0 pypi
+pbkdf2 1.3 pypi_0 pypi
+pip 21.2.2 py37h06a4308_0
+plaster 1.0 pypi_0 pypi
+plaster-pastedeploy 0.7 pypi_0 pypi
+protobuf 3.19.1 pypi_0 pypi
+psutil 5.8.0 pypi_0 pypi
+ptvsd 4.3.2 pypi_0 pypi
+pyparsing 3.0.6 pypi_0 pypi
+pyramid 2.0 pypi_0 pypi
+pyramid-mailer 0.15.1 pypi_0 pypi
+python 3.7.0 h6e4f718_3
+python3-openid 3.2.0 pypi_0 pypi
+readline 7.0 h7b6447c_5
+regex 2021.11.10 pypi_0 pypi
+repoze-sendmail 4.4.1 pypi_0 pypi
+requests 2.26.0 pypi_0 pypi
+requests-oauthlib 1.3.0 pypi_0 pypi
+sacremoses 0.0.46 pypi_0 pypi
+scikit-learn 0.23.2 pypi_0 pypi
+scipy 1.7.2 pypi_0 pypi
+sentencepiece 0.1.96 pypi_0 pypi
+setuptools 58.0.4 py37h06a4308_0
+simplejson 3.17.2 pypi_0 pypi
+six 1.15.0 pypi_0 pypi
+sqlalchemy 1.4.27 pypi_0 pypi
+sqlite 3.33.0 h62c20be_0
+tensorboardx 2.1 pypi_0 pypi
+threadpoolctl 3.0.0 pypi_0 pypi
+tk 8.6.11 h1ccaba5_0
+tokenizers 0.8.1rc1 pypi_0 pypi
+torch 1.6.0 pypi_0 pypi
+tqdm 4.31.1 pypi_0 pypi
+transaction 3.0.1 pypi_0 pypi
+transformers 3.0.2 pypi_0 pypi
+translationstring 1.4 pypi_0 pypi
+typing-extensions 4.0.0 pypi_0 pypi
+urllib3 1.26.7 pypi_0 pypi
+velruse 1.1.1 pypi_0 pypi
+venusian 3.0.0 pypi_0 pypi
+webob 1.8.7 pypi_0 pypi
+wheel 0.37.0 pyhd3eb1b0_1
+wtforms 3.0.0 pypi_0 pypi
+wtforms-recaptcha 0.3.2 pypi_0 pypi
+xz 5.2.5 h7b6447c_0
+zipp 3.6.0 pypi_0 pypi
+zlib 1.2.11 h7b6447c_3
+zope-deprecation 4.4.0 pypi_0 pypi
+zope-interface 5.4.0 pypi_0 pypi
+zope-sqlalchemy 1.6 pypi_0 pypi
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>卸载原有的GPU版本torch，貌似原先是使用pip安装的，在尝试conda卸载无果后使用pip卸载成功。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>tod_bert_cpu&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda remove pytorch
+Collecting package metadata &lt;span class="o">(&lt;/span>repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
+Solving environment: failed
+PackagesNotFoundError: The following packages are missing from the target environment:
+- pytorch
+&lt;span class="o">(&lt;/span>tod_bert_cpu&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ pip uninstall torch
+Found existing installation: torch 1.6.0
+Uninstalling torch-1.6.0:
+Would remove:
+/media/HD1/dche/miniconda3/envs/tod_bert_cpu/bin/convert-caffe2-to-onnx
+/media/HD1/dche/miniconda3/envs/tod_bert_cpu/bin/convert-onnx-to-caffe2
+/media/HD1/dche/miniconda3/envs/tod_bert_cpu/lib/python3.7/site-packages/caffe2/*
+/media/HD1/dche/miniconda3/envs/tod_bert_cpu/lib/python3.7/site-packages/torch-1.6.0.dist-info/*
+/media/HD1/dche/miniconda3/envs/tod_bert_cpu/lib/python3.7/site-packages/torch/*
+Proceed &lt;span class="o">(&lt;/span>Y/n&lt;span class="o">)&lt;/span>? y
+Successfully uninstalled torch-1.6.0
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装cpu版本torch&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>tod_bert_cpu&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda install &lt;span class="nv">pytorch&lt;/span>&lt;span class="o">==&lt;/span>1.6.0 &lt;span class="nv">torchvision&lt;/span>&lt;span class="o">==&lt;/span>0.7.0 cpuonly -c pytorch
+Collecting package metadata &lt;span class="o">(&lt;/span>current_repodata.json&lt;span class="o">)&lt;/span>: &lt;span class="k">done&lt;/span>
+Solving environment: &lt;span class="k">done&lt;/span>
+&lt;span class="c1">## Package Plan ##&lt;/span>
+environment location: /media/HD1/dche/miniconda3/envs/tod_bert_cpu
+added / updated specs:
+- cpuonly
+- &lt;span class="nv">pytorch&lt;/span>&lt;span class="o">==&lt;/span>1.6.0
+- &lt;span class="nv">torchvision&lt;/span>&lt;span class="o">==&lt;/span>0.7.0
+The following packages will be downloaded:
+&lt;span class="p">|&lt;/span> package &lt;span class="p">|&lt;/span> build &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> --------------------- &lt;span class="p">|&lt;/span> ----------------------------------- &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> blas-1.0 &lt;span class="p">|&lt;/span> mkl &lt;span class="m">6&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> cpuonly-2.0 &lt;span class="p">|&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="m">2&lt;/span> KB pytorch &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> freetype-2.11.0 &lt;span class="p">|&lt;/span> h70c0345_0 &lt;span class="m">618&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> giflib-5.2.1 &lt;span class="p">|&lt;/span> h7b6447c_0 &lt;span class="m">78&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> intel-openmp-2021.4.0 &lt;span class="p">|&lt;/span> h06a4308_3561 4.2 MB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> jpeg-9d &lt;span class="p">|&lt;/span> h7f8727e_0 &lt;span class="m">232&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> lcms2-2.12 &lt;span class="p">|&lt;/span> h3be6417_0 &lt;span class="m">312&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> libpng-1.6.37 &lt;span class="p">|&lt;/span> hbc83047_0 &lt;span class="m">278&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> libtiff-4.2.0 &lt;span class="p">|&lt;/span> h85742a9_0 &lt;span class="m">502&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> libwebp-1.2.0 &lt;span class="p">|&lt;/span> h89dd481_0 &lt;span class="m">493&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> libwebp-base-1.2.0 &lt;span class="p">|&lt;/span> h27cfd23_0 &lt;span class="m">437&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> lz4-c-1.9.3 &lt;span class="p">|&lt;/span> h295c915_1 &lt;span class="m">185&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> mkl-2021.4.0 &lt;span class="p">|&lt;/span> h06a4308_640 142.6 MB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> mkl-service-2.4.0 &lt;span class="p">|&lt;/span> py37h7f8727e_0 &lt;span class="m">56&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> mkl_fft-1.3.1 &lt;span class="p">|&lt;/span> py37hd3c417c_0 &lt;span class="m">172&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> mkl_random-1.2.2 &lt;span class="p">|&lt;/span> py37h51133e4_0 &lt;span class="m">287&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> ninja-1.10.2 &lt;span class="p">|&lt;/span> py37hd09550d_3 1.5 MB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> numpy-1.21.2 &lt;span class="p">|&lt;/span> py37h20f2e39_0 &lt;span class="m">23&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> numpy-base-1.21.2 &lt;span class="p">|&lt;/span> py37h79a1101_0 4.8 MB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> olefile-0.46 &lt;span class="p">|&lt;/span> py37_0 &lt;span class="m">50&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> pillow-8.4.0 &lt;span class="p">|&lt;/span> py37h5aabda8_0 &lt;span class="m">644&lt;/span> KB &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> pytorch-1.6.0 &lt;span class="p">|&lt;/span> py3.7_cpu_0 59.4 MB pytorch &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> pytorch-mutex-1.0 &lt;span class="p">|&lt;/span> cpu &lt;span class="m">3&lt;/span> KB pytorch &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> torchvision-0.7.0 &lt;span class="p">|&lt;/span> py37_cpu 10.3 MB pytorch &lt;span class="p">|&lt;/span>
+&lt;span class="p">|&lt;/span> zstd-1.4.9 &lt;span class="p">|&lt;/span> haebb681_0 &lt;span class="m">480&lt;/span> KB &lt;span class="p">|&lt;/span>
+------------------------------------------------------------
+Total: 227.4 MB
+The following NEW packages will be INSTALLED:
+blas pkgs/main/linux-64::blas-1.0-mkl
+cpuonly pytorch/noarch::cpuonly-2.0-0
+freetype pkgs/main/linux-64::freetype-2.11.0-h70c0345_0
+giflib pkgs/main/linux-64::giflib-5.2.1-h7b6447c_0
+intel-openmp pkgs/main/linux-64::intel-openmp-2021.4.0-h06a4308_3561
+jpeg pkgs/main/linux-64::jpeg-9d-h7f8727e_0
+lcms2 pkgs/main/linux-64::lcms2-2.12-h3be6417_0
+libpng pkgs/main/linux-64::libpng-1.6.37-hbc83047_0
+libtiff pkgs/main/linux-64::libtiff-4.2.0-h85742a9_0
+libwebp pkgs/main/linux-64::libwebp-1.2.0-h89dd481_0
+libwebp-base pkgs/main/linux-64::libwebp-base-1.2.0-h27cfd23_0
+lz4-c pkgs/main/linux-64::lz4-c-1.9.3-h295c915_1
+mkl pkgs/main/linux-64::mkl-2021.4.0-h06a4308_640
+mkl-service pkgs/main/linux-64::mkl-service-2.4.0-py37h7f8727e_0
+mkl_fft pkgs/main/linux-64::mkl_fft-1.3.1-py37hd3c417c_0
+mkl_random pkgs/main/linux-64::mkl_random-1.2.2-py37h51133e4_0
+ninja pkgs/main/linux-64::ninja-1.10.2-py37hd09550d_3
+numpy pkgs/main/linux-64::numpy-1.21.2-py37h20f2e39_0
+numpy-base pkgs/main/linux-64::numpy-base-1.21.2-py37h79a1101_0
+olefile pkgs/main/linux-64::olefile-0.46-py37_0
+pillow pkgs/main/linux-64::pillow-8.4.0-py37h5aabda8_0
+pytorch pytorch/linux-64::pytorch-1.6.0-py3.7_cpu_0
+pytorch-mutex pytorch/noarch::pytorch-mutex-1.0-cpu
+six pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_0
+torchvision pytorch/linux-64::torchvision-0.7.0-py37_cpu
+zstd pkgs/main/linux-64::zstd-1.4.9-haebb681_0
+Proceed &lt;span class="o">([&lt;/span>y&lt;span class="o">]&lt;/span>/n&lt;span class="o">)&lt;/span>? y
+Downloading and Extracting Packages
+olefile-0.46 &lt;span class="p">|&lt;/span> &lt;span class="m">50&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+numpy-base-1.21.2 &lt;span class="p">|&lt;/span> 4.8 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+libpng-1.6.37 &lt;span class="p">|&lt;/span> &lt;span class="m">278&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+freetype-2.11.0 &lt;span class="p">|&lt;/span> &lt;span class="m">618&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+libwebp-base-1.2.0 &lt;span class="p">|&lt;/span> &lt;span class="m">437&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+blas-1.0 &lt;span class="p">|&lt;/span> &lt;span class="m">6&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+libtiff-4.2.0 &lt;span class="p">|&lt;/span> &lt;span class="m">502&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+torchvision-0.7.0 &lt;span class="p">|&lt;/span> 10.3 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+zstd-1.4.9 &lt;span class="p">|&lt;/span> &lt;span class="m">480&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+pytorch-1.6.0 &lt;span class="p">|&lt;/span> 59.4 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+libwebp-1.2.0 &lt;span class="p">|&lt;/span> &lt;span class="m">493&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+jpeg-9d &lt;span class="p">|&lt;/span> &lt;span class="m">232&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+intel-openmp-2021.4. &lt;span class="p">|&lt;/span> 4.2 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+lcms2-2.12 &lt;span class="p">|&lt;/span> &lt;span class="m">312&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+mkl-service-2.4.0 &lt;span class="p">|&lt;/span> &lt;span class="m">56&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+pytorch-mutex-1.0 &lt;span class="p">|&lt;/span> &lt;span class="m">3&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+giflib-5.2.1 &lt;span class="p">|&lt;/span> &lt;span class="m">78&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+mkl_random-1.2.2 &lt;span class="p">|&lt;/span> &lt;span class="m">287&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+cpuonly-2.0 &lt;span class="p">|&lt;/span> &lt;span class="m">2&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+mkl-2021.4.0 &lt;span class="p">|&lt;/span> 142.6 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+ninja-1.10.2 &lt;span class="p">|&lt;/span> 1.5 MB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+mkl_fft-1.3.1 &lt;span class="p">|&lt;/span> &lt;span class="m">172&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+pillow-8.4.0 &lt;span class="p">|&lt;/span> &lt;span class="m">644&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+lz4-c-1.9.3 &lt;span class="p">|&lt;/span> &lt;span class="m">185&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+numpy-1.21.2 &lt;span class="p">|&lt;/span> &lt;span class="m">23&lt;/span> KB &lt;span class="p">|&lt;/span> &lt;span class="c1">############################################################################################# | 100% &lt;/span>
+Preparing transaction: &lt;span class="k">done&lt;/span>
+Verifying transaction: &lt;span class="k">done&lt;/span>
+Executing transaction: &lt;span class="k">done&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="配置并运行bert">配置并运行BERT&lt;/h2>
+&lt;p>直接使用同CPU的命令&lt;code>CUDA_VISIBLE_DEVICES=0 ./run_tod_lm_pretraining.sh 0 bert bert-base-uncased save/pretrain/ToD-BERT-MLM --only_last_turn --data_path ./../dialog_datasets&lt;/code>，貌似没有任何问题地跑起来了？&lt;/p>
+&lt;p>由于项目要求，需要限制模型使用cpu的核数。&lt;/p>
+&lt;p>使用命令&lt;code>top -d 1&lt;/code>查看目前cpu占用情况，顺便查看跑BERT模型的python进程PID&lt;/p>
+&lt;p>使用命令&lt;code>taskset -cp &amp;lt;cpu list&amp;gt; &amp;lt;pid&amp;gt;&lt;/code>进行绑核操作，ep.&lt;code>taskset -cp 0,1,2,3 94434&lt;/code>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/94744929" target="_blank" rel="noopener"
+>Anaconda-用conda创建python虚拟环境&lt;/a>&lt;/p></description></item><item><title>OpenCV with Python</title><link>https://comfluter.life/p/opencv-with-python/</link><pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-with-python/</guid><description>&lt;h2 id="安装opencv">安装OpenCV&lt;/h2>
 &lt;p>Python中使用pip安装时的命令为&lt;code>pip install opencv-python&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="p">(.&lt;/span>&lt;span class="n">venv&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nb">PS &lt;/span>&lt;span class="n">D:&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">Work&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">04&lt;/span> &lt;span class="n">Research&lt;/span> &lt;span class="n">Project&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">21&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">08&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">19&lt;/span> &lt;span class="n">Early&lt;/span> &lt;span class="n">Visual&lt;/span> &lt;span class="n">Processing&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">pyspice&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">pip&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
 &lt;span class="n">Collecting&lt;/span> &lt;span class="nb">opencv-python&lt;/span>

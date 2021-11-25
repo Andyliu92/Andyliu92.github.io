@@ -5,7 +5,7 @@ using iverilog
 go to extension settings and set verilog &amp;gt; linting : linter = iverilog
 then the linting function should work for verilog files.
 Notice:
- the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without ``includecommand, iverilog willl report an error. As it is always the case when using vivado, add-ito extention settingVerilog › Linting › Iverilog: Arguments` to ignore this error."><title>Verilog with vscode</title>
+ the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without include command, iverilog willl report an error. As it is always the case when using vivado, add -i to extention setting Verilog › Linting › Iverilog: Arguments to ignore this error."><title>Verilog with vscode</title>
 <link rel=canonical href=https://comfluter.life/p/verilog-with-vscode/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Verilog with vscode">
 <meta property="og:description" content="linting using vscode extension Verilog-HDL/SystemVerilog/Bluespec SystemVerilog.
@@ -13,7 +13,7 @@ using iverilog
 go to extension settings and set verilog &amp;gt; linting : linter = iverilog
 then the linting function should work for verilog files.
 Notice:
- the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without ``includecommand, iverilog willl report an error. As it is always the case when using vivado, add-ito extention settingVerilog › Linting › Iverilog: Arguments` to ignore this error.">
+ the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without include command, iverilog willl report an error. As it is always the case when using vivado, add -i to extention setting Verilog › Linting › Iverilog: Arguments to ignore this error.">
 <meta property="og:url" content="https://comfluter.life/p/verilog-with-vscode/">
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="verilog"><meta property="article:tag" content="vscode"><meta property="article:published_time" content="2021-11-24T00:00:00+00:00"><meta property="article:modified_time" content="2021-11-24T00:00:00+00:00">
@@ -23,7 +23,7 @@ using iverilog
 go to extension settings and set verilog &amp;gt; linting : linter = iverilog
 then the linting function should work for verilog files.
 Notice:
- the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without ``includecommand, iverilog willl report an error. As it is always the case when using vivado, add-ito extention settingVerilog › Linting › Iverilog: Arguments` to ignore this error.">
+ the dir to verilog file should not contain chinese characters and spaces. if you imported module from other file without include command, iverilog willl report an error. As it is always the case when using vivado, add -i to extention setting Verilog › Linting › Iverilog: Arguments to ignore this error.">
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -67,7 +67,7 @@ extended">
 <p>Notice:</p>
 <ul>
 <li>the dir to verilog file should not contain chinese characters and spaces.</li>
-<li>if you imported module from other file without ``include<code>command, iverilog willl report an error. As it is always the case when using vivado, add</code>-i<code>to extention setting</code>Verilog › Linting › Iverilog: Arguments` to ignore this error.</li>
+<li>if you imported module from other file without <code>include</code> command, iverilog willl report an error. As it is always the case when using vivado, add <code>-i</code> to extention setting <code>Verilog › Linting › Iverilog: Arguments</code> to ignore this error.</li>
 </ul>
 <h2 id=references>References</h2>
 <p><a class=link href=https://zhuanlan.zhihu.com/p/338497672 target=_blank rel=noopener>用VSCode编辑verilog代码、iverilog编译、自动例化、自动补全、自动格式化等常用插件</a></p>
@@ -92,6 +92,13 @@ extended">
 </a>
 </article>
 <article>
+<a href=/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/>
+<div class=article-details>
+<h2 class=article-title>博客评论功能搭建</h2>
+</div>
+</a>
+</article>
+<article>
 <a href=/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/>
 <div class=article-details>
 <h2 class=article-title>在Nginx服务器上部署SSL证书</h2>
@@ -101,6 +108,11 @@ extended">
 </div>
 </div>
 </aside>
+<div id=gitalk-container></div>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css>
+<script src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js></script>
+<script>const gitalk=new Gitalk({clientID:"0d5bb28ba48d7571aaae",clientSecret:"5b4b5a48ddaf1390937e89e0f88e1deede49e4f5",repo:"personal-blog-comment",owner:"Andyliu92",admin:["Andyliu92"],distractionFreeMode:!1,id:md5(location.pathname)});(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("gitalk-container").innerHTML="Gitalk comments not available by default when the website is previewed locally.";return}gitalk.render("gitalk-container")})()</script>
 <footer class=site-footer>
 <section class=copyright>
 &copy;
