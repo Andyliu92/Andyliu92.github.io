@@ -43,7 +43,7 @@ extended">
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
-1 minute read
+2 minute read
 </time>
 </div>
 </footer>
@@ -74,7 +74,21 @@ extended">
 <span class=k>if</span> <span class=n>k</span> <span class=o>==</span> <span class=nb>ord</span><span class=p>(</span><span class=s2>&#34;s&#34;</span><span class=p>):</span>
     <span class=n>cv</span><span class=o>.</span><span class=n>imwrite</span><span class=p>(</span>
         <span class=s2>&#34;D:</span><span class=se>\\</span><span class=s2>Work</span><span class=se>\\</span><span class=s2>04 Research Project</span><span class=se>\\</span><span class=s2>21.08.19 Early Visual Processing</span><span class=se>\\</span><span class=s2>pyspice</span><span class=se>\\</span><span class=s2>assets</span><span class=se>\\</span><span class=s2>img</span><span class=se>\\</span><span class=s2>saved.jpg&#34;</span><span class=p>,</span> <span class=n>img</span><span class=p>)</span> <span class=c1># 保存图像</span>
-</code></pre></div><p>图像路径中不能有中文字符。</p>
+</code></pre></div><p><code>cv.imread()</code>参数：</p>
+<ul>
+<li>filename：读取图像的文件路径和文件名</li>
+<li>flags：读取图片的方式，可选项
+<ul>
+<li>cv.IMREAD_COLOR(1)：始终将图像转换为 3 通道BGR彩色图像，默认方式</li>
+<li>cv.IMREAD_GRAYSCALE(0)：始终将图像转换为单通道灰度图像</li>
+<li>cv.IMREAD_UNCHANGED(-1)：按原样返回加载的图像（使用Alpha通道）</li>
+<li>cv.IMREAD_ANYDEPTH(2)：在输入具有相应深度时返回16位/ 32位图像，否则将其转换为8位</li>
+<li>cv.IMREAD_ANYCOLOR(4)：以任何可能的颜色格式读取图像</li>
+</ul>
+</li>
+<li>返回值 retval：读取的 OpenCV 图像，nparray 多维数组</li>
+</ul>
+<p>图像路径中不能有中文字符。</p>
 <h2 id=读取并修改图像信息>读取并修改图像信息</h2>
 <ul>
 <li>图片像素信息：通过<code>img = cv.imread(imagePath)</code>读取得到的img类型为<code>np.ndarray</code>，其中0维为行数，1维为列数，2，3，4维分别为图片每像素B、G、R对应的值。<strong>注意顺序！</strong></li>
@@ -164,6 +178,13 @@ extended">
 <a href=/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <div class=article-details>
 <h2 class=article-title>PlantUML 学习随记</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/>
+<div class=article-details>
+<h2 class=article-title>《先秦诸子选读》：道家思想</h2>
 </div>
 </a>
 </article>

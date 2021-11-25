@@ -188,6 +188,18 @@ Installing collected packages: platformdirs, filelock, distlib, backports.entry-
 <h2 id=minutiae>Minutiae</h2>
 <ul>
 <li>Python does not have <code>switch</code> statement. Use dict instead.</li>
+<li>autopep8 auto line feed:
+<ul>
+<li>Python编码风格指导(PEP8)要求每行代码不得超过80个字符。而VSCode+Pyhon常用代码检查工具是pylint和flake8，常用代码格式化工具是yapf、autopep8和black。针对代码过长导致格式化时自动换行，应在setting.json中修改格式化工具的每行最大字符个数。
+<pre tabindex=0><code>// autopep8
+&quot;python.formatting.provider&quot;: &quot;autopep8&quot;,
+&quot;python.formatting.autopep8Args&quot;: [
+    &quot;--max-line-length=200&quot;
+],
+</code></pre></li>
+</ul>
+</li>
+<li><code>exec</code> 执行储存在字符串或文件中的 Python 语句，相比于 <code>eval</code>，<code>exec</code>可以执行更复杂的 Python 代码</li>
 </ul>
 <h2 id=resources>Resources</h2>
 <p>(W3School Python 教程)[https://www.w3school.com.cn/python/index.asp]</p>
@@ -222,6 +234,13 @@ Installing collected packages: platformdirs, filelock, distlib, backports.entry-
 <a href=/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <div class=article-details>
 <h2 class=article-title>PlantUML 学习随记</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/>
+<div class=article-details>
+<h2 class=article-title>《先秦诸子选读》：道家思想</h2>
 </div>
 </a>
 </article>

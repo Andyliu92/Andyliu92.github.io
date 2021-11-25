@@ -11,7 +11,176 @@
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338497672" target="_blank" rel="noopener"
 >用VSCode编辑verilog代码、iverilog编译、自动例化、自动补全、自动格式化等常用插件&lt;/a>&lt;/p></description></item><item><title>Vivado 学习随记</title><link>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="multi-module-project">Multi-module Project&lt;/h2>
-&lt;p>Just write two verilog files and instantiate a module specified in the other file, the vivado will figure out the dependencies automatically.&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="anaconda新建环境">Anaconda新建环境&lt;/h2>
+&lt;p>Just write two verilog files and instantiate a module specified in the other file, the vivado will figure out the dependencies automatically.&lt;/p></description></item><item><title>《先秦诸子选读》：道家思想</title><link>https://comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</guid><description>&lt;h2 id="老子">老子&lt;/h2>
+&lt;h3 id="概述">概述&lt;/h3>
+&lt;ul>
+&lt;li>先秦道家第一部&lt;/li>
+&lt;li>《老子》文献的真实性：
+&lt;ul>
+&lt;li>上世纪20年代，用西方方法考察中国传统文献：有气人，但书可能是后人写的&lt;/li>
+&lt;li>马王堆汉墓老子帛书抄本 汉文帝时期 证明此时《老子》其书已经盛行
+&lt;ul>
+&lt;li>篇目数量差不多&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>90年代：郭店楚简 其中有《老子》 测年公元前300年，战国中晚期
+&lt;ul>
+&lt;li>其中还有较多儒家早期文献&lt;/li>
+&lt;li>篇目较少，约为传世本1/3，可能为摘抄&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>此两本出图后，证明《老子》一定成书早于战国晚期。&lt;/li>
+&lt;li>&lt;strong>证实了《老子》应为所有道家文献的原创。&lt;/strong>&lt;/li>
+&lt;li>作者到现在还不确定，&lt;strong>阅读时不用深究&lt;/strong>&lt;/li>
+&lt;li>首创“自然之道”的概念&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="道">道&lt;/h3>
+&lt;p>不仅道家讲“道”，其应该为春秋时代出现的思想概念。&lt;/p>
+&lt;p>“道”字商代便有，但不是重要思想概念，仅为“道路”之意。“道”在春秋时成为思想概念内涵。从《论语》中可以得到印证。&lt;/p>
+&lt;p>含义变化原因：政治变化。以氏族为本位的政治构架在衰弱。以祭祀为本，为期中心概念（西周时）。后来西周衰落，天命观念受到怀疑，上天包庇某一氏族的理念在弱化。孔子时政治基本不讲“天命”，个人也可以讲“天命”。政治的合理性在哪？当时的思想家在寻找新的理解。这个背景下，“道”的观念得以提出。政治的合法性来源：神授&amp;ndash;&amp;gt;往圣先贤的做法，体现出人本主义。&lt;/p>
+&lt;blockquote>
+&lt;p>《国语》周语下：吾非瞽史，焉知天道？&lt;/p>
+&lt;/blockquote>
+&lt;p>只有知道历史，才知道天道。（史官当时也管天道）此处天道：星象变化的大致规则，引申为自然变化的规则。&lt;/p>
+&lt;p>中国的士大夫文化：&lt;/p>
+&lt;ul>
+&lt;li>对中国文化发展影响最深。&lt;/li>
+&lt;li>非宗教的：思想主流为人文主义的：道德规则、历史传承、品信修养，而非不可知的神意。&lt;/li>
+&lt;li>&lt;strong>道为非常重要的概念。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>道为其他概念的中心：仁义礼智等等&lt;/p>
+&lt;h3 id="自然之道一种特别的道">自然之道：一种特别的道&lt;/h3>
+&lt;blockquote>
+&lt;p>《老子》二十五章：人法地，地法天，天法道，道法自然
+“道可道非常道”&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="自然之道的含义">自然之道的含义&lt;/h4>
+&lt;p>自然：名词？ &amp;mdash;&amp;gt; 天地万物的规则&lt;/p>
+&lt;p>&lt;strong>自然是动词！&lt;/strong> 意为“自己这样”，万物自己演化的规律。&lt;/p>
+&lt;p>人应当效法自然：不是效法自然的规律，而是效法自己如此的状态。&lt;/p>
+&lt;blockquote>
+&lt;p>第七章：天长地久。天地所以能长且久者，以其不自生，故能长生。是以圣人后其身而身先，外其身而身存。非以其无私耶？故能成其私。(后其身 一作：退其身)&lt;/p>
+&lt;/blockquote>
+&lt;p>天地长久，不自生：天地不是单一的生命，以万物的生命来体现自己的生命。万物演变恒久不息，天也恒久存在。&lt;/p>
+&lt;p>是以圣人后其身而身先，外其身而身存： 老子对后代人物的政治谋略影响较大，怎么在政治上立于不败之地。看上去是哲理，但用起来是技巧。&lt;/p>
+&lt;blockquote>
+&lt;p>四十章：反者道之动；弱者道之用。天下万物生于有，有生于无。
+老子要否认所有提升到“规则”层面的内容。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>二章：天下皆知美之为美，斯恶已。皆知善之为善，斯不善已。故有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随，恒也。是以圣人处无为之事，行不言之教，万物作焉而不辞，生而不有，为而不恃，功成而弗居。夫唯弗居，是以不去。(万物作焉而不辞 一作：万物作焉而不为始)&lt;/p>
+&lt;/blockquote>
+&lt;p>理解：古人淳朴自然的理解中没有“美”的概念，其为认为的&lt;/p>
+&lt;p>讲的是常识中相对的概念的相互转化。&lt;/p>
+&lt;h4 id="道不是规律性">道：不是规律性&lt;/h4>
+&lt;p>充满辩证的因果关系？不能说不对，但是容易被误导。辩证法、辩证规律本质上都还是对我们&lt;em>知识&lt;/em>的概括。第一层：形式逻辑；第二层：变化规律、辩证法。顺着这个理解&lt;/p>
+&lt;blockquote>
+&lt;p>五十八章：祸兮福所倚；福兮祸所伏。孰知其极？其无正邪？正复为奇，善复为妖。人之迷，其日固久。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>极：根本的道理。“悠悠苍天，曷其有极？”&lt;/li>
+&lt;li>无正：没有规则、根本道理。&lt;/li>
+&lt;li>奇：突然冒出来的、没有道理的&lt;/li>
+&lt;li>妖：怪异的&lt;/li>
+&lt;/ul>
+&lt;p>根本上否定规律性，而不是相反相成。
+&lt;strong>不应当将道理解为规律&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>道可道，非常道；名可名，非常名。无名天地之始，有名万物之母。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>第二个“道”：
+&lt;ul>
+&lt;li>言说&lt;/li>
+&lt;li>走路：明明白白的路径&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>天地之始 万物之母：天地初始的状态&lt;/li>
+&lt;/ul>
+&lt;h4 id="有关天地起源问题">有关天地起源问题：&lt;/h4>
+&lt;blockquote>
+&lt;p>谷神不死，是谓玄牝。玄牝之门，是谓天地根。绵绵若存，用之不勤。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>谷神：道&lt;/li>
+&lt;li>玄牝：雌性的牲畜，有学者由此将老子思想归结于民间崇拜
+&lt;ul>
+&lt;li>颜世安老师想法：可能受到淮河水网地区地方信仰的影响：水崇拜、雌性崇拜。但老子不停留在这个层面，而是提出了一种思想。&lt;/li>
+&lt;li>此处将道与雌性生殖功能做类比&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>有物混成，先天地生，寂兮寥兮，独立而不改，周行而不殆，可以为天地母。吾不知其名，强字之曰道，强为之名曰大。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>有物混成：道&lt;/li>
+&lt;li>周兴不殆在出土文献中均不存在，大概率是后人添加。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>孔德之容，惟道是从。道之为物，惟恍惟惚。惚兮恍兮，其中有象；恍兮惚兮，其中有物；窈兮冥兮，其中有精；其精甚真，其中有信。&lt;/p>
+&lt;/blockquote>
+&lt;p>但&lt;strong>老子的本意应当不是天地起源&lt;/strong>：&lt;/p>
+&lt;ol>
+&lt;li>后世道家，天地起源不是道家思想的中心。庄子嘲笑天地起源的探究。&lt;/li>
+&lt;li>如果谈天地起源，为什么在文本中一直强调“说不清楚”，许多地方既有又无？“孰知其极”？&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>不要将道与天地起源混为一谈！&lt;/strong>&lt;/p>
+&lt;h4 id="原初状态">原初状态&lt;/h4>
+&lt;p>&lt;strong>谈天地之道，应当从天地的原初状态谈起，对比原初状态和现在状态的对比。从而使得人回到自己“自然”、“原初”的状态，以天道为引导。&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>致虚极；守静笃。万物并作，吾以观复。夫物芸芸，各复归其根。归根曰静，静曰复命。复命曰常，知常曰明。不知常，妄作凶。知常容，容乃公，公乃全，全乃天，天乃道，道乃久，歿身不殆。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>虚、静：心态意义上的原初状态
+&lt;ul>
+&lt;li>虚 对应：实、知识、成见&lt;/li>
+&lt;li>静 对应：好物、情感&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>为学日益，为道日损。损之又损，以至於无为。无为而无不为。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>为道要一天天减少自己的知识，直至无有的状态。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>不出户，知天下；不窥牖，见天道。其出弥远，其知弥少。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>在经验意义上回到自己的状态。有经验便有成见。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>知其雄，守其雌，为天下谿。为天下谿，常德不离，复归于婴儿。&lt;/p>
+&lt;/blockquote>
+&lt;p>只要是道家文献，必然谈回到原初状态&lt;/p>
+&lt;h4 id="理解自然之道">理解自然之道&lt;/h4>
+&lt;p>自己生、自己长，本来如此。与计划、规则相对。&lt;/p>
+&lt;blockquote>
+&lt;p>古之人，其知有所至矣。恶乎生？有以为未始有物者，至矣，尽矣，不可以加矣。其次，以为有物矣，而未始有封也。其次以为有封焉，而未始有是非也。是非之彰也，道之所以亏也。道之所以亏，爱之所以成。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>至：强？弱？总之不一样。&lt;/li>
+&lt;li>未始有物：物我一体
+&lt;ul>
+&lt;li>郭象：未始有我。无自我意识。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>封：将物分为不同领域。&lt;/li>
+&lt;li>爱：偏私、喜好&lt;/li>
+&lt;/ul>
+&lt;p>人们悲惨的根源：人们生下来便不可避免地落入非自然的状态中。解决：回到原初状态。&lt;/p>
+&lt;blockquote>
+&lt;p>道家无为，又曰无不为，其实易行，其辞难知。其术以虚无为本，以因循为用。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>难知：天地初始状态，难以用现有的语言进行描述。思维习惯、语言、行为规范是禁锢、限制、不自由、不自然。描述初始状态时必然会用到玄奥的词句。&lt;/li>
+&lt;li>其实易行：回到初始状态&lt;/li>
+&lt;/ul>
+&lt;p>庄子：自由与自然的紧张。警惕“自我”对他人的毒害。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="anaconda新建环境">Anaconda新建环境&lt;/h2>
 &lt;ol>
 &lt;li>检查python版本&lt;/li>
 &lt;/ol>
@@ -99,7 +268,21 @@ Executing transaction: &lt;span class="k">done&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;s&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
 &lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imwrite&lt;/span>&lt;span class="p">(&lt;/span>
 &lt;span class="s2">&amp;#34;D:&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">Work&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">04 Research Project&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">21.08.19 Early Visual Processing&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">pyspice&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">assets&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">img&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">saved.jpg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 保存图像&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>图像路径中不能有中文字符。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>cv.imread()&lt;/code>参数：&lt;/p>
+&lt;ul>
+&lt;li>filename：读取图像的文件路径和文件名&lt;/li>
+&lt;li>flags：读取图片的方式，可选项
+&lt;ul>
+&lt;li>cv.IMREAD_COLOR(1)：始终将图像转换为 3 通道BGR彩色图像，默认方式&lt;/li>
+&lt;li>cv.IMREAD_GRAYSCALE(0)：始终将图像转换为单通道灰度图像&lt;/li>
+&lt;li>cv.IMREAD_UNCHANGED(-1)：按原样返回加载的图像（使用Alpha通道）&lt;/li>
+&lt;li>cv.IMREAD_ANYDEPTH(2)：在输入具有相应深度时返回16位/ 32位图像，否则将其转换为8位&lt;/li>
+&lt;li>cv.IMREAD_ANYCOLOR(4)：以任何可能的颜色格式读取图像&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>返回值 retval：读取的 OpenCV 图像，nparray 多维数组&lt;/li>
+&lt;/ul>
+&lt;p>图像路径中不能有中文字符。&lt;/p>
 &lt;h2 id="读取并修改图像信息">读取并修改图像信息&lt;/h2>
 &lt;ul>
 &lt;li>图片像素信息：通过&lt;code>img = cv.imread(imagePath)&lt;/code>读取得到的img类型为&lt;code>np.ndarray&lt;/code>，其中0维为行数，1维为列数，2，3，4维分别为图片每像素B、G、R对应的值。&lt;strong>注意顺序！&lt;/strong>&lt;/li>
@@ -320,6 +503,18 @@ Installing collected packages: platformdirs, filelock, distlib, backports.entry-
 &lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;ul>
 &lt;li>Python does not have &lt;code>switch&lt;/code> statement. Use dict instead.&lt;/li>
+&lt;li>autopep8 auto line feed:
+&lt;ul>
+&lt;li>Python编码风格指导(PEP8)要求每行代码不得超过80个字符。而VSCode+Pyhon常用代码检查工具是pylint和flake8，常用代码格式化工具是yapf、autopep8和black。针对代码过长导致格式化时自动换行，应在setting.json中修改格式化工具的每行最大字符个数。
+&lt;pre tabindex="0">&lt;code>// autopep8
+&amp;quot;python.formatting.provider&amp;quot;: &amp;quot;autopep8&amp;quot;,
+&amp;quot;python.formatting.autopep8Args&amp;quot;: [
+&amp;quot;--max-line-length=200&amp;quot;
+],
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>exec&lt;/code> 执行储存在字符串或文件中的 Python 语句，相比于 &lt;code>eval&lt;/code>，&lt;code>exec&lt;/code>可以执行更复杂的 Python 代码&lt;/li>
 &lt;/ul>
 &lt;h2 id="resources">Resources&lt;/h2>
 &lt;p>(W3School Python 教程)[https://www.w3school.com.cn/python/index.asp]&lt;/p></description></item><item><title>大创对话系统21.11.22组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
