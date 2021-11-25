@@ -35,7 +35,13 @@
 &lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
 >Stack Chinese documentation&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
->icons&lt;/a>&lt;/p></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="minutiae">Minutiae&lt;/h2>
+>icons&lt;/a>&lt;/p></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
+&lt;ol>
+&lt;li>修改root密码 &lt;code>sudo passwd root&lt;/code>&lt;/li>
+&lt;li>修改SSH配置 &lt;code>sudo vi /etc/ssh/sshd_config&lt;/code>&lt;/li>
+&lt;li>找到选项&lt;code>PermitRootLogin&lt;/code>，将其前面的&lt;code>#&lt;/code>去掉，即可使用SSH登录。若将后面的&lt;code>prohibit-password&lt;/code>改为&lt;code>yes&lt;/code>则可使用密码登录。&lt;/li>
+&lt;/ol>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_36829091/article/details/82053322" target="_blank" rel="noopener"
 >使用taskset命令限定Linux下CPU逻辑核的使用对象及个数&lt;/a>
 &lt;a class="link" href="https://www.cnblogs.com/the-tops/p/7840494.html#:~:text=Linux%E4%B8%8B%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9C%8B%E6%AF%8F%E4%B8%AACPU%E7%9A%84%E4%BD%BF%E7%94%A8%E7%8E%87%EF%BC%9A%20%23top%20-d,1%20%EF%BC%88%E6%AD%A4%E6%97%B6%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%BB%A51s%E7%9A%84%E9%A2%91%E7%8E%87%E5%88%B7%E6%96%B0%E7%B3%BB%E7%BB%9F%E8%B4%9F%E8%BD%BD%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%80%BB%E7%9A%84CPU%E7%9A%84%E8%B4%9F%E8%BD%BD%E6%83%85%E5%86%B5%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%8D%A0CPU%E6%9C%80%E9%AB%98%E7%9A%84%E8%BF%9B%E7%A8%8Bid%EF%BC%8C%E8%BF%9B%E7%A8%8B%E5%90%8D%E5%AD%97%E7%AD%89%E4%BF%A1%E6%81%AF%EF%BC%89%20%EF%BC%88%E5%88%87%E6%8D%A2%E6%8C%89%E4%B8%8B%E6%95%B0%E5%AD%971%EF%BC%8C%E5%88%99%E5%8F%AF%E4%BB%A5%E5%9C%A8%E6%98%BE%E7%A4%BA%E5%A4%9A%E4%B8%AACPU%E5%92%8C%E6%80%BBCPU%E4%B8%AD%E5%88%87%E6%8D%A2%EF%BC%89" target="_blank" rel="noopener"
