@@ -66,6 +66,8 @@
 &lt;li>&lt;code>owner&lt;/code>: 类型：字符串，必填，github仓库的所有者的名字&lt;/li>
 &lt;li>&lt;code>admin&lt;/code>: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：&lt;code>['someone']&lt;/code>&lt;/li>
 &lt;/ol>
+&lt;h2 id="debugging">Debugging&lt;/h2>
+&lt;h3 id="error-not-found">Error: Not Found.&lt;/h3>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000018072952" target="_blank" rel="noopener"
 >Gitalk评论插件使用教程&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>

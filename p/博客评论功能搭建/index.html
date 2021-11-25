@@ -2,19 +2,19 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="在王凯师兄的推荐下，使用gitalk搭建博客评论功能。
 Github上申请OAuth application  登录github 在Settings页面选择Developer settings选项。 在Developer settings选择OAuth Apps,然后会在页面右边有一个New OAuth App按钮，点击这个按钮就进入到新建OAuth application页面 填写新建OAuth application相关信息：  Application name：新建应用的名称 Homepage URL：The full URL to your application homepage. eg.https://comfluter.life/ Application description：对新建应用的描述 Authorization callback URL：回调链接，与Homepage URL保持一致即可。 注：这些参数可以在以后修改   点击注册应用，就可以看到Client ID，可以新建一个Client Secret  Hugo 配置 使用stack主题，在配置文件config.yaml中已经预留了相关字段。
- 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  References Gitalk评论插件使用教程"><title>博客评论功能搭建</title>
+ 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  Debugging Error: Not Found. References Gitalk评论插件使用教程"><title>博客评论功能搭建</title>
 <link rel=canonical href=https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="博客评论功能搭建">
 <meta property="og:description" content="在王凯师兄的推荐下，使用gitalk搭建博客评论功能。
 Github上申请OAuth application  登录github 在Settings页面选择Developer settings选项。 在Developer settings选择OAuth Apps,然后会在页面右边有一个New OAuth App按钮，点击这个按钮就进入到新建OAuth application页面 填写新建OAuth application相关信息：  Application name：新建应用的名称 Homepage URL：The full URL to your application homepage. eg.https://comfluter.life/ Application description：对新建应用的描述 Authorization callback URL：回调链接，与Homepage URL保持一致即可。 注：这些参数可以在以后修改   点击注册应用，就可以看到Client ID，可以新建一个Client Secret  Hugo 配置 使用stack主题，在配置文件config.yaml中已经预留了相关字段。
- 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  References Gitalk评论插件使用教程">
+ 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  Debugging Error: Not Found. References Gitalk评论插件使用教程">
 <meta property="og:url" content="https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/">
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="blog"><meta property="article:published_time" content="2021-11-25T00:00:00+00:00"><meta property="article:modified_time" content="2021-11-25T00:00:00+00:00">
 <meta name=twitter:title content="博客评论功能搭建">
 <meta name=twitter:description content="在王凯师兄的推荐下，使用gitalk搭建博客评论功能。
 Github上申请OAuth application  登录github 在Settings页面选择Developer settings选项。 在Developer settings选择OAuth Apps,然后会在页面右边有一个New OAuth App按钮，点击这个按钮就进入到新建OAuth application页面 填写新建OAuth application相关信息：  Application name：新建应用的名称 Homepage URL：The full URL to your application homepage. eg.https://comfluter.life/ Application description：对新建应用的描述 Authorization callback URL：回调链接，与Homepage URL保持一致即可。 注：这些参数可以在以后修改   点击注册应用，就可以看到Client ID，可以新建一个Client Secret  Hugo 配置 使用stack主题，在配置文件config.yaml中已经预留了相关字段。
- 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  References Gitalk评论插件使用教程">
+ 复制填写刚生成的Client ID，Client Secret。 repo: 类型：字符串，必填，github上的仓库名字，用于存放Gitalk评论 owner: 类型：字符串，必填，github仓库的所有者的名字 admin: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：['someone']  Debugging Error: Not Found. References Gitalk评论插件使用教程">
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -75,6 +75,8 @@ extended">
 <li><code>owner</code>: 类型：字符串，必填，github仓库的所有者的名字</li>
 <li><code>admin</code>: 类型：数组(元素是字符串)，必填，github仓库的所有者和合作者 (对这个 repository 有写权限的用户)。如果仓库有多个人可以操作，那么在这里以数组形式写出：<code>['someone']</code></li>
 </ol>
+<h2 id=debugging>Debugging</h2>
+<h3 id=error-not-found>Error: Not Found.</h3>
 <h2 id=references>References</h2>
 <p><a class=link href=https://segmentfault.com/a/1190000018072952 target=_blank rel=noopener>Gitalk评论插件使用教程</a></p>
 </section>
@@ -176,6 +178,11 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <ol>
 <li><a href=#github上申请oauth-application>Github上申请OAuth application</a></li>
 <li><a href=#hugo-配置>Hugo 配置</a></li>
+<li><a href=#debugging>Debugging</a>
+<ol>
+<li><a href=#error-not-found>Error: Not Found.</a></li>
+</ol>
+</li>
 <li><a href=#references>References</a></li>
 </ol>
 </nav>
