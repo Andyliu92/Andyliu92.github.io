@@ -84,7 +84,26 @@ literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;s
 &amp;lt;your code&amp;gt;
 &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>lstlisting&lt;span class="nb">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ol></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
+&lt;/ol></description></item><item><title>Pyspice 学习随记</title><link>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/88583481" target="_blank" rel="noopener"
+>PySpice: 使用ngspice进行电路仿真分析-1：安装&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/88631728" target="_blank" rel="noopener"
+>PySpice: 使用ngspice进行电路仿真分析-2：ngspice简要介绍-输入文件格式1&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
+&lt;ol>
+&lt;li>修改root密码 &lt;code>sudo passwd root&lt;/code>&lt;/li>
+&lt;li>修改SSH配置 &lt;code>sudo vi /etc/ssh/sshd_config&lt;/code>&lt;/li>
+&lt;li>找到选项&lt;code>PermitRootLogin&lt;/code>，将其前面的&lt;code>#&lt;/code>去掉，即可使用SSH登录。若将后面的&lt;code>prohibit-password&lt;/code>改为&lt;code>yes&lt;/code>则可使用密码登录。&lt;/li>
+&lt;li>如果不选择密码登录，还需要通过其他账户登录，将&lt;code>authorized_keys&lt;/code>复制到root账户的.ssh文件夹&lt;code>/root/.ssh&lt;/code>下&lt;/li>
+&lt;/ol>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_36829091/article/details/82053322" target="_blank" rel="noopener"
+>使用taskset命令限定Linux下CPU逻辑核的使用对象及个数&lt;/a>
+&lt;a class="link" href="https://www.cnblogs.com/the-tops/p/7840494.html#:~:text=Linux%E4%B8%8B%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9C%8B%E6%AF%8F%E4%B8%AACPU%E7%9A%84%E4%BD%BF%E7%94%A8%E7%8E%87%EF%BC%9A%20%23top%20-d,1%20%EF%BC%88%E6%AD%A4%E6%97%B6%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%BB%A51s%E7%9A%84%E9%A2%91%E7%8E%87%E5%88%B7%E6%96%B0%E7%B3%BB%E7%BB%9F%E8%B4%9F%E8%BD%BD%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%80%BB%E7%9A%84CPU%E7%9A%84%E8%B4%9F%E8%BD%BD%E6%83%85%E5%86%B5%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%8D%A0CPU%E6%9C%80%E9%AB%98%E7%9A%84%E8%BF%9B%E7%A8%8Bid%EF%BC%8C%E8%BF%9B%E7%A8%8B%E5%90%8D%E5%AD%97%E7%AD%89%E4%BF%A1%E6%81%AF%EF%BC%89%20%EF%BC%88%E5%88%87%E6%8D%A2%E6%8C%89%E4%B8%8B%E6%95%B0%E5%AD%971%EF%BC%8C%E5%88%99%E5%8F%AF%E4%BB%A5%E5%9C%A8%E6%98%BE%E7%A4%BA%E5%A4%9A%E4%B8%AACPU%E5%92%8C%E6%80%BBCPU%E4%B8%AD%E5%88%87%E6%8D%A2%EF%BC%89" target="_blank" rel="noopener"
+>linux下如何查看多核负载情况&lt;/a>
+&lt;a class="link" href="https://cloud.tencent.com/developer/article/1457617" target="_blank" rel="noopener"
+>LINUX下查看CPU使用率的命令&lt;/a>&lt;/p></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
 &lt;ol>
 &lt;li>修改root密码 &lt;code>sudo passwd root&lt;/code>&lt;/li>
 &lt;li>修改SSH配置 &lt;code>sudo vi /etc/ssh/sshd_config&lt;/code>&lt;/li>
@@ -548,94 +567,7 @@ Executing transaction: &lt;span class="k">done&lt;/span>
 &lt;p>使用命令&lt;code>taskset -cp &amp;lt;cpu list&amp;gt; &amp;lt;pid&amp;gt;&lt;/code>进行绑核操作，ep.&lt;code>taskset -cp 0,1,2,3 94434&lt;/code>&lt;/p>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/94744929" target="_blank" rel="noopener"
->Anaconda-用conda创建python虚拟环境&lt;/a>&lt;/p></description></item><item><title>OpenCV with Python</title><link>https://comfluter.life/p/opencv-with-python/</link><pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-with-python/</guid><description>&lt;h2 id="安装opencv">安装OpenCV&lt;/h2>
-&lt;p>Python中使用pip安装时的命令为&lt;code>pip install opencv-python&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="p">(.&lt;/span>&lt;span class="n">venv&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nb">PS &lt;/span>&lt;span class="n">D:&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">Work&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">04&lt;/span> &lt;span class="n">Research&lt;/span> &lt;span class="n">Project&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">21&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">08&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">19&lt;/span> &lt;span class="n">Early&lt;/span> &lt;span class="n">Visual&lt;/span> &lt;span class="n">Processing&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">pyspice&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">pip&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
-&lt;span class="n">Collecting&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
-&lt;span class="n">Downloading&lt;/span> &lt;span class="n">opencv_python&lt;/span>&lt;span class="p">-&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">60-cp39-cp39-win_amd64&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">whl&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">35&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="n">MB&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">|&lt;/span>&lt;span class="err">████████████████████████████████&lt;/span>&lt;span class="p">|&lt;/span> &lt;span class="n">35&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">1&lt;/span> &lt;span class="n">MB&lt;/span> &lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="n">MB&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">s&lt;/span>
-&lt;span class="n">Requirement&lt;/span> &lt;span class="n">already&lt;/span> &lt;span class="n">satisfied&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="n">numpy&lt;/span>&lt;span class="p">&amp;gt;=&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">19&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">3&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">c:&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">programming&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">python&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">lib&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="nb">site-packages&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span> &lt;span class="nb">opencv-python&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">21&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">Installing&lt;/span> &lt;span class="n">collected&lt;/span> &lt;span class="n">packages&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="nb">opencv-python&lt;/span>
-&lt;span class="n">Successfully&lt;/span> &lt;span class="n">installed&lt;/span> &lt;span class="nb">opencv-python&lt;/span>&lt;span class="p">-&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">60&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>导入时使用语句&lt;code>import cv2 as cv&lt;/code>&lt;/p>
-&lt;h2 id="图像读取显示与保存">图像读取、显示与保存&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">cv2&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">cv&lt;/span>
-&lt;span class="n">imagePath&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;D:&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">Work&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">04 Research Project&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">21.08.19 Early Visual Processing&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">pyspice&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">assets&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">img&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">test.jpg&amp;#34;&lt;/span>
-&lt;span class="n">img&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imread&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">imagePath&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 读取图像&lt;/span>
-&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 命令行打印图像像素信息&lt;/span>
-&lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imshow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Display window&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 调用窗口显示图像&lt;/span>
-&lt;span class="n">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">waitKey&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 在argument规定的时间内等待用户输入，并返回用户输入值，0=forever&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;s&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="n">cv&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imwrite&lt;/span>&lt;span class="p">(&lt;/span>
-&lt;span class="s2">&amp;#34;D:&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">Work&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">04 Research Project&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">21.08.19 Early Visual Processing&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">pyspice&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">assets&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">img&lt;/span>&lt;span class="se">\\&lt;/span>&lt;span class="s2">saved.jpg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 保存图像&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>cv.imread()&lt;/code>参数：&lt;/p>
-&lt;ul>
-&lt;li>filename：读取图像的文件路径和文件名&lt;/li>
-&lt;li>flags：读取图片的方式，可选项
-&lt;ul>
-&lt;li>cv.IMREAD_COLOR(1)：始终将图像转换为 3 通道BGR彩色图像，默认方式&lt;/li>
-&lt;li>cv.IMREAD_GRAYSCALE(0)：始终将图像转换为单通道灰度图像&lt;/li>
-&lt;li>cv.IMREAD_UNCHANGED(-1)：按原样返回加载的图像（使用Alpha通道）&lt;/li>
-&lt;li>cv.IMREAD_ANYDEPTH(2)：在输入具有相应深度时返回16位/ 32位图像，否则将其转换为8位&lt;/li>
-&lt;li>cv.IMREAD_ANYCOLOR(4)：以任何可能的颜色格式读取图像&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>返回值 retval：读取的 OpenCV 图像，nparray 多维数组&lt;/li>
-&lt;/ul>
-&lt;p>图像路径中不能有中文字符。&lt;/p>
-&lt;h2 id="读取并修改图像信息">读取并修改图像信息&lt;/h2>
-&lt;ul>
-&lt;li>图片像素信息：通过&lt;code>img = cv.imread(imagePath)&lt;/code>读取得到的img类型为&lt;code>np.ndarray&lt;/code>，其中0维为行数，1维为列数，2，3，4维分别为图片每像素B、G、R对应的值。&lt;strong>注意顺序！&lt;/strong>&lt;/li>
-&lt;li>图片大小信息：&lt;code>img.shape&lt;/code>对象，为三值数组，分别为行数、列数、通道数。e.p.&lt;code>(138, 200, 3)&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="读取视频调用摄像头保存视频">读取视频、调用摄像头、保存视频&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">cv2&lt;/span>
-&lt;span class="n">cap&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoCapture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">fourcc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoWriter_fourcc&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="s1">&amp;#39;XVID&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">out&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoWriter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;output.avi&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">fourcc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">20.0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">640&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">480&lt;/span>&lt;span class="p">))&lt;/span>
-&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">isOpened&lt;/span>&lt;span class="p">()):&lt;/span>
-&lt;span class="n">ret&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="n">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">frame&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imshow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;frame&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">frame&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">waitKey&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="mh">0xFF&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;q&amp;#39;&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="k">break&lt;/span>
-&lt;span class="n">cap&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">release&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="n">out&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">release&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">destroyAllWindows&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>关键点：&lt;/p>
-&lt;ul>
-&lt;li>调用摄像头：&lt;code>cap = cv2.VideoCapture(0)&lt;/code> 创建一个VideoCapture对象。它的参数可以是设备索引或视频文件的名称（下面会讲到）。设备索引只是指定哪台摄像机的号码。0代表第一台摄像机、1代表第二台摄像机。之后，可以逐帧捕捉视频。最后释放捕获。&lt;/li>
-&lt;li>读取视频：&lt;code>cap = cv2.VideoCapture('&amp;lt;path to video&amp;gt;')&lt;/code>，然后可以使用&lt;code>cap.isOpened()&lt;/code>检查视频的打开情况&lt;/li>
-&lt;li>读取视频：&lt;!-- raw HTML omitted --> = cv.VideoWriter( filename, fourcc, fps, frameSize[, isColor] )
-&lt;ul>
-&lt;li>filename：给要保存的视频起个名字&lt;/li>
-&lt;li>fourcc：指定视频编解码器的4字节代码&lt;/li>
-&lt;li>【（‘P’，‘I’，‘M’，‘1’）是MPEG-1编解码器】？&lt;/li>
-&lt;li>【（‘M’，‘J’，‘P’，&amp;lsquo;G &amp;lsquo;）是一个运动jpeg编解码器】？&lt;/li>
-&lt;li>fps：帧率&lt;/li>
-&lt;li>frameSize：帧大小&lt;/li>
-&lt;li>isColor：如果为true，则视频为彩色，否则为灰度视频，默认为true&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>读取下一帧：&lt;code>ret, frame = cap.read()&lt;/code>&lt;/li>
-&lt;li>将帧写到文件中：&lt;code>ret, frame = cap.read()&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h3 id="常用视频相关函数">常用视频相关函数&lt;/h3>
-&lt;ul>
-&lt;li>&lt;code>cv2.VideoCapture.get(propId)&lt;/code> 访问视频的某些功能，其中propId是一个从0到18的数字，每个数字表示视频的属性（Property Identifier）。&lt;/li>
-&lt;li>&lt;code>retval = cv2.VideoCapture.set(propId,value)&lt;/code> 其中一些值可以使用 &lt;code>cap.set(propId，value)&lt;/code> 进行修改，value是修改后的值。
-&lt;ul>
-&lt;li>例如：通过&lt;code>cap.get(3)&lt;/code>和&lt;code>cap.get(4)&lt;/code>来检查帧的宽度和高度，默认的值是640x480。现修改为320x240，使用&lt;code>ret = cap.set（3, 320）&lt;/code>和&lt;code>ret = cap.set（4, 240）&lt;/code>。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;code>retval,image= cv2.VideoCapture.read([,image])&lt;/code> 抓取，解码并返回下一个视频帧。返回值为&lt;code>true&lt;/code>表明抓取成功。该函数是组合了&lt;code>grab()&lt;/code>和&lt;code>retrieve()&lt;/code> ，这是最方便的方法。如果没有帧，该函数返回&lt;code>false&lt;/code>，并输出空图像。&lt;/li>
-&lt;li>&lt;code>retval, image = cv2.VideoCapture.retrieve([, image[, flag]])&lt;/code> 解码并返回抓取的视频帧
-&lt;code>retval = cv2.VideoCapture.grab()&lt;/code> 从视频文件或相机中抓取下一帧。&lt;code>true&lt;/code>为抓取成功。该函数主要用于多摄像头时。&lt;/li>
-&lt;li>&lt;code>cv2.VideoCapture.release()&lt;/code> 关闭视频文件或相机设备。&lt;/li>
-&lt;/ul>
-&lt;h2 id="reference">Reference&lt;/h2>
-&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_34106574/article/details/90265603?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.no_search_link&amp;amp;spm=1001.2101.3001.4242.1" target="_blank" rel="noopener"
->【OpenCV】Python视频的读取及保存&lt;/a>&lt;/p></description></item><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
+>Anaconda-用conda创建python虚拟环境&lt;/a>&lt;/p></description></item><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
 &lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="p">]],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">31&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">33&lt;/span>&lt;span class="p">])&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意Numpy中元素编号从0开始，左侧包含右侧不包含&lt;/strong>&lt;/p>
