@@ -35,11 +35,61 @@
 &lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
 >Stack Chinese documentation&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
->icons&lt;/a>&lt;/p></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
+>icons&lt;/a>&lt;/p></description></item><item><title>Including Verilog Code Block in Latex</title><link>https://comfluter.life/p/including-verilog-code-block-in-latex/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/including-verilog-code-block-in-latex/</guid><description>&lt;ol>
+&lt;li>
+&lt;p>include packages for code block and coloring&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>\usepackage{listings}&lt;/code>&lt;/li>
+&lt;li>&lt;code>\usepackage{xcolor}&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>insert following codes for defining verilog code coloring tactic. It should be inserted at the head field of the latex file (before &lt;code>\begin{document}&lt;/code>).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="c">% for verilog code coloring
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">\definecolor&lt;/span>&lt;span class="nb">{&lt;/span>vgreen&lt;span class="nb">}{&lt;/span>RGB&lt;span class="nb">}{&lt;/span>104,180,104&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\definecolor&lt;/span>&lt;span class="nb">{&lt;/span>vblue&lt;span class="nb">}{&lt;/span>RGB&lt;span class="nb">}{&lt;/span>49,49,255&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\definecolor&lt;/span>&lt;span class="nb">{&lt;/span>vorange&lt;span class="nb">}{&lt;/span>RGB&lt;span class="nb">}{&lt;/span>255,143,102&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\lstdefinestyle&lt;/span>&lt;span class="nb">{&lt;/span>verilog-style&lt;span class="nb">}&lt;/span>
+&lt;span class="nb">{&lt;/span>
+language=Verilog,
+basicstyle=&lt;span class="k">\small\ttfamily&lt;/span>,
+keywordstyle=&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>vblue&lt;span class="nb">}&lt;/span>,
+identifierstyle=&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>,
+commentstyle=&lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>vgreen&lt;span class="nb">}&lt;/span>,
+numbers=left,
+numberstyle=&lt;span class="k">\tiny\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>,
+numbersep=10pt,
+tabsize=8,
+moredelim=*[s][&lt;span class="k">\colorIndex&lt;/span>]&lt;span class="nb">{&lt;/span>[&lt;span class="nb">}{&lt;/span>]&lt;span class="nb">}&lt;/span>,
+literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;span class="nb">}&lt;/span>1
+&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\makeatletter&lt;/span>
+&lt;span class="k">\newcommand*\@&lt;/span>lbracket&lt;span class="nb">{&lt;/span>[&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\newcommand*\@&lt;/span>rbracket&lt;span class="nb">{&lt;/span>]&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\newcommand*\@&lt;/span>colon&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\newcommand*\colorIndex&lt;/span>&lt;span class="nb">{&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\edef\@&lt;/span>temp&lt;span class="nb">{&lt;/span>&lt;span class="k">\the\lst&lt;/span>@token&lt;span class="nb">}&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\ifx\@&lt;/span>temp&lt;span class="k">\@&lt;/span>lbracket &lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\else\ifx\@&lt;/span>temp&lt;span class="k">\@&lt;/span>rbracket &lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\else\ifx\@&lt;/span>temp&lt;span class="k">\@&lt;/span>colon &lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>black&lt;span class="nb">}&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\else&lt;/span> &lt;span class="k">\color&lt;/span>&lt;span class="nb">{&lt;/span>vorange&lt;span class="nb">}&lt;/span>&lt;span class="c">%
+&lt;/span>&lt;span class="c">&lt;/span> &lt;span class="k">\fi\fi\fi&lt;/span>
+&lt;span class="nb">}&lt;/span>
+&lt;span class="k">\makeatother&lt;/span>
+&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>trace&lt;span class="nb">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Insert your verilog code block using following codes:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>lstlisting&lt;span class="nb">}&lt;/span>[style=&lt;span class="nb">{&lt;/span>verilog-style&lt;span class="nb">}&lt;/span>]
+&amp;lt;your code&amp;gt;
+&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>lstlisting&lt;span class="nb">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
 &lt;ol>
 &lt;li>修改root密码 &lt;code>sudo passwd root&lt;/code>&lt;/li>
 &lt;li>修改SSH配置 &lt;code>sudo vi /etc/ssh/sshd_config&lt;/code>&lt;/li>
 &lt;li>找到选项&lt;code>PermitRootLogin&lt;/code>，将其前面的&lt;code>#&lt;/code>去掉，即可使用SSH登录。若将后面的&lt;code>prohibit-password&lt;/code>改为&lt;code>yes&lt;/code>则可使用密码登录。&lt;/li>
+&lt;li>如果不选择密码登录，还需要通过其他账户登录，将&lt;code>authorized_keys&lt;/code>复制到root账户的.ssh文件夹&lt;code>/root/.ssh&lt;/code>下&lt;/li>
 &lt;/ol>
 &lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_36829091/article/details/82053322" target="_blank" rel="noopener"
@@ -74,6 +124,8 @@
 &lt;/ol>
 &lt;h2 id="debugging">Debugging&lt;/h2>
 &lt;h3 id="error-not-found">Error: Not Found.&lt;/h3>
+&lt;p>尝试了修改&lt;code>Homepage URL&lt;/code>为github pages页面，发现并没有用。&lt;/p>
+&lt;p>解决：存放评论的repo不能为&lt;code>private&lt;/code>属性. 应该是一个&lt;code>public&lt;/code>的代码库才可以使用Gitalk！&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000018072952" target="_blank" rel="noopener"
 >Gitalk评论插件使用教程&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
