@@ -18,6 +18,7 @@ import numpy as np a = np.array([[1, 2, 3], [2, 3, 4]]) print(a == np.">
  取单个元素x = a[1, 2]，对应第0维的第1个元素4 切片x = a[0:2, 1:3]，对应第0维的第0~1个元素，第1维的第1~2个元素[[12 13], [22 23]] 切片x = a[:2, 2:]，对应对应第0维的最开始到第2（2-1）个元素，第1维的第2个及以后的所有元素[[13], [23]]  判断一个数组是否存在于另一个大数组内 直接使用==会逐数字判断元素是否存在：
 import numpy as np a = np.array([[1, 2, 3], [2, 3, 4]]) print(a == np.array([1, 2, 3])) 可以改为(a == np.array([1, 2, 3])).all(1).any()。y == z会将y的每一行与z的每个元素进行比较。 使用all(axis=1)可以获取所有元素匹配的行，并使用any()找出是否匹配。
 import numpy as np a = np.array([[1, 2, 3], [2, 3, 4]]) print(a == np.">
+<link rel="shortcut icon" href=/siteIcon/favicon.ico>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -124,16 +125,16 @@ True
 </a>
 </article>
 <article>
-<a href=/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<a href=/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <div class=article-details>
-<h2 class=article-title>Linux 学习随记</h2>
+<h2 class=article-title>PlantUML 学习随记</h2>
 </div>
 </a>
 </article>
 <article>
-<a href=/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<a href=/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/>
 <div class=article-details>
-<h2 class=article-title>PlantUML 学习随记</h2>
+<h2 class=article-title>Nginx 服务器配置子域名</h2>
 </div>
 </a>
 </article>

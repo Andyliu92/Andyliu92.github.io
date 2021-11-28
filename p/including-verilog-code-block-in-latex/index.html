@@ -15,6 +15,7 @@
 <meta name=twitter:description content="include packages for code block and coloring
  \usepackage{listings} \usepackage{xcolor}    insert following codes for defining verilog code coloring tactic. It should be inserted at the head field of the latex file (before \begin{document}).
 % for verilog code coloring \definecolor{vgreen}{RGB}{104,180,104} \definecolor{vblue}{RGB}{49,49,255} \definecolor{vorange}{RGB}{255,143,102} \lstdefinestyle{verilog-style} { language=Verilog, basicstyle=\small\ttfamily, keywordstyle=\color{vblue}, identifierstyle=\color{black}, commentstyle=\color{vgreen}, numbers=left, numberstyle=\tiny\color{black}, numbersep=10pt, tabsize=8, moredelim=*[s][\colorIndex]{[}{]}, literate=*{:}{:}1 } \makeatletter \newcommand*\@lbracket{[} \newcommand*\@rbracket{]} \newcommand*\@colon{:} \newcommand*\colorIndex{%  \edef\@temp{\the\lst@token}%  \ifx\@temp\@lbracket \color{black}%  \else\ifx\@temp\@rbracket \color{black}%  \else\ifx\@temp\@colon \color{black}%  \else \color{vorange}%  \fi\fi\fi } \makeatother \usepackage{trace}   Insert your verilog code block using following codes:">
+<link rel="shortcut icon" href=/siteIcon/favicon.ico>
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -182,16 +183,16 @@ on-phone--column extended">
 </a>
 </article>
 <article>
-<a href=/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<a href=/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/>
 <div class=article-details>
-<h2 class=article-title>Pyspice 学习随记</h2>
+<h2 class=article-title>Nginx 服务器配置子域名</h2>
 </div>
 </a>
 </article>
 <article>
-<a href=/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
+<a href=/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <div class=article-details>
-<h2 class=article-title>Linux 学习随记</h2>
+<h2 class=article-title>Pyspice 学习随记</h2>
 </div>
 </a>
 </article>
