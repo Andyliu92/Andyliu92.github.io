@@ -61,7 +61,15 @@ server_name ling.comfluter.life;
 # 301重定向设置
 return 301 http://47.102.150.182/;
 }
-&lt;/code>&lt;/pre>&lt;p>增加一项二级域名设置即可。&lt;/p></description></item><item><title>参观华为南京研究所</title><link>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</link><pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</guid><description>&lt;p>今天，借着网络课提供的机会，有幸走进华为南研所，切身感受企业研究部门的气氛，也看看自己在课上的所学是如何落到实处的。&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>增加一项二级域名设置即可。&lt;/p></description></item><item><title>树莓派配置NAS</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</guid><description>&lt;h2 id="挂载ntfs格式磁盘">挂载NTFS格式磁盘&lt;/h2>
+&lt;p>貌似树莓派OS能够自动挂载NTFS磁盘到&lt;code>/media/pi&lt;/code>下。不用额外操作。&lt;/p>
+&lt;h2 id="使用samba协议提供校园网内文件服务">使用SAMBA协议提供校园网内文件服务&lt;/h2>
+&lt;h3 id="安装samba">安装SAMBA&lt;/h3>
+&lt;p>安装SAMBA：&lt;code>sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install -y samba&lt;/code>&lt;/p>
+&lt;p>查看SAMBA版本：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">root@raspberrypi:/media/pi/4T存储# samba --version
+Version 4.13.13-Debian
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>参观华为南京研究所</title><link>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</link><pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</guid><description>&lt;p>今天，借着网络课提供的机会，有幸走进华为南研所，切身感受企业研究部门的气氛，也看看自己在课上的所学是如何落到实处的。&lt;/p>
 &lt;p>企业气氛确实是今天感觉到比较奇特的一个方面。随处可见使人奋进、催人奋斗的标语。除此以外，园区里还有许多战斗标语，例如“没有退路就是胜利之路”，美国的打压看起来也确实落到了实处。&lt;/p></description></item><item><title>Including Verilog Code Block in Latex</title><link>https://comfluter.life/p/including-verilog-code-block-in-latex/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/including-verilog-code-block-in-latex/</guid><description>&lt;ol>
 &lt;li>
 &lt;p>include packages for code block and coloring&lt;/p>
@@ -1163,4 +1171,103 @@ How many questions (y/n) must you ask to ensure the color of the ball you have?&
 &lt;li>通过采样稀疏的键值信号，尽可能好地还原信号&lt;/li>
 &lt;/ul>
 &lt;/li>
+&lt;/ul>
+&lt;h2 id="211129-law-of-imaging-measurement-and-statistics">21.11.29 Law of Imaging: Measurement and statistics&lt;/h2>
+&lt;h3 id="噪声">噪声&lt;/h3>
+&lt;h4 id="photon-noise">Photon Noise&lt;/h4>
+&lt;p>光子数量越多，相对噪声数量越来越少。&lt;/p>
+&lt;p>光子随机到达，符合泊松分布$P(X=k) = \frac{\lambda^k\cdot e^{-\lambda}}{k!}$，误差与光子数量的根号成正比。&lt;/p>
+&lt;p>但是，噪声如果与信号产生共振，可以使得信号的阈值降低。&lt;code>Stochastic resonance&lt;/code>&lt;/p>
+&lt;p>photons: bunched? antibunched? &amp;ndash;&amp;gt; &lt;strong>bunched!&lt;/strong>. 探测到/不探测到光子的概率符合二项式分布。&lt;/p>
+&lt;p>所有基本粒子，按照自旋数区分：&lt;/p>
+&lt;ol>
+&lt;li>整数自旋：费米子，满足泡利不相容原理，不能同时出现&lt;/li>
+&lt;li>$\frac{1}{2}$自旋：玻色子，不满足不相容原理，两离子可以同时出现在同一位置，符合波色-爱因斯坦分布。&lt;/li>
+&lt;/ol>
+&lt;p>光子，若$hv \leq kT$，则波动性更强，反之粒子性更强。&lt;/p>
+&lt;p>&lt;strong>如何使随机光变得更均匀？&lt;/strong>
+加一“挡板”，收到光子就短时屏蔽掉后来的光子。&lt;code>Sub-Possion Light&lt;/code>光子噪声更低，测到的相对噪声远低于普通光源。此技术应用于引力波探测，减少激光束的噪声误差。&lt;/p>
+&lt;p>&lt;code>DOI: 10.1063/1.881246&lt;/code>&lt;/p>
+&lt;h4 id="signal-to-noise-ratio-snr">Signal to Noise Ratio &lt;code>SNR&lt;/code>&lt;/h4>
+&lt;p>对于光：$SNR = \frac{N_S}{\sqrt{N_S}}$（不考虑sensor noise）&lt;/p>
+&lt;p>光处于粒子态与波动态时的信噪比不同，因此探测量也不同：光：光子个数，波：幅度。&lt;/p>
+&lt;h3 id="information-capacity-of-imagers">Information Capacity of Imagers&lt;/h3>
+&lt;p>香农定理：$C = \frac{B}{2} \log_2(1+\frac{S}{N})$，对于每个信道。&lt;/p>
+&lt;p>空间带宽积：$SBP = \frac{A}{G^2}$&lt;/p>
+&lt;p>所以可以推出相机最大成像信息量：$Capacity = \frac{A}{G^2} R \frac{B}{2} \log_2(1+\frac{S}{N})$&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 122;
+flex-basis: 294px"
+>
+&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp" data-size="941x768">
+&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp"
+width="941"
+height="768"
+srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_1024x0_resize_q75_h2_box_2.webp 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h3 id="information-processing-limit">Information Processing Limit&lt;/h3>
+&lt;h4 id="information-and-energy">Information and Energy&lt;/h4>
+&lt;p>全互联网数据：175ZB。如此大量信息使得人工智能算法算力需求急速发展，数据分析用电量在急速发展。&lt;/p>
+&lt;p>但是，摩尔定律的潜能在耗尽，人类发电量的总量也达到瓶颈。&lt;/p>
+&lt;p>&lt;strong>Kardashev Scale&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>文明分级：能量的使用能力。&lt;/li>
+&lt;/ul>
+&lt;h4 id="information-processing">Information Processing&lt;/h4>
+&lt;p>Von-Neumann architecture&lt;/p>
+&lt;p>储存墙瓶颈：为了存储数据消耗了大量能量，消耗了大量时间。读、取均是。例如识别Cifar10图像时访问能量是计算能量的10倍以上&lt;/p>
+&lt;p>由此可以推算出算力能量效率的极限。&lt;/p>
+&lt;p>512KB 需要 1.8GFLOPS&lt;/p>
+&lt;p>Big Data Explosion. 无法应对如此大量的信息。我们必须提升能效。&lt;/p>
+&lt;h4 id="ways-to-overcome">Ways to overcome&lt;/h4>
+&lt;ol>
+&lt;li>器件级存算一体神经网络架构。能量潜力~1000TOPS/W&lt;/li>
+&lt;li>探索类人眼新形态神经网络结构，充分发挥存算一体器件的优势&lt;/li>
+&lt;/ol>
+&lt;h3 id="limit-for-computing">Limit for Computing&lt;/h3>
+&lt;p>Computing：映射？&lt;/p>
+&lt;blockquote>
+&lt;p>刘慈欣《三体》：人列计算机？&lt;/p>
+&lt;/blockquote>
+&lt;p>Turing Computers&lt;/p>
+&lt;ul>
+&lt;li>input -&amp;gt; compute unit -&amp;gt; output&lt;/li>
+&lt;/ul>
+&lt;p>Computing unit:&lt;/p>
+&lt;ul>
+&lt;li>人脑：神经网络：概率&lt;/li>
+&lt;li>电脑：冯诺依曼架构：逻辑&lt;/li>
+&lt;/ul>
+&lt;h4 id="power-consumption">Power Consumption&lt;/h4>
+&lt;ul>
+&lt;li>input&lt;/li>
+&lt;li>output&lt;/li>
+&lt;/ul>
+&lt;p>Maxwell Demon:信息换能量&lt;/p>
+&lt;p>Szilard Engine(1921): Storing or erasing 1 bit of information needs at least $kT \ln 2 $ Joule energy.&lt;/p>
+&lt;ul>
+&lt;li>Optical Computing
+&lt;ul>
+&lt;li>Power efficiency could be very low!&lt;/li>
+&lt;li>直接操作光子，输入图像输出状态&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Quantum Computing
+&lt;ul>
+&lt;li>The power efficiency used computing can be negligible.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="noesis">Noesis&lt;/h3>
+&lt;p>The chains are made of rubber instead of steel.
+Can human beings break the chains and find the way to Noesis?&lt;/p>
+&lt;h4 id="question-and-exploration">Question and Exploration&lt;/h4>
+&lt;p>Mission of human:&lt;/p>
+&lt;ul>
+&lt;li>To quest what is known that is unknown.&lt;/li>
 &lt;/ul></description></item></channel></rss>
