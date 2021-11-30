@@ -35,7 +35,31 @@
 &lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
 >Stack Chinese documentation&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
->icons&lt;/a>&lt;/p></description></item><item><title>Nginx 服务器配置子域名</title><link>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</guid><description>&lt;h2 id="添加域名解析">添加域名解析&lt;/h2>
+>icons&lt;/a>&lt;/p></description></item><item><title>Anaconda使用随记</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;ul>
+&lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
+&lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;ul>
+&lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>Anaconda使用随记11</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B011/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B011/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;ul>
+&lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
+&lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;ul>
+&lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>Anaconda使用随记22</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B022/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B022/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;ul>
+&lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
+&lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="minutiae">Minutiae&lt;/h2>
+&lt;ul>
+&lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>Nginx 服务器配置子域名</title><link>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</guid><description>&lt;h2 id="添加域名解析">添加域名解析&lt;/h2>
 &lt;p>到腾讯云服务器控制台，添加需要解析的子域名，如下图。图中第一个参数“主机记录”即为子域名名称。&lt;/p>
 &lt;p>&lt;figure
 class="gallery-image"
