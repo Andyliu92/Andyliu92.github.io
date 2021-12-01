@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 19 Nov 9999 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, World!</title><link>https://comfluter.life/p/hello-world/</link><pubDate>Fri, 19 Nov 9999 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/hello-world/</guid><description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 31 Dec 9999 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, World!</title><link>https://comfluter.life/p/hello-world/</link><pubDate>Fri, 31 Dec 9999 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/hello-world/</guid><description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
 &lt;p>在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p>
 &lt;p>在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p>
 &lt;p>第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p>
@@ -29,13 +29,28 @@
 &lt;li>Nginx服务器搭建&lt;/li>
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
-&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p>
-&lt;h2 id="link">link&lt;/h2>
-&lt;p>built with hugo and using theme &amp;ldquo;Stack&amp;rdquo;&lt;/p>
-&lt;p>&lt;a class="link" href="https://docs.stack.jimmycai.com/zh/" target="_blank" rel="noopener"
->Stack Chinese documentation&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://tablericons.com/" target="_blank" rel="noopener"
->icons&lt;/a>&lt;/p></description></item><item><title>Anaconda使用随记</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>1 Introduction to Programming Languages and Tools of the Trade</title><link>https://comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</guid><description>&lt;h2 id="vscode-extensions-for-web-development">Vscode extensions for web development&lt;/h2>
+&lt;ul>
+&lt;li>ESLint
+&lt;ul>
+&lt;li>Integrates ESLint JavaScript into VS Code.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Prettier
+&lt;ul>
+&lt;li>JS code formatter&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>JavaScript (ES6) code snippets&lt;/li>
+&lt;/ul>
+&lt;h2 id="tools">Tools&lt;/h2>
+&lt;ul>
+&lt;li>Node.JS
+&lt;ul>
+&lt;li>(NodeJS安装-菜鸟教程)[https://www.runoob.com/nodejs/nodejs-install-setup.html]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>2 Introduction to GitHub</title><link>https://comfluter.life/p/2-introduction-to-github/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/2-introduction-to-github/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
 &lt;ul>
 &lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
 &lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
@@ -43,15 +58,7 @@
 &lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;ul>
 &lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Anaconda使用随记11</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B011/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B011/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
-&lt;ul>
-&lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
-&lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="minutiae">Minutiae&lt;/h2>
-&lt;ul>
-&lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Anaconda使用随记22</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B022/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B022/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;/ul></description></item><item><title>Anaconda使用随记</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
 &lt;ul>
 &lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
 &lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
@@ -263,9 +270,9 @@ literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;s
 &lt;p>天地长久，不自生：天地不是单一的生命，以万物的生命来体现自己的生命。万物演变恒久不息，天也恒久存在。&lt;/p>
 &lt;p>是以圣人后其身而身先，外其身而身存： 老子对后代人物的政治谋略影响较大，怎么在政治上立于不败之地。看上去是哲理，但用起来是技巧。&lt;/p>
 &lt;blockquote>
-&lt;p>四十章：反者道之动；弱者道之用。天下万物生于有，有生于无。
-老子要否认所有提升到“规则”层面的内容。&lt;/p>
+&lt;p>四十章：反者道之动；弱者道之用。天下万物生于有，有生于无。&lt;/p>
 &lt;/blockquote>
+&lt;p>老子要否认所有提升到“规则”层面的内容。&lt;/p>
 &lt;blockquote>
 &lt;p>二章：天下皆知美之为美，斯恶已。皆知善之为善，斯不善已。故有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随，恒也。是以圣人处无为之事，行不言之教，万物作焉而不辞，生而不有，为而不恃，功成而弗居。夫唯弗居，是以不去。(万物作焉而不辞 一作：万物作焉而不为始)&lt;/p>
 &lt;/blockquote>
@@ -375,9 +382,121 @@ literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;s
 &lt;/blockquote>
 &lt;ul>
 &lt;li>难知：天地初始状态，难以用现有的语言进行描述。思维习惯、语言、行为规范是禁锢、限制、不自由、不自然。描述初始状态时必然会用到玄奥的词句。&lt;/li>
-&lt;li>其实易行：回到初始状态&lt;/li>
+&lt;li>其实易行：回到&lt;strong>初始状态&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>庄子：自由与自然的紧张。警惕“自我”对他人的毒害。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="conda-复制已有环境">Conda 复制已有环境&lt;/h2>
+&lt;p>庄子：自由与自然的紧张。警惕“自我”对他人的毒害。&lt;/p>
+&lt;p>自然而然、自己如此与回到原初状态的联系是什么？&lt;/p>
+&lt;p>道家：反对条理化、经验化的对世界的理解与体验。&lt;/p>
+&lt;p>后世道家较少谈道的自然哲学的一面，而是谈**回到本源。**后世道家从各个方面引导人们回到自己的初始状态。&lt;/p>
+&lt;h3 id="回到原初状态">回到原初状态&lt;/h3>
+&lt;blockquote>
+&lt;p>持而盈之，不如其已。揣而锐之，不可长保。金玉满堂，莫之能守。富贵而骄，自遗其咎。功遂身退，天之道也。&lt;/p>
+&lt;/blockquote>
+&lt;p>个人的原初状态。退守，在知识阶层的普通人中广为流传。&lt;/p>
+&lt;h4 id="政治上的原初状态">政治上的原初状态&lt;/h4>
+&lt;blockquote>
+&lt;p>小国寡民。使有什伯之器而不用；使民重死而不远徙；虽有舟舆，无所乘之；虽有甲兵，无所陈之。使人复结绳而用之。至治之极。甘其食，美其服，安其居，乐其俗，邻国相望，鸡犬之声相闻，民至老死不相往来。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>群体的原初状态。重点在心态。&lt;/li>
+&lt;li>有机械，即有机事，有机事，即有机心。&lt;/li>
+&lt;li>甘其食&amp;hellip;乐其俗：吃什么、穿什么都觉得好。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>故圣人云：“我无为，而民自化；我好静，而民自正；我无事，而民自富；我无欲，而民自朴。”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>说到底，重点在于&lt;strong>政治&lt;/strong>上。要国家回到无为的原初状态。但是老子不是在否定政治的作用，不是在说应该没有政治。&lt;/li>
+&lt;li>无为：
+&lt;ul>
+&lt;li>君主对官员：君无为而臣有为。&lt;/li>
+&lt;li>政府对民间：国家无为而让社会自己演化。例：文景之治。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>《管子·心术上》：天曰虚，地曰静，乃不伐。洁其宫，开其门，去私毋言，神明若存。纷乎其若乱，静之而自治。强不能遍立，智不能尽谋。物固有形，形固有名，名当，谓之圣人。故必知不言，无为之事，然后知道之纪。殊形异埶，不与万物异理，故可以为天下始。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>天地虚静：人应当虚、静。伐：自我吹嘘。&lt;/li>
+&lt;li>宫：房间，比喻内心。不洁：知识、情绪等等一切妨碍清晰认知客观世界的障碍。&lt;/li>
+&lt;li>神明：与虚静相对。指向生命原始的可能性、创造力。&lt;/li>
+&lt;li>强不能遍立，智不能尽谋：具体的道理。&lt;/li>
+&lt;li>物固有形，形固有名：自然万物有其自己的形态，依据其形态命名。这里因为在将政治，这里的物应当指社会生活的事物，如官职、社会制度等等。名：对事物发展状态的反映。形名之学，将道家与法家结合起来。
+&lt;ul>
+&lt;li>道家：有从自然而来的正当性。&lt;/li>
+&lt;li>法家：法令的正当性从何而来？早期道家只以现实需要为自己辩护，但这个理由显然在理论上不够高明。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>道家中将政治道术的文献：&lt;/p>
+&lt;ul>
+&lt;li>马王堆汉墓帛书、《黄帝四经》或称《黄老帛书》、《经法》、《十大经》、《称》、《道原》、《庄子·天道》、《韩非子·解老》、《杨权》等篇、吕氏春秋若干篇、慎子、鹖冠子、《史记·货殖列传》&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>《史记·货殖列传序》：夫山西饶材、竹、旄、玉石，山东多鱼、盐、漆、丝、声色，江南出棻、梓、姜、桂、金、锡、连、丹沙、犀、玳瑁、珠玑、齿、革，龙门、碣石 北多马、牛、羊、旃、裘、筋、角；铜、铁则千里往往山出棋置。此其大较也。皆中国人民所喜好，谣俗被服饮食奉生送死之具也。故待农而食之，虞而出之，工而成之，商而通之。此宁有政教发征期会哉？人各任其能，竭其力，以得所欲。故物贱之征贵，贵之征贱，各劝其业，乐其事，若水之趋下，日夜无休时，不召而自来，不求而民出之。岂非道之所符，而自然之验邪？&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>商业的规律是自然而然形成的。&lt;/li>
+&lt;li>好的政治：因循利导。&lt;/li>
+&lt;/ul>
+&lt;p>道家的展开不仅仅是理论运作，而是与政治运作紧密结合。司马迁此处应该是在讲文景之治之时的政治模式，以批判汉武帝的政治。这应当不是司马迁个人的想法，而是当时的一种思潮，是老子思想展开的一种形态。&lt;/p>
+&lt;h2 id="庄子">庄子&lt;/h2>
+&lt;p>庄子对后来士大夫思想的影响很大。魏晋玄学的旷达自由与宋明理学的无我朴实。&lt;/p>
+&lt;blockquote>
+&lt;p>南郭子綦隐机而坐，仰天而嘘，荅焉似丧其耦。颜成子游立侍乎前，曰：“何居乎？形固可使如槁木，而心固可使如死灰乎？今之隐机者，非昔之隐机者也？”子綦曰：“偃，不亦善乎，而问之也！今者吾丧我，汝知之乎？汝闻人籁而未闻地籁，汝闻地籁而不闻天籁夫！”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>“隐机而坐，仰天而嘘，荅焉似丧其耦”：文学化表达，不用逐字深究，回到婴儿原初状态的表现。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>子游曰：“敢问其方。”子綦曰：“夫大块噫气，其名为风。是唯无作，作则万窍怒呺。而独不闻之翏翏乎？山林之畏隹，大木百围之窍穴，似鼻，似口，似耳，似枅，似圈，似臼，似洼者，似污者。激者、謞者、叱者、吸者、叫者、譹者、宎者，咬者，前者唱于而随者唱喁，泠风则小和，飘风则大和，厉风济则众窍为虚。而独不见之调调之刁刁乎？”
+子游曰：“地籁则众窍是已，人籁则比竹是已，敢问天籁。”子綦曰：“夫吹万不同，为而使其自己也。咸其自取，怒者其谁邪？”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>文学性：形象大于思想&lt;/li>
+&lt;li>思想上仍然是在说致虚极，守静笃。&lt;/li>
+&lt;li>直接去体验自然世界的生气勃勃&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>至人无己，神人无功，圣人无名。&lt;/p>
+&lt;/blockquote>
+&lt;p>最后还是回到道家思想：&lt;strong>回到原初状态。&lt;/strong>&lt;/p>
+&lt;h3 id="人与世界的关系">人与世界的关系&lt;/h3>
+&lt;blockquote>
+&lt;p>《庄子·知北游》：东郭子问于庄子曰：“所谓道，恶乎在？”庄子曰：“无所不在。 ”东郭子曰：“期而后可。”庄子曰：“在蝼蚁。”曰：“何其下邪 ？”曰：“在稊稗。”曰：“何其愈下邪？”曰：“在瓦甓。”曰： “何其愈甚邪？”曰：“在屎溺。”东郭子不应。庄子曰：“夫子之 问也，固不及质。正、获之问于监市履狶也，‘每下愈况’。汝唯莫必， 无乎逃物&amp;hellip;”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>重点在前半。思想上的重点在于：道表现在人与外部世界的一种关系。退回原初状态后可以与世界建立新的关系。此理念在后来结出无数思想果实。后世：什么是好的状态？&lt;/li>
+&lt;li>“何其下邪？”：外部世界以自己的标准做区分、分化。每一个物都有它的价值、角度。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>《庄子·齐物论》：古之人，其知有所至矣。恶乎至？有以为未始有物者，至矣，尽矣，不可以加矣！其次以为有物矣，而未始有封也。其次以为有封焉，而未始有是非也。是非之彰也，道之所以亏也。道之所以亏，爱之所以成。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>梓庆削木为鐻，日成，见者惊犹鬼神。鲁侯见而问焉，曰：“子何术以为焉？”对曰：“臣，工人，何术之有！虽然，有一焉：臣将为 鐻，未尝敢以耗气也，必齐以静心。齐三日，而不敢怀庆赏爵禄；齐五日，不敢怀非誉巧拙；齐七日，辄然忘吾有四枝形体也。当是时也，无公朝。其巧专而外骨消，然后入山林，观天性形躯，至矣，然后成鐻，然后加手焉，不然则已。则以天合天，器之所以疑神者，其是与！”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>一步一步将现实状态中的“我”逐步忘记。&lt;/li>
+&lt;li>“以天合天”：第一个天：自己的天然；第二个天：自然世界。&lt;/li>
+&lt;li>在自然之道的意义上，做事仅看与这个事有关的事情，回到事情本身，其余的所有纷扰（晋赏爵禄，非誉巧拙等等）全部忘记。此形成一种文化形态、文化理想。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>生而美者，人与之鉴，不告则不知其美于人也。若知之，若不知之 ，若闻之，若不闻之，其可喜也终无已，人之好之亦无已，性也。圣人之爱人也，人与之名，不告则不知其爱人也。若知之，若不知之， 若闻之，若不闻之，其爱人也终无已，人之安之亦无已，性也。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>美：不顾盼自怜。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>《传习录下》：有一属官，因久听讲先生之学，曰：“此学甚好，只是簿书讼狱繁难，不得为学。”先生闻之，曰：“我何尝教尔离了簿书讼狱悬空去讲学？尔既有官司之事，便从官司的事上为学，才是真格物。如问一词讼，不可因其应对无状，起个怒心：不可因他言语圆转，生个喜心：不可恶其嘱托，加意治之：不可因其请求，屈意从之：不可因自己事务烦冗，随意苟且断之；不可因旁人谮毁罗织，随人意思处之：这许多意思皆私，只尔自知，须精细省察克治，惟恐此心有一毫偏倚，杜人是非，这便是格物致知。簿书讼狱之间，无非实学。若离了事物为学，却是着空。”&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>庄子对后世的影响。&lt;/li>
+&lt;li>听这个案件，就应当回到这件事情，不要掺杂任何私心。&lt;/li>
+&lt;li>&lt;strong>公私之分&lt;/strong>：道家的概念。道家核心：无私、无己、无我。&lt;/li>
+&lt;/ul>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>道家回到原初状态是对人的表达，没有一个具体的形态。庄子中形成了一种系统性的理解，形成了一种理想，成为文化道理的理念，对后世启发良多。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="conda-复制已有环境">Conda 复制已有环境&lt;/h2>
 &lt;p>由于服务器上本身已经有使用CUDA平台的ToD-BERT运行环境，仅需将此环境中所有使用GPU的库换为使用CPU的库即可：pytorch&lt;/p>
 &lt;p>查看已有环境&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda info --env
@@ -1353,4 +1472,35 @@ srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E
 loading="lazy"
 >
 &lt;/a>
-&lt;/figure>&lt;/p></description></item></channel></rss>
+&lt;/figure>&lt;/p></description></item><item><title>Hello, World!</title><link>https://comfluter.life/p/hello-world/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/hello-world/</guid><description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
+&lt;p>在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p>
+&lt;p>在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p>
+&lt;p>第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p>
+&lt;p>此外，也是最近在学习计算机网络的相关课程。从之前分不清HTTP、URL、TCP等等名词之间的关系的状态一步步地了解了网络的各个方面，而因为课程设计原因深感实践不足。云服务器的配置、连接、博客的搭建与部署、域名的申请与域名解析配置等等正好为动手实践课程内容提供了一个极佳的机会。在搭建服务器、部署博客的过程中也确实不断地将课本中抽象的知识落到实处。&lt;/p>
+&lt;p>最后，可能也是最近受龄的影响，觉得自己不能再一天天想着GPA就惶惶不可终日。成天担心对成绩的影响而束手束脚，投入了过多不必要的时间在课业的细枝末节上，生怕漏掉一小点就会有多么大的影响。现在我觉得比较好的态度是：应该投入的时间，我保证投入。除此之外，偶然性是必然有的，考试中等等可能出现的意外情况、偏门的微末之处，实在无必要，也无意义为了它们投入大量的时间。投入了，也不能保证最后的结果。与其如此，正如闫锋老师说的，不如让自己真正做点实在的事出来，在实践中学习，在实践中收获，在主动地做事情的过程当中发挥自己心灵的能动性，让自己过得由己、恣肆、多彩一些。&lt;/p>
+&lt;p>因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。&lt;/p>
+&lt;h2 id="建站小记">建站小记&lt;/h2>
+&lt;ul>
+&lt;li>21.11.05 购买腾讯云服务器、购买域名&lt;code>comfluter.life&lt;/code>，熟悉linux服务器操作与hugo工具基本使用&lt;/li>
+&lt;li>21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。&lt;/li>
+&lt;li>21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。&lt;/li>
+&lt;li>21.11.19 由于使用主题时采用了&lt;code>git submodule&lt;/code>的方式，而github同步时不同步submodule导致各种错误，重新使用&lt;code>git clone&lt;/code>方式引入了主题，重新搭建了博客与github repo，并配置github actions。&lt;/li>
+&lt;li>21.11.19 解决github actions css无法加载问题，使用&lt;code>git submodule&lt;/code>直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。&lt;/li>
+&lt;li>21.11.19 写下这篇hello world文档。&lt;/li>
+&lt;/ul>
+&lt;p>动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：&lt;/p>
+&lt;ol>
+&lt;li>云服务器&lt;/li>
+&lt;li>Linux命令行&lt;/li>
+&lt;li>git命令行操作&lt;/li>
+&lt;li>git submodule&lt;/li>
+&lt;li>github全流程&lt;/li>
+&lt;li>github pages&lt;/li>
+&lt;li>github actions&lt;/li>
+&lt;li>hugo使用&lt;/li>
+&lt;li>域名配置与域名解析&lt;/li>
+&lt;li>防火墙配置&lt;/li>
+&lt;li>Nginx服务器搭建&lt;/li>
+&lt;/ol>
+&lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item></channel></rss>
