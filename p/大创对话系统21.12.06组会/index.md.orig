@@ -1,0 +1,20 @@
+---
+title: 大创对话系统21.12.06组会
+<<<<<<< HEAD
+date: 2021-12-06
+=======
+date: 2021-11-22
+>>>>>>> 12f369bf970cab5db9c3c398cc5f6692760b92b4
+categories:
+    - 格致之道
+tags:
+    - 大创 AI对话系统
+---
+
+## 任务
+- 断点调试：解决training时参数错误的TypeError
+  - 使用vscode中`launch.json`加入args参数
+
+## 问题
+- ToD-BERT模型适用性？
+- 数据搬运是否是性能瓶颈？
