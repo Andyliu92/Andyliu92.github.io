@@ -1,0 +1,279 @@
+<!doctype html><html lang=en>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Circuit Prototype  
+The gain is $V=\frac{kT}{q}=25.4$ mV per e-fold intensity change.
+Deficient in 2 respects:
+ High signal offset Slow response  Advanced circuit  
+ left side: source follower lowpass feedback internal adaptive learning model to predict the input signal. output: the comparison of the input signal and prediction.  Right side: Comparison model
+ $Q_n, Q_{cas}, Q_{p}$ consist a inverting amplifier for feedback. $V_b$: determines the cutoff frequency for receptor, by setting the bias current."><title>Adaptive Photoreceptor with Wide Dynamic Range</title>
+<link rel=canonical href=https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Adaptive Photoreceptor with Wide Dynamic Range">
+<meta property="og:description" content="Circuit Prototype  
+The gain is $V=\frac{kT}{q}=25.4$ mV per e-fold intensity change.
+Deficient in 2 respects:
+ High signal offset Slow response  Advanced circuit  
+ left side: source follower lowpass feedback internal adaptive learning model to predict the input signal. output: the comparison of the input signal and prediction.  Right side: Comparison model
+ $Q_n, Q_{cas}, Q_{p}$ consist a inverting amplifier for feedback. $V_b$: determines the cutoff frequency for receptor, by setting the bias current.">
+<meta property="og:url" content="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/">
+<meta property="og:site_name" content="知止堂">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="paper"><meta property="article:tag" content="visual"><meta property="article:tag" content="IC Design"><meta property="article:published_time" content="2021-12-07T00:00:00+00:00"><meta property="article:modified_time" content="2020-12-07T00:00:00+00:00"><meta property="og:image" content="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg">
+<meta name=twitter:title content="Adaptive Photoreceptor with Wide Dynamic Range">
+<meta name=twitter:description content="Circuit Prototype  
+The gain is $V=\frac{kT}{q}=25.4$ mV per e-fold intensity change.
+Deficient in 2 respects:
+ High signal offset Slow response  Advanced circuit  
+ left side: source follower lowpass feedback internal adaptive learning model to predict the input signal. output: the comparison of the input signal and prediction.  Right side: Comparison model
+ $Q_n, Q_{cas}, Q_{p}$ consist a inverting amplifier for feedback. $V_b$: determines the cutoff frequency for receptor, by setting the bias current."><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg">
+<link rel="shortcut icon" href=/siteIcon/favicon.ico>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/adaptive-photoreceptor-with-wide-dynamic-range/>
+<img src=/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_800x0_resize_q75_box.jpg srcset="/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_800x0_resize_q75_box.jpg 800w, /p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_1600x0_resize_q75_box.jpg 1600w" width=800 height=418 loading=lazy alt="Featured image of post Adaptive Photoreceptor with Wide Dynamic Range">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E4%B8%8A%E4%B8%8B%E6%B1%82%E7%B4%A2/>
+上下求索
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/adaptive-photoreceptor-with-wide-dynamic-range/>Adaptive Photoreceptor with Wide Dynamic Range</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 07, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+3 minute read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=circuit-prototype>Circuit Prototype</h2>
+<p><figure class=gallery-image style=flex-grow:51;flex-basis:124px>
+<a href=/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg data-size=249x480>
+<img src=/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg width=249 height=480 srcset="/p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_480x0_resize_q75_box.jpg 480w, /p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>The gain is $V=\frac{kT}{q}=25.4$ mV per e-fold intensity change.</p>
+<p>Deficient in 2 respects:</p>
+<ol>
+<li>High signal offset</li>
+<li>Slow response</li>
+</ol>
+<h2 id=advanced-circuit>Advanced circuit</h2>
+<p><figure class=gallery-image style=flex-grow:191;flex-basis:459px>
+<a href=/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg data-size=919x480>
+<img src=/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg width=919 height=480 srcset="/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_480x0_resize_q75_box.jpg 480w, /p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<ul>
+<li>left side: source follower</li>
+<li>lowpass feedback</li>
+<li>internal adaptive learning model to predict the input signal.</li>
+<li>output: the comparison of the input signal and prediction.</li>
+</ul>
+<p>Right side: Comparison model</p>
+<ul>
+<li>$Q_n, Q_{cas}, Q_{p}$ consist a <em>inverting amplifier</em> for feedback.</li>
+<li>$V_b$: determines the <em>cutoff frequency</em> for receptor, by setting the bias current.</li>
+<li>$Q_{cas}$: <em>cascode</em> which nullifies the Miller capacitance</li>
+<li>feedback loop: adaptive element and capacitor $C_1$ and $C_2$</li>
+</ul>
+<h2 id=circuit-performance>Circuit Performance</h2>
+<p>Steady-state closed-loop gain:
+$$
+\frac{\frac{v_o}{V_T}}{\frac{i}{l_{bg}}} = \frac{1}{\kappa}
+$$</p>
+<p>Transient closed-loop gain:
+$$
+A_{cl} \equiv \frac{\frac{v_o}{V_T}}{\frac{i}{l_{bg}}} = \frac{1}{\kappa} \frac{C_1+C_2}{C_2}
+$$</p>
+<p>Time constant of the receptor:(baseline speed)
+$$
+\tau_{in} = \frac{C}{g} = \frac{C V_T}{I_{bg}}
+$$</p>
+<p>The speedup obtained by using the active feedback to clamp the input node is given by:
+$$
+A_{loop} = \frac{A_{amp}}{A_{cl}}
+$$</p>
+<p>The total receptor noise in dimensionlessinput-referred units is given by:
+$$
+\frac{\Delta i^2}{I_{bg}^{2}} = \frac{q}{C_{eff}V_T}
+$$
+where $C_{eff}$ is the effective input capacitance including the effect of total loop gain</p>
+<p>The spectral density of the noise within the passband is given by a simple computa-
+tion involving the first-order low-pass filter at the input:(noise spectral density)
+$$
+S = \frac{4q}{I_{bg}}
+$$</p>
+<p>Second-order temporal effects:</p>
+<p>A second-order time-domain analysis reveals that in order for the receptor to be a first-order system (i.e. produce a non-ringing response to a step input), the output-node time constant of the feedback amplifier must be faster than the input node time constant by a factor of $A_{loop}$. However, since the maximum Q of the circuit only scales as $\sqrt{A_{loop}}$, a large bias current may not be essential. We usually tolerate some resonance in return for filtering out flicker from artificial lighting and reducing noise at high intensities.</p>
+<p>Dynamic Range:</p>
+<p>The usable bandwidth of the receptor is proportional to the intensity. The receptor has a bandwidth of at least 60Hz (like human photopic vision) down to an irradiance of about 1 mW/m^2. This irradiance corresponds to an illuminance of about 1 lux for 555 nm (yellow) photons.</p>
+<h2 id=receptor-characteristics>Receptor Characteristics</h2>
+<ul>
+<li>The amplitude of the response to the small contrast variation is almost invariant to the absolute intensity, owing to the logarithmic response property. The adaptation makes the receptor have high gain for rapidly varying intensities and low gain for slowly varying intensities. A careful examination shows that the receptor adapts very rapidly in response to the decade changes in intensity. This rapid adaptation is due to the use of an adaptive element with an expansive nonlinearity.</li>
+<li>Adaptation occurs when charge is transferred through the adaptive element onto or off the storage capacitor.The adaptive element acts like a pair of diodes, in parallel, with opposite polarity. The current increases exponentially with voltage for either sign of voltage, and there is an extremely high-resistance region around the origin, as shown in Figure 4. The I-V relationship of the expansive element means that the effective resistance of the element is huge for small signals and small for large signals. Hence, the adaptation is slow for small signals and fast for large signals.
+<ul>
+<li><figure class=gallery-image style=flex-grow:273;flex-basis:655px>
+<a href=/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg data-size=800x293>
+<img src=/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg width=800 height=293 srcset="/p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_480x0_resize_q75_box.jpg 480w, /p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></li>
+<li>This behavior is useful, because it means that the receptor can adapt quickly to a large change in conditions-say, moving from shadow into sunlight-while maintaining high sensitivity to small and slowly varying signals</li>
+</ul>
+</li>
+</ul>
+<h2 id=source>Source</h2>
+<p>DOI: <code>10.1109/iscas.1994.409266</code>
+Ref: <code>DELBRUCK, T. & MEAD, C. A. Adaptive photoreceptor with wide dynamic range. IEEE.</code></p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/paper/>paper</a>
+<a href=/tags/visual/>visual</a>
+<a href=/tags/ic-design/>IC Design</a>
+</section>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+Last updated on Dec 07, 2020
+</span>
+</section></footer>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/%E5%BA%84%E5%AD%90%E6%91%98%E5%BD%95/>
+<div class=article-details>
+<h2 class=article-title>《庄子》摘录</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/>
+<div class=article-details>
+<h2 class=article-title>《大学》摘录</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%AD%90%E6%80%9D%E5%AD%90%E6%91%98%E5%BD%95/>
+<div class=article-details>
+<h2 class=article-title>《子思子》摘录</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/1-introduction-to-programming-languages-and-tools-of-the-trade/>
+<div class=article-details>
+<h2 class=article-title>1 Introduction to Programming Languages and Tools of the Trade</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/2-introduction-to-github/>
+<div class=article-details>
+<h2 class=article-title>2 Introduction to GitHub</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div id=gitalk-container></div>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css>
+<script src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js></script>
+<script>const gitalk=new Gitalk({clientID:"0d5bb28ba48d7571aaae",clientSecret:"5b4b5a48ddaf1390937e89e0f88e1deede49e4f5",repo:"personal-blog-comment",owner:"Andyliu92",admin:["Andyliu92"],distractionFreeMode:!1,id:md5(location.pathname)});(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("gitalk-container").innerHTML="Gitalk comments not available by default when the website is previewed locally.";return}gitalk.render("gitalk-container")})()</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 知止堂
+</section>
+<section class=powerby>
+京ICP备2021035515号 <br>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#circuit-prototype>Circuit Prototype</a></li>
+<li><a href=#advanced-circuit>Advanced circuit</a></li>
+<li><a href=#circuit-performance>Circuit Performance</a></li>
+<li><a href=#receptor-characteristics>Receptor Characteristics</a></li>
+<li><a href=#source>Source</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
