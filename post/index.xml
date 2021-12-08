@@ -6,7 +6,27 @@
 因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。
 建站小记 21.11.05 购买腾讯云服务器、购买域名comfluter.life，熟悉linux服务器操作与hugo工具基本使用 21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。 21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。 21.11.19 由于使用主题时采用了git submodule的方式，而github同步时不同步submodule导致各种错误，重新使用git clone方式引入了主题，重新搭建了博客与github repo，并配置github actions。 21.11.19 解决github actions css无法加载问题，使用git submodule直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。 21.11.19 写下这篇hello world文档。 动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：
 云服务器 Linux命令行 git命令行操作 git submodule github全流程 github pages github actions hugo使用 域名配置与域名解析 防火墙配置 Nginx服务器搭建 其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。
-希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>Adaptive Photoreceptor with Wide Dynamic Range</title><link>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</guid><description>Circuit Prototype
+希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>化性起伪——荀子的礼学思想</title><link>https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</guid><description>唐宋以前，中国思想笼罩在荀子的思想之下。注重礼（外在表现），唐宋以后才转为仁。
+荀子学生：
+李斯 韩非 浮丘伯 申培 荀子的礼学讲得很好。
+刘毓璜《先秦诸子初探》：个性极强、作为革命者试图沟通马克思主义与先秦诸子。七十有余在南大讲课时
+参考书目 王先谦《荀子集解》
+荀子的生平 《史記·孟子荀卿列傳》: 荀卿，趙人。年五十始來游學於齊。騶衍之術迂大而閎辯；奭也文具難施【按，騶奭者，齊諸騶子，亦頗采騶衍之術以紀文】；淳于髡久與處，時有得善言。故齊人頌曰：「談天衍，雕龍奭，炙轂過髡。」田駢之屬皆已死齊襄王時，而荀卿最為老師。齊尚修列大夫之缺，而荀卿三為祭酒焉。
+齊人或讒荀卿，荀卿乃適楚，而春申君以為蘭陵令。春申君死而荀卿廢，因家蘭陵。李斯嘗為弟子，已而相秦。
+荀卿嫉濁世之政，亡國亂君相屬，不遂大道而營於巫祝，信禨祥，鄙儒小拘，如莊周等又猾稽亂俗，於是推儒、墨、道德之行事興壞，序列著數萬言而卒。因葬蘭陵。
+战国时期赵人，传说曾在赵王前论军事。为数不多的到过秦国的先秦诸子。《韩非子·初见秦》一般认为是荀子文章。年50游学于齐。稷下学宫学者文集：《管子》。荀子多被选为稷下学宫祭酒。
+老师：老：纯粹，师：有师法
+关于荀子生平的考证 若荀子生平考证可靠，则其生活的下限接近秦始皇统一天下。
+《盐铁论》：李斯相秦，荀卿为之不食。
+一般认为荀子逝世接近秦朝建立之时。
+荀子生活在戰國晚期，得見儒、墨、道（道德、莊周）諸家學說。荀子的學術本身受時代影響，帶有綜合的傾向。回应当时时代的大思潮。
+荀子文本第一篇：劝学。荀子对着庄子的马蹄篇讲的。 性恶：对着孟子的性善论讲的。 荀子的文本 《漢書•藝文志》 诸子略儒家类，著錄《孫卿子》三十三篇。今存三十二篇。 又詩賦，亦列荀子。 荀子的人性论 3种人性论：
+积极人性论：认为人性是美好光明的。代表：儒家孟子性善论、王阳明心善论。 消极人性论：代表：法家韩非子、道家庄子 一般人理解人性的恶：人性由欲望所驱动。（韩非子） 庄子理解人性的黑暗：来自于人的主观、来自人的自作聪明、来自于人的这种自私。《齐物论》中讲人生下来就尝试用自己的感官理解这个世界。人类社会的黑暗在于依据自己的经验判断赋予这个社会以价值意义。 圣人设计的制度，才与不才均不可幸免。人在社会中越是挣扎，越是用小聪明试图改变社会，越是容易引来更大的灾难。 自然人性论：人的本质是空的，白纸。受后世经验影响很大。 武老师个人感受：中国人和人关系在近三十年来变得大不相同。人与人之间的原则以交易为本。交易以欲往为本。人与人之间的“获得”充斥着消极人性论。中国传统文化中应当为非常积极的人性论氛围。
+对人性无信心，人与动物有什么区别？
+对自然的看法 与儒家大不相同。孔子：给信仰的东西保留领地，同时不利用这份领地。“敬鬼神而远之”
+天行有常，不为尧存，不为纣亡。应之以治则吉，应之以乱则凶
+道德与自然无关系。
+《非相》：相形不如论心，论心不如择术。</description></item><item><title>Adaptive Photoreceptor with Wide Dynamic Range</title><link>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</guid><description>Circuit Prototype
 The gain is $V=\frac{kT}{q}=25.4$ mV per e-fold intensity change.
 Deficient in 2 respects:
 High signal offset Slow response Advanced circuit
