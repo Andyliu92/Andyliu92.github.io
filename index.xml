@@ -373,7 +373,9 @@ loading="lazy"
 &lt;/ul>
 &lt;h2 id="source">Source&lt;/h2>
 &lt;p>DOI: &lt;code>10.1109/iscas.1994.409266&lt;/code>
-Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wide dynamic range. IEEE.&lt;/code>&lt;/p></description></item><item><title>OpenCV 学习随记</title><link>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="reading-and-saving-images">Reading and Saving Images&lt;/h2>
+Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wide dynamic range. IEEE.&lt;/code>&lt;/p></description></item><item><title>OpenCV 学习随记</title><link>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>&lt;code>pip install opencv-python&lt;/code>&lt;/p>
+&lt;h2 id="reading-and-saving-images">Reading and Saving Images&lt;/h2>
 &lt;p>函数 &lt;code>cv2.imwrite()&lt;/code>用于将图像保存到指定的文件&lt;/p>
 &lt;blockquote>
 &lt;p>retval = cv2.imwrite(filename, img [, paras])&lt;/p>
@@ -624,7 +626,86 @@ literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;s
 &amp;lt;your code&amp;gt;
 &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>lstlisting&lt;span class="nb">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ol></description></item><item><title>Pyspice 学习随记</title><link>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="references">References&lt;/h2>
+&lt;/ol></description></item><item><title>Pyspice 学习随记</title><link>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="environment-config">Environment config&lt;/h2>
+&lt;ol>
+&lt;li>Initialize the python virtual environment&lt;code>virtualenv .venv&lt;/code>&lt;/li>
+&lt;li>activate venv (windows system) &lt;code>.venv/Scripts/activate&lt;/code>&lt;/li>
+&lt;li>install packages used in pyspice
+&lt;ol>
+&lt;li>&lt;code>pip install pyspice&lt;/code>&lt;/li>
+&lt;li>&lt;code>pip install opencv-python&lt;/code> for image output&lt;/li>
+&lt;li>install ngspice dll libraries
+&lt;ol>
+&lt;li>installation: &lt;code>pyspice-post-installation --install-ngspice-dll&lt;/code>&lt;/li>
+&lt;li>check: &lt;code>pyspice-post-installation --check-install&lt;/code>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">OS is Windows
+Found in library search path: None
+Load NgSpiceShared
+Load library D:&lt;span class="se">\W&lt;/span>ork&lt;span class="se">\0&lt;/span>4_Research_Project&lt;span class="se">\2&lt;/span>1.08.19_Early_Visual_Processing&lt;span class="se">\p&lt;/span>yspice&lt;span class="se">\.&lt;/span>venv&lt;span class="se">\l&lt;/span>ib&lt;span class="se">\s&lt;/span>ite-packages&lt;span class="se">\P&lt;/span>ySpice&lt;span class="se">\S&lt;/span>pice&lt;span class="se">\N&lt;/span>gSpice&lt;span class="se">\S&lt;/span>pice64_dll&lt;span class="se">\d&lt;/span>ll-vs&lt;span class="se">\n&lt;/span>gspice.dll
+Ngspice version is &lt;span class="m">34&lt;/span>
+has xspice: True
+has cider True
+&amp;gt; version -f
+******
+** ngspice-34 : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2020, The ngspice team.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Jan &lt;span class="m">29&lt;/span> &lt;span class="m">2021&lt;/span> 16:38:37
+**
+** CIDER 1.b1 &lt;span class="o">(&lt;/span>CODECS simulator&lt;span class="o">)&lt;/span> included
+** XSPICE extensions included
+** Relevant compilation options &lt;span class="o">(&lt;/span>refer to user&lt;span class="err">&amp;#39;&lt;/span>s manual&lt;span class="o">)&lt;/span>:
+** OpenMP multithreading &lt;span class="k">for&lt;/span> BSIM3, BSIM4 enabled
+** X11 interface not compiled into ngspice
+**
+******
+PySpice should work as expected
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="advanced-power-resources">Advanced Power Resources&lt;/h2>
+&lt;h3 id="behavioral-resource">Behavioral Resource&lt;/h3>
+&lt;p>spice syntax:&lt;/p>
+&lt;pre tabindex="0">&lt;code>BXXXXXXX n+ n- &amp;lt;i=expr&amp;gt; &amp;lt;v=expr&amp;gt; &amp;lt;tc1=value&amp;gt; &amp;lt;tc2=value&amp;gt; &amp;lt;temp=value&amp;gt; &amp;lt;dtemp=value&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>functions:
+The following functions of a single real variable are defined:&lt;/p>
+&lt;ul>
+&lt;li>Trigonometric functions: cos, sin, tan, acos, asin, atan&lt;/li>
+&lt;li>Hyperbolic functions: cosh, sinh, acosh, asinh, atanh&lt;/li>
+&lt;li>Exponential and logarithmic: exp, ln, log, log10 (ln, log with base e, log10 with base 10)&lt;/li>
+&lt;li>Other: abs, sqrt, u, u2, uramp, floor, ceil, i Functions of two variables are min, max, pow, **, pwr, ^&lt;/li>
+&lt;li>Functions of three variables are a ? b:c&lt;/li>
+&lt;/ul>
+&lt;p>Refer to page 102 of ngspice-35-manual&lt;/p>
+&lt;p>Keyword Parameters:&lt;/p>
+&lt;ul>
+&lt;li>current_expression / i&lt;/li>
+&lt;li>voltage_expression / v&lt;/li>
+&lt;li>tc1: first order temperature coeff.&lt;/li>
+&lt;li>tc2: second order temperature coeff.&lt;/li>
+&lt;li>temperature / temp&lt;/li>
+&lt;li>device_temperature / dtemp&lt;/li>
+&lt;/ul>
+&lt;p>special variable available:&lt;/p>
+&lt;ul>
+&lt;li>time, 0 in AC analysis&lt;/li>
+&lt;li>temper, given in degree C&lt;/li>
+&lt;li>hertz, 0 in transient analysis&lt;/li>
+&lt;/ul>
+&lt;p>example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="n">circuit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;p1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">circuit&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gnd&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">voltage_expression&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;exp(time)&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="modules-and-libraries">Modules and libraries&lt;/h2>
+&lt;p>&lt;a class="link" href="http://ltwiki.org/index.php?title=Main_Page" target="_blank" rel="noopener"
+>Ltwiki&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://ltwiki.org/index.php?title=Components_Library_and_Circuits" target="_blank" rel="noopener"
+>Components Library and Circuits&lt;/a>&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/88583481" target="_blank" rel="noopener"
 >PySpice: 使用ngspice进行电路仿真分析-1：安装&lt;/a>&lt;/li>
@@ -1483,7 +1564,69 @@ loading="lazy"
 &lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>ToD-BERT 相关内容</title><link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid><description>&lt;h2 id="tod-bert-the-paper">ToD-BERT the Paper&lt;/h2>
+&lt;/ol></description></item><item><title>Debugging ToD-BERT with vscode</title><link>https://comfluter.life/p/debugging-tod-bert-with-vscode/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/debugging-tod-bert-with-vscode/</guid><description>&lt;h2 id="configuring-launchjson-in-vscode">Configuring &lt;code>launch.json&lt;/code> in vscode&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="s2">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: my tod training&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${file}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;console&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integratedTerminal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;--task=usdl&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--model_type=bert&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--model_name_or_path=bert-base-uncased&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--output_dir=&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--do_train&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--do_eval&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--mlm&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--do_lower_case&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--evaluate_during_training&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--save_steps=2500&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--logging_steps=1000&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--per_gpu_train_batch_size=1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--per_gpu_eval_batch_size=1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;--only_last_turn&amp;#34;&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="running-debug-session">Running Debug Session&lt;/h2>
+&lt;p>open &lt;code>my_tod_pretraining.py&lt;/code> and press &lt;code>F5&lt;/code> to start a debug session using the configuration shown above.&lt;/p>
+&lt;p>bug report:
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 157;
+flex-basis: 377px"
+>
+&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg" data-size="1000x636">
+&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg"
+width="1000"
+height="636"
+srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="initial bug report">
+&lt;/a>
+&lt;figcaption>initial bug report&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 142;
+flex-basis: 342px"
+>
+&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg" data-size="1000x700">
+&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg"
+width="1000"
+height="700"
+srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="initial bug console report">
+&lt;/a>
+&lt;figcaption>initial bug console report&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="debugging">Debugging&lt;/h2>
+&lt;p>adding breakpoint on line 458 of &lt;code>my_tod_pretraining.py&lt;/code>, and use &lt;code>F11:Step into&lt;/code> to dig into the situation.&lt;/p></description></item><item><title>ToD-BERT 相关内容</title><link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid><description>&lt;h2 id="tod-bert-the-paper">ToD-BERT the Paper&lt;/h2>
 &lt;h3 id="数据集">数据集&lt;/h3>
 &lt;p>不同的数据集可以帮助模型达到不同的熟练效果&lt;/p>
 &lt;ul>

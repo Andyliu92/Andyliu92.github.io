@@ -1,18 +1,21 @@
 <!doctype html><html lang=en>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Installation pip install opencv-python
+Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
  retval = cv2.imwrite(filename, img [, paras])
   cv2.imwrite() 将 OpenCV 图像保存到指定的文件。 cv2.imwrite() 基于保存文件的扩展名选择保存图像的格式。 cv2.imwrite() 只能保存 BGR 3通道图像，或 8 位单通道图像、或 PNG/JPEG/TIFF 16位无符号单通道图像。  Arguments  filename：要保存的文件的路径和名称，包括文件扩展名 img：要保存的 OpenCV 图像，nparray 多维数组 paras：不同编码格式的参数，可选项  cv2.CV_IMWRITE_JPEG_QUALITY：设置 .jpeg/.jpg 格式的图片质量，取值为 0-100（默认值 95），数值越大则图片质量越高； cv2.CV_IMWRITE_WEBP_QUALITY：设置 .webp 格式的图片质量，取值为 0-100； cv2.CV_IMWRITE_PNG_COMPRESSION：设置 .png 格式图片的压缩比，取值为 0-9（默认值 3），数值越大则压缩比越大。   retval：返回值，保存成功返回 True，否则返回 False。  Notice  cv2.imwrite() 保存的是 OpenCV 图像（多维数组），不是 cv2.imread() 读取的图像文件，所保存的文件格式是由 filename 的扩展名决定的，与读取的图像文件的格式无关。 对 4 通道 BGRA 图像，可以使用 Alpha 通道保存为 PNG 图像。 cv2."><title>OpenCV 学习随记</title>
 <link rel=canonical href=https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="OpenCV 学习随记">
-<meta property="og:description" content="Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
+<meta property="og:description" content="Installation pip install opencv-python
+Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
  retval = cv2.imwrite(filename, img [, paras])
   cv2.imwrite() 将 OpenCV 图像保存到指定的文件。 cv2.imwrite() 基于保存文件的扩展名选择保存图像的格式。 cv2.imwrite() 只能保存 BGR 3通道图像，或 8 位单通道图像、或 PNG/JPEG/TIFF 16位无符号单通道图像。  Arguments  filename：要保存的文件的路径和名称，包括文件扩展名 img：要保存的 OpenCV 图像，nparray 多维数组 paras：不同编码格式的参数，可选项  cv2.CV_IMWRITE_JPEG_QUALITY：设置 .jpeg/.jpg 格式的图片质量，取值为 0-100（默认值 95），数值越大则图片质量越高； cv2.CV_IMWRITE_WEBP_QUALITY：设置 .webp 格式的图片质量，取值为 0-100； cv2.CV_IMWRITE_PNG_COMPRESSION：设置 .png 格式图片的压缩比，取值为 0-9（默认值 3），数值越大则压缩比越大。   retval：返回值，保存成功返回 True，否则返回 False。  Notice  cv2.imwrite() 保存的是 OpenCV 图像（多维数组），不是 cv2.imread() 读取的图像文件，所保存的文件格式是由 filename 的扩展名决定的，与读取的图像文件的格式无关。 对 4 通道 BGRA 图像，可以使用 Alpha 通道保存为 PNG 图像。 cv2.">
 <meta property="og:url" content="https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/">
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Python"><meta property="article:tag" content="OpenCV"><meta property="article:published_time" content="2021-12-07T00:00:00+00:00"><meta property="article:modified_time" content="2021-12-07T00:00:00+00:00">
 <meta name=twitter:title content="OpenCV 学习随记">
-<meta name=twitter:description content="Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
+<meta name=twitter:description content="Installation pip install opencv-python
+Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
  retval = cv2.imwrite(filename, img [, paras])
   cv2.imwrite() 将 OpenCV 图像保存到指定的文件。 cv2.imwrite() 基于保存文件的扩展名选择保存图像的格式。 cv2.imwrite() 只能保存 BGR 3通道图像，或 8 位单通道图像、或 PNG/JPEG/TIFF 16位无符号单通道图像。  Arguments  filename：要保存的文件的路径和名称，包括文件扩展名 img：要保存的 OpenCV 图像，nparray 多维数组 paras：不同编码格式的参数，可选项  cv2.CV_IMWRITE_JPEG_QUALITY：设置 .jpeg/.jpg 格式的图片质量，取值为 0-100（默认值 95），数值越大则图片质量越高； cv2.CV_IMWRITE_WEBP_QUALITY：设置 .webp 格式的图片质量，取值为 0-100； cv2.CV_IMWRITE_PNG_COMPRESSION：设置 .png 格式图片的压缩比，取值为 0-9（默认值 3），数值越大则压缩比越大。   retval：返回值，保存成功返回 True，否则返回 False。  Notice  cv2.imwrite() 保存的是 OpenCV 图像（多维数组），不是 cv2.imread() 读取的图像文件，所保存的文件格式是由 filename 的扩展名决定的，与读取的图像文件的格式无关。 对 4 通道 BGRA 图像，可以使用 Alpha 通道保存为 PNG 图像。 cv2.">
 <link rel="shortcut icon" href=/siteIcon/favicon.ico>
@@ -51,6 +54,8 @@ extended">
 </div>
 </header>
 <section class=article-content>
+<h2 id=installation>Installation</h2>
+<p><code>pip install opencv-python</code></p>
 <h2 id=reading-and-saving-images>Reading and Saving Images</h2>
 <p>函数 <code>cv2.imwrite()</code>用于将图像保存到指定的文件</p>
 <blockquote>
@@ -211,6 +216,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
+<li><a href=#installation>Installation</a></li>
 <li><a href=#reading-and-saving-images>Reading and Saving Images</a>
 <ol>
 <li><a href=#arguments>Arguments</a></li>
