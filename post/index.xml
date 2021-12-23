@@ -6,7 +6,30 @@
 因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。
 建站小记 21.11.05 购买腾讯云服务器、购买域名comfluter.life，熟悉linux服务器操作与hugo工具基本使用 21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。 21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。 21.11.19 由于使用主题时采用了git submodule的方式，而github同步时不同步submodule导致各种错误，重新使用git clone方式引入了主题，重新搭建了博客与github repo，并配置github actions。 21.11.19 解决github actions css无法加载问题，使用git submodule直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。 21.11.19 写下这篇hello world文档。 动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：
 云服务器 Linux命令行 git命令行操作 git submodule github全流程 github pages github actions hugo使用 域名配置与域名解析 防火墙配置 Nginx服务器搭建 其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。
-希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>Git Notes</title><link>https://comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-notes/</guid><description>Delete branchs local: git branch -d &amp;lt;localBranchName&amp;gt; remote: git push origin --delete &amp;lt;remoteBranchName&amp;gt;</description></item><item><title>韩非子的思想：势与术</title><link>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
+希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>数通网络发展史</title><link>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>发展概况：
+昨日：沟通你我
+今日：万物互联
+明日：产业数字经济底座
+3个发展阶段：
+IPv4+以太网：无连接、共享带宽、尽力而为的 IP/MPLS：面向连接的、业务见隔离的流量工程 IPv6/IPv6+：与业务有机融合，对网络服务进行可编程控制 IP网络发展中的重大技术发明： 以太网 IP/TCP 数据通信厂家沉浮： 华为+思科
+IP1.0时代：从计算机互联到internet 计算机网络诞生 计算机网络形成 Internet形成 军事科研到商用，消息类型不断增多
+第一阶段： 50年代：中心化的计算机网络，主机与所有计算机连接，位于网络中心
+60年代：以分组交换网为中心的无中心节点交换网
+1969年11月：ARPAnet，4节点分组交换网。
+指导思想：网络中某一部分受到攻击时网络仍然畅通 第二阶段：形成计算机网络 1975年，100+主机，正式运行
+1974年开始研究TCP/IP协议，80年前后转向TCP/ip
+1971年发明电子邮件、74年bbs
+建立了互联网模型：TCP/IP协议栈 5层结构、IP统一异质网络
+端节点：5层封装/解封装
+第三阶段：突破科研网，Internet开始形成（90年代）
+Internet在中国
+建网原则
+与公路网建设十分相像
+期间的技术： 提出了互联互通寻址方法
+提出了全套互联互通协议
+IGP EGP
+IP2.0 IP网络的电信化 互联网本身的规模、性能飞速发展 电信运营商尝试将语音、专线等电信业务应用到internet上 互联网本身继续快速发展
+电信业务迁移到IP网上</description></item><item><title>Git Notes</title><link>https://comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-notes/</guid><description>Delete branchs local: git branch -d &amp;lt;localBranchName&amp;gt; remote: git push origin --delete &amp;lt;remoteBranchName&amp;gt;</description></item><item><title>韩非子的思想：势与术</title><link>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
 《韩非子》文本 陈奇猷《韩非子集释》 梁启雄《韩非子浅解》 周勋初等《韩非子校注》 评法批儒运动中编纂。建国以来整理水平最高。 江苏人民出版社 人性论：人性本恶，韩非子的人性判断 典型的消极人性论：人的本质是自私。
 好逸恶劳
 《商君书·算地》：“民之性，饥而求食，劳而求逸，苦而索乐，辱则求荣，此民之情也。”

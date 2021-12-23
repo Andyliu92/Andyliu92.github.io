@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>求索集 on 知止堂</title><link>https://comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/</link><description>Recent content in 求索集 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/index.xml" rel="self" type="application/rss+xml"/><item><title>韩非子的思想：势与术</title><link>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>求索集 on 知止堂</title><link>https://comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/</link><description>Recent content in 求索集 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/index.xml" rel="self" type="application/rss+xml"/><item><title>数通网络发展史</title><link>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>发展概况：
+昨日：沟通你我
+今日：万物互联
+明日：产业数字经济底座
+3个发展阶段：
+IPv4+以太网：无连接、共享带宽、尽力而为的 IP/MPLS：面向连接的、业务见隔离的流量工程 IPv6/IPv6+：与业务有机融合，对网络服务进行可编程控制 IP网络发展中的重大技术发明： 以太网 IP/TCP 数据通信厂家沉浮： 华为+思科
+IP1.0时代：从计算机互联到internet 计算机网络诞生 计算机网络形成 Internet形成 军事科研到商用，消息类型不断增多
+第一阶段： 50年代：中心化的计算机网络，主机与所有计算机连接，位于网络中心
+60年代：以分组交换网为中心的无中心节点交换网
+1969年11月：ARPAnet，4节点分组交换网。
+指导思想：网络中某一部分受到攻击时网络仍然畅通 第二阶段：形成计算机网络 1975年，100+主机，正式运行
+1974年开始研究TCP/IP协议，80年前后转向TCP/ip
+1971年发明电子邮件、74年bbs
+建立了互联网模型：TCP/IP协议栈 5层结构、IP统一异质网络
+端节点：5层封装/解封装
+第三阶段：突破科研网，Internet开始形成（90年代）
+Internet在中国
+建网原则
+与公路网建设十分相像
+期间的技术： 提出了互联互通寻址方法
+提出了全套互联互通协议
+IGP EGP
+IP2.0 IP网络的电信化 互联网本身的规模、性能飞速发展 电信运营商尝试将语音、专线等电信业务应用到internet上 互联网本身继续快速发展
+电信业务迁移到IP网上</description></item><item><title>韩非子的思想：势与术</title><link>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
 《韩非子》文本 陈奇猷《韩非子集释》 梁启雄《韩非子浅解》 周勋初等《韩非子校注》 评法批儒运动中编纂。建国以来整理水平最高。 江苏人民出版社 人性论：人性本恶，韩非子的人性判断 典型的消极人性论：人的本质是自私。
 好逸恶劳
 《商君书·算地》：“民之性，饥而求食，劳而求逸，苦而索乐，辱则求荣，此民之情也。”

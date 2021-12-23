@@ -29,7 +29,322 @@
 &lt;li>Nginx服务器搭建&lt;/li>
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
-&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>Git Notes</title><link>https://comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-notes/</guid><description>&lt;h2 id="delete-branchs">Delete branchs&lt;/h2>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>数通网络发展史</title><link>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>&lt;h2 id="发展概况">发展概况：&lt;/h2>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>昨日：沟通你我&lt;/p>
+&lt;p>今日：万物互联&lt;/p>
+&lt;p>明日：产业数字经济底座&lt;/p>
+&lt;p>3个发展阶段：&lt;/p>
+&lt;ol>
+&lt;li>IPv4+以太网：无连接、共享带宽、尽力而为的&lt;/li>
+&lt;li>IP/MPLS：面向连接的、业务见隔离的流量工程&lt;/li>
+&lt;li>IPv6/IPv6+：与业务有机融合，对网络服务进行可编程控制&lt;/li>
+&lt;/ol>
+&lt;h3 id="ip网络发展中的重大技术发明">IP网络发展中的重大技术发明：&lt;/h3>
+&lt;ol>
+&lt;li>以太网&lt;/li>
+&lt;li>IP/TCP&lt;/li>
+&lt;/ol>
+&lt;h3 id="数据通信厂家沉浮">数据通信厂家沉浮：&lt;/h3>
+&lt;p>华为+思科&lt;/p>
+&lt;h2 id="ip10时代从计算机互联到internet">IP1.0时代：从计算机互联到internet&lt;/h2>
+&lt;ol>
+&lt;li>计算机网络诞生&lt;/li>
+&lt;li>计算机网络形成&lt;/li>
+&lt;li>Internet形成&lt;/li>
+&lt;/ol>
+&lt;p>军事科研到商用，消息类型不断增多&lt;/p>
+&lt;h3 id="第一阶段">第一阶段：&lt;/h3>
+&lt;p>50年代：中心化的计算机网络，主机与所有计算机连接，位于网络中心&lt;/p>
+&lt;p>60年代：以分组交换网为中心的无中心节点交换网&lt;/p>
+&lt;p>1969年11月：ARPAnet，4节点分组交换网。&lt;/p>
+&lt;ul>
+&lt;li>指导思想：网络中某一部分受到攻击时网络仍然畅通&lt;/li>
+&lt;/ul>
+&lt;h3 id="第二阶段形成计算机网络">第二阶段：形成计算机网络&lt;/h3>
+&lt;p>1975年，100+主机，正式运行&lt;/p>
+&lt;p>1974年开始研究TCP/IP协议，80年前后转向TCP/ip&lt;/p>
+&lt;p>1971年发明电子邮件、74年bbs&lt;/p>
+&lt;h4 id="建立了互联网模型tcpip协议栈">建立了互联网模型：TCP/IP协议栈&lt;/h4>
+&lt;p>5层结构、IP统一异质网络&lt;/p>
+&lt;p>端节点：5层封装/解封装&lt;/p>
+&lt;h3 id="第三阶段突破科研网internet开始形成90年代">第三阶段：突破科研网，Internet开始形成（90年代）&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h4 id="internet在中国">Internet在中国&lt;/h4>
+&lt;p>&lt;figure
+>
+&lt;a href="https://comfluter.life/internet_in_china.jpg" >
+&lt;img src="https://comfluter.life/internet_in_china.jpg"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h4 id="建网原则">建网原则&lt;/h4>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>与公路网建设十分相像&lt;/p>
+&lt;h4 id="期间的技术">期间的技术：&lt;/h4>
+&lt;p>提出了互联互通寻址方法&lt;/p>
+&lt;p>提出了全套互联互通协议&lt;/p>
+&lt;ul>
+&lt;li>IGP&lt;/li>
+&lt;li>EGP&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="ip20-ip网络的电信化">IP2.0 IP网络的电信化&lt;/h2>
+&lt;ol>
+&lt;li>互联网本身的规模、性能飞速发展&lt;/li>
+&lt;li>电信运营商尝试将语音、专线等电信业务应用到internet上&lt;/li>
+&lt;/ol>
+&lt;h3 id="互联网本身继续快速发展">互联网本身继续快速发展&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h3 id="电信业务迁移到ip网上">电信业务迁移到IP网上&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>驱动力：成本低，一网解决全部不同类型的通信需求&lt;/p>
+&lt;h3 id="挑战">挑战：&lt;/h3>
+&lt;ul>
+&lt;li>时延&lt;/li>
+&lt;li>带宽&lt;/li>
+&lt;li>丢包率&lt;/li>
+&lt;li>可靠性：网络异常恢复时间&amp;lt;50ms&lt;/li>
+&lt;/ul>
+&lt;h3 id="传统ip难以承载电信级别业务流量模型存在缺陷">传统IP难以承载电信级别业务：流量模型存在缺陷&lt;/h3>
+&lt;p>最短路径流量办法无法保证不拥塞，共享网络的性质更无法保证服务质量。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>电信网：独占线路
+&lt;figure
+>
+&lt;a href="https://comfluter.life/ATMnet" >
+&lt;img src="https://comfluter.life/ATMnet"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>.jpg&lt;/p>
+&lt;h3 id="mpls">MPLS&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>在2.5层加入标签，沿途按照标签进行转发。&lt;/p>
+&lt;p>转发时建立标签通道。&lt;/p>
+&lt;p>面向连接，服务质量可以更好得到保证&lt;/p>
+&lt;ul>
+&lt;li>TE流量工程：可以人为规划路径，网络调度，平衡负载&lt;/li>
+&lt;li>流量抢占&lt;/li>
+&lt;li>自动调整路径、重新规划&lt;/li>
+&lt;li>路径备份：实现网络失效时的微秒级切换&lt;/li>
+&lt;/ul>
+&lt;p>可以在MPLS的基础上建立不同VPN：
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="ip30ip网上的万物互联">IP3.0：IP网上的万物互联&lt;/h2>
+&lt;p>互联网从信息消费向工业产业演进。&lt;/p>
+&lt;p>2025年：千亿连接数量&lt;/p>
+&lt;p>连接数与数据流量指数级上升&lt;/p>
+&lt;p>问题：&lt;/p>
+&lt;ol>
+&lt;li>地址短缺&lt;/li>
+&lt;li>设备吞吐能力不足&lt;/li>
+&lt;/ol>
+&lt;h3 id="ipv6诞生">IPv6诞生&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>ipv6报头更简单。一个流标签进行比特比较&lt;/li>
+&lt;li>扩展字段可以无限扩展进行网络管控&lt;/li>
+&lt;/ul>
+&lt;p>IPv6、IPv4兼容：&lt;/p>
+&lt;ul>
+&lt;li>双栈&lt;/li>
+&lt;li>隧道&lt;/li>
+&lt;li>翻译&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h3 id="ipv6推动万物互联">IPv6推动万物互联&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 320px"
+>
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg" data-size="1706x1279">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg"
+width="1706"
+height="1279"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol>
+&lt;li>网络可编程&lt;/li>
+&lt;li>用户体验保障&lt;/li>
+&lt;li>应用驱动网络服务&lt;/li>
+&lt;/ol>
+&lt;h2 id="未来发展趋势">未来发展趋势&lt;/h2></description></item><item><title>Git Notes</title><link>https://comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-notes/</guid><description>&lt;h2 id="delete-branchs">Delete branchs&lt;/h2>
 &lt;ol>
 &lt;li>local: &lt;code>git branch -d &amp;lt;localBranchName&amp;gt;&lt;/code>&lt;/li>
 &lt;li>remote: &lt;code>git push origin --delete &amp;lt;remoteBranchName&amp;gt;&lt;/code>&lt;/li>
