@@ -210,13 +210,20 @@ loading="lazy"
 &lt;/figure>&lt;/p>
 &lt;p>电信网：独占线路
 &lt;figure
+class="gallery-image"
+style="
+flex-grow: 219;
+flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/ATMnet" >
-&lt;img src="https://comfluter.life/ATMnet"
+&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg" data-size="1920x873">
+&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg"
+width="1920"
+height="873"
+srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
-&lt;/figure>.jpg&lt;/p>
+&lt;/figure>&lt;/p>
 &lt;h3 id="mpls">MPLS&lt;/h3>
 &lt;p>&lt;figure
 class="gallery-image"
@@ -390,7 +397,7 @@ loading="lazy"
 &lt;blockquote>
 &lt;p>君臣之交计也，夫子之亲利也。&lt;/p>
 &lt;/blockquote>
-&lt;p>而人的这种人性是可以****被利用以实现现实统治的**。&lt;/p>
+&lt;p>而人的这种人性是可以&lt;strong>被利用以实现现实统治的&lt;/strong>。&lt;/p>
 &lt;blockquote>
 &lt;p>《难一》：设民所欲以求其功，故为爵禄以劝之；设民所恶以禁其奸，故为刑罚以威之。&lt;/p>
 &lt;/blockquote>
