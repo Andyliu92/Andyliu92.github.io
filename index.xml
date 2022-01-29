@@ -29,7 +29,133 @@
 &lt;li>Nginx服务器搭建&lt;/li>
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
-&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>树莓派挂载onedrive</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</guid><description>&lt;h2 id="steps">Steps:&lt;/h2>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>Config Raspi after Reinstallation</title><link>https://comfluter.life/p/config-raspi-after-reinstallation/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/config-raspi-after-reinstallation/</guid><description>&lt;h2 id="download-system-and-write-disk">Download system and write disk&lt;/h2>
+&lt;p>&lt;a class="link" href="https://downloads.raspberrypi.org/raspios_lite_arm64/images" target="_blank" rel="noopener"
+>64-bit Raspi images&lt;/a>&lt;/p>
+&lt;h2 id="enable-ssh">Enable SSH&lt;/h2>
+&lt;p>create empty file named &lt;code>ssh&lt;/code> under the disk named &lt;code>boot&lt;/code>&lt;/p>
+&lt;h2 id="connecting-wifi-for-the-1st-time">Connecting wifi for the 1st time&lt;/h2>
+&lt;p>create &lt;code>wpa_supplicant.conf&lt;/code> under disk named &lt;code>boot&lt;/code>, write followings:&lt;/p>
+&lt;pre tabindex="0">&lt;code>country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot;
+psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot;
+key_mgmt=WPA-PSK
+}
+&lt;/code>&lt;/pre>&lt;p>then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.&lt;/p>
+&lt;p>init name: &lt;code>pi&lt;/code>, init passwd: &lt;code>raspberry&lt;/code>&lt;/p>
+&lt;h2 id="change-password-and-enable-root">Change Password and enable root&lt;/h2>
+&lt;p>change passwd:
+&lt;code>sudo passwd pi&lt;/code>&lt;/p>
+&lt;p>&lt;code>sudo passwd root&lt;/code>&lt;/p>
+&lt;p>enable root login:
+&lt;code>sudo passwd --unlock root&lt;/code>&lt;/p>
+&lt;h2 id="change-apt-package-source">Change Apt package source&lt;/h2>
+&lt;p>ref&lt;/p>
+&lt;h2 id="enable-remote-root-login">Enable remote root login&lt;/h2>
+&lt;p>&lt;code>sudo nano /etc/ssh/sshd_config&lt;/code>&lt;/p>
+&lt;p>change &lt;code>#PermitRootLogin prohibit-password&lt;/code> to &lt;code>PermitRootLogin yes&lt;/code>&lt;/p>
+&lt;h2 id="open-vnc-to-enable-remote-desktop">Open VNC to enable Remote desktop&lt;/h2>
+&lt;p>&lt;code>sudo raspi-config&lt;/code>&lt;/p>
+&lt;p>Interfacing Options →→ VNC →→ YES&lt;/p></description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>&lt;p>Using open source code &lt;code>https://github.com/mozilla/TTS.git&lt;/code>&lt;/p>
+&lt;h2 id="direct-installation">Direct Installation&lt;/h2>
+&lt;p>TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.&lt;/p>
+&lt;p>If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.&lt;/p>
+&lt;p>&lt;code>pip install TTS&lt;/code>&lt;/p>
+&lt;p>If you plan to code or train models, clone TTS and install it locally.&lt;/p>
+&lt;pre tabindex="0">&lt;code>git clone https://github.com/mozilla/TTS
+pip install -e .
+&lt;/code>&lt;/pre>&lt;h2 id="custom-installation">Custom installation&lt;/h2>
+&lt;p>However, the version is lower in github than in Pypl, losing many models and features. Therefore, we need to download the package from Pypl, extract manually to local path, and install using extracted files so that modified code will be carried later.&lt;/p>
+&lt;h3 id="pip-download-without-installation">Pip download without installation&lt;/h3>
+&lt;p>Create a new &lt;code>requirement.exe&lt;/code> file, fill in all packages that needs to be downloaded: &lt;code>tts&lt;/code>&lt;/p>
+&lt;p>in the same dir, use command &lt;code>pip download -d &amp;lt;dir to save downloaded files&amp;gt; -r requirement.txt&lt;/code>&lt;/p>
+&lt;h3 id="installation">Installation&lt;/h3>
+&lt;p>extract &lt;code>TTS-0.5.0.tar.gz&lt;/code>, use command &lt;code>pip install -e .&lt;/code> in the extracted dir to install TTS.&lt;/p>
+&lt;h2 id="config-tts">Config TTS&lt;/h2>
+&lt;ul>
+&lt;li>change &lt;code>max_decoder_steps&lt;/code> in &lt;code>.\tts\configs\tacotron_config.py&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-on-raspi">Install on Raspi&lt;/h2>
+&lt;p>&lt;a class="link" href="https://levelup.gitconnected.com/installing-mozilla-tts-on-a-raspberry-pi-4-e6af16459ab9" target="_blank" rel="noopener"
+>Reference&lt;/a>&lt;/p></description></item><item><title>树莓派更换镜像源</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</guid><description>&lt;p>更换为清华镜像源，参考&lt;a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/" target="_blank" rel="noopener"
+>清华Raspbian 镜像使用帮助&lt;/a>&lt;/p>
+&lt;p>对于&lt;code>Debian 11 (bullseye)&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code># 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：
+deb [arch=armhf] http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+# 如果需要 arm64 软件源，在 `/etc/apt/sources.list` 中加上
+deb [arch=arm64] http://mirrors.tuna.tsinghua.edu.cn/raspbian/multiarch/ bullseye main
+# 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：
+deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bullseye main
+&lt;/code>&lt;/pre>&lt;p>保存后运行&lt;code>sudo apt-get update&lt;/code>&lt;/p>
+&lt;p>运行后出现&lt;/p>
+&lt;pre tabindex="0">&lt;code>W: GPG error: http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian bullseye InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9165938D90FDDD2E
+&lt;/code>&lt;/pre>&lt;p>需要手动添加公钥：&lt;code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys &amp;lt;PUBKEY&amp;gt;&lt;/code>&lt;/p>
+&lt;p>添加所有公钥，提示成功后即可运行&lt;code>sudo apt-get update&lt;/code>换源。&lt;/p></description></item><item><title>Configuring FTP server on raspberry</title><link>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>&lt;h2 id="install-vsftpd">Install vsftpd&lt;/h2>
+&lt;p>on raspberry:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>sudo apt-get install vsftpd&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="config-vsftpd">Config vsftpd&lt;/h2>
+&lt;p>&lt;code>sudo nano /etc/vsftpd.conf&lt;/code>&lt;/p>
+&lt;p>Simplest config:&lt;/p>
+&lt;pre tabindex="0">&lt;code>anonymous_enable=NO 匿名帐号
+local_enable=YES 本地帐号
+write_enable=YES 允许使用任何可以修改文件系统的FTP的指令
+local_umask=022 屏蔽权限即本地用户上传的文件权限
+anon_upload_enable=NO 允许匿名用户上传文件
+anon_mkdir_write_enable=NO 允许匿名用户创建新目录
+dirmessage_enable=YES 允许为目录配置显示信息
+ascii_upload_enable=YES 管控是否可用ASCII 模式上传
+ascii_download_enable=YES 管控是否可用ASCII 模式下载
+&lt;/code>&lt;/pre>&lt;p>others:&lt;/p>
+&lt;pre tabindex="0">&lt;code>anonymous_enable=YES 是否允许匿名帐号
+local_enable=YES 是否允许本地帐号
+write_enable=YES 是否允许使用任何可以修改文件系统的FTP的指令
+local_umask=022 本用户的文件掩码
+anon_upload_enable=YES是否允许匿名用户上传文件
+anon_mkdir_write_enable=YES是否允许匿名用户创建新目录
+dirmessage_enable=YES 是否显示欢迎信息
+xferlog_enable=YES 开启日记功能
+connect_from_port_20=YES 设定ftp服务数据端口
+chown_uploads=YES是否允许修改上传文件的属主
+chown_username=whoever如果允许，输入该属主的用户名
+xferlog_file=/var/log/xferlog日志文件位置
+xferlog_std_format=YES 使用标准的日志格式
+idle_session_timeout=600空闲连接超时
+data_connection_timeout=120数据传输超时
+nopriv_user=ftpsecure当服务器运行于最底层时使用的用户名
+async_abor_enable=YES是否允许使用\&amp;quot;async ABOR\&amp;quot;命令,一般不用,容易出问题
+ascii_upload_enable=YES是否可用ASCII 模式上传。默认值为NO
+ascii_download_enable=YES是否可用ASCII 模式下载。默认值为NO
+ftpd_banner=Welcome to blah FTP service login时显示欢迎信息
+deny_email_enable=YES如果匿名用户需要密码,那么使用banned_email_file里面的电子邮件地址的用户不能登录
+banned_email_file=/etc/vsftpd/banned_emails禁止使用匿名用户登陆时作为密码的电子邮件地址
+chroot_list_enable=YES如果启动这项功能，则所有列在chroot_list_file中的使用者不能更改根目录
+chroot_list_file=/etc/vsftpd/chroot_list定义不能更改用户主目录的文件
+userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
+&lt;/code>&lt;/pre>&lt;p>unfinished.&lt;/p>
+&lt;p>configuration failed&lt;/p></description></item><item><title>Configuring rclone in Windows</title><link>https://comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-rclone-in-windows/</guid><description>&lt;h2 id="install-rclone">Install Rclone&lt;/h2>
+&lt;p>&lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
+>rclone download link&lt;/a>&lt;/p>
+&lt;p>rclone relies on winfsp to work&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.secfs.net/winfsp/rel/" target="_blank" rel="noopener"
+>winfsp download link&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>install winfsp&lt;/li>
+&lt;li>unzip downloaded rclone files&lt;/li>
+&lt;li>config path: add the path where &lt;code>rclone.exe&lt;/code> is in.&lt;/li>
+&lt;li>check rclone config state:&lt;code>rclone --version&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="config-rclone-drives">Config rclone drives&lt;/h2>
+&lt;p>git bash is recommended for mounting drives&lt;/p>
+&lt;h3 id="add-a-remote">Add a remote&lt;/h3>
+&lt;p>&lt;code>rclone config&lt;/code> and follow the interactive config process&lt;/p>
+&lt;h3 id="mount-remote-as-a-disk">Mount remote as a disk&lt;/h3>
+&lt;p>&lt;code>rclone mount Pi:/ Q: --cache-dir &amp;quot;C:\Users\liush\Documents\rclone_cache&amp;quot; --vfs-cache-mode writes&lt;/code>&lt;/p></description></item><item><title>树莓派挂载onedrive</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</guid><description>&lt;h2 id="steps">Steps:&lt;/h2>
 &lt;ol>
 &lt;li>install rclone: &lt;code>sudo apt install rclone&lt;/code>&lt;/li>
 &lt;li>authorize onedrive: &lt;code>rclone authorize &amp;quot;onedrive&amp;quot;&lt;/code>
@@ -1442,7 +1568,9 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;/ul>
 &lt;blockquote>
 &lt;p>尧治天下之民，平海内之政，往见四子藐姑射之山，汾水之阳，窅然丧其天下焉。&lt;/p>
-&lt;/blockquote></description></item><item><title>《大学》摘录</title><link>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</guid><description>&lt;p>大学之道，在明明德，在亲民，在止于至善。知止而后能定，定而后能静，静而后能安，安而后能虑，虑而后能得。物有本末，事有始终，知所先后，则近道矣。古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。自天子以至于庶人，壹是皆以修身为本。其本乱而末治者，否矣。其所厚者薄，而其所薄者厚，未之有也。此谓知本，此谓知之至也。&lt;/p>
+&lt;/blockquote></description></item><item><title>《中国人性论史·先秦篇》读书笔记</title><link>https://comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="第五章-从命到性中庸的性命思想">第五章 从命到性——《中庸》的性命思想&lt;/h2>
+&lt;p>中庸应当分为上、下两篇来加以理解。由第一章到第二十章前半段为上篇，主要解决孔子实践性的伦常之教，和性与天道的关系，解决这三者如何关联在一起的问题。&lt;/p>
+&lt;p>讲中庸，首先要对中庸概念本身作一理解。不偏谓之中，不易谓之庸。庸也有“用”、“平常”之意，其精神与“不易”是相通的。庸行见于人伦日用的平常当中，具有普遍的妥当性，因此才能长久践行而不易。中庸的具体内容，即忠恕。尽心之谓中，推己之谓恕。此为内在的精神，指导日常生活中庸言庸行的实践。&lt;/p></description></item><item><title>《大学》摘录</title><link>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</guid><description>&lt;p>大学之道，在明明德，在亲民，在止于至善。知止而后能定，定而后能静，静而后能安，安而后能虑，虑而后能得。物有本末，事有始终，知所先后，则近道矣。古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。自天子以至于庶人，壹是皆以修身为本。其本乱而末治者，否矣。其所厚者薄，而其所薄者厚，未之有也。此谓知本，此谓知之至也。&lt;/p>
 &lt;p>康诰曰：“克明德”。&amp;hellip;帝典曰：“克明俊德”&amp;hellip;&lt;/p>
 &lt;p>汤之盤铭曰：“苟日新，日日新，又日新。”康诰曰：“作新民。”诗曰：“周虽旧邦，其命惟新。”是故君子无所不用其极。&lt;/p>
 &lt;p>君子贤其贤而亲其亲，小人乐其乐而利其利，此以没世不忘也。&lt;/p>
