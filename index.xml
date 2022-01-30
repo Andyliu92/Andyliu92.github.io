@@ -30,8 +30,10 @@
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
 &lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>Config Raspi after Reinstallation</title><link>https://comfluter.life/p/config-raspi-after-reinstallation/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/config-raspi-after-reinstallation/</guid><description>&lt;h2 id="download-system-and-write-disk">Download system and write disk&lt;/h2>
-&lt;p>&lt;a class="link" href="https://downloads.raspberrypi.org/raspios_lite_arm64/images" target="_blank" rel="noopener"
->64-bit Raspi images&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://downloads.raspberrypi.org/raspios_arm64/images/" target="_blank" rel="noopener"
+>64-bit Raspi images&lt;/a>
+&lt;a class="link" href="https://downloads.raspberrypi.org/raspios_full_arm64/images/" target="_blank" rel="noopener"
+>64-bit Full Raspi images&lt;/a>&lt;/p>
 &lt;h2 id="enable-ssh">Enable SSH&lt;/h2>
 &lt;p>create empty file named &lt;code>ssh&lt;/code> under the disk named &lt;code>boot&lt;/code>&lt;/p>
 &lt;h2 id="connecting-wifi-for-the-1st-time">Connecting wifi for the 1st time&lt;/h2>
@@ -52,14 +54,28 @@ key_mgmt=WPA-PSK
 &lt;p>&lt;code>sudo passwd root&lt;/code>&lt;/p>
 &lt;p>enable root login:
 &lt;code>sudo passwd --unlock root&lt;/code>&lt;/p>
+&lt;h2 id="open-vnc-to-enable-remote-desktop">Open VNC to enable Remote desktop&lt;/h2>
+&lt;p>&lt;code>sudo raspi-config&lt;/code>&lt;/p>
+&lt;p>Interfacing Options →→ VNC →→ YES&lt;/p>
+&lt;p>&lt;strong>Notice&lt;/strong>: You should do this before switch package source.&lt;/p>
+&lt;p>reboot after installation.&lt;/p>
 &lt;h2 id="change-apt-package-source">Change Apt package source&lt;/h2>
-&lt;p>ref&lt;/p>
+&lt;p>&lt;a class="link" href="https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" target="_blank" rel="noopener"
+>ref&lt;/a>&lt;/p>
 &lt;h2 id="enable-remote-root-login">Enable remote root login&lt;/h2>
 &lt;p>&lt;code>sudo nano /etc/ssh/sshd_config&lt;/code>&lt;/p>
 &lt;p>change &lt;code>#PermitRootLogin prohibit-password&lt;/code> to &lt;code>PermitRootLogin yes&lt;/code>&lt;/p>
-&lt;h2 id="open-vnc-to-enable-remote-desktop">Open VNC to enable Remote desktop&lt;/h2>
-&lt;p>&lt;code>sudo raspi-config&lt;/code>&lt;/p>
-&lt;p>Interfacing Options →→ VNC →→ YES&lt;/p></description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>&lt;p>Using open source code &lt;code>https://github.com/mozilla/TTS.git&lt;/code>&lt;/p>
+&lt;h3 id="software-installation">Software Installation&lt;/h3>
+&lt;h2 id="install-miniconda">Install miniconda&lt;/h2>
+&lt;p>&lt;code>wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py37_4.9.2-Linux-aarch64.sh&lt;/code>&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo chmod +x Miniconda3-py37_4.9.2-Linux-aarch64.sh
+sh Miniconda3-py37_4.9.2-Linux-aarch64.sh
+&lt;/code>&lt;/pre>&lt;p>After installation, add miniconda&amp;rsquo;s installation path to .bashrc:
+&lt;code>sudo gedit ~/.bashrc&lt;/code>&lt;/p>
+&lt;p>write this into .bashrc:
+&lt;code>export PATH=$PATH:/home/pi/miniconda3/bin&lt;/code>,path should be modified accordingly.&lt;/p>
+&lt;h2 id="install-vscode">Install VScode&lt;/h2>
+&lt;p>&lt;code>sudo apt install code&lt;/code>&lt;/p></description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>&lt;p>Using open source code &lt;code>https://github.com/mozilla/TTS.git&lt;/code>&lt;/p>
 &lt;h2 id="direct-installation">Direct Installation&lt;/h2>
 &lt;p>TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.&lt;/p>
 &lt;p>If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.&lt;/p>
