@@ -1,0 +1,349 @@
+<!doctype html><html lang=en>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="NJU ICS 22 Fall"><title>PA1 数据的表示、类型、存取、运算</title>
+<link rel=canonical href=https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="PA1 数据的表示、类型、存取、运算">
+<meta property="og:description" content="NJU ICS 22 Fall">
+<meta property="og:url" content="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/">
+<meta property="og:site_name" content="知止堂">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="笔记"><meta property="article:tag" content="ICS"><meta property="article:tag" content="computer"><meta property="article:published_time" content="2022-02-25T00:00:00+00:00"><meta property="article:modified_time" content="2022-02-25T00:00:00+00:00"><meta property="og:image" content="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg">
+<meta name=twitter:title content="PA1 数据的表示、类型、存取、运算">
+<meta name=twitter:description content="NJU ICS 22 Fall"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg">
+<link rel="shortcut icon" href=/siteIcon/favicon.ico>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_800x0_resize_q75_box.jpg srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_800x0_resize_q75_box.jpg 800w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_1600x0_resize_q75_box.jpg 1600w" width=800 height=447 loading=lazy alt="Featured image of post PA1 数据的表示、类型、存取、运算">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/>
+求索集
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/>PA1 数据的表示、类型、存取、运算</a>
+</h2>
+<h3 class=article-subtitle>
+NJU ICS 22 Fall
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Feb 25, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+1 minute read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=pa1-1-数据的表示和存取>PA1-1 数据的表示和存取</h2>
+<p>计算机：用以处理信息的设备。故第一步要解决数据、信息如何存取、表示。</p>
+<p>PA1 典型数据存取</p>
+<p><figure class=gallery-image style=flex-grow:178;flex-basis:429px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg data-size=1568x876>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg width=1568 height=876 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<h3 id=数据的类型及其机器级表示>数据的类型及其机器级表示</h3>
+<p>数据（真值）的类型：</p>
+<ul>
+<li>无符号整数</li>
+<li>带符号整数</li>
+<li>定点/浮点数</li>
+<li>非数值型：字母、操作码等</li>
+</ul>
+<p>机器数：二进制位串</p>
+<p>编码过程：</p>
+<ul>
+<li>无符号整数：直接编码，直接做进制转换即可</li>
+<li>带符号整数：
+<ul>
+<li>原码：直接编码+符号位（正0负1）</li>
+<li>补码：</li>
+</ul>
+</li>
+</ul>
+<h3 id=机器数的存取>机器数的存取</h3>
+<h4 id=机器数的定义>机器数的定义</h4>
+<p><figure class=gallery-image style=flex-grow:239;flex-basis:573px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg data-size=1492x624>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg width=1492 height=624 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure>
+<figure class=gallery-image style=flex-grow:176;flex-basis:423px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png data-size=1587x899>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png width=1587 height=899 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_480x0_resize_box_3.png 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_1024x0_resize_box_3.png 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>主存（RAM）：随机存取存储器</p>
+<p><figure class=gallery-image style=flex-grow:174;flex-basis:419px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg data-size=1572x899>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg width=1572 height=899 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>我们讲的大小以字节为单位</p>
+<p>i386中定义：word（字）：2字节，double word（long，双字）：4字节，32位</p>
+<p>i386：:3位机</p>
+<p>随机存取：以O(1)的时间读写任意位置的数据</p>
+<h4 id=大端方式和小端方式>大端方式和小端方式</h4>
+<p>问题：如果一个需要存取的数据超过了一个字节，怎么存：
+例：0x 12 34 56 78</p>
+<p>小端方式：低有效<strong>字节</strong>在低地址</p>
+<ul>
+<li>0x3 : 0x12</li>
+<li>0x2 : 0x34</li>
+<li>0x1 : 0x56</li>
+<li>0x0 : 0x78</li>
+</ul>
+<p>大端方式：低有效<strong>字节</strong>在高地址</p>
+<h3 id=对于存储器的模拟>对于存储器的模拟</h3>
+<p>如何使用C语言模拟？</p>
+<p>使用字节类型的数组进行模拟</p>
+<h4 id=主存>主存</h4>
+<p><figure class=gallery-image style=flex-grow:177;flex-basis:426px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg data-size=1578x887>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg width=1578 height=887 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>内存访问接口：
+<figure class=gallery-image style=flex-grow:160;flex-basis:385px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg data-size=1614x1004>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg width=1614 height=1004 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p><strong>理解</strong>主存的模拟方式</p>
+<h4 id=通用寄存器>通用寄存器</h4>
+<p>CPU内部的通用寄存器</p>
+<p><figure class=gallery-image style=flex-grow:180;flex-basis:432px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg data-size=1575x875>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg width=1575 height=875 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>寄存器最长：32位</p>
+<p>整个A寄存器：EAX，低16位部分：AX，AX中的高8位：AH，低8位：AL。</p>
+<p><figure class=gallery-image style=flex-grow:175;flex-basis:421px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg data-size=1584x902>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg width=1584 height=902 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_1024x0_resize_q75_box.jpg 1024w" loading=lazy alt=CPU以及通用寄存器在NEMU中的定义>
+</a>
+<figcaption>CPU以及通用寄存器在NEMU中的定义</figcaption>
+</figure>
+<figure class=gallery-image style=flex-grow:160;flex-basis:385px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg data-size=1602x998>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg width=1602 height=998 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_1024x0_resize_q75_box.jpg 1024w" loading=lazy alt=通用寄存器访问示例>
+</a>
+<figcaption>通用寄存器访问示例</figcaption>
+</figure></p>
+<p>make test_pa-1测试是否通过</p>
+<h2 id=pa1-2-整数的表示与运算>PA1-2 整数的表示与运算</h2>
+<h3 id=整数的表示>整数的表示</h3>
+<ul>
+<li>无符号整数：
+<ul>
+<li>关注最大位数以及最大表示区间</li>
+</ul>
+</li>
+<li>带符号整数：
+<ul>
+<li>常用补码表示法
+<ul>
+<li>优点：0表示唯一，可以用加法表示减法（模运算系统）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id=整数的运算>整数的运算</h3>
+<p><figure class=gallery-image style=flex-grow:172;flex-basis:414px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg data-size=1575x911>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg width=1575 height=911 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_1024x0_resize_q75_box.jpg 1024w" loading=lazy alt=ALU结构>
+</a>
+<figcaption>ALU结构</figcaption>
+</figure></p>
+<p>模拟ALU支持功能：</p>
+<ul>
+<li>算数运算：加减乘除、移位</li>
+<li>逻辑运算：与或非</li>
+</ul>
+<p><figure class=gallery-image style=flex-grow:181;flex-basis:435px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg data-size=1614x890>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg width=1614 height=890 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure>
+c语言中的无符号类型表达的是机器数的意思</p>
+<p>注意根据操作数长度确定无效位数长度，并在<strong>输出时进行高位清零</strong></p>
+<p>相加后还要操作相应flag</p>
+<p>CF：无符号int的加减法，看是否需要进位或借位
+OF：当做补码表示，看是否溢出</p>
+<p>两者不同示例：
+<figure class=gallery-image style=flex-grow:181;flex-basis:435px>
+<a href=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg data-size=1614x890>
+<img src=/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg width=1614 height=890 srcset="/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_480x0_resize_q75_box.jpg 480w, /p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>AF不模拟</p>
+<p>看好sign_ext和sign函数的具体定义</p>
+<p>sign_ext在后续会频繁使用</p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/%E7%AC%94%E8%AE%B0/>笔记</a>
+<a href=/tags/ics/>ICS</a>
+<a href=/tags/computer/>computer</a>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/>
+<div class=article-details>
+<h2 class=article-title>外国人眼中的中华文明</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/>
+<div class=article-details>
+<h2 class=article-title>数通网络发展史</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/>
+<div class=article-details>
+<h2 class=article-title>韩非子的思想：势与术</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E6%B3%95%E5%AE%B6%E6%80%9D%E6%83%B3%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/>
+<div class=article-details>
+<h2 class=article-title>法家思想——中国古代的政治逻辑</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/>
+<div class=article-details>
+<h2 class=article-title>化性起伪——荀子的礼学思想</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div id=gitalk-container></div>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css>
+<script src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js></script>
+<script>const gitalk=new Gitalk({clientID:"0d5bb28ba48d7571aaae",clientSecret:"5b4b5a48ddaf1390937e89e0f88e1deede49e4f5",repo:"personal-blog-comment",owner:"Andyliu92",admin:["Andyliu92"],distractionFreeMode:!1,id:md5(location.pathname)});(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("gitalk-container").innerHTML="Gitalk comments not available by default when the website is previewed locally.";return}gitalk.render("gitalk-container")})()</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 知止堂
+</section>
+<section class=powerby>
+京ICP备2021035515号 <br>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#pa1-1-数据的表示和存取>PA1-1 数据的表示和存取</a>
+<ol>
+<li><a href=#数据的类型及其机器级表示>数据的类型及其机器级表示</a></li>
+<li><a href=#机器数的存取>机器数的存取</a>
+<ol>
+<li><a href=#机器数的定义>机器数的定义</a></li>
+<li><a href=#大端方式和小端方式>大端方式和小端方式</a></li>
+</ol>
+</li>
+<li><a href=#对于存储器的模拟>对于存储器的模拟</a>
+<ol>
+<li><a href=#主存>主存</a></li>
+<li><a href=#通用寄存器>通用寄存器</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#pa1-2-整数的表示与运算>PA1-2 整数的表示与运算</a>
+<ol>
+<li><a href=#整数的表示>整数的表示</a></li>
+<li><a href=#整数的运算>整数的运算</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
