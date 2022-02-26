@@ -1,6 +1,6 @@
 <!doctype html><html lang=en>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Using open source code https://github.com/mozilla/TTS.git
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
 Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
@@ -8,7 +8,7 @@ If you plan to code or train models, clone TTS and install it locally.
 git clone https://github.com/mozilla/TTS pip install -e . Custom installation However, the version is lower in github than in Pypl, losing many models and features."><title>Offline TTS</title>
 <link rel=canonical href=https://comfluter.life/p/offline-tts/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Offline TTS">
-<meta property="og:description" content="Using open source code https://github.com/mozilla/TTS.git
+<meta property="og:description" content="TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
 Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
@@ -18,7 +18,7 @@ git clone https://github.com/mozilla/TTS pip install -e . Custom installation Ho
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="TTS"><meta property="article:tag" content="tool"><meta property="article:tag" content="ML"><meta property="article:published_time" content="2022-01-29T00:00:00+00:00"><meta property="article:modified_time" content="2022-01-29T00:00:00+00:00">
 <meta name=twitter:title content="Offline TTS">
-<meta name=twitter:description content="Using open source code https://github.com/mozilla/TTS.git
+<meta name=twitter:description content="TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
 Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
@@ -60,27 +60,37 @@ extended">
 </div>
 </header>
 <section class=article-content>
+<h2 id=tts-by-mozilla>TTS by Mozilla</h2>
 <p>Using open source code <code>https://github.com/mozilla/TTS.git</code></p>
-<h2 id=direct-installation>Direct Installation</h2>
+<h3 id=direct-installation>Direct Installation</h3>
 <p>TTS supports python >= 3.6, &lt;3.9.</p>
 <p>If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.</p>
 <p><code>pip install TTS</code></p>
 <p>If you plan to code or train models, clone TTS and install it locally.</p>
 <pre tabindex=0><code>git clone https://github.com/mozilla/TTS
 pip install -e .
-</code></pre><h2 id=custom-installation>Custom installation</h2>
+</code></pre><h3 id=custom-installation>Custom installation</h3>
 <p>However, the version is lower in github than in Pypl, losing many models and features. Therefore, we need to download the package from Pypl, extract manually to local path, and install using extracted files so that modified code will be carried later.</p>
-<h3 id=pip-download-without-installation>Pip download without installation</h3>
+<h4 id=pip-download-without-installation>Pip download without installation</h4>
 <p>Create a new <code>requirement.exe</code> file, fill in all packages that needs to be downloaded: <code>tts</code></p>
 <p>in the same dir, use command <code>pip download -d &lt;dir to save downloaded files> -r requirement.txt</code></p>
-<h3 id=installation>Installation</h3>
+<h4 id=installation>Installation</h4>
 <p>extract <code>TTS-0.5.0.tar.gz</code>, use command <code>pip install -e .</code> in the extracted dir to install TTS.</p>
-<h2 id=config-tts>Config TTS</h2>
+<h3 id=config-tts>Config TTS</h3>
 <ul>
 <li>change <code>max_decoder_steps</code> in <code>.\tts\configs\tacotron_config.py</code></li>
 </ul>
-<h2 id=install-on-raspi>Install on Raspi</h2>
+<h3 id=install-on-raspi>Install on Raspi</h3>
 <p><a class=link href=https://levelup.gitconnected.com/installing-mozilla-tts-on-a-raspberry-pi-4-e6af16boto3459ab9 target=_blank rel=noopener>Reference</a></p>
+<h2 id=transformertts>TransformerTTS</h2>
+<p><a class=link href=https://github.com/as-ideas/TransformerTTS target=_blank rel=noopener>repo link</a></p>
+<h3 id=installation-1>Installation</h3>
+<ul>
+<li><code>conda create -n tts python=3.7.10</code></li>
+<li><code>conda activate tts</code></li>
+<li><code>cd &lt;path to install></code></li>
+<li>git clone &mldr;</li>
+</ul>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
@@ -194,6 +204,8 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
+<li><a href=#tts-by-mozilla>TTS by Mozilla</a>
+<ol>
 <li><a href=#direct-installation>Direct Installation</a></li>
 <li><a href=#custom-installation>Custom installation</a>
 <ol>
@@ -203,6 +215,13 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 </li>
 <li><a href=#config-tts>Config TTS</a></li>
 <li><a href=#install-on-raspi>Install on Raspi</a></li>
+</ol>
+</li>
+<li><a href=#transformertts>TransformerTTS</a>
+<ol>
+<li><a href=#installation-1>Installation</a></li>
+</ol>
+</li>
 </ol>
 </nav>
 </div>
