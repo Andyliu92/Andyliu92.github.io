@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>开物集 on 知止堂</title><link>https://comfluter.life/categories/%E5%BC%80%E7%89%A9%E9%9B%86/</link><description>Recent content in 开物集 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/categories/%E5%BC%80%E7%89%A9%E9%9B%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Config Raspi after Reinstallation</title><link>https://comfluter.life/p/config-raspi-after-reinstallation/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/config-raspi-after-reinstallation/</guid><description>Download system and write disk 64-bit Raspi images 64-bit Full Raspi images
 Enable SSH create empty file named ssh under the disk named boot
 Connecting wifi for the 1st time create wpa_supplicant.conf under disk named boot, write followings:
-country=CN ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1 network={ ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot; psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot; key_mgmt=WPA-PSK } then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.</description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
+country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot;
+psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot;
+key_mgmt=WPA-PSK
+}
+then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.</description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
 Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
 If you plan to code or train models, clone TTS and install it locally.
-git clone https://github.com/mozilla/TTS pip install -e . Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item><item><title>树莓派更换镜像源</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</guid><description>更换为清华镜像源，参考清华Raspbian 镜像使用帮助
+git clone https://github.com/mozilla/TTS
+pip install -e .
+Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item><item><title>树莓派更换镜像源</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</guid><description>更换为清华镜像源，参考清华Raspbian 镜像使用帮助
 对于Debian 11 (bullseye):
-# 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代： deb [arch=armhf] http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi # 如果需要 arm64 软件源，在 `/etc/apt/sources.list` 中加上 deb [arch=arm64] http://mirrors.tuna.tsinghua.edu.cn/raspbian/multiarch/ bullseye main # 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代： deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bullseye main 保存后运行sudo apt-get update
+# 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：
+deb [arch=armhf] http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+# 如果需要 arm64 软件源，在 `/etc/apt/sources.list` 中加上
+deb [arch=arm64] http://mirrors.tuna.tsinghua.edu.cn/raspbian/multiarch/ bullseye main
+# 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：
+deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bullseye main
+保存后运行sudo apt-get update
 运行后出现
-W: GPG error: http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian bullseye InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9165938D90FDDD2E 需要手动添加公钥：sudo apt-key adv --keyserver keyserver.</description></item><item><title>Configuring FTP server on raspberry</title><link>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>Install vsftpd on raspberry:
+W: GPG error: http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian bullseye InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9165938D90FDDD2E
+需要手动添加公钥：sudo apt-key adv --keyserver keyserver.</description></item><item><title>Configuring FTP server on raspberry</title><link>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>Install vsftpd on raspberry:
 sudo apt-get install vsftpd Config vsftpd sudo nano /etc/vsftpd.conf
 Simplest config:
-anonymous_enable=NO 匿名帐号 local_enable=YES 本地帐号 write_enable=YES 允许使用任何可以修改文件系统的FTP的指令 local_umask=022 屏蔽权限即本地用户上传的文件权限 anon_upload_enable=NO 允许匿名用户上传文件 anon_mkdir_write_enable=NO 允许匿名用户创建新目录 dirmessage_enable=YES 允许为目录配置显示信息 ascii_upload_enable=YES 管控是否可用ASCII 模式上传 ascii_download_enable=YES 管控是否可用ASCII 模式下载 others:
-anonymous_enable=YES 是否允许匿名帐号 local_enable=YES 是否允许本地帐号 write_enable=YES 是否允许使用任何可以修改文件系统的FTP的指令 local_umask=022 本用户的文件掩码 anon_upload_enable=YES是否允许匿名用户上传文件 anon_mkdir_write_enable=YES是否允许匿名用户创建新目录 dirmessage_enable=YES 是否显示欢迎信息 xferlog_enable=YES 开启日记功能 connect_from_port_20=YES 设定ftp服务数据端口 chown_uploads=YES是否允许修改上传文件的属主 chown_username=whoever如果允许，输入该属主的用户名 xferlog_file=/var/log/xferlog日志文件位置 xferlog_std_format=YES 使用标准的日志格式 idle_session_timeout=600空闲连接超时 data_connection_timeout=120数据传输超时 nopriv_user=ftpsecure当服务器运行于最底层时使用的用户名 async_abor_enable=YES是否允许使用\&amp;quot;async ABOR\&amp;quot;命令,一般不用,容易出问题 ascii_upload_enable=YES是否可用ASCII 模式上传。默认值为NO ascii_download_enable=YES是否可用ASCII 模式下载。默认值为NO ftpd_banner=Welcome to blah FTP service login时显示欢迎信息 deny_email_enable=YES如果匿名用户需要密码,那么使用banned_email_file里面的电子邮件地址的用户不能登录 banned_email_file=/etc/vsftpd/banned_emails禁止使用匿名用户登陆时作为密码的电子邮件地址 chroot_list_enable=YES如果启动这项功能，则所有列在chroot_list_file中的使用者不能更改根目录 chroot_list_file=/etc/vsftpd/chroot_list定义不能更改用户主目录的文件 userlist_enable=YES 若启用此选项,userlist_deny选项才被启动 unfinished.</description></item><item><title>Configuring rclone in Windows</title><link>https://comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-rclone-in-windows/</guid><description>Install Rclone rclone download link
+anonymous_enable=NO 匿名帐号 local_enable=YES 本地帐号
+write_enable=YES 允许使用任何可以修改文件系统的FTP的指令
+local_umask=022 屏蔽权限即本地用户上传的文件权限
+anon_upload_enable=NO 允许匿名用户上传文件
+anon_mkdir_write_enable=NO 允许匿名用户创建新目录
+dirmessage_enable=YES 允许为目录配置显示信息 ascii_upload_enable=YES 管控是否可用ASCII 模式上传
+ascii_download_enable=YES 管控是否可用ASCII 模式下载
+others:
+anonymous_enable=YES 是否允许匿名帐号
+local_enable=YES 是否允许本地帐号
+write_enable=YES 是否允许使用任何可以修改文件系统的FTP的指令
+local_umask=022 本用户的文件掩码
+anon_upload_enable=YES是否允许匿名用户上传文件
+anon_mkdir_write_enable=YES是否允许匿名用户创建新目录
+dirmessage_enable=YES 是否显示欢迎信息
+xferlog_enable=YES 开启日记功能
+connect_from_port_20=YES 设定ftp服务数据端口
+chown_uploads=YES是否允许修改上传文件的属主
+chown_username=whoever如果允许，输入该属主的用户名
+xferlog_file=/var/log/xferlog日志文件位置
+xferlog_std_format=YES 使用标准的日志格式
+idle_session_timeout=600空闲连接超时
+data_connection_timeout=120数据传输超时
+nopriv_user=ftpsecure当服务器运行于最底层时使用的用户名
+async_abor_enable=YES是否允许使用\&amp;quot;async ABOR\&amp;quot;命令,一般不用,容易出问题
+ascii_upload_enable=YES是否可用ASCII 模式上传。默认值为NO
+ascii_download_enable=YES是否可用ASCII 模式下载。默认值为NO
+ftpd_banner=Welcome to blah FTP service login时显示欢迎信息
+deny_email_enable=YES如果匿名用户需要密码,那么使用banned_email_file里面的电子邮件地址的用户不能登录
+banned_email_file=/etc/vsftpd/banned_emails禁止使用匿名用户登陆时作为密码的电子邮件地址
+chroot_list_enable=YES如果启动这项功能，则所有列在chroot_list_file中的使用者不能更改根目录
+chroot_list_file=/etc/vsftpd/chroot_list定义不能更改用户主目录的文件
+userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
+unfinished.</description></item><item><title>Configuring rclone in Windows</title><link>https://comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-rclone-in-windows/</guid><description>Install Rclone rclone download link
 rclone relies on winfsp to work
 winfsp download link
 install winfsp unzip downloaded rclone files config path: add the path where rclone.exe is in. check rclone config state:rclone --version Config rclone drives git bash is recommended for mounting drives
@@ -23,7 +73,15 @@ Mount remote as a disk rclone mount Pi:/ Q: --cache-dir &amp;quot;C:\Users\liush
 Reading and Saving Images 函数 cv2.imwrite()用于将图像保存到指定的文件
 retval = cv2.imwrite(filename, img [, paras])
 cv2.imwrite() 将 OpenCV 图像保存到指定的文件。 cv2.imwrite() 基于保存文件的扩展名选择保存图像的格式。 cv2.imwrite() 只能保存 BGR 3通道图像，或 8 位单通道图像、或 PNG/JPEG/TIFF 16位无符号单通道图像。 Arguments filename：要保存的文件的路径和名称，包括文件扩展名 img：要保存的 OpenCV 图像，nparray 多维数组 paras：不同编码格式的参数，可选项 cv2.CV_IMWRITE_JPEG_QUALITY：设置 .jpeg/.jpg 格式的图片质量，取值为 0-100（默认值 95），数值越大则图片质量越高； cv2.CV_IMWRITE_WEBP_QUALITY：设置 .webp 格式的图片质量，取值为 0-100； cv2.CV_IMWRITE_PNG_COMPRESSION：设置 .png 格式图片的压缩比，取值为 0-9（默认值 3），数值越大则压缩比越大。 retval：返回值，保存成功返回 True，否则返回 False。 Notice cv2.imwrite() 保存的是 OpenCV 图像（多维数组），不是 cv2.imread() 读取的图像文件，所保存的文件格式是由 filename 的扩展名决定的，与读取的图像文件的格式无关。 对 4 通道 BGRA 图像，可以使用 Alpha 通道保存为 PNG 图像。 cv2.</description></item><item><title>Anaconda使用随记</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>基本命令 创建虚拟环境：conda create -n &amp;lt;env_name&amp;gt; python=X.X 查看环境信息：conda info --envs 激活虚拟环境：conda activate &amp;lt;env_name&amp;gt; 删除环境：conda remove -n &amp;lt;env_name&amp;gt; --all 查找包：conda search --full-name &amp;lt;pkg_name&amp;gt; 添加软件源 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r conda config --set show_channel_urls yes Minutiae unable auto activate base: conda config --set auto_activate_base false</description></item><item><title>Nginx 服务器配置子域名</title><link>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</guid><description>添加域名解析 到腾讯云服务器控制台，添加需要解析的子域名，如下图。图中第一个参数“主机记录”即为子域名名称。
-配置Nginx server { # 端口设置 listen 80; # 二级域名设置 server_name ling.comfluter.life; # 301重定向设置 return 301 http://47.102.150.182/; } 增加一项二级域名设置即可。</description></item><item><title>树莓派配置NAS</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</guid><description>挂载NTFS格式磁盘 貌似树莓派OS能够自动挂载NTFS磁盘到/media/pi下。不用额外操作。
+配置Nginx server {
+# 端口设置
+listen 80;
+# 二级域名设置
+server_name ling.comfluter.life;
+# 301重定向设置
+return 301 http://47.102.150.182/;
+}
+增加一项二级域名设置即可。</description></item><item><title>树莓派配置NAS</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</guid><description>挂载NTFS格式磁盘 貌似树莓派OS能够自动挂载NTFS磁盘到/media/pi下。不用额外操作。
 使用SAMBA协议提供校园网内文件服务 安装SAMBA 安装SAMBA：sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install -y samba
 查看SAMBA版本：
 root@raspberrypi:/media/pi/4T存储# samba --version Version 4.13.13-Debian</description></item><item><title>Including Verilog Code Block in Latex</title><link>https://comfluter.life/p/including-verilog-code-block-in-latex/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/including-verilog-code-block-in-latex/</guid><description>include packages for code block and coloring
@@ -43,7 +101,12 @@ import numpy as np a = np.array([[1, 2, 3], [2, 3, 4]]) print(a == np.array([1, 
 import numpy as np a = np.array([[1, 2, 3], [2, 3, 4]]) print(a == np.</description></item><item><title>PlantUML 学习随记</title><link>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>PlantUML with VsCode Install PlantUML extension for vscode. following extension follow me document: install java JRE install Graphviz download the latest plantuml.jar specify the jar location with the extension setting plantuml.jar specify the GraphViz installation by defining the Windows environment variable GRAPHVIZ_DOT, e.g., c:\program files\graphviz\bin\dot.exe</description></item><item><title>Python 学习随记</title><link>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>Python Module Python Module 导入方法 import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用 搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
 当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。 命名空间和作用域 变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典 python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
 导入本地自定义包 文件结构
-main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+main.py
+package
+|--__init__.py
+|--module1.py
+|--module2.py
+包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
 简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
 假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
 import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1.</description></item><item><title>在Nginx服务器上部署SSL证书</title><link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid><description>申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。

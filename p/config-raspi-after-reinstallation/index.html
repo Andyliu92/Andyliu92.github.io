@@ -3,13 +3,13 @@
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Download system and write disk 64-bit Raspi images 64-bit Full Raspi images
 Enable SSH create empty file named ssh under the disk named boot
 Connecting wifi for the 1st time create wpa_supplicant.conf under disk named boot, write followings:
-country=CN ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1 network={ ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot; psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot; key_mgmt=WPA-PSK } then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH."><title>Config Raspi after Reinstallation</title>
+country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1network={ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot;psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot;key_mgmt=WPA-PSK}then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH."><title>Config Raspi after Reinstallation</title>
 <link rel=canonical href=https://comfluter.life/p/config-raspi-after-reinstallation/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Config Raspi after Reinstallation">
 <meta property="og:description" content="Download system and write disk 64-bit Raspi images 64-bit Full Raspi images
 Enable SSH create empty file named ssh under the disk named boot
 Connecting wifi for the 1st time create wpa_supplicant.conf under disk named boot, write followings:
-country=CN ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1 network={ ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot; psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot; key_mgmt=WPA-PSK } then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.">
+country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1network={ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot;psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot;key_mgmt=WPA-PSK}then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.">
 <meta property="og:url" content="https://comfluter.life/p/config-raspi-after-reinstallation/">
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="树莓派"><meta property="article:tag" content="Linux"><meta property="article:published_time" content="2022-01-29T00:00:00+00:00"><meta property="article:modified_time" content="2022-01-29T00:00:00+00:00">
@@ -17,7 +17,7 @@ country=CN ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config
 <meta name=twitter:description content="Download system and write disk 64-bit Raspi images 64-bit Full Raspi images
 Enable SSH create empty file named ssh under the disk named boot
 Connecting wifi for the 1st time create wpa_supplicant.conf under disk named boot, write followings:
-country=CN ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1 network={ ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot; psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot; key_mgmt=WPA-PSK } then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.">
+country=CNctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1network={ssid=&amp;quot;&amp;lt;wifi name&amp;gt;&amp;quot;psk=&amp;quot;&amp;lt;wifi passwd&amp;gt;&amp;quot;key_mgmt=WPA-PSK}then, plug the SD card to pi and start the pi. You should be able to connect to Pi using SSH.">
 <link rel="shortcut icon" href=/siteIcon/favicon.ico>
 </head>
 <body class="article-page has-toc">
@@ -81,15 +81,19 @@ network={
 <h2 id=open-vnc-to-enable-remote-desktop>Open VNC to enable Remote desktop</h2>
 <p><code>sudo raspi-config</code></p>
 <p>Interfacing Options →→ VNC →→ YES</p>
-<p><strong>Notice</strong>: You should do this before switch package source.</p>
 <p>reboot after installation.</p>
+<h3 id=debug-vnc-cannot-show-the-desktop>Debug: VNC: cannot show the desktop</h3>
+<p>changing resolution for VNC to a resolution of ratio 16:9 is needed(e.p. 1280x720)</p>
+<p><code>sudo raspi-config</code></p>
+<p>Display Options →→ VNC resolution</p>
+<p>select a preferred resolution and reboot after alteration.</p>
 <h2 id=change-apt-package-source>Change Apt package source</h2>
 <p><a class=link href=https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/ target=_blank rel=noopener>ref</a></p>
 <h2 id=enable-remote-root-login>Enable remote root login</h2>
 <p><code>sudo nano /etc/ssh/sshd_config</code></p>
 <p>change <code>#PermitRootLogin prohibit-password</code> to <code>PermitRootLogin yes</code></p>
-<h3 id=software-installation>Software Installation</h3>
-<h2 id=install-miniconda>Install miniconda</h2>
+<h2 id=software-installation>Software Installation</h2>
+<h3 id=install-miniconda>Install miniconda</h3>
 <p><code>wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py37_4.9.2-Linux-aarch64.sh</code></p>
 <pre tabindex=0><code>sudo chmod +x Miniconda3-py37_4.9.2-Linux-aarch64.sh
 sh Miniconda3-py37_4.9.2-Linux-aarch64.sh
@@ -97,7 +101,7 @@ sh Miniconda3-py37_4.9.2-Linux-aarch64.sh
 <code>sudo gedit ~/.bashrc</code></p>
 <p>write this into .bashrc:
 <code>export PATH=$PATH:/home/pi/miniconda3/bin</code>,path should be modified accordingly.</p>
-<h2 id=install-vscode>Install VScode</h2>
+<h3 id=install-vscode>Install VScode</h3>
 <p><code>sudo apt install code</code></p>
 </section>
 <footer class=article-footer>
@@ -161,7 +165,7 @@ sh Miniconda3-py37_4.9.2-Linux-aarch64.sh
 2022 知止堂
 </section>
 <section class=powerby>
-京ICP备2021035515号 <br>
+<a href=https://beian.miit.gov.cn/ target=_blank>京ICP备2021035515号</a> <br>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>
@@ -215,15 +219,19 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#enable-ssh>Enable SSH</a></li>
 <li><a href=#connecting-wifi-for-the-1st-time>Connecting wifi for the 1st time</a></li>
 <li><a href=#change-password-and-enable-root>Change Password and enable root</a></li>
-<li><a href=#open-vnc-to-enable-remote-desktop>Open VNC to enable Remote desktop</a></li>
-<li><a href=#change-apt-package-source>Change Apt package source</a></li>
-<li><a href=#enable-remote-root-login>Enable remote root login</a>
+<li><a href=#open-vnc-to-enable-remote-desktop>Open VNC to enable Remote desktop</a>
 <ol>
-<li><a href=#software-installation>Software Installation</a></li>
+<li><a href=#debug-vnc-cannot-show-the-desktop>Debug: VNC: cannot show the desktop</a></li>
 </ol>
 </li>
+<li><a href=#change-apt-package-source>Change Apt package source</a></li>
+<li><a href=#enable-remote-root-login>Enable remote root login</a></li>
+<li><a href=#software-installation>Software Installation</a>
+<ol>
 <li><a href=#install-miniconda>Install miniconda</a></li>
 <li><a href=#install-vscode>Install VScode</a></li>
+</ol>
+</li>
 </ol>
 </nav>
 </div>

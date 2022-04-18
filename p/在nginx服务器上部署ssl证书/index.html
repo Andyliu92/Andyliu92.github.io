@@ -2,22 +2,22 @@
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
 下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
- SSL证书面板 
+SSL证书面板
 zip包文件结构：
- zip_struct 
+zip_struct
 由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
- 
+
 将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
 root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter."><title>在Nginx服务器上部署SSL证书</title>
 <link rel=canonical href=https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="在Nginx服务器上部署SSL证书">
 <meta property="og:description" content="申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
 下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
- SSL证书面板 
+SSL证书面板
 zip包文件结构：
- zip_struct 
+zip_struct
 由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
- 
+
 将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
 root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.">
 <meta property="og:url" content="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/">
@@ -26,11 +26,11 @@ root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc
 <meta name=twitter:title content="在Nginx服务器上部署SSL证书">
 <meta name=twitter:description content="申请证书 在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。
 下载证书并上传至云服务器 在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载
- SSL证书面板 
+SSL证书面板
 zip包文件结构：
- zip_struct 
+zip_struct
 由于使用Nginx服务器，需要使用的文件全部放在Nginx文件夹下：
- 
+
 将这两个文件复制到服务器Nginx安装路径下，我服务器上的安装路径为/etc/nginx：
 root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/1_comfluter.life_bundle.crt /etc/nginx root@VM-24-3-ubuntu:/# mv /home/ubuntu/download/2_comfluter.life.key /etc/nginx root@VM-24-3-ubuntu:/# cd /etc/nginx root@VM-24-3-ubuntu:/etc/nginx# ll -s total 80 4 drwxr-xr-x 8 root root 4096 Nov 21 10:05 ./ 4 drwxr-xr-x 115 root root 4096 Nov 15 15:50 ../ 4 -rw-rw-r-- 1 ubuntu ubuntu 3921 Nov 21 08:37 1_comfluter.life_bundle.crt 4 -rw-rw-r-- 1 ubuntu ubuntu 1700 Nov 21 08:37 2_comfluter.">
 <link rel="shortcut icon" href=/siteIcon/favicon.ico>
@@ -225,7 +225,7 @@ nginx: configuration file /etc/nginx/nginx.conf <span class=nb>test</span> is su
 2022 知止堂
 </section>
 <section class=powerby>
-京ICP备2021035515号 <br>
+<a href=https://beian.miit.gov.cn/ target=_blank>京ICP备2021035515号</a> <br>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>

@@ -3,7 +3,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
  当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
 导入本地自定义包 文件结构
-main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+main.pypackage|--__init__.py|--module1.py|--module2.py包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
 简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
 假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
  import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1."><title>Python 学习随记</title>
@@ -12,7 +12,7 @@ main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次
 <meta property="og:description" content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
  当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
 导入本地自定义包 文件结构
-main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+main.pypackage|--__init__.py|--module1.py|--module2.py包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
 简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
 假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
  import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1.">
@@ -23,7 +23,7 @@ main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次
 <meta name=twitter:description content="Python Module Python Module 导入方法  import &amp;lt;module name&amp;gt;调用这个方法导入的module中的函数时，需要&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;格式进行使用 from &amp;lt;module name&amp;gt; import &amp;lt;sth&amp;gt;从某个模块中引入某些特殊函数等引入现在所在的全局命名空间中，直接使用&amp;lt;sth&amp;gt;就可以进行使用。这里引入的可以是一个子包，也可以是子包中的任意对象。 from &amp;lt;module name&amp;gt; import *将模块中所有对象引入，直接使用原模块中的名称即可使用  搜索路径 导入一个模块时，Python 解析器对模块位置的搜索顺序是：
  当前目录 如果不在当前目录，Python 则搜索在 shell 变量 PYTHONPATH 下的每个目录。 如果都找不到，Python会察看默认路径。UNIX下，默认路径一般为/usr/local/lib/python/。 模块搜索路径存储在 system 模块的 sys.path 变量中。变量里包含当前目录，PYTHONPATH和由安装过程决定的默认目录。  命名空间和作用域  变量：名字与匹配对象的对应 命名空间：记录了所有名字-对象对应关系的字典  python表达式可以访问全局/局部命名空间，重名时局部命名空间优先。 使用global语句可以告诉python变量属于全局变量。ex.global x
 导入本地自定义包 文件结构
-main.py package |--__init__.py |--module1.py |--module2.py 包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
+main.pypackage|--__init__.py|--module1.py|--module2.py包是一个分层次的文件目录结构，它定义了一个由模块及子包，和子包下的子包等组成的 Python 的应用环境。
 简单来说，包就是文件夹，但该文件夹下必须存在__init__.py 文件, 该文件的内容可以为空。__init__.py 用于标识当前文件夹是一个包。
 假设module1.py中有函数func1()，则在main函数中可以使用以下集中方式进行包导入：
  import mymodule.module1此时对应func1()的调用为mymodule.module1.func1()，前缀较长，比较繁琐。 import mymodule.module1 as m1此时对应func1()的调用为m1.func1() from mymodule import module1此时对应func1()的调用为module1.">
@@ -266,7 +266,7 @@ Installing collected packages: platformdirs, filelock, distlib, backports.entry-
 2022 知止堂
 </section>
 <section class=powerby>
-京ICP备2021035515号 <br>
+<a href=https://beian.miit.gov.cn/ target=_blank>京ICP备2021035515号</a> <br>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>

@@ -3,4 +3,6 @@ Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
 If you plan to code or train models, clone TTS and install it locally.
-git clone https://github.com/mozilla/TTS pip install -e . Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item></channel></rss>
+git clone https://github.com/mozilla/TTS
+pip install -e .
+Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item></channel></rss>
