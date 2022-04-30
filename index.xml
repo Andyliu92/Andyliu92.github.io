@@ -29,7 +29,209 @@
 &lt;li>Nginx服务器搭建&lt;/li>
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
-&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>Linux基础</title><link>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>Linux环境下使用vscode进行c/c++语言debug</title><link>https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</guid><description>&lt;h2 id="vscode中debug运行逻辑概述">VScode中debug运行逻辑概述&lt;/h2>
+&lt;h3 id="工作区">工作区&lt;/h3>
+&lt;p>&lt;code>VScode&lt;/code>由两种运行模式：单文件打开模式和文件夹打开模式。界面上最明显的区分是&lt;code>VScode&lt;/code>底部的颜色条如果是紫色的，说明在单文件打开模式，如果为天蓝色，即处于文件夹打开模式。&lt;/p>
+&lt;p>在文件夹打开模式下，左侧文件浏览器界面可以看到当前文件夹路径下的所有文件以及文件夹。这个所谓的“当前文件夹路径”在&lt;code>VScode&lt;/code>中被称为“工作区路径”。如果不清楚当前的工作区路径，在&lt;code>VScode&lt;/code>中&lt;strong>新建&lt;/strong>——注意不是显示之前隐藏的终端——一个终端后所处在的路径就是当前的工作区路径，由&lt;code>VScode&lt;/code>自动帮你切换好了。可以在打开后不更改路径的情况下使用&lt;code>pwd&lt;/code>命令打印当前的绝对路径。
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 150;
+flex-basis: 360px"
+>
+&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg" data-size="2736x1824">
+&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg"
+width="2736"
+height="1824"
+srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="打开新的终端并查看当前绝对路径">
+&lt;/a>
+&lt;figcaption>打开新的终端并查看当前绝对路径&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h3 id="debug相关配置文件">Debug相关配置文件&lt;/h3>
+&lt;p>以&lt;code>${workspaceFolder}&lt;/code>表示当前工作区文件夹，则与这个工作区相关的所有&lt;code>VScode&lt;/code>的配置文件都放在&lt;code>${workspaceFolder}/.vscode&lt;/code>文件夹下，若要进行c语言程序的debug，需要用到两个文件：&lt;/p>
+&lt;h4 id="launchjson">launch.json&lt;/h4>
+&lt;p>这个文件里面记录的是与debug直接相关的配置，包括debug任务名称、debug程序（c语言对应&lt;code>gdb&lt;/code>）、相关参数等等。对于python这种不需要编译的解释性语言，仅用这个文件就够了。但是c语言是编译型语言，在调用&lt;code>gdb&lt;/code>debug之前还需要调用&lt;code>gcc&lt;/code>进行编译，对应到&lt;code>launch.json&lt;/code>里面就要配置一个参数&lt;code>&amp;quot;preLaunchTask&amp;quot;&lt;/code>，里面调用接下来要说的&lt;code>tasks.json&lt;/code>文件里的配置进行编译。&lt;/p>
+&lt;h4 id="tasksjson">tasks.json&lt;/h4>
+&lt;p>这个文件就是一些常用任务的配置，写成配置文件后就可以一键运行，而不用每次都敲繁琐的命令行了。在debug的相关配置中常用来填写编译（&lt;code>build&lt;/code>）任务的相关配置，里面可以指定使用的编译器、使用的语言版本、编译参数等等。&lt;/p>
+&lt;h3 id="debug相关设置以及快捷键">debug相关设置以及快捷键&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>F5&lt;/code>在debug启动前为“启动debug”命令，在debug启动后为“继续”命令（继续运行直到遇到下一个断点暂停）&lt;/li>
+&lt;li>&lt;code>F9&lt;/code>在光标所在的行设置断点&lt;/li>
+&lt;li>&lt;code>F10&lt;/code>下一步，遇到函数不会进入&lt;/li>
+&lt;li>&lt;code>F11&lt;/code>下一个指令，遇到函数会进入函数&lt;/li>
+&lt;li>&lt;code>shift + F11&lt;/code>单步跳出，即执行完当前函数并返回后暂停程序&lt;/li>
+&lt;li>&lt;code>shift + F5&lt;/code>停止debug&lt;/li>
+&lt;/ul>
+&lt;p>或者在遇到断点后点击debug工具栏里的按钮也可以
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 150;
+flex-basis: 360px"
+>
+&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg" data-size="2736x1824">
+&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg"
+width="2736"
+height="1824"
+srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="debug遇到断点后的界面">
+&lt;/a>
+&lt;figcaption>debug遇到断点后的界面&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>有可能启动debug之后弹出的终端界面在&lt;code>debug console&lt;/code>中，而非&lt;code>terminal&lt;/code>中，此时进行的输入不会被引导到&lt;code>stdin&lt;/code>中，而是会交给调试器。点击下图中红框圈起来的&lt;code>terminal&lt;/code>（中文翻译应该是“终端”）即可回到正常的终端，此时进行的输入将直接进入&lt;code>stdin&lt;/code>交给程序。
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 150;
+flex-basis: 360px"
+>
+&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg" data-size="2736x1824">
+&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg"
+width="2736"
+height="1824"
+srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="debug console界面">
+&lt;/a>
+&lt;figcaption>debug console界面&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>更多进阶玩法参见&lt;a class="link" href="https://code.visualstudio.com/docs/cpp/cpp-debug" target="_blank" rel="noopener"
+>微软官方文档&lt;/a>&lt;/p>
+&lt;h3 id="一次c语言debug的流程配合下文给出的配置">一次C语言Debug的流程（配合下文给出的配置）&lt;/h3>
+&lt;ol>
+&lt;li>在左侧的debug面板中选择debug任务名称（由于下文给出的配置中实际上只含有1个配置，会被默认选中，这步可以被跳过。但是如果有多个debug配置则需要先选中一个。）&lt;/li>
+&lt;li>打开含有&lt;code>main&lt;/code>函数的c语言源文件，待会编译的时候默认当前打开的文件中含有&lt;code>main&lt;/code>函数&lt;/li>
+&lt;li>摁下&lt;code>F5&lt;/code>键，启动一个debug流程&lt;/li>
+&lt;li>vscode按照选择的任务名称读取&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>文件，发现里面有参数&lt;code>&amp;quot;preLaunchTask&amp;quot;&lt;/code>&lt;/li>
+&lt;li>于是vscode调用&lt;code>${workspaceFolder}/.vscode/tasks.json&lt;/code>文件中指定的编译任务，调用&lt;code>gcc&lt;/code>完成c程序的编译&lt;/li>
+&lt;li>完成编译后，vscode继续按照&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>文件中定义的debug配置调用&lt;code>gdb&lt;/code>启动debug过程&lt;/li>
+&lt;li>程序遇到断点后暂停，此时可以在左侧debug面板中查看变量、调用栈等等信息&lt;/li>
+&lt;li>按下弹出的debug工具栏最右侧的红色方块停止debug&lt;/li>
+&lt;/ol>
+&lt;h2 id="配置文件">配置文件&lt;/h2>
+&lt;p>windows和linux下的配置文件有所不同，请根据运行环境选择&lt;/p>
+&lt;h3 id="linux">Linux&lt;/h3>
+&lt;h4 id="tasksjson-1">tasks.json&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;tasks&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;cppbuild&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;C/C++: gcc build active file&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;command&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/bin/gcc&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;-fdiagnostics-color=always&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;-g&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;${file}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;${fileDirname}/${fileBasenameNoExtension}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;-lpthread&amp;#34;&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;options&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;cwd&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}&amp;#34;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;problemMatcher&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;$gcc&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;group&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;build&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;detail&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;compiler: /usr/bin/gcc&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2.0.0&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/tasks.json&lt;/code>中。&lt;/p>
+&lt;h4 id="launchjson-1">launch.json&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Use IntelliSense to learn about possible attributes.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Hover to view descriptions of existing attributes.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;0.2.0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;(gdb) Launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;cppdbg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}/${fileBasenameNoExtension}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span>
+&lt;span class="nt">&amp;#34;stopAtEntry&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;cwd&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;environment&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span>
+&lt;span class="nt">&amp;#34;externalConsole&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;MIMode&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;gdb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;setupCommands&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Enable pretty-printing for gdb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;-enable-pretty-printing&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;ignoreFailures&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Set Disassembly Flavor to Intel&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;-gdb-set disassembly-flavor intel&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;ignoreFailures&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;preLaunchTask&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;C/C++: gcc build active file&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>中。&lt;/p>
+&lt;h3 id="windows">Windows&lt;/h3>
+&lt;h4 id="tasksjson-2">tasks.json&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2.0.0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;tasks&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="c1">//这个大括号里是‘编译（build）’任务
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;build&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//任务名称，可以更改，不过不建议改
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;shell&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//任务类型，process是vsc把预定义变量和转义解析后直接全部传给command；shell相当于先打开shell再输入命令，所以args还会经过shell再解析一遍
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;command&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;gcc&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//编译命令，这里是gcc，编译c++的话换成g++
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="c1">//方括号里是传给gcc命令的一系列参数，用于实现一些功能
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${file}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//指定要编译的是当前文件
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//指定输出文件的路径和名称
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}\\${fileBasenameNoExtension}.exe&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//承接上一步的-o，让可执行文件输出到源码文件所在的文件夹内，并且让它的名字和源码文件相同
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-g&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//生成和调试有关的信息
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//&amp;#34;-Wall&amp;#34;, // 开启额外警告
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//&amp;#34;-static-libgcc&amp;#34;, // 静态链接libgcc
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-fexec-charset=GBK&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 生成的程序使用GBK编码，不加这一条会导致Win下输出中文乱码
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-std=c99&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 语言标准，可根据自己的需要进行修改，写c++要换成c++的语言标准，比如c++11
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-lpthread&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//多线程程序需要使用
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;group&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">//group表示‘组’，我们可以有很多的task，然后把他们放在一个‘组’里
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;kind&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;build&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//表示这一组任务类型是构建
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;isDefault&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="c1">//表示这个任务是当前这组任务中的默认任务
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;presentation&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">//执行这个任务时的一些其他设定
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;echo&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//表示在执行任务时在终端要有输出
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;reveal&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;always&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//执行任务时是否跳转到终端面板，可以为always，silent，never
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;focus&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//设为true后可以使执行task时焦点聚集在终端，但对编译来说，设为true没有意义，因为运行的时候才涉及到输入
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;panel&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;new&amp;#34;&lt;/span> &lt;span class="c1">//每次执行这个task时都新建一个终端面板，也可以设置为shared，共用一个面板，不过那样会出现‘任务将被终端重用’的提示，比较烦人
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;problemMatcher&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;$gcc&amp;#34;&lt;/span> &lt;span class="c1">//捕捉编译时编译器在终端里显示的报错信息，将其显示在vscode的‘问题’面板里
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/tasks.json&lt;/code>中。可能有一些配置需要更改，阅读注释即可。&lt;/p>
+&lt;h4 id="launchjson-2">launch.json&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;0.2.0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="c1">//这个大括号里是我们的‘调试(Debug)’配置
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;C Debug&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置名称
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;cppdbg&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置类型，cppdbg对应cpptools提供的调试功能；可以认为此处只能是cppdbg
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 请求配置类型，可以为launch（启动）或attach（附加）
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}\\${fileBasenameNoExtension}.exe&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 将要进行调试的程序的路径
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span> &lt;span class="c1">// 程序调试时传递给程序的命令行参数，这里设为空即可
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;stopAtEntry&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 设为true时程序将暂停在程序入口处，相当于在main上打断点
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;cwd&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${fileDirname}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 调试程序时的工作目录，此处为源码文件所在目录
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;environment&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span> &lt;span class="c1">// 环境变量，这里设为空即可
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;externalConsole&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 为true时使用单独的cmd窗口，跳出小黑框；设为false则是用vscode的内置终端，建议用内置终端
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;internalConsoleOptions&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;neverOpen&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡，新手调试用不到
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;MIMode&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;gdb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 指定连接的调试器，gdb是minGW中的调试程序
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;miDebuggerPath&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;C:\\programming\\MinGW_w64\\mingw64\\bin\\gdb.exe&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 指定调试器所在路径，如果你的minGW装在别的地方，则要改成你自己的路径，注意间隔是\\
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;preLaunchTask&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;build&amp;#34;&lt;/span> &lt;span class="c1">// 调试开始前执行的任务，我们在调试前要编译构建。与tasks.json的label相对应，名字要一样
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>中。&lt;code>&amp;quot;miDebuggerPath&amp;quot;&lt;/code>中指定的&lt;code>gdb&lt;/code>路径需要按照本地配置进行更改。&lt;/p></description></item><item><title>Linux基础</title><link>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
 &lt;h3 id="python可迭代对象和迭代器对象">python可迭代对象和迭代器对象&lt;/h3>
 &lt;p>iter()返回一个迭代器&lt;/p>
 &lt;p>能够被迭代器迭代的对象就是可迭代对象&lt;/p>
