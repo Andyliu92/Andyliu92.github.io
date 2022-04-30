@@ -112,7 +112,7 @@ alt="debug console界面">
 &lt;li>按下弹出的debug工具栏最右侧的红色方块停止debug&lt;/li>
 &lt;/ol>
 &lt;h2 id="配置文件">配置文件&lt;/h2>
-&lt;p>windows和linux下的配置文件有所不同，请根据运行环境选择&lt;/p>
+&lt;p>windows和linux下的配置文件有所不同，请根据运行环境选择。在写入配置文件前请确认在终端中可以正常使用&lt;code>gcc&lt;/code>和&lt;code>gdb&lt;/code>命令。&lt;/p>
 &lt;h3 id="linux">Linux&lt;/h3>
 &lt;h4 id="tasksjson-1">tasks.json&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
