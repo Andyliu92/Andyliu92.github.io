@@ -24,7 +24,7 @@ debug相关设置以及快捷键  F5在debug启动前为“启动debug”命令�
 Linux tasks.json { &amp;#34;tasks&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;cppbuild&amp;#34;, &amp;#34;label&amp;#34;: &amp;#34;C/C++: gcc build active file&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;/usr/bin/gcc&amp;#34;, &amp;#34;args&amp;#34;: [ &amp;#34;-fdiagnostics-color=always&amp;#34;, &amp;#34;-g&amp;#34;, &amp;#34;${file}&amp;#34;, &amp;#34;-o&amp;#34;, &amp;#34;${fileDirname}/${fileBasenameNoExtension}&amp;#34;, &amp;#34;-lpthread&amp;#34; ], &amp;#34;options&amp;#34;: { &amp;#34;cwd&amp;#34;: &amp;#34;${fileDirname}&amp;#34; }, &amp;#34;problemMatcher&amp;#34;: [&amp;#34;$gcc&amp;#34;], &amp;#34;group&amp;#34;: &amp;#34;build&amp;#34;, &amp;#34;detail&amp;#34;: &amp;#34;compiler: /usr/bin/gcc&amp;#34; } ], &amp;#34;version&amp;#34;: &amp;#34;2.">
 <meta property="og:url" content="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/">
 <meta property="og:site_name" content="知止堂">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="latex"><meta property="article:tag" content="verilog"><meta property="article:published_time" content="2022-04-30T00:00:00+00:00"><meta property="article:modified_time" content="2022-04-30T00:00:00+00:00">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="vscode"><meta property="article:tag" content="c"><meta property="article:tag" content="c++"><meta property="article:tag" content="debug"><meta property="article:published_time" content="2022-04-30T00:00:00+00:00"><meta property="article:modified_time" content="2022-04-30T00:00:00+00:00">
 <meta name=twitter:title content="Linux环境下使用vscode进行c/c++语言debug">
 <meta name=twitter:description content="VScode中debug运行逻辑概述 工作区 VScode由两种运行模式：单文件打开模式和文件夹打开模式。界面上最明显的区分是VScode底部的颜色条如果是紫色的，说明在单文件打开模式，如果为天蓝色，即处于文件夹打开模式。
 在文件夹打开模式下，左侧文件浏览器界面可以看到当前文件夹路径下的所有文件以及文件夹。这个所谓的“当前文件夹路径”在VScode中被称为“工作区路径”。如果不清楚当前的工作区路径，在VScode中新建——注意不是显示之前隐藏的终端——一个终端后所处在的路径就是当前的工作区路径，由VScode自动帮你切换好了。可以在打开后不更改路径的情况下使用pwd命令打印当前的绝对路径。 打开新的终端并查看当前绝对路径
@@ -250,8 +250,10 @@ extended">
 </section>
 <footer class=article-footer>
 <section class=article-tags>
-<a href=/tags/latex/>latex</a>
-<a href=/tags/verilog/>verilog</a>
+<a href=/tags/vscode/>vscode</a>
+<a href=/tags/c/>c</a>
+<a href=/tags/c++/>c++</a>
+<a href=/tags/debug/>debug</a>
 </section>
 </footer>
 </article>
@@ -260,23 +262,9 @@ extended">
 <div class=related-contents>
 <div class="flex article-list--tile">
 <article>
-<a href=/p/including-verilog-code-block-in-latex/>
-<div class=article-details>
-<h2 class=article-title>Including Verilog Code Block in Latex</h2>
-</div>
-</a>
-</article>
-<article>
 <a href=/p/verilog-with-vscode/>
 <div class=article-details>
 <h2 class=article-title>Verilog with vscode</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/>
-<div class=article-details>
-<h2 class=article-title>Vivado 学习随记</h2>
 </div>
 </a>
 </article>
@@ -291,6 +279,20 @@ extended">
 <a href=/p/offline-tts/>
 <div class=article-details>
 <h2 class=article-title>Offline TTS</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/>
+<div class=article-details>
+<h2 class=article-title>树莓派更换镜像源</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/configuring-ftp-server-on-raspberry/>
+<div class=article-details>
+<h2 class=article-title>Configuring FTP server on raspberry</h2>
 </div>
 </a>
 </article>
