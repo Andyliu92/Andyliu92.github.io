@@ -231,7 +231,10 @@ alt="debug console界面">
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">},&lt;/span>
 &lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>中。&lt;code>&amp;quot;miDebuggerPath&amp;quot;&lt;/code>中指定的&lt;code>gdb&lt;/code>路径需要按照本地配置进行更改。&lt;/p></description></item><item><title>Linux基础</title><link>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>中。&lt;code>&amp;quot;miDebuggerPath&amp;quot;&lt;/code>中指定的&lt;code>gdb&lt;/code>路径需要按照本地配置进行更改。&lt;/p>
+&lt;h2 id="补充">补充&lt;/h2>
+&lt;p>首先，建议在vscode的插件界面中搜索并安装&lt;code>C/C++ Extension Pack&lt;/code>&lt;/p>
+&lt;p>其次，存在更高阶也更简洁的debug配置——cmake，有兴趣可以搜索查看。&lt;/p></description></item><item><title>Linux基础</title><link>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
 &lt;h3 id="python可迭代对象和迭代器对象">python可迭代对象和迭代器对象&lt;/h3>
 &lt;p>iter()返回一个迭代器&lt;/p>
 &lt;p>能够被迭代器迭代的对象就是可迭代对象&lt;/p>
