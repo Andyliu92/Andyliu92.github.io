@@ -1,0 +1,221 @@
+<!doctype html><html lang=en>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Basic config  install delve use debug config template in vscode  Debug with stdin input The default delve debug mod doesn&amp;rsquo;t support stdin input. To tackle this issue, use the method of launching a delve debug server and attach program to debug server instead.
+tasks.json
+{ &amp;#34;tasks&amp;#34;: [ { &amp;#34;label&amp;#34;: &amp;#34;Delve debug server&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;shell&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;cd \&amp;#34;${fileDirname}\&amp;#34; &amp;amp;&amp;amp; source /etc/profile &amp;amp;&amp;amp; ~/go/bin/dlv debug --headless --listen=:2346 --api-version=2&amp;#34;, &amp;#34;problemMatcher&amp;#34;: [], &amp;#34;group&amp;#34;: { &amp;#34;kind&amp;#34;: &amp;#34;build&amp;#34;, &amp;#34;isDefault&amp;#34;: false } } ], &amp;#34;version&amp;#34;: &amp;#34;2."><title>Debug golang program in vscode</title>
+<link rel=canonical href=https://comfluter.life/p/debug-golang-program-in-vscode/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Debug golang program in vscode">
+<meta property="og:description" content="Basic config  install delve use debug config template in vscode  Debug with stdin input The default delve debug mod doesn&amp;rsquo;t support stdin input. To tackle this issue, use the method of launching a delve debug server and attach program to debug server instead.
+tasks.json
+{ &amp;#34;tasks&amp;#34;: [ { &amp;#34;label&amp;#34;: &amp;#34;Delve debug server&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;shell&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;cd \&amp;#34;${fileDirname}\&amp;#34; &amp;amp;&amp;amp; source /etc/profile &amp;amp;&amp;amp; ~/go/bin/dlv debug --headless --listen=:2346 --api-version=2&amp;#34;, &amp;#34;problemMatcher&amp;#34;: [], &amp;#34;group&amp;#34;: { &amp;#34;kind&amp;#34;: &amp;#34;build&amp;#34;, &amp;#34;isDefault&amp;#34;: false } } ], &amp;#34;version&amp;#34;: &amp;#34;2.">
+<meta property="og:url" content="https://comfluter.life/p/debug-golang-program-in-vscode/">
+<meta property="og:site_name" content="知止堂">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="vscode"><meta property="article:tag" content="go"><meta property="article:tag" content="debug"><meta property="article:published_time" content="2022-05-01T00:00:00+00:00"><meta property="article:modified_time" content="2022-05-01T00:00:00+00:00">
+<meta name=twitter:title content="Debug golang program in vscode">
+<meta name=twitter:description content="Basic config  install delve use debug config template in vscode  Debug with stdin input The default delve debug mod doesn&amp;rsquo;t support stdin input. To tackle this issue, use the method of launching a delve debug server and attach program to debug server instead.
+tasks.json
+{ &amp;#34;tasks&amp;#34;: [ { &amp;#34;label&amp;#34;: &amp;#34;Delve debug server&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;shell&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;cd \&amp;#34;${fileDirname}\&amp;#34; &amp;amp;&amp;amp; source /etc/profile &amp;amp;&amp;amp; ~/go/bin/dlv debug --headless --listen=:2346 --api-version=2&amp;#34;, &amp;#34;problemMatcher&amp;#34;: [], &amp;#34;group&amp;#34;: { &amp;#34;kind&amp;#34;: &amp;#34;build&amp;#34;, &amp;#34;isDefault&amp;#34;: false } } ], &amp;#34;version&amp;#34;: &amp;#34;2.">
+<link rel="shortcut icon" href=/siteIcon/favicon.ico>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>Back</span>
+</a>
+</div>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E5%BC%80%E7%89%A9%E9%9B%86/>
+开物集
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/debug-golang-program-in-vscode/>Debug golang program in vscode</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>May 01, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+1 minute read
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=basic-config>Basic config</h2>
+<ol>
+<li>install delve</li>
+<li>use debug config template in vscode</li>
+</ol>
+<h2 id=debug-with-stdin-input>Debug with stdin input</h2>
+<p>The default delve debug mod doesn&rsquo;t support stdin input. To tackle this issue, use the method of launching a delve debug server and attach program to debug server instead.</p>
+<p><code>tasks.json</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=nt>&#34;tasks&#34;</span><span class=p>:</span> <span class=p>[</span>
+    <span class=p>{</span>
+      <span class=nt>&#34;label&#34;</span><span class=p>:</span> <span class=s2>&#34;Delve debug server&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;shell&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;command&#34;</span><span class=p>:</span> <span class=s2>&#34;cd \&#34;${fileDirname}\&#34; &amp;&amp; source /etc/profile &amp;&amp; ~/go/bin/dlv debug --headless --listen=:2346 --api-version=2&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;problemMatcher&#34;</span><span class=p>:</span> <span class=p>[],</span>
+      <span class=nt>&#34;group&#34;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&#34;kind&#34;</span><span class=p>:</span> <span class=s2>&#34;build&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;isDefault&#34;</span><span class=p>:</span> <span class=kc>false</span>
+      <span class=p>}</span>
+    <span class=p>}</span>
+  <span class=p>],</span>
+  <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;2.0.0&#34;</span>
+<span class=p>}</span>
+</code></pre></div><p><code>launch.json</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=c1>// Use IntelliSense to learn about possible attributes.
+</span><span class=c1></span>  <span class=c1>// Hover to view descriptions of existing attributes.
+</span><span class=c1></span>  <span class=c1>// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+</span><span class=c1></span>  <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;0.2.0&#34;</span><span class=p>,</span>
+  <span class=nt>&#34;configurations&#34;</span><span class=p>:</span> <span class=p>[</span>
+    <span class=p>{</span>
+      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Go: Connect to dlv server&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;go&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;request&#34;</span><span class=p>:</span> <span class=s2>&#34;attach&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;mode&#34;</span><span class=p>:</span> <span class=s2>&#34;remote&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;remotePath&#34;</span><span class=p>:</span> <span class=s2>&#34;${workspaceFolder}&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;port&#34;</span><span class=p>:</span> <span class=mi>2346</span><span class=p>,</span>
+      <span class=nt>&#34;host&#34;</span><span class=p>:</span> <span class=s2>&#34;127.0.0.1&#34;</span><span class=p>,</span>
+      <span class=nt>&#34;internalConsoleOptions&#34;</span><span class=p>:</span> <span class=s2>&#34;neverOpen&#34;</span>
+    <span class=p>}</span>
+  <span class=p>]</span>
+<span class=p>}</span>
+</code></pre></div>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/vscode/>vscode</a>
+<a href=/tags/go/>go</a>
+<a href=/tags/debug/>debug</a>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>Related contents</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/>
+<div class=article-details>
+<h2 class=article-title>Linux环境下使用vscode进行c/c++语言debug</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/verilog-with-vscode/>
+<div class=article-details>
+<h2 class=article-title>Verilog with vscode</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/config-raspi-after-reinstallation/>
+<div class=article-details>
+<h2 class=article-title>Config Raspi after Reinstallation</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/offline-tts/>
+<div class=article-details>
+<h2 class=article-title>Offline TTS</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/>
+<div class=article-details>
+<h2 class=article-title>树莓派更换镜像源</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div id=gitalk-container></div>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css>
+<script src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js></script>
+<script>const gitalk=new Gitalk({clientID:"0d5bb28ba48d7571aaae",clientSecret:"5b4b5a48ddaf1390937e89e0f88e1deede49e4f5",repo:"personal-blog-comment",owner:"Andyliu92",admin:["Andyliu92"],distractionFreeMode:!1,id:md5(location.pathname)});(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("gitalk-container").innerHTML="Gitalk comments not available by default when the website is previewed locally.";return}gitalk.render("gitalk-container")})()</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 知止堂
+</section>
+<section class=powerby>
+<a href=https://beian.miit.gov.cn/ target=_blank>京ICP备2021035515号</a> <br>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">Table of contents</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#basic-config>Basic config</a></li>
+<li><a href=#debug-with-stdin-input>Debug with stdin input</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
