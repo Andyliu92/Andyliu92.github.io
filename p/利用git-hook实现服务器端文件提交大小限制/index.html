@@ -182,14 +182,14 @@ check_file_size<span class=o>(){</span>
             <span class=nv>totalRepoSize</span><span class=o>=</span><span class=k>$((</span><span class=nv>$totalRepoSize</span> <span class=o>+</span> <span class=nv>$file_size</span><span class=k>))</span>
             <span class=k>if</span>  <span class=o>[</span> <span class=nv>$file_size</span> -ge <span class=k>$((</span><span class=nv>$maxFileSize</span> <span class=o>*</span> <span class=m>1024</span> <span class=o>*</span> <span class=m>1024</span><span class=k>))</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
                 <span class=nv>file_name</span><span class=o>=</span><span class=sb>`</span><span class=nb>echo</span> <span class=nv>$line</span> <span class=p>|</span> awk <span class=s1>&#39;{print $4}&#39;</span><span class=sb>`</span>
-                <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;31mERROR:\033[0m File &#39;</span><span class=nv>$file_name</span><span class=s2>&#39; size &gt; </span><span class=nv>$maxFileSize</span><span class=s2> MB! Try reduce file size.&#34;</span>
+                <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;31mERROR:\033[0m File &#39;</span><span class=nv>$file_name</span><span class=s2>&#39; size </span><span class=k>$((</span><span class=nv>$file_size</span> <span class=o>/</span> <span class=m>1024</span> <span class=o>/</span> <span class=m>1024</span><span class=k>))</span><span class=s2> MB &gt;= </span><span class=nv>$maxFileSize</span><span class=s2> MB! Try reduce file size.&#34;</span>
                 <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;36mFile SHA:\033[0m\t </span><span class=nv>$file_sha</span><span class=s2>&#34;</span>
                 <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;36mCommit SHA:\033[0m\t </span><span class=nv>$2</span><span class=s2>&#34;</span>
                 <span class=nb>exit</span> <span class=m>1</span>
             <span class=k>fi</span>
             <span class=k>if</span>  <span class=o>[</span> <span class=nv>$file_size</span> -ge <span class=k>$((</span><span class=nv>$warningFileSize</span> <span class=o>*</span> <span class=m>1024</span> <span class=o>*</span> <span class=m>1024</span><span class=k>))</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
                 <span class=nv>file_name</span><span class=o>=</span><span class=sb>`</span><span class=nb>echo</span> <span class=nv>$line</span> <span class=p>|</span> awk <span class=s1>&#39;{print $4}&#39;</span><span class=sb>`</span>
-                <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;33mWARNING:\033[0m File &#39;</span><span class=nv>$file_name</span><span class=s2>&#39; size </span><span class=k>$((</span><span class=nv>$file_size</span> <span class=o>/</span> <span class=m>1024</span> <span class=o>/</span> <span class=m>1024</span><span class=k>))</span><span class=s2> MB &gt; </span><span class=nv>$warningFileSize</span><span class=s2> MB! Don&#39;t commit too many large files!&#34;</span>
+                <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;33mWARNING:\033[0m File &#39;</span><span class=nv>$file_name</span><span class=s2>&#39; size </span><span class=k>$((</span><span class=nv>$file_size</span> <span class=o>/</span> <span class=m>1024</span> <span class=o>/</span> <span class=m>1024</span><span class=k>))</span><span class=s2> MB &gt;= </span><span class=nv>$warningFileSize</span><span class=s2> MB! Don&#39;t commit too many large files!&#34;</span>
                 <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;36mFile SHA:\033[0m\t </span><span class=nv>$file_sha</span><span class=s2>&#34;</span>
                 <span class=nb>echo</span> -e <span class=s2>&#34;\e[1;36mCommit SHA:\033[0m\t </span><span class=nv>$2</span><span class=s2>&#34;</span>
             <span class=k>fi</span>
@@ -198,6 +198,10 @@ check_file_size<span class=o>(){</span>
 <span class=o>}</span>
 
 <span class=c1># check_file_size $tree_sha</span>
+
+<span class=k>if</span> <span class=o>[[</span> <span class=nv>$newrev</span> <span class=o>==</span> <span class=s2>&#34;0000000000000000000000000000000000000000&#34;</span> <span class=o>]]</span><span class=p>;</span><span class=k>then</span> <span class=c1># delete a branch</span>
+	<span class=nb>exit</span> <span class=m>0</span>
+<span class=k>fi</span>
 
 <span class=nb>export</span> <span class=nv>commits</span><span class=o>=</span><span class=sb>`</span>git log HEAD..<span class=nv>$newrev</span> <span class=p>|</span> grep <span class=s2>&#34;commit&#34;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $2}&#39;</span><span class=sb>`</span>
 <span class=c1># echo $commits</span>
