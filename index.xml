@@ -30,23 +30,62 @@
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
 &lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>利用Git Hook实现服务器端文件提交大小限制</title><link>https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link><pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid><description>&lt;p>利用git hooks，在服务器端每次接收到push的时候进行文件信息检查，若超过限制则拒绝提交。&lt;/p>
-&lt;p>具体实现：在update hook中对提交的文件进行检查，利用&lt;code>git cat-file&lt;/code> 命令递归查询文件树、查询文件大小，若超限则返回1拒绝提交。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># --- Command line&lt;/span>
+&lt;p>具体实现：在update hook中对提交的文件进行检查，利用&lt;code>git log&lt;/code>命令查询所有新提交的分支，利用&lt;code>git cat-file&lt;/code> 命令递归查询文件树、查询文件大小，若超限则返回1拒绝提交。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># An example hook script to block unannotated tags from entering.&lt;/span>
+&lt;span class="c1"># Called by &amp;#34;git receive-pack&amp;#34; with arguments: refname sha1-old sha1-new&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># To enable this hook, rename this file to &amp;#34;update&amp;#34;.&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># Config&lt;/span>
+&lt;span class="c1"># ------&lt;/span>
+&lt;span class="c1"># hooks.allowunannotated&lt;/span>
+&lt;span class="c1"># This boolean sets whether unannotated tags will be allowed into the&lt;/span>
+&lt;span class="c1"># repository. By default they won&amp;#39;t be.&lt;/span>
+&lt;span class="c1"># hooks.allowdeletetag&lt;/span>
+&lt;span class="c1"># This boolean sets whether deleting tags will be allowed in the&lt;/span>
+&lt;span class="c1"># repository. By default they won&amp;#39;t be.&lt;/span>
+&lt;span class="c1"># hooks.allowmodifytag&lt;/span>
+&lt;span class="c1"># This boolean sets whether a tag may be modified after creation. By default&lt;/span>
+&lt;span class="c1"># it won&amp;#39;t be.&lt;/span>
+&lt;span class="c1"># hooks.allowdeletebranch&lt;/span>
+&lt;span class="c1"># This boolean sets whether deleting branches will be allowed in the&lt;/span>
+&lt;span class="c1"># repository. By default they won&amp;#39;t be.&lt;/span>
+&lt;span class="c1"># hooks.denycreatebranch&lt;/span>
+&lt;span class="c1"># This boolean sets whether remotely creating branches will be denied&lt;/span>
+&lt;span class="c1"># in the repository. By default this is allowed.&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># --- Command line&lt;/span>
 &lt;span class="nv">refname&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$1&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="nv">oldrev&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$2&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="nv">newrev&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$3&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;span class="c1"># check commit file size &amp;lt; 30MB&lt;/span>
-&lt;span class="nb">export&lt;/span> &lt;span class="nv">maxFileSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">30&lt;/span>
-&lt;span class="c1"># check repo size &amp;lt; 20GB&lt;/span>
-&lt;span class="nb">export&lt;/span> &lt;span class="nv">maxRepoSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">20&lt;/span>
+&lt;span class="c1"># --- Safety check&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -z &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$GIT_DIR&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Don&amp;#39;t run this script from the command line.&amp;#34;&lt;/span> &amp;gt;&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34; (if you want, you could supply GIT_DIR then run&amp;#34;&lt;/span> &amp;gt;&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34; &lt;/span>&lt;span class="nv">$0&lt;/span>&lt;span class="s2"> &amp;lt;ref&amp;gt; &amp;lt;oldrev&amp;gt; &amp;lt;newrev&amp;gt;)&amp;#34;&lt;/span> &amp;gt;&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;span class="k">fi&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> -z &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$refname&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o -z &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$oldrev&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o -z &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$newrev&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;usage: &lt;/span>&lt;span class="nv">$0&lt;/span>&lt;span class="s2"> &amp;lt;ref&amp;gt; &amp;lt;oldrev&amp;gt; &amp;lt;newrev&amp;gt;&amp;#34;&lt;/span> &amp;gt;&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;span class="k">fi&lt;/span>
+&lt;span class="c1"># check commit file size (MB)&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">maxFileSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">20&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">warningFileSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;span class="c1"># check repo size (GB)&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">maxRepoSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">warningRepoSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
 &lt;span class="c1"># echo &amp;#34;tree sha&amp;#34;&lt;/span>
-&lt;span class="nv">tree_sha&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>git cat-file -p &lt;span class="nv">$newrev&lt;/span> &lt;span class="p">|&lt;/span> grep tree &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;span class="c1"># tree_sha=`git cat-file -p $newrev | grep tree | awk &amp;#39;{print $2}&amp;#39;`&lt;/span>
 &lt;span class="c1"># echo $tree_sha&lt;/span>
 &lt;span class="nv">IFS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">$&amp;#39;\n\n&amp;#39;&lt;/span>
 &lt;span class="c1"># echo &amp;#34;tree info &amp;#34;&lt;/span>
 &lt;span class="c1"># git cat-file -p $tree_sha&lt;/span>
 &lt;span class="nb">export&lt;/span> &lt;span class="nv">totalRepoSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span>
 check_file_size&lt;span class="o">(){&lt;/span>
+&lt;span class="c1"># echo &amp;#34;$1&amp;#34;&lt;/span>
 &lt;span class="k">for&lt;/span> line in &lt;span class="sb">`&lt;/span>git cat-file -p &lt;span class="nv">$1&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="k">do&lt;/span>
 &lt;span class="c1"># echo &amp;#34;line: $line&amp;#34;&lt;/span>
@@ -55,7 +94,7 @@ check_file_size&lt;span class="o">(){&lt;/span>
 &lt;span class="c1"># echo &amp;#34;file_type: $file_type&amp;#34;&lt;/span>
 &lt;span class="c1"># echo &amp;#34;file_sha: $file_sha&amp;#34;&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> &lt;span class="nv">$file_type&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;tree&amp;#34;&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
-check_file_size &lt;span class="nv">$file_sha&lt;/span>
+check_file_size &lt;span class="nv">$file_sha&lt;/span> &lt;span class="nv">$2&lt;/span>
 &lt;span class="k">else&lt;/span>
 &lt;span class="c1"># echo `git cat-file -s $file_sha`&lt;/span>
 &lt;span class="c1"># echo $(($maxFileSize * 1024 * 1024))&lt;/span>
@@ -63,16 +102,38 @@ check_file_size &lt;span class="nv">$file_sha&lt;/span>
 &lt;span class="nv">totalRepoSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$((&lt;/span>&lt;span class="nv">$totalRepoSize&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nv">$file_size&lt;/span>&lt;span class="k">))&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$file_size&lt;/span> -ge &lt;span class="k">$((&lt;/span>&lt;span class="nv">$maxFileSize&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
 &lt;span class="nv">file_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$line&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $4}&amp;#39;&lt;/span>&lt;span class="sb">`&lt;/span>
-&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;31mERROR: File &amp;#39;&lt;/span>&lt;span class="nv">$file_name&lt;/span>&lt;span class="s2">&amp;#39; size &amp;gt; &lt;/span>&lt;span class="nv">$maxFileSize&lt;/span>&lt;span class="s2"> MB! Try reduce file size.\e[1;37m&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;31mERROR:\033[0m File &amp;#39;&lt;/span>&lt;span class="nv">$file_name&lt;/span>&lt;span class="s2">&amp;#39; size &amp;gt; &lt;/span>&lt;span class="nv">$maxFileSize&lt;/span>&lt;span class="s2"> MB! Try reduce file size.&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;36mFile SHA:\033[0m\t &lt;/span>&lt;span class="nv">$file_sha&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;36mCommit SHA:\033[0m\t &lt;/span>&lt;span class="nv">$2&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;span class="k">fi&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$file_size&lt;/span> -ge &lt;span class="k">$((&lt;/span>&lt;span class="nv">$warningFileSize&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;span class="nv">file_name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$line&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $4}&amp;#39;&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;33mWARNING:\033[0m File &amp;#39;&lt;/span>&lt;span class="nv">$file_name&lt;/span>&lt;span class="s2">&amp;#39; size &lt;/span>&lt;span class="k">$((&lt;/span>&lt;span class="nv">$file_size&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="m">1024&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span>&lt;span class="s2"> MB &amp;gt; &lt;/span>&lt;span class="nv">$warningFileSize&lt;/span>&lt;span class="s2"> MB! Don&amp;#39;t commit too many large files!&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;36mFile SHA:\033[0m\t &lt;/span>&lt;span class="nv">$file_sha&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;36mCommit SHA:\033[0m\t &lt;/span>&lt;span class="nv">$2&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
 &lt;span class="k">fi&lt;/span>
 &lt;span class="k">fi&lt;/span>
 &lt;span class="k">done&lt;/span>
 &lt;span class="o">}&lt;/span>
-check_file_size &lt;span class="nv">$tree_sha&lt;/span>
+&lt;span class="c1"># check_file_size $tree_sha&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">commits&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>git log HEAD..&lt;span class="nv">$newrev&lt;/span> &lt;span class="p">|&lt;/span> grep &lt;span class="s2">&amp;#34;commit&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;span class="c1"># echo $commits&lt;/span>
+&lt;span class="k">for&lt;/span> commit in &lt;span class="nv">$commits&lt;/span>
+&lt;span class="k">do&lt;/span>
+&lt;span class="nv">tree_sha&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="sb">`&lt;/span>git cat-file -p &lt;span class="nv">$commit&lt;/span> &lt;span class="p">|&lt;/span> grep tree &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;span class="c1"># echo $commit&lt;/span>
+&lt;span class="c1"># echo $tree_sha&lt;/span>
+check_file_size &lt;span class="nv">$tree_sha&lt;/span> &lt;span class="nv">$commit&lt;/span>
+&lt;span class="k">done&lt;/span>
 &lt;span class="c1"># echo &amp;#34;totalRepoSize: $totalRepoSize&amp;#34;&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="k">$((&lt;/span>&lt;span class="nv">$totalRepoSize&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> -ge &lt;span class="k">$((&lt;/span>&lt;span class="nv">$maxRepoSize&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
-&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;31mERROR: Repository size &amp;gt; &lt;/span>&lt;span class="nv">$maxRepoSize&lt;/span>&lt;span class="s2"> GB! Try reduce repo size.\e[1;37m&amp;#34;&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;31mERROR:\033[0m Repository size &amp;gt; &lt;/span>&lt;span class="nv">$maxRepoSize&lt;/span>&lt;span class="s2"> GB! Try reduce repo size!&amp;#34;&lt;/span>
+&lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;span class="k">fi&lt;/span>
+&lt;span class="c1"># echo &amp;#34;totalRepoSize: $totalRepoSize&amp;#34;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="k">$((&lt;/span>&lt;span class="nv">$totalRepoSize&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> -ge &lt;span class="k">$((&lt;/span>&lt;span class="nv">$warningRepoSize&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">1024&lt;/span>&lt;span class="k">))&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;span class="nb">echo&lt;/span> -e &lt;span class="s2">&amp;#34;\e[1;33mWARNING:\033[0m Repository size &amp;gt; &lt;/span>&lt;span class="nv">$warningRepoSize&lt;/span>&lt;span class="s2"> GB!&amp;#34;&lt;/span>
 &lt;span class="nb">exit&lt;/span> &lt;span class="m">1&lt;/span>
 &lt;span class="k">fi&lt;/span>
 &lt;span class="c1"># --- Finished&lt;/span>
