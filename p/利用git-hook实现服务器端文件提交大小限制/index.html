@@ -3,12 +3,12 @@
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="利用git hooks，在服务器端每次接收到push的时候进行文件信息检查，若超过限制则拒绝提交。
 具体实现：在update hook中对提交的文件进行检查，利用git log命令查询所有新提交的分支，利用git cat-file 命令递归查询文件树、查询文件大小，若超限则返回1拒绝提交。
 #!/bin/bash # # An example hook script to block unannotated tags from entering. # Called by &amp;#34;git receive-pack&amp;#34; with arguments: refname sha1-old sha1-new # # To enable this hook, rename this file to &amp;#34;update&amp;#34;. # # Config # ------ # hooks.allowunannotated # This boolean sets whether unannotated tags will be allowed into the # repository. By default they won&amp;#39;t be. # hooks.allowdeletetag # This boolean sets whether deleting tags will be allowed in the # repository."><title>利用Git Hook实现服务器端文件提交大小限制</title>
-<link rel=canonical href=https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/>
+<link rel=canonical href=https://blog.comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="利用Git Hook实现服务器端文件提交大小限制">
 <meta property="og:description" content="利用git hooks，在服务器端每次接收到push的时候进行文件信息检查，若超过限制则拒绝提交。
 具体实现：在update hook中对提交的文件进行检查，利用git log命令查询所有新提交的分支，利用git cat-file 命令递归查询文件树、查询文件大小，若超限则返回1拒绝提交。
 #!/bin/bash # # An example hook script to block unannotated tags from entering. # Called by &amp;#34;git receive-pack&amp;#34; with arguments: refname sha1-old sha1-new # # To enable this hook, rename this file to &amp;#34;update&amp;#34;. # # Config # ------ # hooks.allowunannotated # This boolean sets whether unannotated tags will be allowed into the # repository. By default they won&amp;#39;t be. # hooks.allowdeletetag # This boolean sets whether deleting tags will be allowed in the # repository.">
-<meta property="og:url" content="https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
+<meta property="og:url" content="https://blog.comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/">
 <meta property="og:site_name" content="知止堂">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="git"><meta property="article:tag" content="github"><meta property="article:published_time" content="2022-05-07T00:00:00+00:00"><meta property="article:modified_time" content="2022-05-07T00:00:00+00:00">
 <meta name=twitter:title content="利用Git Hook实现服务器端文件提交大小限制">
@@ -34,7 +34,7 @@ on-phone--column extended">
 <h1 class=site-name><a href=/>知止堂</a></h1>
 <h2 class=site-description>思学并进，德智日新。</h2><ol class=social-menu>
 <li>
-<a href=mailto:andyliu.92@outlook.com target=_blank title=email><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+<a href=mailto:andyliu.pub@outlook.com target=_blank title=email><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
 </a>
 </li>
 <li>

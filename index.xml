@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 31 Dec 9999 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome!</title><link>https://comfluter.life/p/welcome/</link><pubDate>Fri, 31 Dec 9999 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/welcome/</guid><description>&lt;img src="https://comfluter.life/p/welcome/cover.jpg" alt="Featured image of post Welcome!" />&lt;h2 id="序言">序言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知止堂</title><link>https://blog.comfluter.life/</link><description>Recent content on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 31 Dec 9999 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.comfluter.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome!</title><link>https://blog.comfluter.life/p/welcome/</link><pubDate>Fri, 31 Dec 9999 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/welcome/</guid><description>&lt;img src="https://blog.comfluter.life/p/welcome/cover.jpg" alt="Featured image of post Welcome!" />&lt;h2 id="序言">序言&lt;/h2>
 &lt;p>在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p>
 &lt;p>在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p>
 &lt;p>第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p>
@@ -29,7 +29,7 @@
 &lt;li>Nginx服务器搭建&lt;/li>
 &lt;/ol>
 &lt;p>其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。&lt;/p>
-&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>利用Git Hook实现服务器端文件提交大小限制</title><link>https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link><pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid><description>&lt;p>利用git hooks，在服务器端每次接收到push的时候进行文件信息检查，若超过限制则拒绝提交。&lt;/p>
+&lt;p>希望以后能以更多项目为依托，让自己不断学习、进步。&lt;/p></description></item><item><title>利用Git Hook实现服务器端文件提交大小限制</title><link>https://blog.comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</link><pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%88%A9%E7%94%A8git-hook%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%96%87%E4%BB%B6%E6%8F%90%E4%BA%A4%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</guid><description>&lt;p>利用git hooks，在服务器端每次接收到push的时候进行文件信息检查，若超过限制则拒绝提交。&lt;/p>
 &lt;p>具体实现：在update hook中对提交的文件进行检查，利用&lt;code>git log&lt;/code>命令查询所有新提交的分支，利用&lt;code>git cat-file&lt;/code> 命令递归查询文件树、查询文件大小，若超限则返回1拒绝提交。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="cp">#!/bin/bash
 &lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="c1">#&lt;/span>
@@ -141,7 +141,7 @@ check_file_size &lt;span class="nv">$tree_sha&lt;/span> &lt;span class="nv">$com
 &lt;span class="k">fi&lt;/span>
 &lt;span class="c1"># --- Finished&lt;/span>
 &lt;span class="nb">exit&lt;/span> &lt;span class="m">0&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Debug golang program in vscode</title><link>https://comfluter.life/p/debug-golang-program-in-vscode/</link><pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/debug-golang-program-in-vscode/</guid><description>&lt;h2 id="basic-config">Basic config&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Debug golang program in vscode</title><link>https://blog.comfluter.life/p/debug-golang-program-in-vscode/</link><pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/debug-golang-program-in-vscode/</guid><description>&lt;h2 id="basic-config">Basic config&lt;/h2>
 &lt;ol>
 &lt;li>install delve&lt;/li>
 &lt;li>use debug config template in vscode&lt;/li>
@@ -183,7 +183,7 @@ check_file_size &lt;span class="nv">$tree_sha&lt;/span> &lt;span class="nv">$com
 &lt;span class="p">}&lt;/span>
 &lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Linux环境下使用vscode进行c/c++语言debug</title><link>https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</guid><description>&lt;h2 id="vscode中debug运行逻辑概述">VScode中debug运行逻辑概述&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Linux环境下使用vscode进行c/c++语言debug</title><link>https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/</guid><description>&lt;h2 id="vscode中debug运行逻辑概述">VScode中debug运行逻辑概述&lt;/h2>
 &lt;h3 id="工作区">工作区&lt;/h3>
 &lt;p>&lt;code>VScode&lt;/code>由两种运行模式：单文件打开模式和文件夹打开模式。界面上最明显的区分是&lt;code>VScode&lt;/code>底部的颜色条如果是紫色的，说明在单文件打开模式，如果为天蓝色，即处于文件夹打开模式。&lt;/p>
 &lt;p>在文件夹打开模式下，左侧文件浏览器界面可以看到当前文件夹路径下的所有文件以及文件夹。这个所谓的“当前文件夹路径”在&lt;code>VScode&lt;/code>中被称为“工作区路径”。如果不清楚当前的工作区路径，在&lt;code>VScode&lt;/code>中&lt;strong>新建&lt;/strong>——注意不是显示之前隐藏的终端——一个终端后所处在的路径就是当前的工作区路径，由&lt;code>VScode&lt;/code>自动帮你切换好了。可以在打开后不更改路径的情况下使用&lt;code>pwd&lt;/code>命令打印当前的绝对路径。
@@ -193,11 +193,11 @@ style="
 flex-grow: 150;
 flex-basis: 360px"
 >
-&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg" data-size="2736x1824">
-&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg" data-size="2736x1824">
+&lt;img src="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1.jpg"
 width="2736"
 height="1824"
-srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/1_hua5e0b4343a6279b9e5be7a1dc02875eb_362835_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="打开新的终端并查看当前绝对路径">
 &lt;/a>
@@ -225,11 +225,11 @@ style="
 flex-grow: 150;
 flex-basis: 360px"
 >
-&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg" data-size="2736x1824">
-&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg" data-size="2736x1824">
+&lt;img src="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2.jpg"
 width="2736"
 height="1824"
-srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/2_hua5e0b4343a6279b9e5be7a1dc02875eb_378251_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="debug遇到断点后的界面">
 &lt;/a>
@@ -242,11 +242,11 @@ style="
 flex-grow: 150;
 flex-basis: 360px"
 >
-&lt;a href="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg" data-size="2736x1824">
-&lt;img src="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg"
+&lt;a href="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg" data-size="2736x1824">
+&lt;img src="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3.jpg"
 width="2736"
 height="1824"
-srcset="https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8vscode%E8%BF%9B%E8%A1%8Cc/c-%E8%AF%AD%E8%A8%80debug/assets/3_hua5e0b4343a6279b9e5be7a1dc02875eb_593336_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="debug console界面">
 &lt;/a>
@@ -388,7 +388,7 @@ alt="debug console界面">
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>以上代码复制到&lt;code>${workspaceFolder}/.vscode/launch.json&lt;/code>中。&lt;code>&amp;quot;miDebuggerPath&amp;quot;&lt;/code>中指定的&lt;code>gdb&lt;/code>路径需要按照本地配置进行更改。&lt;/p>
 &lt;h2 id="补充">补充&lt;/h2>
 &lt;p>首先，建议在vscode的插件界面中搜索并安装&lt;code>C/C++ Extension Pack&lt;/code>&lt;/p>
-&lt;p>其次，存在更高阶也更简洁的debug配置——cmake，有兴趣可以搜索查看。&lt;/p></description></item><item><title>Linux基础</title><link>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
+&lt;p>其次，存在更高阶也更简洁的debug配置——cmake，有兴趣可以搜索查看。&lt;/p></description></item><item><title>Linux基础</title><link>https://blog.comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="文件内容添加">文件内容添加&lt;/h2></description></item><item><title>Python基础</title><link>https://blog.comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>&lt;h2 id="python流程控制">python流程控制&lt;/h2>
 &lt;h3 id="python可迭代对象和迭代器对象">python可迭代对象和迭代器对象&lt;/h3>
 &lt;p>iter()返回一个迭代器&lt;/p>
 &lt;p>能够被迭代器迭代的对象就是可迭代对象&lt;/p>
@@ -396,7 +396,7 @@ alt="debug console界面">
 &lt;ul>
 &lt;li>可以&lt;strong>惰性生成&lt;/strong>需要使用的元素，有利于大规模数据操作。用到时再生成&lt;/li>
 &lt;li>使用生成器表达式生成：(i**2 for i in range(1,5))&lt;/li>
-&lt;/ul></description></item><item><title>22 Spring 学期目标</title><link>https://comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>&lt;h2 id="学期目标">学期目标&lt;/h2>
+&lt;/ul></description></item><item><title>22 Spring 学期目标</title><link>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>&lt;h2 id="学期目标">学期目标&lt;/h2>
 &lt;ol>
 &lt;li>学习方面
 &lt;ol>
@@ -435,7 +435,7 @@ alt="debug console界面">
 &lt;p>专业内的学习，高效完成，不要浪费过多时间。跨选的离散数学与计算机系统基础，重在理解思想，里面有大道所在。旁听的课程一是提升技能，二是培养自己成为一个有真正思想的人。&lt;/p>
 &lt;p>科研的压力也在逐步加大，重点是到了应当有所产出的时候了，不能loads of activities but no actual achievements.&lt;/p>
 &lt;p>工作方面，要承认自己需要向身边的人学习的还有很多，不能自视甚高。这学期决定加入全媒体中心，一是帮助完成自己接纳他人、欣赏他人的心态转换；二是通过这个平台认识许许多多优秀的同学；三是学习组织大众，完成目标的能力；四是让自己的摄影剪辑技能有施展指出不至于荒废。总之，是推着自己去actually do things，以此“下学而上达”，使自己的心态转变、能力提升有切实的着手之处。&lt;/p>
-&lt;p>生活方面，对自己的兴趣要有所坚持，也不妨更加食人间烟火一些，不要成为书房里的书呆子。&lt;/p></description></item><item><title>PA1 数据的表示、类型、存取、运算</title><link>https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</link><pubDate>Fri, 25 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</guid><description>&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg" alt="Featured image of post PA1 数据的表示、类型、存取、运算" />&lt;h2 id="pa1-1-数据的表示和存取">PA1-1 数据的表示和存取&lt;/h2>
+&lt;p>生活方面，对自己的兴趣要有所坚持，也不妨更加食人间烟火一些，不要成为书房里的书呆子。&lt;/p></description></item><item><title>PA1 数据的表示、类型、存取、运算</title><link>https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</link><pubDate>Fri, 25 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</guid><description>&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg" alt="Featured image of post PA1 数据的表示、类型、存取、运算" />&lt;h2 id="pa1-1-数据的表示和存取">PA1-1 数据的表示和存取&lt;/h2>
 &lt;p>计算机：用以处理信息的设备。故第一步要解决数据、信息如何存取、表示。&lt;/p>
 &lt;p>PA1 典型数据存取&lt;/p>
 &lt;p>&lt;figure
@@ -444,11 +444,11 @@ style="
 flex-grow: 178;
 flex-basis: 429px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg" data-size="1568x876">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg" data-size="1568x876">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1.jpg"
 width="1568"
 height="876"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/1_hub35021469f877368602ca584dc5f36db_238845_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -480,11 +480,11 @@ style="
 flex-grow: 239;
 flex-basis: 573px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg" data-size="1492x624">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg" data-size="1492x624">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2.jpg"
 width="1492"
 height="624"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/2_hu148dcaea44c4fe1e511d2ceaad5b8251_230237_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -495,11 +495,11 @@ style="
 flex-grow: 176;
 flex-basis: 423px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png" data-size="1587x899">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png" data-size="1587x899">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3.png"
 width="1587"
 height="899"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_480x0_resize_box_3.png 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_1024x0_resize_box_3.png 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_480x0_resize_box_3.png 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/3_hu5266e37ab01f61d4e183ececb8c26f78_357223_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -511,11 +511,11 @@ style="
 flex-grow: 174;
 flex-basis: 419px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg" data-size="1572x899">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg" data-size="1572x899">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4.jpg"
 width="1572"
 height="899"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/4_hu1458c5e7b2efffb74f6071d3a8a654d6_519027_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -545,11 +545,11 @@ style="
 flex-grow: 177;
 flex-basis: 426px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg" data-size="1578x887">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg" data-size="1578x887">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5.jpg"
 width="1578"
 height="887"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/5_hu7e09b892bdb17bed3e550a613bbfb39f_447208_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -561,11 +561,11 @@ style="
 flex-grow: 160;
 flex-basis: 385px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg" data-size="1614x1004">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg" data-size="1614x1004">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6.jpg"
 width="1614"
 height="1004"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/6_hud31ce290970dd4ec89f52534fb243861_607133_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -579,11 +579,11 @@ style="
 flex-grow: 180;
 flex-basis: 432px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg" data-size="1575x875">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg" data-size="1575x875">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7.jpg"
 width="1575"
 height="875"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/7_hu153e56dd46d9cfb199a1f1e6d722a019_461973_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -596,11 +596,11 @@ style="
 flex-grow: 175;
 flex-basis: 421px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg" data-size="1584x902">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg" data-size="1584x902">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8.jpg"
 width="1584"
 height="902"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/8_hu15c9c95bcbcf4bee7fc2cc237ce12bc1_694400_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="CPU以及通用寄存器在NEMU中的定义">
 &lt;/a>
@@ -612,11 +612,11 @@ style="
 flex-grow: 160;
 flex-basis: 385px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg" data-size="1602x998">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg" data-size="1602x998">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9.jpg"
 width="1602"
 height="998"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/9_huee9658890151dba887017e90fa846bb6_567796_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="通用寄存器访问示例">
 &lt;/a>
@@ -648,11 +648,11 @@ style="
 flex-grow: 172;
 flex-basis: 414px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg" data-size="1575x911">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg" data-size="1575x911">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10.jpg"
 width="1575"
 height="911"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/10_hu8bb0a2fd8c806b5fcc101fd04ddd4cf5_702887_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="ALU结构">
 &lt;/a>
@@ -669,11 +669,11 @@ style="
 flex-grow: 181;
 flex-basis: 435px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg" data-size="1614x890">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg" data-size="1614x890">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11.jpg"
 width="1614"
 height="890"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/11_hu489a37cc083e2cf96c1e01244abd736d_695068_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -690,18 +690,18 @@ style="
 flex-grow: 198;
 flex-basis: 475px"
 >
-&lt;a href="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12.jpg" data-size="1544x779">
-&lt;img src="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12.jpg"
+&lt;a href="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12.jpg" data-size="1544x779">
+&lt;img src="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12.jpg"
 width="1544"
 height="779"
-srcset="https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12_hu3048ad1983812a279c5579e8a21d829f_549833_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12_hu3048ad1983812a279c5579e8a21d829f_549833_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12_hu3048ad1983812a279c5579e8a21d829f_549833_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/pics/12_hu3048ad1983812a279c5579e8a21d829f_549833_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
 &lt;p>AF不模拟&lt;/p>
 &lt;p>看好sign_ext和sign函数的具体定义&lt;/p>
-&lt;p>sign_ext在后续会频繁使用&lt;/p></description></item><item><title>外国人眼中的中华文明</title><link>https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</guid><description>&lt;h2 id="参考书籍">参考书籍&lt;/h2>
+&lt;p>sign_ext在后续会频繁使用&lt;/p></description></item><item><title>外国人眼中的中华文明</title><link>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</guid><description>&lt;h2 id="参考书籍">参考书籍&lt;/h2>
 &lt;p>《吾国与吾名》 胡阿祥
 介绍国号、名号、域外称谓。&lt;/p>
 &lt;h2 id="课程介绍">课程介绍&lt;/h2>
@@ -711,11 +711,11 @@ style="
 flex-grow: 136;
 flex-basis: 328px"
 >
-&lt;a href="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1.jpg" data-size="942x688">
-&lt;img src="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1.jpg" data-size="942x688">
+&lt;img src="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1.jpg"
 width="942"
 height="688"
-srcset="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1_hu17ee2dc853a681e83ed2a8065a404f4f_122855_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1_hu17ee2dc853a681e83ed2a8065a404f4f_122855_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1_hu17ee2dc853a681e83ed2a8065a404f4f_122855_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/1_hu17ee2dc853a681e83ed2a8065a404f4f_122855_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -726,11 +726,11 @@ style="
 flex-grow: 138;
 flex-basis: 332px"
 >
-&lt;a href="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2.jpg" data-size="926x668">
-&lt;img src="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2.jpg" data-size="926x668">
+&lt;img src="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2.jpg"
 width="926"
 height="668"
-srcset="https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2_hu27a8544d782a0d11a233a7c23180a5af_161256_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2_hu27a8544d782a0d11a233a7c23180a5af_161256_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2_hu27a8544d782a0d11a233a7c23180a5af_161256_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/2_hu27a8544d782a0d11a233a7c23180a5af_161256_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -740,7 +740,7 @@ loading="lazy"
 &lt;h3 id="china">China？&lt;/h3>
 &lt;p>瓷器-中国？&lt;/p>
 &lt;p>某种程度上反映了历史的真实。中国瓷器出现时代最早，且数量最多，古代瓷器品质最好。&lt;/p>
-&lt;p>这样的普遍说法，是错误的。错误在于颠倒了作为国家的China与小写的china的因果关系。瓷器本来称作porcelain of China，后称chinaware作为中国瓷器的专用词，后ware在演变中被省略，china本身也可以代表“中国瓷器”，后china由专有名词变为瓷器的通用名词。&lt;/p></description></item><item><title>ConvLab-2 Toolkit</title><link>https://comfluter.life/p/convlab-2-toolkit/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/convlab-2-toolkit/</guid><description>&lt;h2 id="download-toolkit">Download toolkit&lt;/h2>
+&lt;p>这样的普遍说法，是错误的。错误在于颠倒了作为国家的China与小写的china的因果关系。瓷器本来称作porcelain of China，后称chinaware作为中国瓷器的专用词，后ware在演变中被省略，china本身也可以代表“中国瓷器”，后china由专有名词变为瓷器的通用名词。&lt;/p></description></item><item><title>ConvLab-2 Toolkit</title><link>https://blog.comfluter.life/p/convlab-2-toolkit/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/convlab-2-toolkit/</guid><description>&lt;h2 id="download-toolkit">Download toolkit&lt;/h2>
 &lt;p>&lt;code>git clone https://github.com/mozilla/TTS.git&lt;/code>&lt;/p>
 &lt;h2 id="install-and-config-env">Install and config env&lt;/h2>
 &lt;ul>
@@ -752,7 +752,7 @@ loading="lazy"
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;code>pip install -e .&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Early-Exit BERT 组会记录</title><link>https://comfluter.life/p/early-exit-bert-%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/early-exit-bert-%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/</guid><description>&lt;h2 id="20220207-组会">2022.02.07 组会&lt;/h2>
+&lt;/ul></description></item><item><title>Early-Exit BERT 组会记录</title><link>https://blog.comfluter.life/p/early-exit-bert-%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/early-exit-bert-%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/</guid><description>&lt;h2 id="20220207-组会">2022.02.07 组会&lt;/h2>
 &lt;p>简单讨论了一下我对于Early-Exit BERT的理解，解答了一些问题，确定了下一步代码层面的工作内容。&lt;/p>
 &lt;p>2月7日和刘时宜讨论：early-exit&lt;/p>
 &lt;p>周晨晨意见：把FSA的各个模型，让刘时宜学弟先尝试用early-exit加速某一个，然后推广到其他模型；在服务器上，新建一个目录开始尝试。&lt;/p>
@@ -764,7 +764,7 @@ loading="lazy"
 &lt;li>复现完成之后，我们再看如何推广到我们现有的FSA模型上。&lt;/li>
 &lt;/ol>
 &lt;p>周晨晨的工作顺序：&lt;/p>
-&lt;p>先尝试一下能否在distillBERT上做early-exit。&lt;/p></description></item><item><title>FastBERT</title><link>https://comfluter.life/p/fastbert/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/fastbert/</guid><description>&lt;h2 id="install-on-surface-pro-7">Install on Surface Pro 7&lt;/h2>
+&lt;p>先尝试一下能否在distillBERT上做early-exit。&lt;/p></description></item><item><title>FastBERT</title><link>https://blog.comfluter.life/p/fastbert/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/fastbert/</guid><description>&lt;h2 id="install-on-surface-pro-7">Install on Surface Pro 7&lt;/h2>
 &lt;h3 id="download-and-config-fastbert">Download and config FastBERT&lt;/h3>
 &lt;p>&lt;a class="link" href="https://github.com/autoliuweijie/FastBERT" target="_blank" rel="noopener"
 >FastBERT git rep&lt;/a>&lt;/p>
@@ -813,7 +813,7 @@ loading="lazy"
 &lt;li>&lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>Config Raspi after Reinstallation</title><link>https://comfluter.life/p/config-raspi-after-reinstallation/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/config-raspi-after-reinstallation/</guid><description>&lt;h2 id="download-system-and-write-disk">Download system and write disk&lt;/h2>
+&lt;/ol></description></item><item><title>Config Raspi after Reinstallation</title><link>https://blog.comfluter.life/p/config-raspi-after-reinstallation/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/config-raspi-after-reinstallation/</guid><description>&lt;h2 id="download-system-and-write-disk">Download system and write disk&lt;/h2>
 &lt;p>&lt;a class="link" href="https://downloads.raspberrypi.org/raspios_arm64/images/" target="_blank" rel="noopener"
 >64-bit Raspi images&lt;/a>
 &lt;a class="link" href="https://downloads.raspberrypi.org/raspios_full_arm64/images/" target="_blank" rel="noopener"
@@ -863,7 +863,7 @@ sh Miniconda3-py37_4.9.2-Linux-aarch64.sh
 &lt;p>write this into .bashrc:
 &lt;code>export PATH=$PATH:/home/pi/miniconda3/bin&lt;/code>,path should be modified accordingly.&lt;/p>
 &lt;h3 id="install-vscode">Install VScode&lt;/h3>
-&lt;p>&lt;code>sudo apt install code&lt;/code>&lt;/p></description></item><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>&lt;h2 id="tts-by-mozilla">TTS by Mozilla&lt;/h2>
+&lt;p>&lt;code>sudo apt install code&lt;/code>&lt;/p></description></item><item><title>Offline TTS</title><link>https://blog.comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/offline-tts/</guid><description>&lt;h2 id="tts-by-mozilla">TTS by Mozilla&lt;/h2>
 &lt;p>Using open source code &lt;code>https://github.com/mozilla/TTS.git&lt;/code>&lt;/p>
 &lt;h3 id="direct-installation">Direct Installation&lt;/h3>
 &lt;p>TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.&lt;/p>
@@ -895,7 +895,7 @@ pip install -e .
 &lt;li>&lt;code>conda activate tts&lt;/code>&lt;/li>
 &lt;li>&lt;code>cd &amp;lt;path to install&amp;gt;&lt;/code>&lt;/li>
 &lt;li>git clone &amp;hellip;&lt;/li>
-&lt;/ul></description></item><item><title>树莓派更换镜像源</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</guid><description>&lt;p>更换为清华镜像源，参考&lt;a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/" target="_blank" rel="noopener"
+&lt;/ul></description></item><item><title>树莓派更换镜像源</title><link>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/</guid><description>&lt;p>更换为清华镜像源，参考&lt;a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/" target="_blank" rel="noopener"
 >清华Raspbian 镜像使用帮助&lt;/a>&lt;/p>
 &lt;p>对于&lt;code>Debian 11 (bullseye)&lt;/code>:&lt;/p>
 &lt;pre tabindex="0">&lt;code># 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：
@@ -909,7 +909,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bullseye main
 &lt;p>运行后出现&lt;/p>
 &lt;pre tabindex="0">&lt;code>W: GPG error: http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian bullseye InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9165938D90FDDD2E
 &lt;/code>&lt;/pre>&lt;p>需要手动添加公钥：&lt;code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys &amp;lt;PUBKEY&amp;gt;&lt;/code>&lt;/p>
-&lt;p>添加所有公钥，提示成功后即可运行&lt;code>sudo apt-get update&lt;/code>换源。&lt;/p></description></item><item><title>Configuring FTP server on raspberry</title><link>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>&lt;h2 id="install-vsftpd">Install vsftpd&lt;/h2>
+&lt;p>添加所有公钥，提示成功后即可运行&lt;code>sudo apt-get update&lt;/code>换源。&lt;/p></description></item><item><title>Configuring FTP server on raspberry</title><link>https://blog.comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>&lt;h2 id="install-vsftpd">Install vsftpd&lt;/h2>
 &lt;p>on raspberry:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>sudo apt-get install vsftpd&lt;/code>&lt;/li>
@@ -953,7 +953,7 @@ chroot_list_enable=YES如果启动这项功能，则所有列在chroot_list_file
 chroot_list_file=/etc/vsftpd/chroot_list定义不能更改用户主目录的文件
 userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
 &lt;/code>&lt;/pre>&lt;p>unfinished.&lt;/p>
-&lt;p>configuration failed&lt;/p></description></item><item><title>Configuring rclone in Windows</title><link>https://comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-rclone-in-windows/</guid><description>&lt;h2 id="install-rclone">Install Rclone&lt;/h2>
+&lt;p>configuration failed&lt;/p></description></item><item><title>Configuring rclone in Windows</title><link>https://blog.comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/configuring-rclone-in-windows/</guid><description>&lt;h2 id="install-rclone">Install Rclone&lt;/h2>
 &lt;p>&lt;a class="link" href="https://rclone.org/downloads/" target="_blank" rel="noopener"
 >rclone download link&lt;/a>&lt;/p>
 &lt;p>rclone relies on winfsp to work&lt;/p>
@@ -970,7 +970,7 @@ userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
 &lt;h3 id="add-a-remote">Add a remote&lt;/h3>
 &lt;p>&lt;code>rclone config&lt;/code> and follow the interactive config process&lt;/p>
 &lt;h3 id="mount-remote-as-a-disk">Mount remote as a disk&lt;/h3>
-&lt;p>&lt;code>rclone mount Pi:/ Q: --cache-dir &amp;quot;C:\Users\liush\Documents\rclone_cache&amp;quot; --vfs-cache-mode writes&lt;/code>&lt;/p></description></item><item><title>树莓派挂载onedrive</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</guid><description>&lt;h2 id="steps">Steps:&lt;/h2>
+&lt;p>&lt;code>rclone mount Pi:/ Q: --cache-dir &amp;quot;C:\Users\liush\Documents\rclone_cache&amp;quot; --vfs-cache-mode writes&lt;/code>&lt;/p></description></item><item><title>树莓派挂载onedrive</title><link>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8C%82%E8%BD%BDonedrive/</guid><description>&lt;h2 id="steps">Steps:&lt;/h2>
 &lt;ol>
 &lt;li>install rclone: &lt;code>sudo apt install rclone&lt;/code>&lt;/li>
 &lt;li>authorize onedrive: &lt;code>rclone authorize &amp;quot;onedrive&amp;quot;&lt;/code>
@@ -982,18 +982,18 @@ userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
 &lt;li>config rclone clients: &lt;code>rclone config&lt;/code> this will leads to an interactive configuration process&lt;/li>
 &lt;li>check config: &lt;code>rclone config show&lt;/code>&lt;/li>
 &lt;li>mount to local dir: &lt;code>rclone mount &amp;lt;remote name&amp;gt;: &amp;lt;local dir&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>数通网络发展史</title><link>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>&lt;h2 id="发展概况">发展概况：&lt;/h2>
+&lt;/ol></description></item><item><title>数通网络发展史</title><link>https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>&lt;h2 id="发展概况">发展概况：&lt;/h2>
 &lt;p>&lt;figure
 class="gallery-image"
 style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/1_hu297edbe68109a106bd6a7b79049954f9_136515_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1042,11 +1042,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/stage3_huc80dda1567d18866b93e9a9cf3af4c39_118710_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1054,8 +1054,8 @@ loading="lazy"
 &lt;h4 id="internet在中国">Internet在中国&lt;/h4>
 &lt;p>&lt;figure
 >
-&lt;a href="https://comfluter.life/internet_in_china.jpg" >
-&lt;img src="https://comfluter.life/internet_in_china.jpg"
+&lt;a href="https://blog.comfluter.life/internet_in_china.jpg" >
+&lt;img src="https://blog.comfluter.life/internet_in_china.jpg"
 loading="lazy"
 >
 &lt;/a>
@@ -1067,11 +1067,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_principle_hufa915adc4f9aa4dc63da6d1501a9a4f2_100705_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1090,11 +1090,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_techs_hu13fa01ad1e4e14a52bf63588c4ef0fdf_115488_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1111,11 +1111,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_dev_hu931eacd0ed5e22598f926d09e2a60661_99118_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1127,11 +1127,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet&amp;#43;ip_hu4e9e028ab0210b1e0397a046b8ae8bc2_91086_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1152,11 +1152,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/internet_model_defect_hu6b154e395b9d0ee7dcfe8d15ca955a7a_122323_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1168,11 +1168,11 @@ style="
 flex-grow: 219;
 flex-basis: 527px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg" data-size="1920x873">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg" data-size="1920x873">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet.jpg"
 width="1920"
 height="873"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ATMnet_hu9a5ac61d055db65a682dd67807f5f4be_90848_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1184,11 +1184,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_hu2447712d4df2072f6a053cc632399b1f_140605_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1209,11 +1209,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/MPLS_vpn_hu83c9a435fbe07abe6c168e1721eb3c66_164482_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1234,11 +1234,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_hu708fabbf442cf828b128de91d8d1d450_198573_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1249,11 +1249,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_adress_hu2a54aaeb893e568b0fb8ba1007303dc0_157833_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1274,11 +1274,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6_advantages_hude7a418a25209dd152fc9e759b41872f_169082_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1290,11 +1290,11 @@ style="
 flex-grow: 133;
 flex-basis: 320px"
 >
-&lt;a href="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg" data-size="1706x1279">
-&lt;img src="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg" data-size="1706x1279">
+&lt;img src="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;.jpg"
 width="1706"
 height="1279"
-srcset="https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/ipv6&amp;#43;_hufe065544ad86d82ab810c5b805e80ea2_135124_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -1304,11 +1304,11 @@ loading="lazy"
 &lt;li>用户体验保障&lt;/li>
 &lt;li>应用驱动网络服务&lt;/li>
 &lt;/ol>
-&lt;h2 id="未来发展趋势">未来发展趋势&lt;/h2></description></item><item><title>Git Notes</title><link>https://comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-notes/</guid><description>&lt;h2 id="delete-branchs">Delete branchs&lt;/h2>
+&lt;h2 id="未来发展趋势">未来发展趋势&lt;/h2></description></item><item><title>Git Notes</title><link>https://blog.comfluter.life/p/git-notes/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/git-notes/</guid><description>&lt;h2 id="delete-branchs">Delete branchs&lt;/h2>
 &lt;ol>
 &lt;li>local: &lt;code>git branch -d &amp;lt;localBranchName&amp;gt;&lt;/code>&lt;/li>
 &lt;li>remote: &lt;code>git push origin --delete &amp;lt;remoteBranchName&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>韩非子的思想：势与术</title><link>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>&lt;h2 id="势者胜众之资">势者，胜众之资&lt;/h2>
+&lt;/ol></description></item><item><title>韩非子的思想：势与术</title><link>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>&lt;h2 id="势者胜众之资">势者，胜众之资&lt;/h2>
 &lt;h3 id="韩非其人">韩非其人&lt;/h3>
 &lt;p>见《史记·老子韩非列传》&lt;/p>
 &lt;h3 id="韩非子文本">《韩非子》文本&lt;/h3>
@@ -1607,7 +1607,7 @@ loading="lazy"
 &lt;p>诗书业广三冬足用菑畲&lt;/p>
 &lt;/blockquote>
 &lt;p>中国古典道理不复杂，内容很深厚，真正要做一辈子也没有尽头。&lt;/p>
-&lt;p>培养大家的&lt;strong>尺度感&lt;/strong>。应对事情的时候能不能做、能做多少？&lt;/p></description></item><item><title>法家思想——中国古代的政治逻辑</title><link>https://comfluter.life/p/%E6%B3%95%E5%AE%B6%E6%80%9D%E6%83%B3%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/</link><pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%B3%95%E5%AE%B6%E6%80%9D%E6%83%B3%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/</guid><description>&lt;h2 id="法家的诞生">法家的诞生&lt;/h2>
+&lt;p>培养大家的&lt;strong>尺度感&lt;/strong>。应对事情的时候能不能做、能做多少？&lt;/p></description></item><item><title>法家思想——中国古代的政治逻辑</title><link>https://blog.comfluter.life/p/%E6%B3%95%E5%AE%B6%E6%80%9D%E6%83%B3%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/</link><pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%B3%95%E5%AE%B6%E6%80%9D%E6%83%B3%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/</guid><description>&lt;h2 id="法家的诞生">法家的诞生&lt;/h2>
 &lt;ul>
 &lt;li>从城邦国家到领土国家
 &lt;ul>
@@ -1831,7 +1831,7 @@ loading="lazy"
 &lt;/blockquote>
 &lt;p>律令中中央判例法性质的文书。&lt;/p>
 &lt;p>告发：有奖赏、无连带责任。&lt;/p>
-&lt;p>商鞅变法成果。变法后中国建立起了强大的法律体系，为管控民间的手段。国家利益优先。&lt;/p></description></item><item><title>Debugging ToD-BERT with vscode</title><link>https://comfluter.life/p/debugging-tod-bert-with-vscode/</link><pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/debugging-tod-bert-with-vscode/</guid><description>&lt;h2 id="configuring-launchjson-in-vscode">Configuring &lt;code>launch.json&lt;/code> in vscode&lt;/h2>
+&lt;p>商鞅变法成果。变法后中国建立起了强大的法律体系，为管控民间的手段。国家利益优先。&lt;/p></description></item><item><title>Debugging ToD-BERT with vscode</title><link>https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/</link><pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/</guid><description>&lt;h2 id="configuring-launchjson-in-vscode">Configuring &lt;code>launch.json&lt;/code> in vscode&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="s2">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
 &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: my tod training&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -1866,11 +1866,11 @@ style="
 flex-grow: 157;
 flex-basis: 377px"
 >
-&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg" data-size="1000x636">
-&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg" data-size="1000x636">
+&lt;img src="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/1.jpg"
 width="1000"
 height="636"
-srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/1_hub1659c7f9263afa4d294d254f95f6cf0_131180_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="initial bug report">
 &lt;/a>
@@ -1882,11 +1882,11 @@ style="
 flex-grow: 142;
 flex-basis: 342px"
 >
-&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg" data-size="1000x700">
-&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg" data-size="1000x700">
+&lt;img src="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/2.jpg"
 width="1000"
 height="700"
-srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/2_hub366ba85c8ddf28f0b899dfd5384ad25_173440_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="initial bug console report">
 &lt;/a>
@@ -1901,11 +1901,11 @@ style="
 flex-grow: 38;
 flex-basis: 91px"
 >
-&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/cpu.png" data-size="432x1128">
-&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/cpu.png"
+&lt;a href="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cpu.png" data-size="432x1128">
+&lt;img src="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cpu.png"
 width="432"
 height="1128"
-srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/cpu_hu2ccd50e8ccb3f6d7c28e2896de8a49c6_162685_480x0_resize_box_3.png 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/cpu_hu2ccd50e8ccb3f6d7c28e2896de8a49c6_162685_1024x0_resize_box_3.png 1024w"
+srcset="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cpu_hu2ccd50e8ccb3f6d7c28e2896de8a49c6_162685_480x0_resize_box_3.png 480w, https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cpu_hu2ccd50e8ccb3f6d7c28e2896de8a49c6_162685_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="CPU">
 &lt;/a>
@@ -1916,17 +1916,17 @@ style="
 flex-grow: 48;
 flex-basis: 116px"
 >
-&lt;a href="https://comfluter.life/p/debugging-tod-bert-with-vscode/cuda.png" data-size="680x1396">
-&lt;img src="https://comfluter.life/p/debugging-tod-bert-with-vscode/cuda.png"
+&lt;a href="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cuda.png" data-size="680x1396">
+&lt;img src="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cuda.png"
 width="680"
 height="1396"
-srcset="https://comfluter.life/p/debugging-tod-bert-with-vscode/cuda_hu69eb1059b4ade4d34be7daadc186eb26_149198_480x0_resize_box_3.png 480w, https://comfluter.life/p/debugging-tod-bert-with-vscode/cuda_hu69eb1059b4ade4d34be7daadc186eb26_149198_1024x0_resize_box_3.png 1024w"
+srcset="https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cuda_hu69eb1059b4ade4d34be7daadc186eb26_149198_480x0_resize_box_3.png 480w, https://blog.comfluter.life/p/debugging-tod-bert-with-vscode/cuda_hu69eb1059b4ade4d34be7daadc186eb26_149198_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 alt="CUDA">
 &lt;/a>
 &lt;figcaption>CUDA&lt;/figcaption>
 &lt;/figure>&lt;/p>
-&lt;p>Following an answer on stackoverflow, change the argument name from &amp;ldquo;masked_lm_labels&amp;rdquo; to &amp;ldquo;labels&amp;rdquo;. It solved the TypeError problem. But the training process would be killed unexpectedly without warning or any log information.&lt;/p></description></item><item><title>化性起伪——荀子的礼学思想</title><link>https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</guid><description>&lt;p>唐宋以前，中国思想笼罩在荀子的思想之下。注重礼（外在表现），唐宋以后才转为仁。&lt;/p>
+&lt;p>Following an answer on stackoverflow, change the argument name from &amp;ldquo;masked_lm_labels&amp;rdquo; to &amp;ldquo;labels&amp;rdquo;. It solved the TypeError problem. But the training process would be killed unexpectedly without warning or any log information.&lt;/p></description></item><item><title>化性起伪——荀子的礼学思想</title><link>https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/</guid><description>&lt;p>唐宋以前，中国思想笼罩在荀子的思想之下。注重礼（外在表现），唐宋以后才转为仁。&lt;/p>
 &lt;p>荀子学生：&lt;/p>
 &lt;ul>
 &lt;li>李斯&lt;/li>
@@ -2052,11 +2052,11 @@ style="
 flex-grow: 185;
 flex-basis: 445px"
 >
-&lt;a href="https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1.jpg" data-size="640x345">
-&lt;img src="https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1.jpg" data-size="640x345">
+&lt;img src="https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1.jpg"
 width="640"
 height="345"
-srcset="https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1_hu9fd5fa39ccf844cfac13315a89fe64e0_35650_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1_hu9fd5fa39ccf844cfac13315a89fe64e0_35650_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1_hu9fd5fa39ccf844cfac13315a89fe64e0_35650_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%8C%96%E6%80%A7%E8%B5%B7%E4%BC%AA%E8%8D%80%E5%AD%90%E7%9A%84%E7%A4%BC%E5%AD%A6%E6%80%9D%E6%83%B3/1_hu9fd5fa39ccf844cfac13315a89fe64e0_35650_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="礼伪结构">
 &lt;/a>
@@ -2162,18 +2162,18 @@ alt="礼伪结构">
 &lt;/blockquote>
 &lt;p>强调人、君。并不认为制度是最重要的。好的国家、制度最终还在于培养出君子。&lt;/p>
 &lt;p>考核：课本中任选一组、一篇文章写读书笔记。不少于3000字。期限在放假后一周左右。&lt;/p>
-&lt;p>读书笔记写法参考：《学术训练与学术规范：中国古代史研究入门》&lt;/p></description></item><item><title>Adaptive Photoreceptor with Wide Dynamic Range</title><link>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</guid><description>&lt;img src="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg" alt="Featured image of post Adaptive Photoreceptor with Wide Dynamic Range" />&lt;h2 id="circuit-prototype">Circuit Prototype&lt;/h2>
+&lt;p>读书笔记写法参考：《学术训练与学术规范：中国古代史研究入门》&lt;/p></description></item><item><title>Adaptive Photoreceptor with Wide Dynamic Range</title><link>https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/</guid><description>&lt;img src="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg" alt="Featured image of post Adaptive Photoreceptor with Wide Dynamic Range" />&lt;h2 id="circuit-prototype">Circuit Prototype&lt;/h2>
 &lt;p>&lt;figure
 class="gallery-image"
 style="
 flex-grow: 51;
 flex-basis: 124px"
 >
-&lt;a href="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg" data-size="249x480">
-&lt;img src="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg" data-size="249x480">
+&lt;img src="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1.jpg"
 width="249"
 height="480"
-srcset="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/1_hueec27711be4cbf9b88f7037f4431b586_16373_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -2191,11 +2191,11 @@ style="
 flex-grow: 191;
 flex-basis: 459px"
 >
-&lt;a href="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg" data-size="919x480">
-&lt;img src="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg" data-size="919x480">
+&lt;img src="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2.jpg"
 width="919"
 height="480"
-srcset="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/2_hu45083fbefb3cfc2ab04ea1474729dfa9_70951_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -2255,11 +2255,11 @@ style="
 flex-grow: 273;
 flex-basis: 655px"
 >
-&lt;a href="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg" data-size="800x293">
-&lt;img src="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg"
+&lt;a href="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg" data-size="800x293">
+&lt;img src="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3.jpg"
 width="800"
 height="293"
-srcset="https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/adaptive-photoreceptor-with-wide-dynamic-range/3_hu31795e34927421f0af849794c7eff911_50658_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -2270,7 +2270,7 @@ loading="lazy"
 &lt;/ul>
 &lt;h2 id="source">Source&lt;/h2>
 &lt;p>DOI: &lt;code>10.1109/iscas.1994.409266&lt;/code>
-Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wide dynamic range. IEEE.&lt;/code>&lt;/p></description></item><item><title>OpenCV 学习随记</title><link>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="installation">Installation&lt;/h2>
+Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wide dynamic range. IEEE.&lt;/code>&lt;/p></description></item><item><title>OpenCV 学习随记</title><link>https://blog.comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/opencv-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>&lt;code>pip install opencv-python&lt;/code>&lt;/p>
 &lt;h2 id="reading-and-saving-images">Reading and Saving Images&lt;/h2>
 &lt;p>函数 &lt;code>cv2.imwrite()&lt;/code>用于将图像保存到指定的文件&lt;/p>
@@ -2318,7 +2318,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;blockquote>
 &lt;p>OpenCv error: (-2) could not find a writer for the specified extension in function cv::imwrite_&lt;/p>
 &lt;/blockquote>
-&lt;p>Didn&amp;rsquo;t specify the extension name for the image to be saved so that OpenCv cannot tell which encoder to use.&lt;/p></description></item><item><title>大创对话系统21.12.06组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.12.06%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.12.06%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="任务">任务&lt;/h2>
+&lt;p>Didn&amp;rsquo;t specify the extension name for the image to be saved so that OpenCv cannot tell which encoder to use.&lt;/p></description></item><item><title>大创对话系统21.12.06组会</title><link>https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.12.06%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.12.06%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="任务">任务&lt;/h2>
 &lt;ul>
 &lt;li>断点调试：解决training时参数错误的TypeError
 &lt;ul>
@@ -2330,7 +2330,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;ul>
 &lt;li>ToD-BERT模型适用性？&lt;/li>
 &lt;li>数据搬运是否是性能瓶颈？&lt;/li>
-&lt;/ul></description></item><item><title>《庄子》摘录</title><link>https://comfluter.life/p/%E5%BA%84%E5%AD%90%E6%91%98%E5%BD%95/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%BA%84%E5%AD%90%E6%91%98%E5%BD%95/</guid><description>&lt;h2 id="逍遥游">《逍遥游》&lt;/h2>
+&lt;/ul></description></item><item><title>《庄子》摘录</title><link>https://blog.comfluter.life/p/%E5%BA%84%E5%AD%90%E6%91%98%E5%BD%95/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%BA%84%E5%AD%90%E6%91%98%E5%BD%95/</guid><description>&lt;h2 id="逍遥游">《逍遥游》&lt;/h2>
 &lt;blockquote>
 &lt;p>而后乃今培风&lt;/p>
 &lt;/blockquote>
@@ -2383,9 +2383,9 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;/ul>
 &lt;blockquote>
 &lt;p>尧治天下之民，平海内之政，往见四子藐姑射之山，汾水之阳，窅然丧其天下焉。&lt;/p>
-&lt;/blockquote></description></item><item><title>《中国人性论史·先秦篇》读书笔记</title><link>https://comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="第五章-从命到性中庸的性命思想">第五章 从命到性——《中庸》的性命思想&lt;/h2>
+&lt;/blockquote></description></item><item><title>《中国人性论史·先秦篇》读书笔记</title><link>https://blog.comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%80%A7%E8%AE%BA%E5%8F%B2%E5%85%88%E7%A7%A6%E7%AF%87%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="第五章-从命到性中庸的性命思想">第五章 从命到性——《中庸》的性命思想&lt;/h2>
 &lt;p>中庸应当分为上、下两篇来加以理解。由第一章到第二十章前半段为上篇，主要解决孔子实践性的伦常之教，和性与天道的关系，解决这三者如何关联在一起的问题。&lt;/p>
-&lt;p>讲中庸，首先要对中庸概念本身作一理解。不偏谓之中，不易谓之庸。庸也有“用”、“平常”之意，其精神与“不易”是相通的。庸行见于人伦日用的平常当中，具有普遍的妥当性，因此才能长久践行而不易。中庸的具体内容，即忠恕。尽心之谓中，推己之谓恕。此为内在的精神，指导日常生活中庸言庸行的实践。&lt;/p></description></item><item><title>《大学》摘录</title><link>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</guid><description>&lt;p>大学之道，在明明德，在亲民，在止于至善。知止而后能定，定而后能静，静而后能安，安而后能虑，虑而后能得。物有本末，事有始终，知所先后，则近道矣。古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。自天子以至于庶人，壹是皆以修身为本。其本乱而末治者，否矣。其所厚者薄，而其所薄者厚，未之有也。此谓知本，此谓知之至也。&lt;/p>
+&lt;p>讲中庸，首先要对中庸概念本身作一理解。不偏谓之中，不易谓之庸。庸也有“用”、“平常”之意，其精神与“不易”是相通的。庸行见于人伦日用的平常当中，具有普遍的妥当性，因此才能长久践行而不易。中庸的具体内容，即忠恕。尽心之谓中，推己之谓恕。此为内在的精神，指导日常生活中庸言庸行的实践。&lt;/p></description></item><item><title>《大学》摘录</title><link>https://blog.comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%A7%E5%AD%A6%E6%91%98%E5%BD%95/</guid><description>&lt;p>大学之道，在明明德，在亲民，在止于至善。知止而后能定，定而后能静，静而后能安，安而后能虑，虑而后能得。物有本末，事有始终，知所先后，则近道矣。古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。自天子以至于庶人，壹是皆以修身为本。其本乱而末治者，否矣。其所厚者薄，而其所薄者厚，未之有也。此谓知本，此谓知之至也。&lt;/p>
 &lt;p>康诰曰：“克明德”。&amp;hellip;帝典曰：“克明俊德”&amp;hellip;&lt;/p>
 &lt;p>汤之盤铭曰：“苟日新，日日新，又日新。”康诰曰：“作新民。”诗曰：“周虽旧邦，其命惟新。”是故君子无所不用其极。&lt;/p>
 &lt;p>君子贤其贤而亲其亲，小人乐其乐而利其利，此以没世不忘也。&lt;/p>
@@ -2393,7 +2393,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;p>《康诰》曰：“如保赤子。”心诚求之，虽不中，不远矣。&amp;hellip;是故君子有诸己而后求诸人，无诸己而后非诸人。&lt;/p>
 &lt;p>《诗》云：“乐只君子，民之父母。”民之所好好之，民之所恶恶之，此之谓民之父母。&lt;/p>
 &lt;p>德者本也，财者末也。&lt;/p>
-&lt;p>是故君子有大道，必忠信以得之，骄泰以失之。&lt;/p></description></item><item><title>《子思子》摘录</title><link>https://comfluter.life/p/%E5%AD%90%E6%80%9D%E5%AD%90%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%AD%90%E6%80%9D%E5%AD%90%E6%91%98%E5%BD%95/</guid><description>&lt;h2 id="中庸">《中庸》&lt;/h2>
+&lt;p>是故君子有大道，必忠信以得之，骄泰以失之。&lt;/p></description></item><item><title>《子思子》摘录</title><link>https://blog.comfluter.life/p/%E5%AD%90%E6%80%9D%E5%AD%90%E6%91%98%E5%BD%95/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%AD%90%E6%80%9D%E5%AD%90%E6%91%98%E5%BD%95/</guid><description>&lt;h2 id="中庸">《中庸》&lt;/h2>
 &lt;p>天命谓之性，率性谓之道，修道谓之教。道也者，不可须臾离也，可离非道也。是故君子戒慎乎其所不睹，恐惧乎其所不闻。莫现乎隐，莫显乎微，故君子慎其独也。喜怒哀乐之未发，谓之中；发而皆中节，谓之和。中也者，天下之大本也；和也者，天下之达道也。致中和，天地位焉，万物育焉。&lt;/p>
 &lt;p>仲尼曰：“君子中庸，小人反中庸。”君子之中庸也，君子而时中；小人之中庸也，小人而无忌惮也。&lt;/p>
 &lt;p>子曰：“舜其大知也与！舜好问而好察迩言，隐恶而扬善，执其两端，用其中于民，其斯以为舜乎！”&lt;/p>
@@ -2404,7 +2404,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;p>子曰：“道不远人。人之为道而远人，不可以为道。”诗云：“伐柯伐柯，其则不远。”执柯以伐柯，睨而视之，犹以为远。故君子治人以人，改而止。&lt;/p>
 &lt;p>庸德之行，庸言之谨，有所不足，不敢不勉，有余不敢尽，言顾行，行顾言，君子乎不慥慥尔！&lt;/p>
 &lt;p>君子素位而行，不愿乎其外。素富贵，行乎富贵；素贫贱，行乎贫贱；素夷狄，行乎夷狄；素患难，行乎患难，君子无入而不自得焉。在上位不陵下，在下位不援上，正己而不求于人则无怨。上不怨天，下不尤人。故君子居易以俟命，小人行险以侥幸。子曰：“射有似乎君子，失诸正鹄，反求诸其身。”&lt;/p>
-&lt;p>君子之道，譬如行远必自迩，譬如登高必自卑。&lt;/p></description></item><item><title>1 Introduction to Programming Languages and Tools of the Trade</title><link>https://comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</guid><description>&lt;h2 id="vscode-extensions-for-web-development">Vscode extensions for web development&lt;/h2>
+&lt;p>君子之道，譬如行远必自迩，譬如登高必自卑。&lt;/p></description></item><item><title>1 Introduction to Programming Languages and Tools of the Trade</title><link>https://blog.comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</guid><description>&lt;h2 id="vscode-extensions-for-web-development">Vscode extensions for web development&lt;/h2>
 &lt;ul>
 &lt;li>ESLint
 &lt;ul>
@@ -2425,7 +2425,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;li>(NodeJS安装-菜鸟教程)[https://www.runoob.com/nodejs/nodejs-install-setup.html]&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>2 Introduction to GitHub</title><link>https://comfluter.life/p/2-introduction-to-github/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/2-introduction-to-github/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;/ul></description></item><item><title>2 Introduction to GitHub</title><link>https://blog.comfluter.life/p/2-introduction-to-github/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2-introduction-to-github/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
 &lt;ul>
 &lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
 &lt;li>激活虚拟环境：&lt;code>conda activate &amp;lt;env_name&amp;gt;&lt;/code>&lt;/li>
@@ -2433,7 +2433,7 @@ Ref: &lt;code>DELBRUCK, T. &amp;amp; MEAD, C. A. Adaptive photoreceptor with wid
 &lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;ul>
 &lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Anaconda使用随记</title><link>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
+&lt;/ul></description></item><item><title>Anaconda使用随记</title><link>https://blog.comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/anaconda%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="基本命令">基本命令&lt;/h2>
 &lt;ul>
 &lt;li>创建虚拟环境：&lt;code>conda create -n &amp;lt;env_name&amp;gt; python=X.X&lt;/code>&lt;/li>
 &lt;li>查看环境信息：&lt;code>conda info --envs&lt;/code>&lt;/li>
@@ -2449,7 +2449,7 @@ conda config --set show_channel_urls yes
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="minutiae">Minutiae&lt;/h2>
 &lt;ul>
 &lt;li>unable auto activate base: &lt;code>conda config --set auto_activate_base false&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Nginx 服务器配置子域名</title><link>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</guid><description>&lt;h2 id="添加域名解析">添加域名解析&lt;/h2>
+&lt;/ul></description></item><item><title>Nginx 服务器配置子域名</title><link>https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/</guid><description>&lt;h2 id="添加域名解析">添加域名解析&lt;/h2>
 &lt;p>到腾讯云服务器控制台，添加需要解析的子域名，如下图。图中第一个参数“主机记录”即为子域名名称。&lt;/p>
 &lt;p>&lt;figure
 class="gallery-image"
@@ -2457,11 +2457,11 @@ style="
 flex-grow: 1588;
 flex-basis: 3812px"
 >
-&lt;a href="https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1.png" data-size="2256x142">
-&lt;img src="https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1.png"
+&lt;a href="https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1.png" data-size="2256x142">
+&lt;img src="https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1.png"
 width="2256"
 height="142"
-srcset="https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1_hu19760e8d2679b02dd8767514ef769dc3_17088_480x0_resize_box_3.png 480w, https://comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1_hu19760e8d2679b02dd8767514ef769dc3_17088_1024x0_resize_box_3.png 1024w"
+srcset="https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1_hu19760e8d2679b02dd8767514ef769dc3_17088_480x0_resize_box_3.png 480w, https://blog.comfluter.life/p/nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AD%90%E5%9F%9F%E5%90%8D/1_hu19760e8d2679b02dd8767514ef769dc3_17088_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -2475,7 +2475,7 @@ server_name ling.comfluter.life;
 # 301重定向设置
 return 301 http://47.102.150.182/;
 }
-&lt;/code>&lt;/pre>&lt;p>增加一项二级域名设置即可。&lt;/p></description></item><item><title>树莓派配置NAS</title><link>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</guid><description>&lt;h2 id="挂载ntfs格式磁盘">挂载NTFS格式磁盘&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>增加一项二级域名设置即可。&lt;/p></description></item><item><title>树莓派配置NAS</title><link>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</link><pubDate>Sun, 28 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AEnas/</guid><description>&lt;h2 id="挂载ntfs格式磁盘">挂载NTFS格式磁盘&lt;/h2>
 &lt;p>貌似树莓派OS能够自动挂载NTFS磁盘到&lt;code>/media/pi&lt;/code>下。不用额外操作。&lt;/p>
 &lt;h2 id="使用samba协议提供校园网内文件服务">使用SAMBA协议提供校园网内文件服务&lt;/h2>
 &lt;h3 id="安装samba">安装SAMBA&lt;/h3>
@@ -2483,8 +2483,8 @@ return 301 http://47.102.150.182/;
 &lt;p>查看SAMBA版本：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">root@raspberrypi:/media/pi/4T存储# samba --version
 Version 4.13.13-Debian
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>参观华为南京研究所</title><link>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</link><pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</guid><description>&lt;p>今天，借着网络课提供的机会，有幸走进华为南研所，切身感受企业研究部门的气氛，也看看自己在课上的所学是如何落到实处的。&lt;/p>
-&lt;p>企业气氛确实是今天感觉到比较奇特的一个方面。随处可见使人奋进、催人奋斗的标语。除此以外，园区里还有许多战斗标语，例如“没有退路就是胜利之路”，美国的打压看起来也确实落到了实处。&lt;/p></description></item><item><title>Including Verilog Code Block in Latex</title><link>https://comfluter.life/p/including-verilog-code-block-in-latex/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/including-verilog-code-block-in-latex/</guid><description>&lt;ol>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>参观华为南京研究所</title><link>https://blog.comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</link><pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%8F%82%E8%A7%82%E5%8D%8E%E4%B8%BA%E5%8D%97%E4%BA%AC%E7%A0%94%E7%A9%B6%E6%89%80/</guid><description>&lt;p>今天，借着网络课提供的机会，有幸走进华为南研所，切身感受企业研究部门的气氛，也看看自己在课上的所学是如何落到实处的。&lt;/p>
+&lt;p>企业气氛确实是今天感觉到比较奇特的一个方面。随处可见使人奋进、催人奋斗的标语。除此以外，园区里还有许多战斗标语，例如“没有退路就是胜利之路”，美国的打压看起来也确实落到了实处。&lt;/p></description></item><item><title>Including Verilog Code Block in Latex</title><link>https://blog.comfluter.life/p/including-verilog-code-block-in-latex/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/including-verilog-code-block-in-latex/</guid><description>&lt;ol>
 &lt;li>
 &lt;p>include packages for code block and coloring&lt;/p>
 &lt;ol>
@@ -2533,7 +2533,7 @@ literate=*&lt;span class="nb">{&lt;/span>:&lt;span class="nb">}{&lt;/span>:&lt;s
 &amp;lt;your code&amp;gt;
 &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>lstlisting&lt;span class="nb">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ol></description></item><item><title>Pyspice 学习随记</title><link>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="environment-config">Environment config&lt;/h2>
+&lt;/ol></description></item><item><title>Pyspice 学习随记</title><link>https://blog.comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/pyspice-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="environment-config">Environment config&lt;/h2>
 &lt;ol>
 &lt;li>Initialize the python virtual environment&lt;code>virtualenv .venv&lt;/code>&lt;/li>
 &lt;li>activate venv (windows system) &lt;code>.venv/Scripts/activate&lt;/code>&lt;/li>
@@ -2618,7 +2618,7 @@ The following functions of a single real variable are defined:&lt;/p>
 >PySpice: 使用ngspice进行电路仿真分析-1：安装&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/88631728" target="_blank" rel="noopener"
 >PySpice: 使用ngspice进行电路仿真分析-2：ngspice简要介绍-输入文件格式1&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Linux 学习随记</title><link>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
+&lt;/ul></description></item><item><title>Linux 学习随记</title><link>https://blog.comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/linux-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="开启root账户并配置ssh登录">开启root账户并配置SSH登录&lt;/h2>
 &lt;ol>
 &lt;li>修改root密码 &lt;code>sudo passwd root&lt;/code>&lt;/li>
 &lt;li>修改SSH配置 &lt;code>sudo vi /etc/ssh/sshd_config&lt;/code>&lt;/li>
@@ -2633,7 +2633,7 @@ The following functions of a single real variable are defined:&lt;/p>
 >linux下如何查看多核负载情况&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://cloud.tencent.com/developer/article/1457617" target="_blank" rel="noopener"
 >LINUX下查看CPU使用率的命令&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>博客评论功能搭建</title><link>https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</guid><description>&lt;p>在王凯师兄的推荐下，使用gitalk搭建博客评论功能。&lt;/p>
+&lt;/ul></description></item><item><title>博客评论功能搭建</title><link>https://blog.comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</link><pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%90%AD%E5%BB%BA/</guid><description>&lt;p>在王凯师兄的推荐下，使用gitalk搭建博客评论功能。&lt;/p>
 &lt;h2 id="github上申请oauth-application">Github上申请OAuth application&lt;/h2>
 &lt;ol>
 &lt;li>登录github&lt;/li>
@@ -2664,7 +2664,7 @@ The following functions of a single real variable are defined:&lt;/p>
 &lt;p>解决：存放评论的repo不能为&lt;code>private&lt;/code>属性. 应该是一个&lt;code>public&lt;/code>的代码库才可以使用Gitalk！&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000018072952" target="_blank" rel="noopener"
->Gitalk评论插件使用教程&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
+>Gitalk评论插件使用教程&lt;/a>&lt;/p></description></item><item><title>Verilog with vscode</title><link>https://blog.comfluter.life/p/verilog-with-vscode/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/verilog-with-vscode/</guid><description>&lt;h2 id="linting">linting&lt;/h2>
 &lt;p>using vscode extension &lt;code>Verilog-HDL/SystemVerilog/Bluespec SystemVerilog&lt;/code>.&lt;/p>
 &lt;p>using &lt;code>iverilog&lt;/code>&lt;/p>
 &lt;p>go to extension settings and set &lt;code>verilog &amp;gt; linting : linter = iverilog&lt;/code>&lt;/p>
@@ -2676,8 +2676,8 @@ The following functions of a single real variable are defined:&lt;/p>
 &lt;/ul>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338497672" target="_blank" rel="noopener"
->用VSCode编辑verilog代码、iverilog编译、自动例化、自动补全、自动格式化等常用插件&lt;/a>&lt;/p></description></item><item><title>Vivado 学习随记</title><link>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="multi-module-project">Multi-module Project&lt;/h2>
-&lt;p>Just write two verilog files and instantiate a module specified in the other file, the vivado will figure out the dependencies automatically.&lt;/p></description></item><item><title>《先秦诸子选读》：道家思想</title><link>https://comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</guid><description>&lt;h2 id="老子">老子&lt;/h2>
+>用VSCode编辑verilog代码、iverilog编译、自动例化、自动补全、自动格式化等常用插件&lt;/a>&lt;/p></description></item><item><title>Vivado 学习随记</title><link>https://blog.comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/vivado-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="multi-module-project">Multi-module Project&lt;/h2>
+&lt;p>Just write two verilog files and instantiate a module specified in the other file, the vivado will figure out the dependencies automatically.&lt;/p></description></item><item><title>《先秦诸子选读》：道家思想</title><link>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</guid><description>&lt;h2 id="老子">老子&lt;/h2>
 &lt;h3 id="概述">概述&lt;/h3>
 &lt;ul>
 &lt;li>先秦道家第一部&lt;/li>
@@ -2958,7 +2958,7 @@ The following functions of a single real variable are defined:&lt;/p>
 &lt;li>&lt;strong>公私之分&lt;/strong>：道家的概念。道家核心：无私、无己、无我。&lt;/li>
 &lt;/ul>
 &lt;h2 id="总结">总结&lt;/h2>
-&lt;p>道家回到原初状态是对人的表达，没有一个具体的形态。庄子中形成了一种系统性的理解，形成了一种理想，成为文化道理的理念，对后世启发良多。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="conda-复制已有环境">Conda 复制已有环境&lt;/h2>
+&lt;p>道家回到原初状态是对人的表达，没有一个具体的形态。庄子中形成了一种系统性的理解，形成了一种理想，成为文化道理的理念，对后世启发良多。&lt;/p></description></item><item><title>服务器配置CPU版ToD-BERT环境</title><link>https://blog.comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AEcpu%E7%89%88tod-bert%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="conda-复制已有环境">Conda 复制已有环境&lt;/h2>
 &lt;p>由于服务器上本身已经有使用CUDA平台的ToD-BERT运行环境，仅需将此环境中所有使用GPU的库换为使用CPU的库即可：pytorch&lt;/p>
 &lt;p>查看已有环境&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">(&lt;/span>base&lt;span class="o">)&lt;/span> dialogue@amax-13:/$ conda info --env
@@ -3196,7 +3196,7 @@ Executing transaction: &lt;span class="k">done&lt;/span>
 &lt;p>使用命令&lt;code>taskset -cp &amp;lt;cpu list&amp;gt; &amp;lt;pid&amp;gt;&lt;/code>进行绑核操作，ep.&lt;code>taskset -cp 0,1,2,3 94434&lt;/code>&lt;/p>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/94744929" target="_blank" rel="noopener"
->Anaconda-用conda创建python虚拟环境&lt;/a>&lt;/p></description></item><item><title>Git large file versioning</title><link>https://comfluter.life/p/git-large-file-versioning/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/git-large-file-versioning/</guid><description>&lt;ol>
+>Anaconda-用conda创建python虚拟环境&lt;/a>&lt;/p></description></item><item><title>Git large file versioning</title><link>https://blog.comfluter.life/p/git-large-file-versioning/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/git-large-file-versioning/</guid><description>&lt;ol>
 &lt;li>Download git-lfs on &lt;code>https://git-lfs.github.com/&lt;/code>, and run the installation package for windows.&lt;/li>
 &lt;li>Once downloaded and installed, set up Git LFS for your user account by running:&lt;code>git lfs install&lt;/code>. You only need to run this once per user account.&lt;/li>
 &lt;li>In each Git repository where you want to use Git LFS, select the file types you&amp;rsquo;d like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.&lt;code>git lfs track &amp;quot;*.psd&amp;quot;&lt;/code>&lt;/li>
@@ -3207,7 +3207,7 @@ Executing transaction: &lt;span class="k">done&lt;/span>
 git commit -m &lt;span class="s2">&amp;#34;Add design file&amp;#34;&lt;/span>
 git push origin main
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ol></description></item><item><title>Numpy 学习随记</title><link>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
+&lt;/ol></description></item><item><title>Numpy 学习随记</title><link>https://blog.comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/numpy-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="数组切片">数组切片&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
 &lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([[&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="p">]],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">31&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">33&lt;/span>&lt;span class="p">])&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意Numpy中元素编号从0开始，左侧包含右侧不包含&lt;/strong>&lt;/p>
@@ -3237,7 +3237,7 @@ True
 &lt;li>无拷贝&lt;code>a = b&lt;/code>:a,b完全相同，指向同一对象&lt;/li>
 &lt;li>浅拷贝&lt;code>b = a.view()&lt;/code>：只会copy父对象，不会copy底层的数据，共用原始引用指向的对象数据。如果在view上修改数据，会直接反馈到原始对象。改变b的&lt;code>shape&lt;/code>等父对象的参数时，不会改变a的相应参数&lt;/li>
 &lt;li>深拷贝&lt;code>b = a.copy()&lt;/code>：对象及其子对象都进行copy一份，两对象完全独立。&lt;/li>
-&lt;/ol></description></item><item><title>PlantUML 学习随记</title><link>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="plantuml-with-vscode">PlantUML with VsCode&lt;/h2>
+&lt;/ol></description></item><item><title>PlantUML 学习随记</title><link>https://blog.comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/plantuml-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="plantuml-with-vscode">PlantUML with VsCode&lt;/h2>
 &lt;ol>
 &lt;li>Install &lt;code>PlantUML&lt;/code> extension for vscode.&lt;/li>
 &lt;li>following extension follow me document:
@@ -3249,7 +3249,7 @@ True
 &lt;li>specify the GraphViz installation by defining the Windows environment variable &lt;code>GRAPHVIZ_DOT&lt;/code>, e.g., &lt;code>c:\program files\graphviz\bin\dot.exe&lt;/code>&lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>Python 学习随记</title><link>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="python-module">Python Module&lt;/h2>
+&lt;/ol></description></item><item><title>Python 学习随记</title><link>https://blog.comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/python-%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0/</guid><description>&lt;h2 id="python-module">Python Module&lt;/h2>
 &lt;h3 id="python-module-导入方法">Python Module 导入方法&lt;/h3>
 &lt;ol>
 &lt;li>&lt;code>import &amp;lt;module name&amp;gt;&lt;/code>调用这个方法导入的module中的函数时，需要&lt;code>&amp;lt;module name&amp;gt;.&amp;lt;function name&amp;gt;&lt;/code>格式进行使用&lt;/li>
@@ -3389,7 +3389,7 @@ Installing collected packages: platformdirs, filelock, distlib, backports.entry-
 &lt;li>&lt;code>exec&lt;/code> 执行储存在字符串或文件中的 Python 语句，相比于 &lt;code>eval&lt;/code>，&lt;code>exec&lt;/code>可以执行更复杂的 Python 代码&lt;/li>
 &lt;/ul>
 &lt;h2 id="resources">Resources&lt;/h2>
-&lt;p>(W3School Python 教程)[https://www.w3school.com.cn/python/index.asp]&lt;/p></description></item><item><title>大创对话系统21.11.22组会</title><link>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
+&lt;p>(W3School Python 教程)[https://www.w3school.com.cn/python/index.asp]&lt;/p></description></item><item><title>大创对话系统21.11.22组会</title><link>https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/</guid><description>&lt;h2 id="问题">问题&lt;/h2>
 &lt;ol>
 &lt;li>设备选择：
 &lt;ol>
@@ -3429,11 +3429,11 @@ style="
 flex-grow: 194;
 flex-basis: 467px"
 >
-&lt;a href="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png" data-size="678x348">
-&lt;img src="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png"
+&lt;a href="https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png" data-size="678x348">
+&lt;img src="https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1.png"
 width="678"
 height="348"
-srcset="https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_480x0_resize_box_3.png 480w, https://comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_1024x0_resize_box_3.png 1024w"
+srcset="https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_480x0_resize_box_3.png 480w, https://blog.comfluter.life/p/%E5%A4%A7%E5%88%9B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F21.11.22%E7%BB%84%E4%BC%9A/1_hu0ba1bded01dad50e4947996634712043_24060_1024x0_resize_box_3.png 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3471,7 +3471,7 @@ loading="lazy"
 &lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>ToD-BERT 相关内容</title><link>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid><description>&lt;h2 id="tod-bert-the-paper">ToD-BERT the Paper&lt;/h2>
+&lt;/ol></description></item><item><title>ToD-BERT 相关内容</title><link>https://blog.comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/tod-bert-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/</guid><description>&lt;h2 id="tod-bert-the-paper">ToD-BERT the Paper&lt;/h2>
 &lt;h3 id="数据集">数据集&lt;/h3>
 &lt;p>不同的数据集可以帮助模型达到不同的熟练效果&lt;/p>
 &lt;ul>
@@ -3619,7 +3619,7 @@ zym2: &lt;span class="m">1&lt;/span> windows &lt;span class="o">(&lt;/span>creat
 &lt;li>
 &lt;p>为了便于记录inference time，可以将bash命令中的输出全部写入txt文件，&lt;code>script -a 1.txt&lt;/code>，则之后shell中所有文字都将被记录在&lt;code>1.txt&lt;/code>中。&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>在Nginx服务器上部署SSL证书</title><link>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid><description>&lt;h2 id="申请证书">申请证书&lt;/h2>
+&lt;/ol></description></item><item><title>在Nginx服务器上部署SSL证书</title><link>https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/</guid><description>&lt;h2 id="申请证书">申请证书&lt;/h2>
 &lt;p>在腾讯云SSL证书界面申请即可，过程很快，十分钟就通知证书申请成功。&lt;/p>
 &lt;h2 id="下载证书并上传至云服务器">下载证书并上传至云服务器&lt;/h2>
 &lt;p>在腾讯云SSL证书面板，找到要部署网站的证书，点击右侧的下载按钮即可下载&lt;/p>
@@ -3629,11 +3629,11 @@ style="
 flex-grow: 176;
 flex-basis: 423px"
 >
-&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg" data-size="2736x1550">
-&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg" data-size="2736x1550">
+&lt;img src="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1.jpg"
 width="2736"
 height="1550"
-srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/1_huc70d1ace7178234db90a2009528b06e2_362037_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="SSL证书面板">
 &lt;/a>
@@ -3646,11 +3646,11 @@ style="
 flex-grow: 128;
 flex-basis: 308px"
 >
-&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg" data-size="342x266">
-&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg" data-size="342x266">
+&lt;img src="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2.jpg"
 width="342"
 height="266"
-srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/2_hua5d80ebc9a0a7e639306a0621ea97d51_18720_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 alt="zip_struct">
 &lt;/a>
@@ -3663,11 +3663,11 @@ style="
 flex-grow: 397;
 flex-basis: 954px"
 >
-&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg" data-size="366x92">
-&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg" data-size="366x92">
+&lt;img src="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3.jpg"
 width="366"
 height="92"
-srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/3_huaec6fc8956754b71ff02d1c9284335d0_10544_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3740,17 +3740,17 @@ style="
 flex-grow: 657;
 flex-basis: 1577px"
 >
-&lt;a href="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg" data-size="368x56">
-&lt;img src="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg"
+&lt;a href="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg" data-size="368x56">
+&lt;img src="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4.jpg"
 width="368"
 height="56"
-srcset="https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, https://comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_480x0_resize_q75_box.jpg 480w, https://blog.comfluter.life/p/%E5%9C%A8nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6/4_hud9da19d6fc0e32acb5a778f763005686_6410_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
 &lt;h2 id="debugging">Debugging&lt;/h2>
-&lt;p>更改成为https连接后博客的搜索功能出现问题，浏览器提示提交的表单不安全并阻止了搜索表单的提交。问题在于没有更改hugo博客配置文件中的&lt;code>baseURL&lt;/code>字段，将其改为&lt;code>baseurl: https://comfluter.life&lt;/code>即可解决。&lt;/p></description></item><item><title>重听《成像世界的奇境》</title><link>https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</guid><description>&lt;h2 id="211122-锁链">21.11.22 锁链&lt;/h2>
+&lt;p>更改成为https连接后博客的搜索功能出现问题，浏览器提示提交的表单不安全并阻止了搜索表单的提交。问题在于没有更改hugo博客配置文件中的&lt;code>baseURL&lt;/code>字段，将其改为&lt;code>baseurl: https://comfluter.life&lt;/code>即可解决。&lt;/p></description></item><item><title>重听《成像世界的奇境》</title><link>https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/</guid><description>&lt;h2 id="211122-锁链">21.11.22 锁链&lt;/h2>
 &lt;ul>
 &lt;li>香农-奈奎斯特采样定律&lt;/li>
 &lt;li>测量：测不准原理
@@ -3831,11 +3831,11 @@ style="
 flex-grow: 122;
 flex-basis: 294px"
 >
-&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp" data-size="941x768">
-&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp"
+&lt;a href="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp" data-size="941x768">
+&lt;img src="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1.webp"
 width="941"
 height="768"
-srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_480x0_resize_q75_h2_box_2.webp 480w, https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/1_huff845a9deab670e315861062b94cca69_77664_1024x0_resize_q75_h2_box_2.webp 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3850,11 +3850,11 @@ style="
 flex-grow: 119;
 flex-basis: 287px"
 >
-&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2.webp" data-size="919x768">
-&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2.webp"
+&lt;a href="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2.webp" data-size="919x768">
+&lt;img src="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2.webp"
 width="919"
 height="768"
-srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2_hu9dc7bd817cbbd056052bef3db93d718f_66438_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2_hu9dc7bd817cbbd056052bef3db93d718f_66438_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2_hu9dc7bd817cbbd056052bef3db93d718f_66438_480x0_resize_q75_h2_box_2.webp 480w, https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/2_hu9dc7bd817cbbd056052bef3db93d718f_66438_1024x0_resize_q75_h2_box_2.webp 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3873,11 +3873,11 @@ style="
 flex-grow: 113;
 flex-basis: 271px"
 >
-&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3.webp" data-size="870x768">
-&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3.webp"
+&lt;a href="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3.webp" data-size="870x768">
+&lt;img src="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3.webp"
 width="870"
 height="768"
-srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3_hu99ed2dcd955eefa5b8b8c3b54d649632_67394_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3_hu99ed2dcd955eefa5b8b8c3b54d649632_67394_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3_hu99ed2dcd955eefa5b8b8c3b54d649632_67394_480x0_resize_q75_h2_box_2.webp 480w, https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/3_hu99ed2dcd955eefa5b8b8c3b54d649632_67394_1024x0_resize_q75_h2_box_2.webp 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3892,11 +3892,11 @@ style="
 flex-grow: 121;
 flex-basis: 292px"
 >
-&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4.webp" data-size="935x768">
-&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4.webp"
+&lt;a href="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4.webp" data-size="935x768">
+&lt;img src="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4.webp"
 width="935"
 height="768"
-srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4_hue575c0d42495eb37382aea4c46b6431b_49180_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4_hue575c0d42495eb37382aea4c46b6431b_49180_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4_hue575c0d42495eb37382aea4c46b6431b_49180_480x0_resize_q75_h2_box_2.webp 480w, https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/4_hue575c0d42495eb37382aea4c46b6431b_49180_1024x0_resize_q75_h2_box_2.webp 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -3951,11 +3951,11 @@ style="
 flex-grow: 119;
 flex-basis: 286px"
 >
-&lt;a href="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5.webp" data-size="918x768">
-&lt;img src="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5.webp"
+&lt;a href="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5.webp" data-size="918x768">
+&lt;img src="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5.webp"
 width="918"
 height="768"
-srcset="https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5_hu0f8cb17a41cb4513bad2df1adfabea06_54014_480x0_resize_q75_h2_box_2.webp 480w, https://comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5_hu0f8cb17a41cb4513bad2df1adfabea06_54014_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5_hu0f8cb17a41cb4513bad2df1adfabea06_54014_480x0_resize_q75_h2_box_2.webp 480w, https://blog.comfluter.life/p/%E9%87%8D%E5%90%AC%E6%88%90%E5%83%8F%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%87%E5%A2%83/5_hu0f8cb17a41cb4513bad2df1adfabea06_54014_1024x0_resize_q75_h2_box_2.webp 1024w"
 loading="lazy"
 >
 &lt;/a>
@@ -4044,7 +4044,7 @@ easy for human, hard for computer, vice visa.&lt;/p>
 &lt;p>The rules of morality are not the conclusion of our reason&lt;/p>
 &lt;/blockquote>
 &lt;p>Science cannot make value judgement! Human have to seriously design AI&amp;rsquo;s morality.&lt;/p>
-&lt;p>One thing nearly for sure, that human brain is not the most powerful processor.&lt;/p></description></item><item><title>Hello, World!</title><link>https://comfluter.life/p/hello-world/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/hello-world/</guid><description>&lt;img src="https://comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
+&lt;p>One thing nearly for sure, that human brain is not the most powerful processor.&lt;/p></description></item><item><title>Hello, World!</title><link>https://blog.comfluter.life/p/hello-world/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/hello-world/</guid><description>&lt;img src="https://blog.comfluter.life/p/hello-world/cover.jpg" alt="Featured image of post Hello, World!" />&lt;h2 id="序言">序言&lt;/h2>
 &lt;p>在经历许许多多的学习、配置、折腾之后，终于在今天配置好了自己的个人博客。&lt;/p>
 &lt;p>在朋友圈、微博盛行的当下，个人博客的风头已过，好像已经是上一个时代的产物了。那么究竟又是什么让我在建站的过程中即使遇到了层层困难，也坚定不移地搭起来这个博客呢？&lt;/p>
 &lt;p>第一方面，感觉自己还是需要一个记录与对外表达的窗口。朋友圈等等社交网络固然可以，但是于我来讲似乎显得喧闹了些。我期待的表达，不是浮于表面的事件记录与短暂的情感宣泄。静下心来记录自己成长变化、各阶段真实想法与所思所得才是我我之所需。而这些想法，有时又期待能随时随地回顾，或是与志同道合之人分享。因此介于朋友圈、微博等社交平台与传统纸笔日记之间的个人博客似乎是个不错的选择。从半年前看到王凯师兄的博客便觉心动，到现在终于有了属于自己的一方空间。&lt;/p>

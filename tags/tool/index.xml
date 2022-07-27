@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tool on 知止堂</title><link>https://comfluter.life/tags/tool/</link><description>Recent content in tool on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://comfluter.life/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>Offline TTS</title><link>https://comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/offline-tts/</guid><description>TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tool on 知止堂</title><link>https://blog.comfluter.life/tags/tool/</link><description>Recent content in tool on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.comfluter.life/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>Offline TTS</title><link>https://blog.comfluter.life/p/offline-tts/</link><pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/offline-tts/</guid><description>TTS by Mozilla Using open source code https://github.com/mozilla/TTS.git
 Direct Installation TTS supports python &amp;gt;= 3.6, &amp;lt;3.9.
 If you are only interested in synthesizing speech with the released TTS models, installing from PyPI is the easiest option.
 pip install TTS
 If you plan to code or train models, clone TTS and install it locally.
 git clone https://github.com/mozilla/TTS
 pip install -e .
-Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item><item><title>Configuring FTP server on raspberry</title><link>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>Install vsftpd on raspberry:
+Custom installation However, the version is lower in github than in Pypl, losing many models and features.</description></item><item><title>Configuring FTP server on raspberry</title><link>https://blog.comfluter.life/p/configuring-ftp-server-on-raspberry/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/configuring-ftp-server-on-raspberry/</guid><description>Install vsftpd on raspberry:
 sudo apt-get install vsftpd Config vsftpd sudo nano /etc/vsftpd.conf
 Simplest config:
 anonymous_enable=NO 匿名帐号 local_enable=YES 本地帐号
@@ -41,7 +41,7 @@ banned_email_file=/etc/vsftpd/banned_emails禁止使用匿名用户登陆时作�
 chroot_list_enable=YES如果启动这项功能，则所有列在chroot_list_file中的使用者不能更改根目录
 chroot_list_file=/etc/vsftpd/chroot_list定义不能更改用户主目录的文件
 userlist_enable=YES 若启用此选项,userlist_deny选项才被启动
-unfinished.</description></item><item><title>Configuring rclone in Windows</title><link>https://comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://comfluter.life/p/configuring-rclone-in-windows/</guid><description>Install Rclone rclone download link
+unfinished.</description></item><item><title>Configuring rclone in Windows</title><link>https://blog.comfluter.life/p/configuring-rclone-in-windows/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/configuring-rclone-in-windows/</guid><description>Install Rclone rclone download link
 rclone relies on winfsp to work
 winfsp download link
 install winfsp unzip downloaded rclone files config path: add the path where rclone.exe is in. check rclone config state:rclone --version Config rclone drives git bash is recommended for mounting drives
