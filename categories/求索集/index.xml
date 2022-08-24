@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>求索集 on 知止堂</title><link>https://blog.comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/</link><description>Recent content in 求索集 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux基础</title><link>https://blog.comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/linux%E5%9F%BA%E7%A1%80/</guid><description>文件内容添加</description></item><item><title>Python基础</title><link>https://blog.comfluter.life/p/python%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/python%E5%9F%BA%E7%A1%80/</guid><description>python流程控制 python可迭代对象和迭代器对象 iter()返回一个迭代器
-能够被迭代器迭代的对象就是可迭代对象
-生成器对象 可以惰性生成需要使用的元素，有利于大规模数据操作。用到时再生成 使用生成器表达式生成：(i**2 for i in range(1,5))</description></item><item><title>PA1 数据的表示、类型、存取、运算</title><link>https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</link><pubDate>Fri, 25 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/pa1-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%8F%96%E8%BF%90%E7%AE%97/</guid><description>PA1-1 数据的表示和存取 计算机：用以处理信息的设备。故第一步要解决数据、信息如何存取、表示。
-PA1 典型数据存取
-数据的类型及其机器级表示 数据（真值）的类型：
-无符号整数 带符号整数 定点/浮点数 非数值型：字母、操作码等 机器数：二进制位串
-编码过程：
-无符号整数：直接编码，直接做进制转换即可 带符号整数： 原码：直接编码+符号位（正0负1） 补码： 机器数的存取 机器数的定义
-主存（RAM）：随机存取存储器
-我们讲的大小以字节为单位
-i386中定义：word（字）：2字节，double word（long，双字）：4字节，32位
-i386：:3位机
-随机存取：以O(1)的时间读写任意位置的数据
-大端方式和小端方式 问题：如果一个需要存取的数据超过了一个字节，怎么存： 例：0x 12 34 56 78
-小端方式：低有效字节在低地址
-0x3 : 0x12 0x2 : 0x34 0x1 : 0x56 0x0 : 0x78 大端方式：低有效字节在高地址
-对于存储器的模拟 如何使用C语言模拟？
-使用字节类型的数组进行模拟
-主存
-内存访问接口：</description></item><item><title>外国人眼中的中华文明</title><link>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</guid><description>参考书籍 《吾国与吾名》 胡阿祥 介绍国号、名号、域外称谓。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>求索集 on 知止堂</title><link>https://blog.comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/</link><description>Recent content in 求索集 on 知止堂</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.comfluter.life/categories/%E6%B1%82%E7%B4%A2%E9%9B%86/index.xml" rel="self" type="application/rss+xml"/><item><title>外国人眼中的中华文明</title><link>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E/</guid><description>参考书籍 《吾国与吾名》 胡阿祥 介绍国号、名号、域外称谓。
 课程介绍
 第一讲 外国人眼中的中华文明 外国人称中国，常用别名。而起别名，就要抓特征，抓特征，就要有了解。
 China？ 瓷器-中国？
@@ -27,30 +8,7 @@ China？ 瓷器-中国？
 Lab实验
 PA实验
 Discrete Mathematics 22 Spring 离散数学课程主页
-Pattern Recognition 22 Spring Pattern Recognition Course Site</description></item><item><title>数通网络发展史</title><link>https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</link><pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E6%95%B0%E9%80%9A%E7%BD%91%E7%BB%9C%E5%8F%91%E5%B1%95%E5%8F%B2/</guid><description>发展概况：
-昨日：沟通你我
-今日：万物互联
-明日：产业数字经济底座
-3个发展阶段：
-IPv4+以太网：无连接、共享带宽、尽力而为的 IP/MPLS：面向连接的、业务见隔离的流量工程 IPv6/IPv6+：与业务有机融合，对网络服务进行可编程控制 IP网络发展中的重大技术发明： 以太网 IP/TCP 数据通信厂家沉浮： 华为+思科
-IP1.0时代：从计算机互联到internet 计算机网络诞生 计算机网络形成 Internet形成 军事科研到商用，消息类型不断增多
-第一阶段： 50年代：中心化的计算机网络，主机与所有计算机连接，位于网络中心
-60年代：以分组交换网为中心的无中心节点交换网
-1969年11月：ARPAnet，4节点分组交换网。
-指导思想：网络中某一部分受到攻击时网络仍然畅通 第二阶段：形成计算机网络 1975年，100+主机，正式运行
-1974年开始研究TCP/IP协议，80年前后转向TCP/ip
-1971年发明电子邮件、74年bbs
-建立了互联网模型：TCP/IP协议栈 5层结构、IP统一异质网络
-端节点：5层封装/解封装
-第三阶段：突破科研网，Internet开始形成（90年代）
-Internet在中国
-建网原则
-与公路网建设十分相像
-期间的技术： 提出了互联互通寻址方法
-提出了全套互联互通协议
-IGP EGP
-IP2.0 IP网络的电信化 互联网本身的规模、性能飞速发展 电信运营商尝试将语音、专线等电信业务应用到internet上 互联网本身继续快速发展
-电信业务迁移到IP网上</description></item><item><title>韩非子的思想：势与术</title><link>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
+Pattern Recognition 22 Spring Pattern Recognition Course Site</description></item><item><title>韩非子的思想：势与术</title><link>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E9%9F%A9%E9%9D%9E%E5%AD%90%E7%9A%84%E6%80%9D%E6%83%B3%E5%8A%BF%E4%B8%8E%E6%9C%AF/</guid><description>势者，胜众之资 韩非其人 见《史记·老子韩非列传》
 《韩非子》文本 陈奇猷《韩非子集释》 梁启雄《韩非子浅解》 周勋初等《韩非子校注》 评法批儒运动中编纂。建国以来整理水平最高。 江苏人民出版社 人性论：人性本恶，韩非子的人性判断 典型的消极人性论：人的本质是自私。
 好逸恶劳
 《商君书·算地》：“民之性，饥而求食，劳而求逸，苦而索乐，辱则求荣，此民之情也。”
@@ -134,7 +92,7 @@ $Q_n, Q_{cas}, Q_{p}$ consist a inverting amplifier for feedback. $V_b$: determi
 子曰：“道不远人。人之为道而远人，不可以为道。”诗云：“伐柯伐柯，其则不远。”执柯以伐柯，睨而视之，犹以为远。故君子治人以人，改而止。
 庸德之行，庸言之谨，有所不足，不敢不勉，有余不敢尽，言顾行，行顾言，君子乎不慥慥尔！
 君子素位而行，不愿乎其外。素富贵，行乎富贵；素贫贱，行乎贫贱；素夷狄，行乎夷狄；素患难，行乎患难，君子无入而不自得焉。在上位不陵下，在下位不援上，正己而不求于人则无怨。上不怨天，下不尤人。故君子居易以俟命，小人行险以侥幸。子曰：“射有似乎君子，失诸正鹄，反求诸其身。”
-君子之道，譬如行远必自迩，譬如登高必自卑。</description></item><item><title>1 Introduction to Programming Languages and Tools of the Trade</title><link>https://blog.comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/1-introduction-to-programming-languages-and-tools-of-the-trade/</guid><description>Vscode extensions for web development ESLint Integrates ESLint JavaScript into VS Code. Prettier JS code formatter JavaScript (ES6) code snippets Tools Node.JS (NodeJS安装-菜鸟教程)[https://www.runoob.com/nodejs/nodejs-install-setup.html]</description></item><item><title>2 Introduction to GitHub</title><link>https://blog.comfluter.life/p/2-introduction-to-github/</link><pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2-introduction-to-github/</guid><description>基本命令 创建虚拟环境：conda create -n &amp;lt;env_name&amp;gt; python=X.X 激活虚拟环境：conda activate &amp;lt;env_name&amp;gt; Minutiae unable auto activate base: conda config --set auto_activate_base false</description></item><item><title>《先秦诸子选读》：道家思想</title><link>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</guid><description>老子 概述 先秦道家第一部 《老子》文献的真实性： 上世纪20年代，用西方方法考察中国传统文献：有气人，但书可能是后人写的 马王堆汉墓老子帛书抄本 汉文帝时期 证明此时《老子》其书已经盛行 篇目数量差不多 90年代：郭店楚简 其中有《老子》 测年公元前300年，战国中晚期 其中还有较多儒家早期文献 篇目较少，约为传世本1/3，可能为摘抄 此两本出图后，证明《老子》一定成书早于战国晚期。 证实了《老子》应为所有道家文献的原创。 作者到现在还不确定，阅读时不用深究 首创“自然之道”的概念 道 不仅道家讲“道”，其应该为春秋时代出现的思想概念。
+君子之道，譬如行远必自迩，譬如登高必自卑。</description></item><item><title>《先秦诸子选读》：道家思想</title><link>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/%E5%85%88%E7%A7%A6%E8%AF%B8%E5%AD%90%E9%80%89%E8%AF%BB%E9%81%93%E5%AE%B6%E6%80%9D%E6%83%B3/</guid><description>老子 概述 先秦道家第一部 《老子》文献的真实性： 上世纪20年代，用西方方法考察中国传统文献：有气人，但书可能是后人写的 马王堆汉墓老子帛书抄本 汉文帝时期 证明此时《老子》其书已经盛行 篇目数量差不多 90年代：郭店楚简 其中有《老子》 测年公元前300年，战国中晚期 其中还有较多儒家早期文献 篇目较少，约为传世本1/3，可能为摘抄 此两本出图后，证明《老子》一定成书早于战国晚期。 证实了《老子》应为所有道家文献的原创。 作者到现在还不确定，阅读时不用深究 首创“自然之道”的概念 道 不仅道家讲“道”，其应该为春秋时代出现的思想概念。
 “道”字商代便有，但不是重要思想概念，仅为“道路”之意。“道”在春秋时成为思想概念内涵。从《论语》中可以得到印证。
 含义变化原因：政治变化。以氏族为本位的政治构架在衰弱。以祭祀为本，为期中心概念（西周时）。后来西周衰落，天命观念受到怀疑，上天包庇某一氏族的理念在弱化。孔子时政治基本不讲“天命”，个人也可以讲“天命”。政治的合理性在哪？当时的思想家在寻找新的理解。这个背景下，“道”的观念得以提出。政治的合法性来源：神授&amp;ndash;&amp;gt;往圣先贤的做法，体现出人本主义。
 《国语》周语下：吾非瞽史，焉知天道？
