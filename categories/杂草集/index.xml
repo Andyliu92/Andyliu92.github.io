@@ -7,31 +7,31 @@
 建站小记 21.11.05 购买腾讯云服务器、购买域名comfluter.life，熟悉linux服务器操作与hugo工具基本使用 21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。 21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。 21.11.19 由于使用主题时采用了git submodule的方式，而github同步时不同步submodule导致各种错误，重新使用git clone方式引入了主题，重新搭建了博客与github repo，并配置github actions。 21.11.19 解决github actions css无法加载问题，使用git submodule直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。 21.11.19 写下这篇hello world文档。 动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：
 云服务器 Linux命令行 git命令行操作 git submodule github全流程 github pages github actions hugo使用 域名配置与域名解析 防火墙配置 Nginx服务器搭建 其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。
 希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>2022一年音乐会集锦</title><link>https://blog.comfluter.life/p/2022%E4%B8%80%E5%B9%B4%E9%9F%B3%E4%B9%90%E4%BC%9A%E9%9B%86%E9%94%A6/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2022%E4%B8%80%E5%B9%B4%E9%9F%B3%E4%B9%90%E4%BC%9A%E9%9B%86%E9%94%A6/</guid><description>“欢乐颂”中国交响乐团2022音乐季开幕音乐会 大量听音乐会现场，是从这场起。很幸运的是，本场的两首曲目：《布鲁赫第二小提琴协奏曲》、《贝多芬第九交响曲》都是值得反复倾听的经典之曲，演出水准也极高。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_192140.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_212843.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_213702.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_213710.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_192140.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_212843.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_213702.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_213710.jpeg
 图兰朵 欢乐颂音乐会后不到两周，直接冲了《图兰朵》。原因其实是《碟中谍6》中《图兰朵》歌剧刺杀那场戏实在过于精彩。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_203346.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_212737.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_212859.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213144.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213311.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213335.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_203346.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_212737.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_212859.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213144.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213311.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213335.jpeg
 《图兰朵》合唱音乐会 与ts等好友相约，再听一次《图兰朵》
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_191948.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658575230358.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658585125794.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658589357129.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_193158.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_213936.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_214000.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_214636.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_220303.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_191948.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658575230358.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658585125794.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658589357129.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_193158.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_213936.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_214000.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_214636.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_220303.jpeg
 “国之骄子” 协奏曲之夜 音乐会 有长笛协奏曲！好听！
 马林巴协奏曲很出乎意料地精彩。本来是奔着看乐子的心态想看马林巴能整出什么活的，没想到直接成为最有表现力的曲目。不仅是马林巴“大珠小珠落玉盘”般的音色，更在于演奏家的形体表演对于音乐情绪的表现。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220717_185953.jpeg
-http://picserver.</description></item><item><title>22 Spring 学期目标</title><link>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>学期目标 学习方面 保证专业内课程学习质量，确保申请要求的专业GPA，争取都取得92分以上的成绩 保证在选课列表里的跨选课程，即离散数学、计算机系统基础的学习，争取都取得92分以上的成绩 尽量全程跟上旁听课程，如人工智能程序设计、社会学概论、名师导学，并在此过程中真正开拓视野、学到技能。 托福考试出分 工作方面 多参与南大本科招办全媒体中心的工作，并在此过程中体会如何融入一个集体，向身边的伙伴们学习组织人员共同完成一个目标的能力，也提升自己技术层面的摄影摄像、剪辑等等技能。 保证空手道社活动的正常运行 科研方面 在大创和early-exit BERT项目中学习人工智能的模型搭建与使用，争取能在前者有专利申请，后者有论文发表 hilbert项目稳步推进，学习芯片设计的相关知识 视情况看是否需要去王肖沐老师那里做一做项目 生活方面 更好地平衡学习与生活，没有必要不计一切地把所有时间都投入到学习与工作中去。多尝试、体会生活的方方面面。 坚持练习长笛，每周都应该练一练。 学习欣赏的人并融入团体当中 安排理由 总体上来讲，这学期的整体心态应该是放下过多的担忧和顾虑，勇敢地去多学习、多尝试、多参与。之前被各种担忧困住了手脚，心态也还没有从高考的失利中缓过来。结果是，做事一方面患得患失，不敢开始做，另一方面又自视甚高，不愿意去做，因此错过了很多机会。
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220717_185953.jpeg
+https://nas.</description></item><item><title>22 Spring 学期目标</title><link>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>学期目标 学习方面 保证专业内课程学习质量，确保申请要求的专业GPA，争取都取得92分以上的成绩 保证在选课列表里的跨选课程，即离散数学、计算机系统基础的学习，争取都取得92分以上的成绩 尽量全程跟上旁听课程，如人工智能程序设计、社会学概论、名师导学，并在此过程中真正开拓视野、学到技能。 托福考试出分 工作方面 多参与南大本科招办全媒体中心的工作，并在此过程中体会如何融入一个集体，向身边的伙伴们学习组织人员共同完成一个目标的能力，也提升自己技术层面的摄影摄像、剪辑等等技能。 保证空手道社活动的正常运行 科研方面 在大创和early-exit BERT项目中学习人工智能的模型搭建与使用，争取能在前者有专利申请，后者有论文发表 hilbert项目稳步推进，学习芯片设计的相关知识 视情况看是否需要去王肖沐老师那里做一做项目 生活方面 更好地平衡学习与生活，没有必要不计一切地把所有时间都投入到学习与工作中去。多尝试、体会生活的方方面面。 坚持练习长笛，每周都应该练一练。 学习欣赏的人并融入团体当中 安排理由 总体上来讲，这学期的整体心态应该是放下过多的担忧和顾虑，勇敢地去多学习、多尝试、多参与。之前被各种担忧困住了手脚，心态也还没有从高考的失利中缓过来。结果是，做事一方面患得患失，不敢开始做，另一方面又自视甚高，不愿意去做，因此错过了很多机会。
 经过上个学期心态上激烈的转换，这学期应当打破这个状态了。上学期那么多时间并没有花在学习上，但是成绩并没有因此一落千丈。唯一能称得上惨烈的线性代数只取得了83分，也不是再投入多少时间进去便可有飞升的，因为能刷的题已经都刷了，复习到最后已几近无聊。因此，可以说，之前两耳不闻窗外事一心只读圣贤书的心态与策略是错误的，好成绩不是仅仅用这种虚假的好似全部时间埋头苦学的鸵鸟战术所能够达到的。
 现在我认为，一种积极的学习生活态度是开放地尝试各种事物，多参加各种活动，能动地安排自己的时间，而不是为了所谓的学习而把一切其他事情无限拖延。在各种活动中，达到能力的相互促进从而产生快速的提升。
 当然，这肯定不意味着放弃GPA、放弃学习，毕竟这是下一步的敲门砖，虽然很无奈但必须保证。只不过不再通过以前的鸵鸟战法保证了而已。新的心态应该是在学习的过程中专心去学，放开手去干，不要患得患失，非学习过程中就不要想着学习的事情了，所谓work hard, play hard.

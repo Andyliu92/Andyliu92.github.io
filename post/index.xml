@@ -6,18 +6,21 @@
 因此，也希望这个博客在记录我个人所思所想以外，能够带动我走出一天天为了成绩而焦虑的状态之中，真正地敢于放手去做自己喜欢的事，也才真正能做成自己喜欢的事。
 建站小记 21.11.05 购买腾讯云服务器、购买域名comfluter.life，熟悉linux服务器操作与hugo工具基本使用 21.11.13 在询问完王凯师兄hugo博客部署方法以后，学习hugo模板使用与博客搭建、github使用、github actions + 云服务器自动部署。但是卡在了最后一步Nginx服务器配置，使得服务器端页面一直显示404。 21.11.15 由于Nginx服务器的问题，以及之前摸索阶段各种误操作，决定直接重置腾讯云服务器，将服务器端的功能重新搭建。完成服务器基本设置后激活root账户并配置ssh登录信息，重写了github pages，安装Nginx，以root账户运行，配置Nginx。 21.11.19 由于使用主题时采用了git submodule的方式，而github同步时不同步submodule导致各种错误，重新使用git clone方式引入了主题，重新搭建了博客与github repo，并配置github actions。 21.11.19 解决github actions css无法加载问题，使用git submodule直接推送到github pages，但发现问题仍然存在。最终确定问题在baseURL上，改好后部署。 21.11.19 写下这篇hello world文档。 动手去做一个项目确实是学习的高效方法。通过搭建博客，至少熟悉了以下内容：
 云服务器 Linux命令行 git命令行操作 git submodule github全流程 github pages github actions hugo使用 域名配置与域名解析 防火墙配置 Nginx服务器搭建 其中许多是以前多次觉得应该去做，而没多久又半途而废的。放弃的理由大概是陷入极多的知识内容而毫无方向，也就失去了学习的意义，但为了一个目标去做，许多事情就顺理成章了。
-希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>2023 Week13 Summary</title><link>https://blog.comfluter.life/p/2023-week13-summary/</link><pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week13-summary/</guid><description>主要事项 换手机 圣母大学交换项目申请 SoC实验 脉冲编码程序改完 托福 时间分配情况
-http://picserver.comfluter.life:6106/Study/IMG_1087.PNG
-http://picserver.comfluter.life:6106/Study/IMG_1088.PNG
-http://picserver.comfluter.life:6106/Study/IMG_1089.PNG
+希望以后能以更多项目为依托，让自己不断学习、进步。</description></item><item><title>2023 Week14 Summary</title><link>https://blog.comfluter.life/p/2023-week14-summary/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week14-summary/</guid><description>主要事项 省三好院系答辩 SoC论文 Obsidian相关环境配置 时间分配情况
+主要时间分配情况 主要时间都在做SoC论文了。可能是对自己要求有点高了，也可能是之前的经历让自己有点害怕写论文了，总之效率不算很高。不过好处在于通过这次论文写作打通了论文写作的全流程，积累了好用的工具链（zotero+obsidian），并且在最后阅读论文的速度明显增长。 院系三好答辩。 圣母大学交换学习材料。 用于科研的时间实在是太少了！！ 总时间：28.1%，主要精力都在SoC论文上。 其他时间 配置Obsidian和简悦的环境。还是太过于容易沉浸于钻牛角尖配环境当中了。 阅读时间增多了，应该保持！ 用于游泳的时间应该更高效一些 主要成果 SoC论文 省三好院级答辩 圣母大学交换录取 主要问题 用于科研的时间太少了 学习上的时间投入不够高效 下周方向 接下来一段时间的主要方向应当是在科研项目上取得切实的成果，要优先保证科研项目的时间投入
+时间分配：
+正事 32% G/T 2% 学习 5% 科研 11% 课程 9% 阅读 3% 申请 2% 睡眠 35% 休息 4% 兴趣 4% 日常 18% 运动 3%</description></item><item><title>2023 Week13 Summary</title><link>https://blog.comfluter.life/p/2023-week13-summary/</link><pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week13-summary/</guid><description>主要事项 换手机 圣母大学交换项目申请 SoC实验 脉冲编码程序改完 托福 时间分配情况
+https://nas.comfluter.life:6106/Study/IMG_1087.PNG
+https://nas.comfluter.life:6106/Study/IMG_1088.PNG
+https://nas.comfluter.life:6106/Study/IMG_1089.PNG
 主要时间分配情况 托福备考及考试。 课程，这周半导体工艺以及设计实践课的时间都占用较多，应当是本学期课程时间的上限了。 学习，占用时间较多了，但是有很多都被眼前的需求牵着走了，例如设计、毛概课的pre。真正投入到切实需要下功夫的课程的时间其实不多。 科研，完成了脉冲编码SNR的仿真并开始运行。但是实际上需要花费的时间是不多的，远远小于预期。 由于有许多其他的事情，本周基本没有进行阅读。 申请，取护照，办存款证明，最终提交圣母大学的交换申请。 工作，省三好申请准备 总时间：30.81%，虽然精力较为分散，但是总时间还是可以的。
 其他时间 用于日常事务的时间正常。 睡眠时间稍稍减少，33%左右的时间都是比较正常的 换手机迁移以及笔记工作流向Obsidian迁移，都较为顺利。新手机新环境都用的较为舒心。 主要成果 托福考完 换手机 圣母网申完成 脉冲编码SNR仿真 主要问题 精力分散了些。下周还是要尽量避免被SoC实验这种无意义的东西耗费太多时间。 用于科研的时间少了些 学习以及各方面应该找到节奏，不能被牵着走 下周方向 接下来一段时间的主要方向应当是在科研项目上取得切实的成果，要优先保证科研项目的时间投入
 时间分配：
 正事 32% G/T 2% 学习 6% 科研 12% 课程 9% 阅读 3% 睡眠 35% 休息 5% 兴趣 4% 日常 18% 运动 3%</description></item><item><title>2023 Week12 Summary</title><link>https://blog.comfluter.life/p/2023-week12-summary/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week12-summary/</guid><description>主要事项 肠胃炎及其恢复 空手道考带 脉冲编码科研 在线图库迁移以及Qsync同步文件整理 换手机调研 时间分配情况
-http://picserver.comfluter.life:6106/Study/IMG_1057.PNG
-http://picserver.comfluter.life:6106/Study/IMG_1061.PNG
-http://picserver.comfluter.life:6106/Study/IMG_1058.PNG
-http://picserver.comfluter.life:6106/Study/IMG_1060.PNG
+https://nas.comfluter.life:6106/Study/IMG_1057.PNG
+https://nas.comfluter.life:6106/Study/IMG_1061.PNG
+https://nas.comfluter.life:6106/Study/IMG_1058.PNG
+https://nas.comfluter.life:6106/Study/IMG_1060.PNG
 主要时间分配情况 用于科研的时间较上周略有提升，这点在本周初就生病的情况下还能做到值得肯定。而且时间花费十分集中，主要突出的脉冲编码方向十分突出。但是时间总量还是不足。 课程时间正常 用于课后学习的时间太少 用于阅读的时间太少 用于托福备考的时间太少 总时间：15.19%，较以往有明显下降。
 其他时间 用于日常事务的时间正常 用于折腾NAS相关的时间过多，不过也算基本解决了问题。以后还是不能这样上头，去和一个对现在并不迫切的事情过不去。 花在空手道考级上的时间也偏多，不过可以接受 肠胃炎及其恢复占用的时间还是太多了 还调研了手机更换机型 肠胃炎后感觉整体睡眠质量还不错。褪黑素的效果可以继续考察。 主要成果 空手道橙带获得 脉冲编码恢复进度 基本确定手机更换方向 主要问题 用于正事的时间严重不足：科研、课后学习、阅读、G/T备考时间严重不足 花费在和NAS相关内容折腾上的时间太多 身体情况还是要放在第一位，肠胃炎之后效率就开始全面崩溃 下周方向 时间分配： 正事 35% G/T 5% 学习 5% 科研 12% 课程 9% 阅读 4% 睡眠 35% 休息 5% 兴趣 4% 日常 18% 运动 3% 保证托福的备考时间 脉冲编码科研冲冲冲 学习方面，模电、SoC应当是重点方向</description></item><item><title>2023 Week11 Summary</title><link>https://blog.comfluter.life/p/2023-week11-summary/</link><pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week11-summary/</guid><description>主要事项 圣母交换名额确认 朋导中期考核 托福备考 科研 周末各活动：桦墅村考察、三猫黑鱼花、空手道鼓楼联合训练、陈雨竹来南京 时间分配情况
 主要时间分配情况 科研时间略有下降，而且主要时间没有花在脉冲编码的重点项目上，而是被推着走，在NLP项目上花费了过多时间
@@ -40,31 +43,31 @@ http://picserver.comfluter.life:6106/Study/IMG_1060.PNG
 总结 总体而言，这两周是成果颇丰的。不仅渡过了上学期的期末周，还在考试复习之余搞好了chevereto和套辞。在接下来的日子中也要尽力保持这种高效的状态。</description></item><item><title>2023 Week9 Summary</title><link>https://blog.comfluter.life/p/2023-week9-summary/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2023-week9-summary/</guid><description>主要事项 套辞：UCSB收尾确认、Sharon Hu跟进沟通 交换：高中成绩单、高考成绩证明、推荐信跟进 GRE考试 南大招生小蓝鲸精剪 时间分配情况
 主要可自由支配时间情况 小蓝鲸精剪：占据了最宝贵的周二、周三几乎全天的时间，但是实在不是自己想做的东西，做完对自己也没有什么长远的帮助，但时间却实打实地投进去了。以后不要做了。 申请：主要是两部分 各种琐碎的材料申请：交换政策沟通、高中材料开具手续沟通等等，虽然没有什么特别值得说的，但是对时间和精力的牵扯真的很多 套辞收尾、Sharon Hu科研交换套辞跟进。 GRE：由于确实没有充足的时间做系统的准备了，干脆完全放弃，不为这件事情牵扯太多的精力了。就日常背了背单词，到时间去考试 课程：时间明显较上周多，主要是由于试听了较多通识课，后面可以退掉保留必要的即可了 学习、科研及其他，基本没有时间去做，后面几周要注意了，这不应该成为正常状态。 用于正事的总时间：课程+申请+工作+学习+科研，总计约35.7%，与上周基本持平。表明总共花在这些主要事务上的总精力还是比较恒定的。
 其他时间 用于阅读的时间有点少了，还是没有建立常读书的习惯 吹笛子的时间也偏少了？以后考虑每周两到三次 关键成果 确定了UCSB谢源的暑研机会，后来了解到还是很难得的 得到了Sharon Hu的回复，比较有希望能再拿到暑研机会 GRE考试，裸考319分，还是比预想中高不少，以后准备也不必自己给自己太多压力 其他事件 周六在教室自习开始，身体状态逐渐不对，周日考GRE时明显烧起来。考完在鼓楼就近找汪远学弟要了点药服下赶回宿舍休息，晚上音乐会也无缘了。 周四本来想和母亲通报一下套磁的喜讯，谁想到她听到UCSB就炸了，轴上了，真是无语。生病估计也有挺大原因是心里耗在这件事上。</description></item><item><title>2022一年音乐会集锦</title><link>https://blog.comfluter.life/p/2022%E4%B8%80%E5%B9%B4%E9%9F%B3%E4%B9%90%E4%BC%9A%E9%9B%86%E9%94%A6/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/2022%E4%B8%80%E5%B9%B4%E9%9F%B3%E4%B9%90%E4%BC%9A%E9%9B%86%E9%94%A6/</guid><description>“欢乐颂”中国交响乐团2022音乐季开幕音乐会 大量听音乐会现场，是从这场起。很幸运的是，本场的两首曲目：《布鲁赫第二小提琴协奏曲》、《贝多芬第九交响曲》都是值得反复倾听的经典之曲，演出水准也极高。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_192140.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_212843.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_213702.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220115_213710.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_192140.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_212843.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_213702.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220115_213710.jpeg
 图兰朵 欢乐颂音乐会后不到两周，直接冲了《图兰朵》。原因其实是《碟中谍6》中《图兰朵》歌剧刺杀那场戏实在过于精彩。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_203346.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_212737.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_212859.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213144.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213311.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220119_213335.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_203346.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_212737.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_212859.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213144.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213311.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220119_213335.jpeg
 《图兰朵》合唱音乐会 与ts等好友相约，再听一次《图兰朵》
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_191948.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658575230358.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658585125794.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/mmexport1658589357129.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_193158.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_213936.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_214000.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_214636.jpeg
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220723_220303.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_191948.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658575230358.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658585125794.jpeg
+https://nas.comfluter.life:6105/2023/02/16/mmexport1658589357129.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_193158.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_213936.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_214000.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_214636.jpeg
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220723_220303.jpeg
 “国之骄子” 协奏曲之夜 音乐会 有长笛协奏曲！好听！
 马林巴协奏曲很出乎意料地精彩。本来是奔着看乐子的心态想看马林巴能整出什么活的，没想到直接成为最有表现力的曲目。不仅是马林巴“大珠小珠落玉盘”般的音色，更在于演奏家的形体表演对于音乐情绪的表现。
-http://picserver.comfluter.life:6105/2023/02/16/IMG_20220717_185953.jpeg
-http://picserver.</description></item><item><title>22 Spring 学期目标</title><link>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>学期目标 学习方面 保证专业内课程学习质量，确保申请要求的专业GPA，争取都取得92分以上的成绩 保证在选课列表里的跨选课程，即离散数学、计算机系统基础的学习，争取都取得92分以上的成绩 尽量全程跟上旁听课程，如人工智能程序设计、社会学概论、名师导学，并在此过程中真正开拓视野、学到技能。 托福考试出分 工作方面 多参与南大本科招办全媒体中心的工作，并在此过程中体会如何融入一个集体，向身边的伙伴们学习组织人员共同完成一个目标的能力，也提升自己技术层面的摄影摄像、剪辑等等技能。 保证空手道社活动的正常运行 科研方面 在大创和early-exit BERT项目中学习人工智能的模型搭建与使用，争取能在前者有专利申请，后者有论文发表 hilbert项目稳步推进，学习芯片设计的相关知识 视情况看是否需要去王肖沐老师那里做一做项目 生活方面 更好地平衡学习与生活，没有必要不计一切地把所有时间都投入到学习与工作中去。多尝试、体会生活的方方面面。 坚持练习长笛，每周都应该练一练。 学习欣赏的人并融入团体当中 安排理由 总体上来讲，这学期的整体心态应该是放下过多的担忧和顾虑，勇敢地去多学习、多尝试、多参与。之前被各种担忧困住了手脚，心态也还没有从高考的失利中缓过来。结果是，做事一方面患得患失，不敢开始做，另一方面又自视甚高，不愿意去做，因此错过了很多机会。
+https://nas.comfluter.life:6105/2023/02/16/IMG_20220717_185953.jpeg
+https://nas.</description></item><item><title>22 Spring 学期目标</title><link>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</link><pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.comfluter.life/p/22-spring-%E5%AD%A6%E6%9C%9F%E7%9B%AE%E6%A0%87/</guid><description>学期目标 学习方面 保证专业内课程学习质量，确保申请要求的专业GPA，争取都取得92分以上的成绩 保证在选课列表里的跨选课程，即离散数学、计算机系统基础的学习，争取都取得92分以上的成绩 尽量全程跟上旁听课程，如人工智能程序设计、社会学概论、名师导学，并在此过程中真正开拓视野、学到技能。 托福考试出分 工作方面 多参与南大本科招办全媒体中心的工作，并在此过程中体会如何融入一个集体，向身边的伙伴们学习组织人员共同完成一个目标的能力，也提升自己技术层面的摄影摄像、剪辑等等技能。 保证空手道社活动的正常运行 科研方面 在大创和early-exit BERT项目中学习人工智能的模型搭建与使用，争取能在前者有专利申请，后者有论文发表 hilbert项目稳步推进，学习芯片设计的相关知识 视情况看是否需要去王肖沐老师那里做一做项目 生活方面 更好地平衡学习与生活，没有必要不计一切地把所有时间都投入到学习与工作中去。多尝试、体会生活的方方面面。 坚持练习长笛，每周都应该练一练。 学习欣赏的人并融入团体当中 安排理由 总体上来讲，这学期的整体心态应该是放下过多的担忧和顾虑，勇敢地去多学习、多尝试、多参与。之前被各种担忧困住了手脚，心态也还没有从高考的失利中缓过来。结果是，做事一方面患得患失，不敢开始做，另一方面又自视甚高，不愿意去做，因此错过了很多机会。
 经过上个学期心态上激烈的转换，这学期应当打破这个状态了。上学期那么多时间并没有花在学习上，但是成绩并没有因此一落千丈。唯一能称得上惨烈的线性代数只取得了83分，也不是再投入多少时间进去便可有飞升的，因为能刷的题已经都刷了，复习到最后已几近无聊。因此，可以说，之前两耳不闻窗外事一心只读圣贤书的心态与策略是错误的，好成绩不是仅仅用这种虚假的好似全部时间埋头苦学的鸵鸟战术所能够达到的。
 现在我认为，一种积极的学习生活态度是开放地尝试各种事物，多参加各种活动，能动地安排自己的时间，而不是为了所谓的学习而把一切其他事情无限拖延。在各种活动中，达到能力的相互促进从而产生快速的提升。
 当然，这肯定不意味着放弃GPA、放弃学习，毕竟这是下一步的敲门砖，虽然很无奈但必须保证。只不过不再通过以前的鸵鸟战法保证了而已。新的心态应该是在学习的过程中专心去学，放开手去干，不要患得患失，非学习过程中就不要想着学习的事情了，所谓work hard, play hard.
